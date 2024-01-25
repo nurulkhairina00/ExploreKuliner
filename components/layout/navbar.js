@@ -7,10 +7,10 @@ const Navbar = () => {
       <div className="flex justify-between">
         <h6 className="text-xl text-secondary font-bold">ExploreKuliner</h6>
 
-        {/* Tampilan Login Tablet dan Desktop */}
+        {/* Tampilan Masuk Tablet dan Desktop */}
         <div className="flex">
           {/* Daftar dan Masuk */}
-          <Link href="/register">
+          <Link href="/daftar-reviewer">
             <button
               type="button"
               className="px-7 py-2 rounded-full bg-primary mx-2 hidden sm:block"
@@ -19,7 +19,7 @@ const Navbar = () => {
             </button>
           </Link>
 
-          <Link href="/login">
+          <Link href="/masuk-reviewer">
             <button
               type="button"
               className="px-7 py-[6px] rounded-full border-secondary border-2 mx-2 hidden sm:block"

@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 
-const ModalOptionLogin = (props) => {
-  const { showModal, setShowModal } = props;
+const ModalOption = (props) => {
+  const { showModal, setShowModal, type } = props;
 
   const handleCloseModal = () => setShowModal(!showModal);
 
@@ -25,17 +25,22 @@ const ModalOptionLogin = (props) => {
               </svg>
             </div>
           </div>
-          <h2 className="font-bold text-2xl text-black text-center py-4 border-t-[1px] border-mediumGray">
-            Login Sebagai
+          <h2 className="font-bold text-3xl text-black text-center py-4 border-t-[1px] border-mediumGray">
+            {type === "masuk" ? "Masuk " : "Daftar "}
+            Sebagai
           </h2>
           <div className="py-4 flex flex-col items-center justify-center gap-3">
-            <Link href="/login-reviewer">
+            <Link
+              href={type === "masuk" ? "/masuk-reviewer" : "/daftar-reviewer"}
+            >
               <button className="border-secondary border-2 w-1/2 rounded-lg py-2 text-base text-secondary font-bold hover:bg-secondary hover:text-primary">
                 Reviewer
               </button>
             </Link>
             <p className="text-black text-xs font-semibold">Atau</p>
-            <Link href="/login-reviewer">
+            <Link
+              href={type === "masuk" ? "/masuk-reviewer" : "/daftar-reviewer"}
+            >
               <button className="border-secondary border-2 w-1/2 rounded-lg py-2 text-base text-secondary font-bold hover:bg-secondary hover:text-primary">
                 Pemilik Restoran
               </button>
@@ -47,4 +52,4 @@ const ModalOptionLogin = (props) => {
   );
 };
 
-export default ModalOptionLogin;
+export default ModalOption;

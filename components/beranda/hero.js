@@ -1,17 +1,21 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import ModalOptionLogin from "../modalOptionLogin";
+import ModalOption from "../modalOption";
 
 const Hero = () => {
   const [showModal, setShowModal] = useState(false);
+  const [type, setType] = useState("");
 
-  const handleOpenModal = () => setShowModal(!showModal);
+  const handleOpenModal = (value) => {
+    setType(value);
+    setShowModal(!showModal);
+  };
 
   return (
     <section className="w-full h-96 bg-[url(/images/bg-hero.jpg)] bg-cover bg-[50%_50%] p-[5vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-10">
-      {/* Tampilan Login Mobile */}
+      {/* Tampilan Masuk Mobile */}
       <div className="flex justify-end items-end pb-7 sm:hidden">
-        <Link href="/login">
+        <Link href="/masuk-reviewer">
           <div className="flex p-4 rounded-full bg-secondary w-8 h-8 justify-center items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +33,7 @@ const Hero = () => {
         </Link>
       </div>
 
-      {/* Tampilan Login Tablet dan Desktop */}
+      {/* Tampilan Masuk Tablet dan Desktop */}
       <div className="flex justify-between pb-7">
         {/* Icon Social Media */}
         <div className="hidden sm:flex flex-row gap-[3vw] sm:gap-5">
@@ -79,19 +83,18 @@ const Hero = () => {
 
         {/* Daftar dan Masuk */}
         <div className="flex">
-          <Link href="/register">
-            <button
-              type="button"
-              className="px-7 py-2 rounded-full bg-primary mx-2 hidden sm:block"
-            >
-              <span className="text-secondary font-bold">Daftar</span>
-            </button>
-          </Link>
+          <button
+            type="button"
+            className="px-7 py-2 rounded-full bg-primary mx-2 hidden sm:block"
+            onClick={() => handleOpenModal("daftar")}
+          >
+            <span className="text-secondary font-bold">Daftar</span>
+          </button>
 
           <button
             type="button"
             className="px-7 py-[6px] rounded-full border-secondary border-2 mx-2 hidden sm:block"
-            onClick={handleOpenModal}
+            onClick={() => handleOpenModal("masuk")}
           >
             <span className="text-secondary font-bold">Masuk</span>
           </button>
@@ -192,7 +195,11 @@ const Hero = () => {
         </div>
       </div>
       {showModal && (
-        <ModalOptionLogin showModal={showModal} setShowModal={setShowModal} />
+        <ModalOption
+          showModal={showModal}
+          setShowModal={setShowModal}
+          type={type}
+        />
       )}
     </section>
   );
