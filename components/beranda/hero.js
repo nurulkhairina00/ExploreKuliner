@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
+import ModalOptionLogin from "../modalOptionLogin";
 
 const Hero = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleOpenModal = () => setShowModal(!showModal);
+
   return (
     <section className="w-full h-96 bg-[url(/images/bg-hero.jpg)] bg-cover bg-[50%_50%] p-[5vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-10">
       {/* Tampilan Login Mobile */}
@@ -83,14 +88,13 @@ const Hero = () => {
             </button>
           </Link>
 
-          <Link href="/login">
-            <button
-              type="button"
-              className="px-7 py-[6px] rounded-full border-secondary border-2 mx-2 hidden sm:block"
-            >
-              <span className="text-secondary font-bold">Masuk</span>
-            </button>
-          </Link>
+          <button
+            type="button"
+            className="px-7 py-[6px] rounded-full border-secondary border-2 mx-2 hidden sm:block"
+            onClick={handleOpenModal}
+          >
+            <span className="text-secondary font-bold">Masuk</span>
+          </button>
         </div>
       </div>
 
@@ -187,6 +191,9 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      {showModal && (
+        <ModalOptionLogin showModal={showModal} setShowModal={setShowModal} />
+      )}
     </section>
   );
 };

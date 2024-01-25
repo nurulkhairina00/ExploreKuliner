@@ -110,7 +110,7 @@ const Register = () => {
               </button>
               <p className="text-sm text-center pt-7">
                 <span className="text-black">Sudah memiliki akun?</span>
-                <Link href="/login">
+                <Link href="/login-reviewer">
                   <span className="text-secondary font-bold cursor-pointer">
                     {" "}
                     Masuk

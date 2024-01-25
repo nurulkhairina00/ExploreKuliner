@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -116,7 +117,7 @@ const Login = () => {
               </button>
               <p className="text-sm text-center pt-7">
                 <span className="text-black">Belum punya akun?</span>
-                <Link href="/register">
+                <Link href="/register-reviewer">
                   <span className="text-secondary font-bold cursor-pointer">
                     {" "}
                     Daftar
