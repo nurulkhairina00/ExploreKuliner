@@ -86,6 +86,30 @@
             "nama_resto": "Seribu Rasa Menteng",
             "alamat": "Menteng, Jakarta Pusat",
             "rating": 4.5
+        },
+        {
+            "id": 6,
+            "image": "/images/populer.jpg",
+            "jarak": "0.5 km",
+            "nama_resto": "Seribu Rasa Menteng",
+            "alamat": "Menteng, Jakarta Pusat",
+            "rating": 4.5
+        },
+        {
+            "id": 7,
+            "image": "/images/populer.jpg",
+            "jarak": "0.5 km",
+            "nama_resto": "Seribu Rasa Menteng",
+            "alamat": "Menteng, Jakarta Pusat",
+            "rating": 4.5
+        },
+        {
+            "id": 8,
+            "image": "/images/populer.jpg",
+            "jarak": "0.5 km",
+            "nama_resto": "Seribu Rasa Menteng",
+            "alamat": "Menteng, Jakarta Pusat",
+            "rating": 4.5
         }
     ],
     "artikel": [

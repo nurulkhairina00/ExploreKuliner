@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
