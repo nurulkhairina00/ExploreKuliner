@@ -28,7 +28,7 @@ const article = () => {
         </h2>
         <div className="flex justify-between pb-[2vw] sm:pb-5">
           <p className="text-[3vw] sm:text-lg font-normal">
-            Informasi mengenai kuliner nusantara.
+            Berbagai rekomendasi tempat dan menu terbaik.
           </p>
           <p className="text-[3vw] sm:text-lg font-medium text-secondary cursor-pointer">
             Lihat Semua

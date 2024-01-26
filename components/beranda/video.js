@@ -30,13 +30,19 @@ const Video = () => {
   };
 
   return (
-    <div className="p-4 sm:px-12 md:px-16 lg:px-24">
-      <h2 className="text-black font-bold text-2xl sm:text-3xl">
-        Video Makanan
-      </h2>
+    <section className="sm:px-8 md:px-16 lg:px-28 xl:px-36 sm:py-12 sm:p-0">
+      {/* Judul Restoran Populer*/}
+      <div className="p-[5vw] text-black sm:p-0">
+        <h2 className=" font-bold text-[6vw] sm:text-3xl pb-[2vw] sm:pb-5">
+          Video Makanan
+        </h2>
+        <p className="font-normal text-[3vw] sm:text-lg pb-[2vw] sm:pb-5">
+          Video tentang suasana dan makanan resto.
+        </p>
+      </div>
 
       {/* Card Video Makanan */}
-      <div className="py-14 relative">
+      <div className="px-[5vw] sm:px-0 sm:py-5 relative">
         <button
           onClick={slidePrev}
           className="hidden sm:block absolute top-1/2 -translate-y-1/2 bg-white p-2 rounded-full z-10"
@@ -56,14 +62,13 @@ const Video = () => {
             />
           </svg>
         </button>
-        <div className="px-5">
+        <div className="sm:px-5">
           <Swiper
             spaceBetween={30}
             slidesPerView={"auto"}
             className="mySwiper"
             pagination={{
               clickable: true,
-              el: ".swiper-pagination",
             }}
             navigation={{
               prevEl: ".swiper-button-prev",
@@ -72,30 +77,29 @@ const Video = () => {
             modules={[Navigation, Pagination, EffectCoverflow]}
             ref={swiperRef}
             breakpoints={{
-              200: {
-                slidesPerView: 1,
-              },
-              450: {
-                slidesPerView: 2,
-              },
-              640: {
+              0: {
                 slidesPerView: 3,
               },
-              1024: {
+              800: {
+                slidesPerView: 3,
+              },
+              1100: {
                 slidesPerView: 4,
               },
-              1280: {
+              1400: {
                 slidesPerView: 5,
               },
-              1450: {
+              1510: {
                 slidesPerView: 6,
               },
             }}
           >
             {videoTiktok.map((item) => (
               <SwiperSlide key={item.id}>
-                <div className="bg-white w-48 h-80 rounded-lg shadow-lg">
-                  <p className="p-4">ExploreKuliner</p>
+                <div className="bg-white w-[27vw] h-[45vw] md:w-48 md:h-80 rounded-lg shadow-lg">
+                  <p className="p-[2.5vw] sm:p-4 text-[3vw] sm:text-base lg:text-lg">
+                    ExploreKuliner
+                  </p>
                 </div>
               </SwiperSlide>
             ))}
@@ -121,7 +125,7 @@ const Video = () => {
           </svg>
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 

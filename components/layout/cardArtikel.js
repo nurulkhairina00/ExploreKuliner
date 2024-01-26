@@ -23,7 +23,9 @@ const cardArtikel = (props) => {
         <p className="text-gray text-[3vw] sm:text-[10px] lg:text-xs line-clamp-2">
           {data.deskripsi}
         </p>
-        <p className="text-black font-medium text-xs pt-5">By {data.author}</p>
+        <p className="text-black font-medium text-[3vw] sm:text-xs pt-5">
+          By {data.author}
+        </p>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Hero from "../components/beranda/hero";
 import Kategori from "../components/beranda/kategori";
-// import Video from "../components/beranda/video";
+import Video from "../components/beranda/video";
 import RestoranPopuler from "../components/beranda/restoranPopuler";
 import RestoranBaru from "../components/beranda/restoranBaru";
 import RestoranTerdekat from "../components/beranda/restoranTerdekat";
@@ -17,7 +17,7 @@ export default function Home() {
       <div className="bg-primary">
         <Hero />
         <Kategori />
-        {/* <Video /> */}
+        <Video />
         <RestoranPopuler />
         <RestoranBaru />
         <RestoranTerdekat />

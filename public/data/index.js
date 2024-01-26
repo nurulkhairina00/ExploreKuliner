@@ -101,24 +101,24 @@ export const kategoriRestoran = [
     rating: 4.5,
     ulasan: 211,
   },
-  // {
-  //   id: 7,
-  //   image: "/images/populer.jpg",
-  //   jarak: "0.5 km",
-  //   nama_resto: "Seribu Rasa Menteng",
-  //   alamat: "Menteng, Jakarta Pusat",
-  //   rating: 4.5,
-  //   ulasan: 211,
-  // },
-  // {
-  //   id: 8,
-  //   image: "/images/populer.jpg",
-  //   jarak: "0.5 km",
-  //   nama_resto: "Seribu Rasa Menteng",
-  //   alamat: "Menteng, Jakarta Pusat",
-  //   rating: 4.5,
-  //   ulasan: 211,
-  // },
+  {
+    id: 7,
+    image: "/images/populer.jpg",
+    jarak: "0.5 km",
+    nama_resto: "Seribu Rasa Menteng",
+    alamat: "Menteng, Jakarta Pusat",
+    rating: 4.5,
+    ulasan: 211,
+  },
+  {
+    id: 8,
+    image: "/images/populer.jpg",
+    jarak: "0.5 km",
+    nama_resto: "Seribu Rasa Menteng",
+    alamat: "Menteng, Jakarta Pusat",
+    rating: 4.5,
+    ulasan: 211,
+  },
 ];
 
 export const artikel = [
