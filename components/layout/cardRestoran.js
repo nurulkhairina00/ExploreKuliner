@@ -5,7 +5,7 @@ const cardRestoran = (props) => {
   const { data } = props;
 
   return (
-    <div className="text-black bg-white rounded-[2vw] sm:rounded-xl shadow-lg">
+    <div className="text-black bg-white rounded-[2vw] sm:rounded-xl shadow-lg cursor-pointer">
       <div className="relative overflow-hidden rounded-t-[2vw] rounded-b-none sm:rounded-t-lg sm:rounded-b-none">
         <img
           src={data.image}
@@ -28,10 +28,10 @@ const cardRestoran = (props) => {
         {data.rating}
       </div>
       <div className="p-[2.5vw] sm:p-4">
-        <p className="pb-[3vw] text-[3vw] sm:pb-2 sm:text-xs lg:text-sm">
+        <p className="pb-[3vw] text-[3vw] sm:pb-2 sm:text-sm lg:text-base">
           {data.jarak}
         </p>
-        <h6 className="pb-[2vw] text-[3.5vw] sm:pb-2 sm:text-base lg:text-lg font-semibold">
+        <h6 className="pb-[2vw] text-[3.5vw] sm:pb-2 sm:text-lg font-semibold">
           {data.nama_resto}
         </h6>
         <div className="flex">
@@ -46,7 +46,7 @@ const cardRestoran = (props) => {
               d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"
             />
           </svg>
-          <p className="text-gray text-[3vw] sm:text-xs lg:text-sm">
+          <p className="text-gray text-[3vw] sm:text-sm lg:text-base">
             {data.alamat}
           </p>
         </div>

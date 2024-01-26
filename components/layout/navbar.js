@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ModalOption from "../modalOption";
+import Link from "next/link";
 
 const Navbar = () => {
   const [showModal, setShowModal] = useState(false);
@@ -13,7 +14,11 @@ const Navbar = () => {
   return (
     <nav className="w-full bg-white fixed shadow-md p-[5vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-7 z-10">
       <div className="flex justify-between">
-        <h6 className="text-xl text-secondary font-bold">ExploreKuliner</h6>
+        <Link href="/">
+          <h6 className=" text-[4vw] sm:text-xl text-secondary font-bold cursor-pointer">
+            ExploreKuliner
+          </h6>
+        </Link>
 
         {/* Tampilan Masuk Tablet dan Desktop */}
         <div className="flex">

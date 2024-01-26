@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, EffectCoverflow } from "swiper/modules";
@@ -96,10 +97,18 @@ const Video = () => {
           >
             {videoTiktok.map((item) => (
               <SwiperSlide key={item.id}>
-                <div className="bg-white w-[27vw] h-[45vw] md:w-48 md:h-80 rounded-lg shadow-lg">
-                  <p className="p-[2.5vw] sm:p-4 text-[3vw] sm:text-base lg:text-lg">
-                    ExploreKuliner
-                  </p>
+                <div className="group w-[27vw] h-[45vw] md:w-44 md:h-80 relative cursor-pointer overflow-hidden transition-shadow rounded-[2vw] sm:rounded-lg shadow-lg hover:shadow-xl ">
+                  <img
+                    className="h-full w-full object-cover"
+                    src="/images/bg-register.jpg"
+                    alt=""
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+                  <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center transition-all duration-500 group-hover:translate-y-28">
+                    <h1 className="text-[2.5vw] sm:text-base font-bold text-white">
+                      Explore Kuliner
+                    </h1>
+                  </div>
                 </div>
               </SwiperSlide>
             ))}

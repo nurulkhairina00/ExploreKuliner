@@ -48,15 +48,15 @@ const Kategori = () => {
       <div className="flex flex-wrap justify-center items-center gap-[3.5vw] sm:hidden">
         {data.map((item) => (
           <div
-            className="w-[15vw] h-[14vw] pt-[7vw] pb-[2.5vw] mb-[9vw] bg-white rounded-xl shadow-lg relative"
+            className="w-[15vw] h-[14vw] pt-[7vw] pb-[2.5vw] mb-[9vw] bg-white rounded-xl shadow-lg relative cursor-pointer"
             key={item.id}
           >
             <img
               src={item.image}
               alt={item.nama.split(" ").join("-")}
-              className="w-[12vw] h-[12vw] sm:w-14 sm:h-14 rounded-full object-cover absolute -top-1/2 left-1/2 -translate-x-1/2"
+              className="w-[12vw] h-[12vw] sm:w-14 sm:h-14 rounded-full object-cover absolute -top-1/2 left-1/2 -translate-x-1/2 cursor-pointer"
             />
-            <p className="text-black text-center font-bold text-[1.7vw] sm:pt-1 sm:text-[10px] cursor-pointer">
+            <p className="text-black text-center font-bold text-[1.7vw] sm:pt-1 sm:text-[10px]">
               {item.nama}
             </p>
           </div>
@@ -122,7 +122,7 @@ const Kategori = () => {
                     alt={item.nama.split(" ").join("-")}
                     className="rounded-full w-[7rem] h-[7rem] object-cover absolute -top-1/2 left-1/2 -translate-x-1/2"
                   />
-                  <p className=" text-base text-black pt-12 text-center font-semibold cursor-pointer">
+                  <p className="text-base text-black pt-12 text-center font-semibold cursor-pointer">
                     {item.nama}
                   </p>
                 </div>

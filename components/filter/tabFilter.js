@@ -2,7 +2,7 @@ import React from "react";
 
 const TabFilter = () => {
   return (
-    <div className="w-1/4 bg-white p-4 me-4 rounded-lg shadow-lg hidden lg:block">
+    <div className="w-1/4 bg-white p-4 me-4 rounded-lg shadow-lg hidden xl:block relative">
       <div className="flex justify-between items-center pb-3">
         <h6 className="text-balck text-xl font-medium">Filter</h6>
         <p className="text-red text-xs font-semibold cursor-pointer">
@@ -13,12 +13,12 @@ const TabFilter = () => {
       {/* Rating Resto */}
       <hr className="text-gray" />
       <div className="py-6">
-        <p className="text-gray text-sm font-semibold pb-4">Rating Resto</p>
+        <p className="text-gray text-base font-semibold pb-4">Rating Resto</p>
         <div className="flex flex-wrap gap-3">
-          <button className="border-gray border-[1px] px-3 py-1 text-xs rounded-full">
+          <button className="border-gray border-[1px] px-3 py-1 text-sm rounded-full">
             Semua
           </button>
-          <button className="flex items-center border-gray border-[1px] px-3 py-1 text-xs rounded-full">
+          <button className="flex items-center border-gray border-[1px] px-3 py-1 text-sm rounded-full">
             <svg
               width="15"
               height="14"
@@ -33,7 +33,7 @@ const TabFilter = () => {
             </svg>
             <span className="ms-2">1</span>
           </button>
-          <button className="flex items-center border-gray border-[1px] px-3 py-1 text-xs rounded-full">
+          <button className="flex items-center border-gray border-[1px] px-3 py-1 text-sm rounded-full">
             <svg
               width="15"
               height="14"
@@ -48,7 +48,7 @@ const TabFilter = () => {
             </svg>
             <span className="ms-2">2</span>
           </button>
-          <button className="flex items-center border-gray border-[1px] px-3 py-1 text-xs rounded-full">
+          <button className="flex items-center border-gray border-[1px] px-3 py-1 text-sm rounded-full">
             <svg
               width="15"
               height="14"
@@ -63,7 +63,7 @@ const TabFilter = () => {
             </svg>
             <span className="ms-2">3</span>
           </button>
-          <button className="flex items-center border-gray border-[1px] px-3 py-1 text-xs rounded-full">
+          <button className="flex items-center border-gray border-[1px] px-3 py-1 text-sm rounded-full">
             <svg
               width="15"
               height="14"
@@ -78,7 +78,7 @@ const TabFilter = () => {
             </svg>
             <span className="ms-2">4</span>
           </button>
-          <button className="flex items-center border-gray border-[1px] px-3 py-1 text-xs rounded-full">
+          <button className="flex items-center border-gray border-[1px] px-3 py-1 text-sm rounded-full">
             <svg
               width="15"
               height="14"
@@ -99,24 +99,24 @@ const TabFilter = () => {
       {/* Jarak */}
       <hr className="text-gray" />
       <div className="py-6">
-        <p className="text-gray text-sm font-semibold pb-4">Jarak</p>
+        <p className="text-gray text-base font-semibold pb-4">Jarak</p>
         <div className="flex flex-wrap gap-3">
-          <button className="border-gray border-[1px] px-3 py-1 text-xs rounded-full">
+          <button className="border-gray border-[1px] px-3 py-1 text-sm rounded-full">
             Semua
           </button>
-          <button className="border-gray border-[1px] px-3 py-1 text-xs rounded-full">
+          <button className="border-gray border-[1px] px-3 py-1 text-sm rounded-full">
             0-3 km
           </button>
-          <button className="border-gray border-[1px] px-3 py-1 text-xs rounded-full">
+          <button className="border-gray border-[1px] px-3 py-1 text-sm rounded-full">
             3-5 km
           </button>
-          <button className="border-gray border-[1px] px-3 py-1 text-xs rounded-full">
+          <button className="border-gray border-[1px] px-3 py-1 text-sm rounded-full">
             5-10 km
           </button>
-          <button className="border-gray border-[1px] px-3 py-1 text-xs rounded-full">
+          <button className="border-gray border-[1px] px-3 py-1 text-sm rounded-full">
             10-15 km
           </button>
-          <button className="border-gray border-[1px] px-3 py-1 text-xs rounded-full">
+          <button className="border-gray border-[1px] px-3 py-1 text-sm rounded-full">
             {`> 15 km`}
           </button>
         </div>
@@ -125,7 +125,7 @@ const TabFilter = () => {
       {/* Rentang Harga */}
       <hr className="text-gray" />
       <div className="py-6">
-        <p className="text-gray text-sm font-semibold pb-4">Rentang Harga</p>
+        <p className="text-gray text-base font-semibold pb-4">Rentang Harga</p>
         <div className="flex items-center pb-3">
           <input
             type="checkbox"
@@ -134,7 +134,7 @@ const TabFilter = () => {
             value="$"
             className="rounded-3 me-2"
           />
-          <label htmlFor="$" className="text-xs">
+          <label htmlFor="$" className="text-sm">
             Dibawah Rp. 20.000
           </label>
         </div>
@@ -146,7 +146,7 @@ const TabFilter = () => {
             value="$$"
             className="rounded-3 me-2"
           />
-          <label htmlFor="$$" className="text-xs">
+          <label htmlFor="$$" className="text-sm">
             Rp. 20.000 sampai Rp.40.000
           </label>
         </div>
@@ -158,7 +158,7 @@ const TabFilter = () => {
             value="$$$"
             className="rounded-3 me-2"
           />
-          <label htmlFor="$$$" className="text-xs">
+          <label htmlFor="$$$" className="text-sm">
             Rp. 40.000 sampai Rp.100.000
           </label>
         </div>
@@ -170,7 +170,7 @@ const TabFilter = () => {
             value="$$$$"
             className="rounded-3 me-2"
           />
-          <label htmlFor="$$$$" className="text-xs">
+          <label htmlFor="$$$$" className="text-sm">
             Diatas Rp.100.000
           </label>
         </div>
@@ -179,7 +179,7 @@ const TabFilter = () => {
       {/* Lainnya */}
       <hr className="text-gray" />
       <div className="py-6">
-        <p className="text-gray text-sm font-semibold pb-4">Lainnya</p>
+        <p className="text-gray text-base font-semibold pb-4">Lainnya</p>
         <div className="flex items-center pb-3">
           <input
             type="checkbox"
@@ -188,7 +188,7 @@ const TabFilter = () => {
             value="bukasekarang"
             className="rounded-3 me-2"
           />
-          <label htmlFor="bukasekarang" className="text-xs">
+          <label htmlFor="bukasekarang" className="text-sm">
             Buka Sekarang
           </label>
         </div>
@@ -200,16 +200,18 @@ const TabFilter = () => {
             value="pickup"
             className="rounded-3 me-2"
           />
-          <label htmlFor="pickup" className="text-xs">
+          <label htmlFor="pickup" className="text-sm">
             Pickup Only
           </label>
         </div>
       </div>
 
       {/* Button Terapkan */}
-      <button className="w-full bg-secondary py-2 rounded-full text-primary my-5">
-        Terapkan
-      </button>
+      <div className="px-4 absolute bottom-5 inset-x-0">
+        <button className="w-full bg-secondary py-2 rounded-full text-primary">
+          Terapkan
+        </button>
+      </div>
     </div>
   );
 };
