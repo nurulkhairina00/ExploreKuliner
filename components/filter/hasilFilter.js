@@ -5,8 +5,8 @@ import Rating from "./rating";
 
 const HasilFilter = () => {
   return (
-    <div className=" w-3/4 px-4 bg-black over">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 bg-white">
+    <div className=" w-3/4 px-4 relative">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {kategoriRestoran.map((item) => (
           <div className="flex flex-row shadow-lg rounded-lg" key={item.id}>
             <div className="w-1/3 relative shadow-lg rounded-lg">
@@ -49,6 +49,32 @@ const HasilFilter = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="w-full bg-white p-5 rounded-lg absolute bottom-0 inset-x-0 flex justify-between items-center">
+        <button className="px-6 py-2 border-secondary border-2 text-secondary text-lg rounded-xl">
+          Sebelumnya
+        </button>
+        <div className="flex gap-3">
+          <button className="px-4 py-2 text-lg rounded-lg text-black font-semibold">
+            1
+          </button>
+          <button className="px-4 py-2 text-lg rounded-lg text-black font-semibold">
+            2
+          </button>
+          <button className="px-4 py-2 text-lg rounded-lg text-black font-semibold">
+            3
+          </button>
+          <button className="px-4 py-2 text-lg rounded-lg text-black font-semibold">
+            4
+          </button>
+          <button className="px-4 py-2 text-lg rounded-lg text-black font-semibold">
+            5
+          </button>
+        </div>
+        <button className="px-6 py-2 bg-secondary text-primary text-lg rounded-xl">
+          Selanjutnya
+        </button>
       </div>
     </div>
   );

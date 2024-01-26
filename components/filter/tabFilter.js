@@ -207,7 +207,7 @@ const TabFilter = () => {
       </div>
 
       {/* Button Terapkan */}
-      <button className="w-full bg-secondary py-1 rounded-full text-primary my-5">
+      <button className="w-full bg-secondary py-2 rounded-full text-primary my-5">
         Terapkan
       </button>
     </div>
