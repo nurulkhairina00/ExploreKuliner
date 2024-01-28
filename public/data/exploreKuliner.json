@@ -149,5 +149,46 @@
             "deskripsi": "Saat ini, ngopi menjadi salah aktivitas wajib bagi sebagian besar masyarakat indonesia. Selain agar tubuh  lebih semangat dalam melakukan aktivitas",
             "author": "Nurul Khairina"
         }
-    ]
+    ],
+    "detailRestoran": {
+        "nama_resto": "Seribu Rasa Menteng",
+        "rating": "4.5",
+        "ulasan": "1000 Ulasan",
+        "jenis_makanan": "Asia, Indonesia",
+        "deskripsi": "Terinspirasi oleh kekayaan kuliner daerah, Seribu Rasa menawarkan hidangan lokal dan makanan laut lezat yang mewujudkan kekayaan cita rasa Asia Tenggara dan Indonesia. Setiap resep tradisional disiapkan dengan bahan-bahan segar dan disempurnakan oleh keterampilan kuliner Chef kami, membawa pelanggan kami ke perjalanan gastronomi “Seribu Rasa” yang menakjubkan.",
+        "alamat": "Jln. Haji Agus Salim No. 128, Jakarta.",
+        "telephone": "+62 21 7385726",
+        "email": "seriburasa@gmail.com",
+        "website": "Seriburasa.com",
+        "jamOperasional": [
+            {
+                "hari": "Senin",
+                "jam": "10.00 - 22.00 Wib"
+            },
+            {
+                "hari": "Selasa",
+                "jam": "10.00 - 22.00 Wib"
+            },
+            {
+                "hari": "Rabu",
+                "jam": "10.00 - 22.00 Wib"
+            },
+            {
+                "hari": "Kamis",
+                "jam": "10.00 - 22.00 Wib"
+            },
+            {
+                "hari": "Jum'at",
+                "jam": "10.00 - 22.00 Wib"
+            },
+            {
+                "hari": "Sabtu",
+                "jam": "10.00 - 22.00 Wib"
+            },
+            {
+                "hari": "Minggu",
+                "jam": "10.00 - 22.00 Wib"
+            }
+        ]
+    }
 }

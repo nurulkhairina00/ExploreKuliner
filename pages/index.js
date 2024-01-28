@@ -5,7 +5,7 @@ import Video from "../components/beranda/video";
 import RestoranPopuler from "../components/beranda/restoranPopuler";
 import RestoranBaru from "../components/beranda/restoranBaru";
 import RestoranTerdekat from "../components/beranda/restoranTerdekat";
-import Article from "../components/beranda/article";
+import Article from "../components/layout/article";
 import Footer from "../components/layout/footer";
 
 export default function Home() {
