@@ -1,12 +1,12 @@
 import Head from "next/head";
-import Hero from "../components/beranda/hero";
-import Kategori from "../components/beranda/kategori";
-import Video from "../components/beranda/video";
-import RestoranPopuler from "../components/beranda/restoranPopuler";
-import RestoranBaru from "../components/beranda/restoranBaru";
-import RestoranTerdekat from "../components/beranda/restoranTerdekat";
-import Article from "../components/layout/article";
-import Footer from "../components/layout/footer";
+import Hero from "./components/beranda/Hero";
+import Kategori from "./components/beranda/Kategori";
+import Video from "./components/beranda/ListVideo";
+import RestoranPopuler from "./components/beranda/RestoranPopuler";
+import RestoranBaru from "./components/beranda/RestoranBaru";
+import RestoranTerdekat from "./components/beranda/RestoranTerdekat";
+import Article from "./components/layout/ListArtikel";
+import Footer from "./components/layout/Footer";
 
 export default function Home() {
   return (

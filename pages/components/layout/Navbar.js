@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ModalOption from "../layout/modalOption";
+import ModalOption from "./ModalOption";
 import Link from "next/link";
 
 const Navbar = () => {

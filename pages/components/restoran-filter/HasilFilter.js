@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
-import { kategoriRestoran } from "../../public/data";
-import Rating from "./rating";
-import Pagination from "./pagination";
+import { kategoriRestoran } from "../../../public/data";
+import Rating from "../layout/Rating";
+import Pagination from "./Pagination";
 
 const HasilFilter = () => {
   return (

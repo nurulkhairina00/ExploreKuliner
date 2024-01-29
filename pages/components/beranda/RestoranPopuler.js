@@ -1,13 +1,13 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import { kategoriRestoran } from "../../public/data";
-import CardResto from "../layout/cardRestoran";
+import { kategoriRestoran } from "../../../public/data";
+import CardRestoran from "../layout/CardRestoran";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const RestoranBaru = () => {
+const RestoranPopuler = () => {
   const swiperRef = useRef();
 
   const slidePrev = () => {
@@ -21,32 +21,22 @@ const RestoranBaru = () => {
   };
 
   return (
-    <section className="sm:flex sm:px-8 md:px-16 lg:px-28 xl:px-36 sm:py-12 sm:p-0 bg-secondary">
-      {/* Tampilan Judul Mobile */}
-      <div className="sm:hidden p-[5vw]">
-        <h2 className="text-primary font-bold text-[6vw] sm:text-3xl pb-[2vw] sm:pb-5">
-          Restoran Baru
+    <section className="sm:px-8 md:px-16 lg:px-28 xl:px-36 sm:py-12 sm:p-0">
+      {/* Judul Restoran Populer*/}
+      <div className="p-[5vw] text-black sm:p-0">
+        <h2 className=" font-bold text-[6vw] sm:text-3xl pb-[2vw] sm:pb-5">
+          Restoran Populer
         </h2>
-        <p className="text-[3vw] text-primary font-normal pb-[2vw] sm:text-lg sm:pb-5">
-          Restoran baru buka, ayok datangi resto yang kamu mau.
+        <p className="font-normal text-[3vw] sm:text-lg pb-[2vw] sm:pb-5">
+          Resto yang sering dibicarkan di areamu, orang-orang pada makan disini.
         </p>
       </div>
 
-      {/* Tampilan Judul Tablet dan Laptop */}
-      <div className="w-1/4 hidden sm:block p-4">
-        <h2 className="text-primary font-bold text-[6vw] sm:text-3xl pb-[2vw] sm:pb-5">
-          Restoran Baru
-        </h2>
-        <p className="text-[3vw] text-primary font-normal pb-[2vw] sm:text-lg sm:pb-5">
-          Restoran baru buka, ayok datangi resto yang kamu mau.
-        </p>
-      </div>
-
-      {/* Card Restoran Baru */}
-      <div className="w-full sm:w-3/4 ps-[5vw] sm:ps-0 sm:py-5 relative">
+      {/* Card Restoran Populer */}
+      <div className="ps-[5vw] sm:ps-0 sm:py-5 relative">
         <button
           onClick={slidePrev}
-          className="hidden sm:block absolute bottom-3 bg-white p-2 rounded-full z-10"
+          className="hidden sm:block absolute top-1/2 -translate-y-1/2 bg-white p-2 rounded-full z-10"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +55,7 @@ const RestoranBaru = () => {
         </button>
         <div className="sm:px-5">
           <Swiper
-            slidesPerView={3}
+            slidesPerView={4}
             spaceBetween={30}
             className="mySwiper"
             pagination={{
@@ -85,17 +75,17 @@ const RestoranBaru = () => {
               641: {
                 slidesPerView: 2,
               },
-              1000: {
-                slidesPerView: 2,
+              900: {
+                slidesPerView: 3,
               },
               1250: {
-                slidesPerView: 3,
+                slidesPerView: 4,
               },
             }}
           >
             {kategoriRestoran.map((item) => (
               <SwiperSlide key={item.id}>
-                <CardResto data={item} />
+                <CardRestoran data={item} />
               </SwiperSlide>
             ))}
           </Swiper>
@@ -103,7 +93,7 @@ const RestoranBaru = () => {
 
         <button
           onClick={slideNext}
-          className="hidden sm:block absolute bottom-3 right-0 bg-white p-2 rounded-full z-10"
+          className="hidden sm:block absolute top-1/2 -translate-y-1/2 right-0 bg-white p-2 rounded-full z-10"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -125,4 +115,4 @@ const RestoranBaru = () => {
   );
 };
 
-export default RestoranBaru;
+export default RestoranPopuler;

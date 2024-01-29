@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import ModalOption from "../layout/modalOption";
+import ModalOption from "../layout/ModalOption";
 
 const Hero = () => {
   const [showModal, setShowModal] = useState(false);

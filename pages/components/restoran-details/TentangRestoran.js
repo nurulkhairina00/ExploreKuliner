@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import FotoRestoran from "./fotoRestoran";
-import DeskripsiRestoran from "./deskripsiRestoran";
+import FotoRestoran from "./FotoRestoran";
+import DeskripsiRestoran from "./DeskripsiRestoran";
 
 const tentang = () => {
   const [data, setData] = useState({});

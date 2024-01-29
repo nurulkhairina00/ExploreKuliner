@@ -3,8 +3,8 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { useDispatch, useSelector } from "react-redux";
-import { getListRestoran } from "../../pages/actions/restoranAction";
-import CardResto from "../layout/cardRestoran";
+import { getListRestoran } from "../../actions/restoranAction";
+import CardRestoran from "../layout/CardRestoran";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -106,7 +106,7 @@ const RestoranTerdekat = () => {
             >
               {getListRestoranResult?.map((item) => (
                 <SwiperSlide key={item.id}>
-                  <CardResto data={item} />
+                  <CardRestoran data={item} />
                 </SwiperSlide>
               ))}
             </Swiper>

@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Rating from "../restoran-filter/rating";
+import Rating from "../layout/Rating";
 
 const DeskripsiRestoran = (props) => {
   const { data } = props;

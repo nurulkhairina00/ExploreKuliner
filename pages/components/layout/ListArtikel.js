@@ -3,13 +3,13 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import { getListArtikel } from "../../pages/actions/artikelAction";
-import CardArtikel from "./cardArtikel";
+import { getListArtikel } from "../../actions/artikelAction";
+import CardArtikel from "./CardArtikel";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const article = () => {
+const ListArtikel = () => {
   const { getListArtikelResult, getListArtikelLoading, getListArtikelError } =
     useSelector((state) => state.artikelReducer);
 
@@ -83,4 +83,4 @@ const article = () => {
   );
 };
 
-export default article;
+export default ListArtikel;

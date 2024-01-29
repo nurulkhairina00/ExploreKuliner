@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "../../components/layout/navbar";
-import Filter from "../../components/restoran-filter/filterRestoran";
-import Video from "../../components/beranda/video";
-import Artikel from "../../components/layout/article";
-import Footer from "../../components/layout/footer";
+import Navbar from "../components/layout/Navbar";
+import Filter from "../components/restoran-filter/FilterRestoran";
+import Video from "../components/beranda/ListVideo";
+import Artikel from "../components/layout/ListArtikel";
+import Footer from "../components/layout/Footer";
 
 const Index = () => {
   return (
