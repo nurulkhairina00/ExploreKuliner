@@ -1,17 +1,20 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import FotoRestoran from "./FotoRestoran";
 import DeskripsiRestoran from "./DeskripsiRestoran";
+import TabMenu from "./TabMenu";
+import TabUlasan from "./TabUlasan";
 
 const tentang = () => {
   const [data, setData] = useState({});
+  const [activeTab, setActiveTab] = useState("menu");
 
   const getDetailRestoran = async () => {
     await axios
       .get(`/data/exploreKuliner.json`)
       .then((res) => {
-        console.log(res.data.detailRestoran);
         setData(res.data.detailRestoran);
       })
       .catch((error) => console.error(error));
@@ -30,18 +33,34 @@ const tentang = () => {
           <div className="flex mb-4">
             <button
               id="menu"
-              className="bg-secondary px-4 py-2 text-primary rounded-s-lg w-full"
+              className={`px-4 py-2  rounded-s-lg w-full font-semibold ${
+                activeTab === "menu"
+                  ? "bg-secondary text-primary"
+                  : "bg-white text-black"
+              }`}
+              onClick={() => setActiveTab("menu")}
             >
               Menu
             </button>
             <button
               id="ulasan"
-              className="bg-secondary px-4 py-2 text-primary rounded-e-lg w-full"
+              className={` px-4 py-2  rounded-e-lg w-full font-semibold ${
+                activeTab === "ulasan"
+                  ? "bg-secondary text-primary"
+                  : "bg-white text-black"
+              }`}
+              onClick={() => setActiveTab("ulasan")}
             >
               Ulasan
             </button>
           </div>
+          {activeTab === "menu" ? (
+            <TabMenu data={data} />
+          ) : (
+            <TabUlasan data={data} />
+          )}
         </div>
+        <div className="w-1/4"></div>
       </div>
     </section>
   );

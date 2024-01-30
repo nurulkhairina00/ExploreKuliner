@@ -189,6 +189,100 @@
                 "hari": "Minggu",
                 "jam": "10.00 - 22.00 Wib"
             }
+        ],
+        "menu": [
+            {
+                "nama_menu": "Chicken Satay Nusantara",
+                "image": "/images/chicken-satay-nusantara.jpeg",
+                "harga": 65000
+            },
+            {
+                "nama_menu": "Stuffed Tofu Parahtangan",
+                "image": "/images/chicken-satay-nusantara.jpeg",
+                "harga": 75000
+            },
+            {
+                "nama_menu": "Oriental Seafood Ckawe",
+                "image": "/images/chicken-satay-nusantara.jpeg",
+                "harga": 60000
+            },
+            {
+                "nama_menu": "Hokkien Spring Roll",
+                "image": "/images/chicken-satay-nusantara.jpeg",
+                "harga": 50000
+            },
+            {
+                "nama_menu": "Beef Satay kotagede",
+                "image": "/images/chicken-satay-nusantara.jpeg",
+                "harga": 65000
+            },
+            {
+                "nama_menu": "Udang Gulung",
+                "image": "/images/chicken-satay-nusantara.jpeg",
+                "harga": 65000
+            },
+            {
+                "nama_menu": "Chicken Satay Nusantara",
+                "image": "/images/chicken-satay-nusantara.jpeg",
+                "harga": 65000
+            },
+            {
+                "nama_menu": "Beef Satay kotagede",
+                "image": "/images/chicken-satay-nusantara.jpeg",
+                "harga": 65000
+            },
+            {
+                "nama_menu": "Chicken Satay Nusantara",
+                "image": "/images/chicken-satay-nusantara.jpeg",
+                "harga": 65000
+            },
+            {
+                "nama_menu": "Beef Satay kotagede",
+                "image": "/images/chicken-satay-nusantara.jpeg",
+                "harga": 65000
+            }
+        ],
+        "ulasanCustomer": [
+            {
+                "nama": "Nurul Khairina Surbakti",
+                "rating": 4,
+                "image": "/images/kategori.jpg",
+                "komentar": "Tempatnya sangat rekomendasi untuk wfh atau nugas.",
+                "pesanan": "Stuffed Tofu Parahtangan",
+                "created_date": "2024-01-30",
+                "bagus": 5,
+                "buruk": 2
+            },
+            {
+                "nama": "Iqbal Alhuda",
+                "rating": 4.5,
+                "image": "/images/kategori.jpg",
+                "komentar": "Cocok banget buat nongkrong bareng teman atau sahabat.",
+                "pesanan": "Hokkien Spring Roll",
+                "created_date": "2024-01-31",
+                "bagus": 0,
+                "buruk": 0
+            },
+            {
+                "nama": "Herbowo Prasetyo",
+                "rating": 4.5,
+                "image": "/images/kategori.jpg",
+                "komentar": "Interiornya sangat bagus, variant makanannya sangat banyak dan masakannya enak.",
+                "pesanan": "Udang Gulung",
+                "created_date": "2024-01-31",
+                "bagus": 2,
+                "buruk": 0
+            },
+            {
+                "nama": "Ariyandi",
+                "rating": 4,
+                "image": "/images/kategori.jpg",
+                "komentar": "Masakan enak betul",
+                "pesanan": "Oriental Seafood Ckawe",
+                "created_date": "2024-01-31",
+                "bagus": 4,
+                "buruk": 0
+            }
         ]
     }
 }

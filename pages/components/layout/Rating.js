@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const Rating = (props) => {
-  const { initialRating } = props;
+  const { initialRating, display } = props;
   const [rating, setRating] = useState(Number(initialRating));
 
   const roundedRating = Math.round(rating * 2) / 2;
@@ -29,7 +29,9 @@ const Rating = (props) => {
           />
         </svg>
       ))}
-      <span className="text-[3vw] sm:text-xs">{rating}</span>
+      {display !== "none" && (
+        <span className="text-[3vw] sm:text-xs">{rating}</span>
+      )}
     </div>
   );
 };
