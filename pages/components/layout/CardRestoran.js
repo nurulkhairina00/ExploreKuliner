@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 
 const cardRestoran = (props) => {
-  const { data } = props;
+  const { data, jenis_makanan } = props;
 
   return (
     <Link href="/restoran-detail">
@@ -31,7 +31,12 @@ const cardRestoran = (props) => {
         </div>
         <div className="p-[2.5vw] sm:p-4">
           <p className="pb-[3vw] text-[3vw] sm:pb-2 sm:text-sm lg:text-base">
-            {data.jarak}
+            {data.jarak}{" "}
+            {jenis_makanan === "none" && (
+              <span className="text-secondary font-semibold ms-2">
+                {data.jenis_makanan}
+              </span>
+            )}
           </p>
           <h6 className="pb-[2vw] text-[3.5vw] sm:pb-2 sm:text-lg font-semibold">
             {data.nama_resto}

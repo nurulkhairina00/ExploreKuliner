@@ -1,13 +1,14 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import { kategoriRestoran } from "../../../public/data";
+import axios from "axios";
 import CardRestoran from "../layout/CardRestoran";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const RestoranBaru = () => {
+  const [data, setData] = useState([]);
   const swiperRef = useRef();
 
   const slidePrev = () => {
@@ -19,6 +20,19 @@ const RestoranBaru = () => {
     if (swiperRef.current && swiperRef.current.swiper)
       swiperRef.current.swiper.slideNext();
   };
+
+  const getDataRestoran = async () => {
+    await axios
+      .get(`/data/exploreKuliner.json`)
+      .then((res) => {
+        setData(res.data.restoran);
+      })
+      .catch((error) => console.error(error));
+  };
+
+  useEffect(() => {
+    getDataRestoran();
+  }, []);
 
   return (
     <section className="sm:flex sm:px-8 md:px-16 lg:px-28 xl:px-36 sm:py-12 sm:p-0 bg-secondary">
@@ -93,7 +107,7 @@ const RestoranBaru = () => {
               },
             }}
           >
-            {kategoriRestoran.map((item) => (
+            {data.map((item) => (
               <SwiperSlide key={item.id}>
                 <CardRestoran data={item} />
               </SwiperSlide>

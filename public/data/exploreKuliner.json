@@ -53,7 +53,8 @@
             "jarak": "0.5 km",
             "nama_resto": "Seribu Rasa Menteng",
             "alamat": "Menteng, Jakarta Pusat",
-            "rating": 4.5
+            "rating": 4.5,
+            "jenis_makanan": "Asia"
         },
         {
             "id": 2,
@@ -61,7 +62,8 @@
             "jarak": "0.5 km",
             "nama_resto": "Cabe Rempah Resto",
             "alamat": "Menteng, Jakarta Pusat",
-            "rating": 4.5
+            "rating": 4.5,
+            "jenis_makanan": "Asia"
         },
         {
             "id": 3,
@@ -69,7 +71,8 @@
             "jarak": "0.5 km",
             "nama_resto": "Sate Senayan Tebet",
             "alamat": "Tebet, Jakarta Selatan",
-            "rating": 4.5
+            "rating": 4.5,
+            "jenis_makanan": "Asia"
         },
         {
             "id": 4,
@@ -77,7 +80,8 @@
             "jarak": "0.5 km",
             "nama_resto": "Bakmi Gang Kelinci",
             "alamat": "Pasar Baru, Jakarta Pusat",
-            "rating": 4.5
+            "rating": 4.5,
+            "jenis_makanan": "Asia"
         },
         {
             "id": 5,
@@ -85,7 +89,8 @@
             "jarak": "0.5 km",
             "nama_resto": "Seribu Rasa Menteng",
             "alamat": "Menteng, Jakarta Pusat",
-            "rating": 4.5
+            "rating": 4.5,
+            "jenis_makanan": "Asia"
         },
         {
             "id": 6,
@@ -93,7 +98,8 @@
             "jarak": "0.5 km",
             "nama_resto": "Seribu Rasa Menteng",
             "alamat": "Menteng, Jakarta Pusat",
-            "rating": 4.5
+            "rating": 4.5,
+            "jenis_makanan": "Asia"
         },
         {
             "id": 7,
@@ -101,7 +107,8 @@
             "jarak": "0.5 km",
             "nama_resto": "Seribu Rasa Menteng",
             "alamat": "Menteng, Jakarta Pusat",
-            "rating": 4.5
+            "rating": 4.5,
+            "jenis_makanan": "Asia"
         },
         {
             "id": 8,
@@ -109,7 +116,8 @@
             "jarak": "0.5 km",
             "nama_resto": "Seribu Rasa Menteng",
             "alamat": "Menteng, Jakarta Pusat",
-            "rating": 4.5
+            "rating": 4.5,
+            "jenis_makanan": "Asia"
         }
     ],
     "artikel": [
@@ -152,7 +160,9 @@
     ],
     "detailRestoran": {
         "nama_resto": "Seribu Rasa Menteng",
+        "image": "/images/populer.jpg",
         "rating": "4.5",
+        "jarak": "0.5 km",
         "ulasan": "1000 Ulasan",
         "jenis_makanan": "Asia, Indonesia",
         "deskripsi": "Terinspirasi oleh kekayaan kuliner daerah, Seribu Rasa menawarkan hidangan lokal dan makanan laut lezat yang mewujudkan kekayaan cita rasa Asia Tenggara dan Indonesia. Setiap resep tradisional disiapkan dengan bahan-bahan segar dan disempurnakan oleh keterampilan kuliner Chef kami, membawa pelanggan kami ke perjalanan gastronomi “Seribu Rasa” yang menakjubkan.",
@@ -282,6 +292,44 @@
                 "created_date": "2024-01-31",
                 "bagus": 4,
                 "buruk": 0
+            }
+        ],
+        "fotoRestoran": [
+            {
+                "image": "/images/bg-register.jpg"
+            },
+            {
+                "image": "/images/chicken-satay-nusantara.jpeg"
+            },
+            {
+                "image": "/images/kategori.jpg"
+            },
+            {
+                "image": "/images/bg-register.jpg"
+            },
+            {
+                "image": "/images/chicken-satay-nusantara.jpeg"
+            },
+            {
+                "image": "/images/kategori.jpg"
+            },
+            {
+                "image": "/images/populer.jpg"
+            },
+            {
+                "image": "/images/chicken-satay-nusantara.jpeg"
+            },
+            {
+                "image": "/images/kategori.jpg"
+            },
+            {
+                "image": "/images/bg-register.jpg"
+            },
+            {
+                "image": "/images/chicken-satay-nusantara.jpeg"
+            },
+            {
+                "image": "/images/kategori.jpg"
             }
         ]
     }

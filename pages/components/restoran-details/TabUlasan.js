@@ -1,14 +1,24 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useState } from "react";
 import Rating from "../layout/Rating";
 import Pagination from "./Pagination";
 
 const TabUlasan = (props) => {
   const { data } = props;
+  const [showReply, setShowReply] = useState({});
+
+  const handleOpenBalas = (index) => {
+    setShowReply((prevState) => ({
+      ...Object.fromEntries(Object.keys(prevState).map((key) => [key, false])),
+      [index]: !prevState[index],
+    }));
+  };
 
   return (
     <div className="my-10 py-8 px-4 bg-white rounded-lg shadow-lg">
-      <h6 className="text-xl text-black font-bold">Review {data.nama_resto}</h6>
+      <h6 className="text-2xl text-black font-bold">
+        Review {data.nama_resto}
+      </h6>
       <div className="flex items-center gap-3">
         <h4 className="text-5xl font-bold text-black py-6">{data.rating}</h4>
         <div className="py-6 items-center">
@@ -17,14 +27,16 @@ const TabUlasan = (props) => {
         </div>
       </div>
       {data.ulasanCustomer.map((item, index) => (
-        <>
-          <div className="flex p-4" key={index}>
-            <img
-              src={item.image}
-              alt="foto-profile"
-              className="w-16 h-16 rounded-full object-cover mr-10"
-            />
-            <div>
+        <div key={index}>
+          <div className="w-full flex p-4">
+            <div className="w-[10%]">
+              <img
+                src={item.image}
+                alt="foto-profile"
+                className="w-16 h-16 rounded-full object-cover mr-10"
+              />
+            </div>
+            <div className="w-[90%]">
               <h3 className="text-black text-base font-semibold">
                 {item.nama}
               </h3>
@@ -35,9 +47,9 @@ const TabUlasan = (props) => {
               <small className="text-gray text-justify">
                 Pesanan : {item.pesanan}
               </small>
-              <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                  <button class="flex items-center space-x-1">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center space-x-2">
+                  <button className="flex items-center space-x-1">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -55,7 +67,7 @@ const TabUlasan = (props) => {
                     </svg>
                     <span className="text-black">{item.bagus}</span>
                   </button>
-                  <button class="flex items-center space-x-1">
+                  <button className="flex items-center space-x-1">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -73,13 +85,33 @@ const TabUlasan = (props) => {
                     </svg>
                     <span className="text-black">{item.buruk}</span>
                   </button>
-                  <button class="ms-3 text-black font-medium">Balas</button>
+                  <button
+                    className="ms-3 text-black font-medium"
+                    onClick={() => handleOpenBalas(index)}
+                  >
+                    {showReply[index] ? "Tutup" : "Balas"}
+                  </button>
                 </div>
               </div>
+              {showReply[index] && (
+                <div className="w-full pt-4 relative">
+                  <textarea
+                    name="ulasan"
+                    id="ulasan"
+                    cols="30"
+                    rows="4"
+                    placeholder="Berikan komentar anda"
+                    className="w-full rounded-lg p-4"
+                  ></textarea>
+                  <button className="px-6 py-2 text-base rounded-full shadow-lg bg-secondary text-white absolute bottom-5 right-5">
+                    Kirim
+                  </button>
+                </div>
+              )}
             </div>
           </div>
           <div className="border-t-2 border-mediumGray"></div>
-        </>
+        </div>
       ))}
       <Pagination />
     </div>

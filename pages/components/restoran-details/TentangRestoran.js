@@ -1,13 +1,14 @@
-/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import FotoRestoran from "./FotoRestoran";
 import DeskripsiRestoran from "./DeskripsiRestoran";
+import LokasiRestoran from "./LokasiRestoran";
 import TabMenu from "./TabMenu";
 import TabUlasan from "./TabUlasan";
+import RestoranTerdekat from "./RestoranTerdekat";
 
-const tentang = () => {
+const TentangRestoran = () => {
   const [data, setData] = useState({});
   const [activeTab, setActiveTab] = useState("menu");
 
@@ -26,8 +27,11 @@ const tentang = () => {
 
   return (
     <section className="flex flex-col p-[5vw] pt-[30vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-10 sm:pt-36">
-      <FotoRestoran />
-      <DeskripsiRestoran data={data} />
+      <FotoRestoran data={data} />
+      <div className="flex w-full pt-5">
+        <DeskripsiRestoran data={data} />
+        <LokasiRestoran data={data} />
+      </div>
       <div className="flex w-full pt-5">
         <div className="w-3/4 ms-4 me-8">
           <div className="flex mb-4">
@@ -60,10 +64,12 @@ const tentang = () => {
             <TabUlasan data={data} />
           )}
         </div>
-        <div className="w-1/4"></div>
+        <div className="w-1/4">
+          <RestoranTerdekat />
+        </div>
       </div>
     </section>
   );
 };
 
-export default tentang;
+export default TentangRestoran;

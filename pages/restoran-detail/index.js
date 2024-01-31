@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/layout/Navbar";
-import Tentang from "../components/restoran-details/TentangRestoran";
+import TentangRestoran from "../components/restoran-details/tentangRestoran";
+import RestoranSerupa from "../components/restoran-details/RestoranSerupa";
 import Article from "../components/layout/ListArtikel";
 import Footer from "../components/layout/Footer";
 
@@ -8,7 +9,8 @@ const Index = () => {
   return (
     <>
       <Navbar />
-      <Tentang />
+      <TentangRestoran />
+      <RestoranSerupa />
       <Article />
       <Footer />
     </>

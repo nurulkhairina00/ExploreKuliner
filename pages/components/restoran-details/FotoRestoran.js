@@ -1,7 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useState } from "react";
+import ModalFotoRestoran from "./ModalFotoRestoran";
 
-const FotoRestoran = () => {
+const FotoRestoran = (props) => {
+  const { data } = props;
+  console.log("foto", data);
+  const [showModal, setShowModal] = useState(false);
+
+  const handleOpenModal = () => setShowModal(!showModal);
+
   return (
     <div className="flex w-full pb-5">
       <div className="w-3/4 h-96 rounded-lg shadow-lg mx-4">
@@ -25,12 +32,22 @@ const FotoRestoran = () => {
             className="w-full h-full object-cover rounded-lg shadow-lg"
           />
           <div className="absolute bottom-3 right-3">
-            <button className="bg-white text-black text-xs px-4 py-2 rounded-full font-semibold">
+            <button
+              className="bg-white text-black text-xs px-4 py-2 rounded-full font-semibold"
+              onClick={handleOpenModal}
+            >
               Lihat Semua Foto
             </button>
           </div>
         </div>
       </div>
+      {showModal && (
+        <ModalFotoRestoran
+          showModal={showModal}
+          setShowModal={setShowModal}
+          data={data}
+        />
+      )}
     </div>
   );
 };

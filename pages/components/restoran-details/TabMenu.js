@@ -8,7 +8,9 @@ const TabMenu = (props) => {
   return (
     <div className="my-10 py-8 px-4 bg-white rounded-lg shadow-lg">
       <div className="flex justify-between items-center pb-10">
-        <h6 className="text-xl text-black font-bold">Menu {data.nama_resto}</h6>
+        <h6 className="text-2xl text-black font-bold">
+          Menu {data.nama_resto}
+        </h6>
         <div className="flex gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
