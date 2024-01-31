@@ -27,7 +27,9 @@ const RestoranPopuler = () => {
       .then((res) => {
         setData(res.data.restoran);
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        throw error;
+      });
   };
 
   useEffect(() => {

@@ -3,53 +3,53 @@
         {
             "id": 1,
             "nama": "Indonesia",
-            "image": "/images/kategori.jpg"
+            "image": "/images/kategori1.jpg"
         },
         {
             "id": 2,
             "nama": "Barat",
-            "image": "/images/kategori.jpg"
+            "image": "/images/kategori2.jpg"
         },
         {
             "id": 3,
             "nama": "Korea",
-            "image": "/images/kategori.jpg"
+            "image": "/images/kategori3.jpg"
         },
         {
             "id": 4,
             "nama": "Health Food",
-            "image": "/images/kategori.jpg"
+            "image": "/images/kategori2.jpg"
         },
         {
             "id": 5,
             "nama": "Bakery",
-            "image": "/images/kategori.jpg"
+            "image": "/images/kategori4.jpg"
         },
         {
             "id": 6,
             "nama": "Barat",
-            "image": "/images/kategori.jpg"
+            "image": "/images/kategori1.jpg"
         },
         {
             "id": 7,
             "nama": "Indonesia",
-            "image": "/images/kategori.jpg"
+            "image": "/images/kategori1.jpg"
         },
         {
             "id": 8,
             "nama": "Bakery",
-            "image": "/images/kategori.jpg"
+            "image": "/images/kategori3.jpg"
         },
         {
             "id": 9,
             "nama": "Korea",
-            "image": "/images/kategori.jpg"
+            "image": "/images/kategori2.jpg"
         }
     ],
     "restoran": [
         {
             "id": 1,
-            "image": "/images/populer.jpg",
+            "image": "/images/restoran1.jpg",
             "jarak": "0.5 km",
             "nama_resto": "Seribu Rasa Menteng",
             "alamat": "Menteng, Jakarta Pusat",
@@ -58,7 +58,7 @@
         },
         {
             "id": 2,
-            "image": "/images/populer.jpg",
+            "image": "/images/restoran2.jpg",
             "jarak": "0.5 km",
             "nama_resto": "Cabe Rempah Resto",
             "alamat": "Menteng, Jakarta Pusat",
@@ -67,7 +67,7 @@
         },
         {
             "id": 3,
-            "image": "/images/populer.jpg",
+            "image": "/images/restoran3.jpg",
             "jarak": "0.5 km",
             "nama_resto": "Sate Senayan Tebet",
             "alamat": "Tebet, Jakarta Selatan",
@@ -76,7 +76,7 @@
         },
         {
             "id": 4,
-            "image": "/images/populer.jpg",
+            "image": "/images/restoran4.jpg",
             "jarak": "0.5 km",
             "nama_resto": "Bakmi Gang Kelinci",
             "alamat": "Pasar Baru, Jakarta Pusat",
@@ -85,7 +85,7 @@
         },
         {
             "id": 5,
-            "image": "/images/populer.jpg",
+            "image": "/images/restoran2.jpg",
             "jarak": "0.5 km",
             "nama_resto": "Seribu Rasa Menteng",
             "alamat": "Menteng, Jakarta Pusat",
@@ -94,7 +94,7 @@
         },
         {
             "id": 6,
-            "image": "/images/populer.jpg",
+            "image": "/images/restoran4.jpg",
             "jarak": "0.5 km",
             "nama_resto": "Seribu Rasa Menteng",
             "alamat": "Menteng, Jakarta Pusat",
@@ -103,7 +103,7 @@
         },
         {
             "id": 7,
-            "image": "/images/populer.jpg",
+            "image": "/images/restoran3.jpg",
             "jarak": "0.5 km",
             "nama_resto": "Seribu Rasa Menteng",
             "alamat": "Menteng, Jakarta Pusat",
@@ -112,7 +112,7 @@
         },
         {
             "id": 8,
-            "image": "/images/populer.jpg",
+            "image": "/images/restoran1.jpg",
             "jarak": "0.5 km",
             "nama_resto": "Seribu Rasa Menteng",
             "alamat": "Menteng, Jakarta Pusat",
@@ -123,7 +123,7 @@
     "artikel": [
         {
             "id": 1,
-            "image": "/images/populer.jpg",
+            "image": "/images/restoran1.jpg",
             "kategori": "Berita",
             "judul": "10 Coffe Shop Terbagus Di Jakarta",
             "publish_date": "2024-01-12",
@@ -132,7 +132,7 @@
         },
         {
             "id": 2,
-            "image": "/images/populer.jpg",
+            "image": "/images/restoran3.jpg",
             "kategori": "Berita",
             "judul": "Rekomendasi Steak Di Jakarta",
             "publish_date": "2024-01-12",
@@ -141,7 +141,7 @@
         },
         {
             "id": 3,
-            "image": "/images/populer.jpg",
+            "image": "/images/restoran4.jpg",
             "kategori": "Berita",
             "judul": "Promo Diskon Voucher 25% di Subway",
             "publish_date": "2024-01-12",
@@ -150,7 +150,7 @@
         },
         {
             "id": 4,
-            "image": "/images/populer.jpg",
+            "image": "/images/restoran2.jpg",
             "kategori": "Berita",
             "judul": "10 Coffe Shop Terbagus Di Jakarta",
             "publish_date": "2024-01-12",
@@ -160,7 +160,7 @@
     ],
     "detailRestoran": {
         "nama_resto": "Seribu Rasa Menteng",
-        "image": "/images/populer.jpg",
+        "image": "/images/restoran2.jpg",
         "rating": "4.5",
         "jarak": "0.5 km",
         "ulasan": "1000 Ulasan",
@@ -256,7 +256,7 @@
             {
                 "nama": "Nurul Khairina Surbakti",
                 "rating": 4,
-                "image": "/images/kategori.jpg",
+                "image": "/images/kategori4.jpg",
                 "komentar": "Tempatnya sangat rekomendasi untuk wfh atau nugas.",
                 "pesanan": "Stuffed Tofu Parahtangan",
                 "created_date": "2024-01-30",
@@ -266,7 +266,7 @@
             {
                 "nama": "Iqbal Alhuda",
                 "rating": 4.5,
-                "image": "/images/kategori.jpg",
+                "image": "/images/kategori3.jpg",
                 "komentar": "Cocok banget buat nongkrong bareng teman atau sahabat.",
                 "pesanan": "Hokkien Spring Roll",
                 "created_date": "2024-01-31",
@@ -276,7 +276,7 @@
             {
                 "nama": "Herbowo Prasetyo",
                 "rating": 4.5,
-                "image": "/images/kategori.jpg",
+                "image": "/images/kategori2.jpg",
                 "komentar": "Interiornya sangat bagus, variant makanannya sangat banyak dan masakannya enak.",
                 "pesanan": "Udang Gulung",
                 "created_date": "2024-01-31",
@@ -286,7 +286,7 @@
             {
                 "nama": "Ariyandi",
                 "rating": 4,
-                "image": "/images/kategori.jpg",
+                "image": "/images/kategori1.jpg",
                 "komentar": "Masakan enak betul",
                 "pesanan": "Oriental Seafood Ckawe",
                 "created_date": "2024-01-31",
@@ -299,37 +299,37 @@
                 "image": "/images/bg-register.jpg"
             },
             {
+                "image": "/images/restoran1.jpg"
+            },
+            {
+                "image": "/images/restoran3.jpg"
+            },
+            {
+                "image": "/images/restoran4.jpg"
+            },
+            {
+                "image": "/images/kategori1.jpg"
+            },
+            {
+                "image": "/images/bg-hero.jpg"
+            },
+            {
+                "image": "/images/restoran2.jpg"
+            },
+            {
                 "image": "/images/chicken-satay-nusantara.jpeg"
             },
             {
-                "image": "/images/kategori.jpg"
+                "image": "/images/kategori2.jpg"
             },
             {
                 "image": "/images/bg-register.jpg"
             },
             {
-                "image": "/images/chicken-satay-nusantara.jpeg"
+                "image": "/images/kategori4.jpg"
             },
             {
-                "image": "/images/kategori.jpg"
-            },
-            {
-                "image": "/images/populer.jpg"
-            },
-            {
-                "image": "/images/chicken-satay-nusantara.jpeg"
-            },
-            {
-                "image": "/images/kategori.jpg"
-            },
-            {
-                "image": "/images/bg-register.jpg"
-            },
-            {
-                "image": "/images/chicken-satay-nusantara.jpeg"
-            },
-            {
-                "image": "/images/kategori.jpg"
+                "image": "/images/kategori3.jpg"
             }
         ]
     }

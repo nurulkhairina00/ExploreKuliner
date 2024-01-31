@@ -18,7 +18,9 @@ const TentangRestoran = () => {
       .then((res) => {
         setData(res.data.detailRestoran);
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        throw error;
+      });
   };
 
   useEffect(() => {

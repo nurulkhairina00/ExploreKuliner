@@ -32,7 +32,9 @@ const Kategori = () => {
       .then((res) => {
         setData(res.data.kategori);
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        throw error;
+      });
   };
 
   useEffect(() => {

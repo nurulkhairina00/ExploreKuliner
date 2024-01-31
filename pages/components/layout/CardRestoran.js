@@ -12,10 +12,10 @@ const cardRestoran = (props) => {
           <img
             src={data.image}
             alt={data.nama_resto.split(" ").join("-")}
-            className="rounded-t-[2vw] rounded-b-none sm:rounded-t-lg sm:rounded-b-none relative transition-transform duration-300 hover:scale-110 ease-in-out"
+            className="rounded-t-[2vw] w-full h-[40vw] sm:h-48 rounded-b-none sm:rounded-t-lg sm:rounded-b-none relative transition-transform duration-300 hover:scale-110 ease-in-out"
           />
         </div>
-        <div className="flex bg-white w-[17%] h-[6%] text-[2.5vw] sm:w-12 sm:h-5 sm:text-xs text-gray rounded-2xl absolute right-[5vw] top-[5vw] sm:right-5 sm:top-5 justify-center datas-center">
+        <div className="flex bg-white w-[17%] h-[6%] text-[2.5vw] sm:w-12 sm:h-5 sm:text-xs text-gray rounded-2xl absolute right-[2vw] top-[2vw] sm:right-3 sm:top-3 justify-center datas-center">
           <svg
             className="sm:w-[14px] me-1"
             xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@ const cardRestoran = (props) => {
               </span>
             )}
           </p>
-          <h6 className="pb-[2vw] text-[3.5vw] sm:pb-2 sm:text-lg font-semibold">
+          <h6 className="pb-[2vw] text-[3.5vw] sm:pb-2 sm:text-lg font-semibold line-clamp-1">
             {data.nama_resto}
           </h6>
           <div className="flex">
@@ -53,7 +53,7 @@ const cardRestoran = (props) => {
                 d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"
               />
             </svg>
-            <p className="text-gray text-[3vw] sm:text-sm lg:text-base">
+            <p className="text-gray text-[3vw] sm:text-sm lg:text-base line-clamp-1">
               {data.alamat}
             </p>
           </div>

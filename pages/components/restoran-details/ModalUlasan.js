@@ -12,7 +12,7 @@ const ModalUlasan = (props) => {
   };
 
   return (
-    <div className="h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-70 z-10">
+    <div className="h-full w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-70 z-10">
       <div className="w-1/2 bg-white rounded-lg shadow-lg">
         <div className="p-4">
           <div className="flex justify-end pb-3" onClick={handleCloseModal}>
