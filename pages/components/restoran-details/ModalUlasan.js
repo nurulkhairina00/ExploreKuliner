@@ -62,7 +62,7 @@ const ModalUlasan = (props) => {
                   <h6 className="pb-[2vw] text-[3.5vw] sm:pb-2 sm:text-lg font-semibold">
                     {data.nama_resto}
                   </h6>
-                  <p className="text-gray text-[3vw] sm:text-sm lg:text-base">
+                  <p className="text-gray text-[2.5vw] sm:text-sm lg:text-base">
                     {data.alamat}
                   </p>
                 </div>

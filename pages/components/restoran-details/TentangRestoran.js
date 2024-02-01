@@ -28,18 +28,18 @@ const TentangRestoran = () => {
   }, []);
 
   return (
-    <section className="flex flex-col p-[5vw] pt-[30vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-10 sm:pt-36">
+    <section className="flex flex-col p-[5vw] pt-[25vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-10 sm:pt-36">
       <FotoRestoran data={data} />
-      <div className="flex w-full pt-5">
+      <div className="flex flex-col lg:flex-row w-full pt-[2vw] sm:pt-5">
         <DeskripsiRestoran data={data} />
         <LokasiRestoran data={data} />
       </div>
-      <div className="flex w-full pt-5">
-        <div className="w-3/4 ms-4 me-8">
+      <div className="flex flex-col lg:flex-row w-full pt-[10vw] sm:pt-5">
+        <div className="w-full lg:w-4/6 xl:w-3/4 lg:ms-4 lg:me-8">
           <div className="flex mb-4">
             <button
               id="menu"
-              className={`px-4 py-2  rounded-s-lg w-full font-semibold ${
+              className={`p-[2vw] sm:px-4 sm:py-2 rounded-s-[2vw] sm:rounded-s-lg w-full font-semibold text-[3vw] sm:text-xl ${
                 activeTab === "menu"
                   ? "bg-secondary text-primary"
                   : "bg-white text-black"
@@ -50,7 +50,7 @@ const TentangRestoran = () => {
             </button>
             <button
               id="ulasan"
-              className={` px-4 py-2  rounded-e-lg w-full font-semibold ${
+              className={`p-[2vw] sm:px-4 sm:py-2 rounded-e-[2vw] sm:rounded-e-lg w-full font-semibold text-[3vw] sm:text-xl ${
                 activeTab === "ulasan"
                   ? "bg-secondary text-primary"
                   : "bg-white text-black"
@@ -66,7 +66,7 @@ const TentangRestoran = () => {
             <TabUlasan data={data} />
           )}
         </div>
-        <div className="w-1/4">
+        <div className="w-full lg:w-1/3 xl:w-1/4 mt-4 lg:mt-0">
           <RestoranTerdekat />
         </div>
       </div>
