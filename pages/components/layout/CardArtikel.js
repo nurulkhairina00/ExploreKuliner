@@ -10,7 +10,7 @@ const cardArtikel = (props) => {
         <img
           src={data.image}
           alt={data.judul.split(" ").join("-")}
-          className="rounded-t-[2vw] w-full h-[44vw] sm:h-64 rounded-b-none sm:rounded-t-lg sm:rounded-b-none relative transition-transform duration-300 hover:scale-110 ease-in-out"
+          className="rounded-t-[2vw] w-full aspect-[16/10] rounded-b-none sm:rounded-t-lg sm:rounded-b-none relative transition-transform duration-300 hover:scale-110 ease-in-out"
         />
       </div>
       <div className="p-[2.5vw] sm:p-4">
