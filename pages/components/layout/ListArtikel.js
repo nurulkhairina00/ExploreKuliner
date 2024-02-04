@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { getListArtikel } from "../../actions/artikelAction";
-import CardArtikel from "./CardArtikel";
+import CardArtikel from "./cardArtikel";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";

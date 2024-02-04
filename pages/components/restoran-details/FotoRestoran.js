@@ -33,7 +33,7 @@ const FotoRestoran = (props) => {
               />
               <div className="absolute bottom-[1vw] right-[1vw] md:bottom-2 md:right-2 lg:bottom-3 lg:right-3">
                 <button
-                  className="bg-white text-black text-[1.2vw] px-[1vw] py-[0.5vw] md:text-[8px] md:px-2 md:py-1 lg:text-xs lg:px-4 lg:py-2 rounded-full font-semibold"
+                  className="bg-white text-black text-[1.7vw] px-[2vw] py-[0.7vw] md:text-[8px] md:px-2 md:py-1 lg:text-xs lg:px-4 lg:py-2 rounded-full font-semibold"
                   onClick={handleOpenModal}
                 >
                   Lihat Semua Foto

@@ -2,13 +2,14 @@ import React from "react";
 
 const Pagination = () => {
   return (
-    <div className="flex pt-10 gap-3 justify-center">
-      <button className="p-[2vw] text-[2.5vw] rounded-[1.5vw] sm:p-2 sm:text-lg sm:rounded-lg text-black font-semibold bg-mediumGray">
+    <div className="flex pt-[8vw] sm:pt-10 gap-[2vw] sm:gap-3 justify-center">
+      <button className="p-[2vw] text-[4vw] rounded-[1.5vw] sm:p-2 sm:text-lg sm:rounded-lg text-black font-semibold bg-mediumGray">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
+          width="4vw"
+          height="4vw"
           viewBox="0 0 24 24"
+          className="sm:w-[24px] sm:h-[24px]"
         >
           <path
             fill="#ffffff"
@@ -16,12 +17,13 @@ const Pagination = () => {
           />
         </svg>
       </button>
-      <button className="p-[2vw] text-[2.5vw] rounded-[1.5vw] sm:p-2 sm:text-lg sm:rounded-lg text-black font-semibold bg-mediumGray">
+      <button className="p-[2vw] text-[4vw] rounded-[1.5vw] sm:p-2 sm:text-lg sm:rounded-lg text-black font-semibold bg-mediumGray">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
+          width="4vw"
+          height="4vw"
           viewBox="0 0 24 24"
+          className="sm:w-[24px] sm:h-[24px]"
         >
           <path
             fill="none"
@@ -33,27 +35,23 @@ const Pagination = () => {
           />
         </svg>
       </button>
-      <button className="px-[2vw] py-[1vw] text-[2.5vw] rounded-[1.5vw] sm:px-4 sm:py-1 sm:text-lg sm:rounded-lg text-white font-semibold bg-secondary">
+      <button className="px-[3vw] text-[3.5vw] rounded-[1.5vw] sm:px-4 sm:py-1 sm:text-lg sm:rounded-lg text-white font-semibold bg-secondary">
         1
       </button>
-      <button className="px-[2vw] py-[1vw] text-[2.5vw] rounded-[1.5vw] sm:px-3 sm:py-1 sm:text-lg sm:rounded-lg text-secondary font-semibold border-secondary border-2">
+      <button className="px-[3vw] text-[3.5vw] rounded-[1.5vw] sm:px-3 sm:py-1 sm:text-lg sm:rounded-lg text-secondary font-semibold border-secondary border-[0.5vw] sm:border-2">
         2
       </button>
-      <button className="px-[2vw] py-[1vw] text-[2.5vw] rounded-[1.5vw] sm:px-3 sm:py-1 sm:text-lg sm:rounded-lg text-secondary font-semibold border-secondary border-2">
-        3
-      </button>
-      <button className="px-[2vw] py-[1vw] text-[2.5vw] rounded-[1.5vw] sm:px-3 sm:py-1 sm:text-lg sm:rounded-lg text-secondary font-semibold border-secondary border-2">
-        4
-      </button>
-      <button className="px-[2vw] py-[1vw] text-[2.5vw] rounded-[1.5vw] sm:px-3 sm:py-1 sm:text-lg sm:rounded-lg text-secondary font-semibold border-secondary border-2">
+      ...
+      <button className="px-[3vw] text-[3.5vw] rounded-[1.5vw] sm:px-3 sm:py-1 sm:text-lg sm:rounded-lg text-secondary font-semibold border-secondary border-[0.5vw] sm:border-2">
         5
       </button>
-      <button className="p-[2vw] text-[2.5vw] rounded-[1.5vw] sm:p-2 sm:text-lg sm:rounded-lg text-black font-semibold bg-secondary">
+      <button className="p-[2vw] text-[3.5vw] rounded-[1.5vw] sm:p-2 sm:text-lg sm:rounded-lg text-black font-semibold bg-secondary">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
+          width="4vw"
+          height="4vw"
           viewBox="0 0 24 24"
+          className="sm:w-[24px] sm:h-[24px]"
         >
           <path
             fill="none"
@@ -65,12 +63,13 @@ const Pagination = () => {
           />
         </svg>
       </button>
-      <button className="p-[2vw] text-[2.5vw] rounded-[1.5vw] sm:p-2 sm:text-lg sm:rounded-lg text-black font-semibold bg-secondary">
+      <button className="p-[2vw] text-[4vw] rounded-[1.5vw] sm:p-2 sm:text-lg sm:rounded-lg text-black font-semibold bg-secondary">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
+          width="4vw"
+          height="4vw"
           viewBox="0 0 24 24"
+          className="sm:w-[24px] sm:h-[24px]"
         >
           <path
             fill="#ffffff"

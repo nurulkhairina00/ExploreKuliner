@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { useDispatch, useSelector } from "react-redux";
 import { getListRestoran } from "../../actions/restoranAction";
-import CardRestoran from "../layout/CardRestoran";
+import CardRestoran from "../layout/cardRestoran";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";

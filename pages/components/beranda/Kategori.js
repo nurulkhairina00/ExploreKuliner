@@ -58,7 +58,7 @@ const Kategori = () => {
               alt={item.nama.split(" ").join("-")}
               className="w-[12vw] h-[12vw] sm:w-14 sm:h-14 rounded-full object-cover absolute -top-1/2 left-1/2 -translate-x-1/2 cursor-pointer"
             />
-            <p className="text-black text-center font-bold text-[1.7vw] sm:pt-1 sm:text-[10px]">
+            <p className="text-black text-center font-bold text-[2vw] sm:pt-1 sm:text-[10px]">
               {item.nama}
             </p>
           </div>

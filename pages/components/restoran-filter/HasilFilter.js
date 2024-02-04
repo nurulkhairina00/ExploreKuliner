@@ -37,19 +37,19 @@ const HasilFilter = () => {
                 />
               </div>
               <div className="w-2/3 p-[2vw] sm:px-4 sm:py-2">
-                <p className="text-black text-[3vw] sm:text-base font-semibold sm:pb-1">
+                <p className="text-black text-[3.5vw] sm:text-base font-semibold sm:pb-1">
                   {item.nama_resto}
                 </p>
                 <div className="flex">
                   <Rating initialRating={item.rating} />
                 </div>
-                <p className="text-black text-[2.5vw] sm:text-sm font-semibold py-[1vw] sm:py-2">
+                <p className="text-black text-[3vw] sm:text-sm font-semibold py-[1vw] sm:py-2">
                   Asia Indonesia
                 </p>
-                <p className="text-secondary text-[2.5vw] sm:text-sm font-bold ">
+                <p className="text-secondary text-[3vw] sm:text-sm font-bold ">
                   Restoran Buka
                 </p>
-                <p className="text-gray text-[2.5vw] sm:text-sm font-semibold sm:py-1">
+                <p className="text-gray text-[3vw] sm:text-sm font-semibold sm:py-1">
                   Sampai 22.00 WIB
                 </p>
                 <div className="flex pt-[1vw] sm:pt-4">
@@ -64,7 +64,7 @@ const HasilFilter = () => {
                       d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"
                     />
                   </svg>
-                  <p className="text-black text-[2.5vw] sm:text-sm">
+                  <p className="text-black text-[3vw] sm:text-sm">
                     {item.alamat}
                   </p>
                 </div>

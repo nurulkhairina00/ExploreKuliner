@@ -27,7 +27,7 @@ const Rating = (props) => {
         </svg>
       ))}
       {display !== "none" && (
-        <span className="text-[3vw] sm:text-xs">{rating}</span>
+        <span className="text-[3vw] sm:text-base">{rating}</span>
       )}
     </div>
   );

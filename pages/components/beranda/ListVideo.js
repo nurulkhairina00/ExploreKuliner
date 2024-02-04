@@ -105,7 +105,7 @@ const ListVideo = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
                   <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center transition-all duration-500 group-hover:translate-y-28">
-                    <h1 className="text-[3vw] sm:text-base font-bold text-white">
+                    <h1 className="text-[3.5vw] sm:text-base font-bold text-white">
                       Explore Kuliner
                     </h1>
                   </div>

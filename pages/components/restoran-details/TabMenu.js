@@ -6,17 +6,18 @@ const TabMenu = (props) => {
   const { data } = props;
 
   return (
-    <div className="my-10 py-8 px-4 bg-white rounded-lg shadow-lg">
-      <div className="flex justify-between items-center pb-10">
-        <h6 className="text-2xl text-black font-bold">
+    <div className="my-[5vw] sm:my-10 py-[8vw] sm:py-8 px-[2vw] sm:px-4 bg-white rounded-lg shadow-lg">
+      <div className="flex justify-between items-center pb-[5vw] sm:pb-10">
+        <h6 className="text-[4vw] sm:text-2xl text-black font-bold">
           Menu {data.nama_resto}
         </h6>
-        <div className="flex gap-2">
+        <div className="flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            width="3vw"
+            height="3vw"
             viewBox="0 0 24 24"
+            className="sm:w-[16px] sm:h-[16px] mr-[0.5vw] sm:mr-1"
           >
             <path
               fill="#3B7850"
@@ -25,7 +26,10 @@ const TabMenu = (props) => {
               clipRule="evenodd"
             />
           </svg>
-          <a href="" className="text-secondary">
+          <a
+            href=""
+            className="text-secondary text-[3vw] sm:text-base font-semibold"
+          >
             Download Menu
           </a>
         </div>
@@ -34,19 +38,19 @@ const TabMenu = (props) => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-[3vw] sm:gap-4 cursor-pointer overflow-y-auto">
         {data.menu?.map((item, index) => (
           <div className="flex flex-row rounded-lg border-2" key={index}>
-            <div className="w-2/3 p-[2vw] sm:p-4">
-              <p className="text-black text-[3vw] sm:text-base font-semibold sm:pb-1">
+            <div className="w-2/3 p-[2vw] sm:p-2 xl:p-4">
+              <p className="text-black text-[3.5vw] sm:text-base font-semibold sm:pb-1">
                 {item.nama_menu}
               </p>
-              <p className="text-secondary text-base font-semibold">
+              <p className="text-secondary text-[3.5vw] sm:text-base font-semibold">
                 Rp. {item.harga}
               </p>
             </div>
-            <div className="w-1/3 p-[2vw] sm:p-4">
+            <div className="w-1/3 p-[2vw] sm:p-2 xl:p-4">
               <img
                 src={item.image}
                 alt={item.nama_menu.split(" ").join("-")}
-                className="rounded-lg object-cover w-full h-20 -z-10"
+                className="rounded-lg object-cover w-full h-[20vw] sm:h-28 -z-10"
               />
             </div>
           </div>

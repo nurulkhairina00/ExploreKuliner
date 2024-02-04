@@ -13,8 +13,8 @@ const ModalUlasan = (props) => {
 
   return (
     <div className="h-full w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-70 z-10">
-      <div className="w-1/2 bg-white rounded-lg shadow-lg">
-        <div className="p-4">
+      <div className="w-[90%] max-h-[90%] xl:w-2/3 bg-white rounded-[2vw] sm:rounded-lg shadow-lg overflow-y-auto">
+        <div className="p-[2vw] md:p-4">
           <div className="flex justify-end pb-3" onClick={handleCloseModal}>
             <div className="w-[6vw] h-[6vw] sm:w-11 sm:h-11 border-gray border-2 rounded-full flex justify-center items-center cursor-pointer">
               <svg
@@ -31,20 +31,20 @@ const ModalUlasan = (props) => {
             </div>
           </div>
           <div className="border-t border-mediumGray"></div>
-          <div className="flex p-4">
-            <div className="w-1/3 p-4">
-              <h6 className="text-black font-semibold text-3xl pb-4">
+          <div className="flex flex-wrap p-[2vw] md:p-4">
+            <div className="w-full md:w-1/3 md:p-4">
+              <h6 className="text-black font-semibold text-[4vw] md:text-2xl lg:text-3xl pb-[3vw] sm:pb-4 text-center md:text-start">
                 Beri tahu kami tentang kunjungan anda.
               </h6>
-              <div className="text-black bg-white rounded-[2vw] sm:rounded-xl shadow-lg cursor-pointer me-4">
-                <div className="relative overflow-hidden rounded-t-[2vw] rounded-b-none sm:rounded-t-lg sm:rounded-b-none">
+              <div className="relative text-black bg-white rounded-[2vw] sm:rounded-xl shadow-lg cursor-pointer me-4 w-full md:w-5/6">
+                <div className="overflow-hidden rounded-t-[2vw] rounded-b-none sm:rounded-t-lg sm:rounded-b-none">
                   <img
                     src={data.image}
                     alt={data.nama_resto.split(" ").join("-")}
                     className="rounded-t-[2vw] rounded-b-none sm:rounded-t-lg sm:rounded-b-none relative transition-transform duration-300 hover:scale-110 ease-in-out"
                   />
                 </div>
-                <div className="flex bg-white w-[17%] h-[6%] text-[2.5vw] sm:w-12 sm:h-5 sm:text-xs text-gray rounded-2xl absolute right-[5vw] top-[5vw] sm:right-5 sm:top-5 justify-center datas-center">
+                <div className="flex bg-white w-[17%] h-[6%] text-[2.5vw] sm:w-12 sm:h-5 sm:text-xs text-gray rounded-2xl absolute right-[2vw] top-[2vw] sm:right-3 sm:top-3 justify-center datas-center">
                   <svg
                     className="sm:w-[14px] me-1"
                     xmlns="http://www.w3.org/2000/svg"
@@ -58,18 +58,18 @@ const ModalUlasan = (props) => {
                   </svg>
                   {data.rating}
                 </div>
-                <div className="p-[2.5vw] sm:p-4">
-                  <h6 className="pb-[2vw] text-[3.5vw] sm:pb-2 sm:text-lg font-semibold">
+                <div className="p-[2.5vw] md:p-3 lg:p-4">
+                  <h6 className="pb-[2vw] text-[4vw] sm:pb-2 md:text-base lg:text-lg font-semibold">
                     {data.nama_resto}
                   </h6>
-                  <p className="text-gray text-[2.5vw] sm:text-sm lg:text-base">
+                  <p className="text-gray text-[3vw] sm:text-sm lg:text-base">
                     {data.alamat}
                   </p>
                 </div>
               </div>
             </div>
-            <div className="w-4/6 p-4 m-4 bg-primary rounded-lg shadow-lg">
-              <h3 className="text-lg text-black font-semibold pb-2">
+            <div className="w-full md:w-4/6 p-[3vw] md:p-4 bg-primary rounded-[2vw] sm:rounded-lg shadow-lg mt-[5vw] md:mt-0">
+              <h3 className="text-[4.5vw] sm:text-lg text-black font-semibold pb-[2vw] sm:pb-2">
                 Kasih penilaian ke resto ?
               </h3>
               <div className="flex">
@@ -88,10 +88,10 @@ const ModalUlasan = (props) => {
                   </svg>
                 ))}
               </div>
-              <div className="py-4">
+              <div className="py-[3vw] sm:py-4">
                 <label
                   htmlFor="pesanan"
-                  className="text-black text-base font-medium"
+                  className="text-black text-[4vw] sm:text-lg font-medium"
                 >
                   Pesanan
                 </label>
@@ -99,13 +99,13 @@ const ModalUlasan = (props) => {
                   type="text"
                   placeholder="Ayam Goreng"
                   name="pesanan"
-                  className="bg-white w-full rounded-lg mt-2 p-2"
+                  className="bg-white w-full rounded-[2vw] sm:rounded-lg sm:mt-2 p-[3vw] sm:p-3 text-[4vw] sm:text-lg"
                 />
               </div>
-              <div className="py-4">
+              <div className="py-[3vw] sm:py-4">
                 <label
                   htmlFor="komentar"
-                  className="text-black text-base font-medium"
+                  className="text-black text-[4vw] sm:text-lg font-medium"
                 >
                   Tulis Ulasan
                 </label>
@@ -115,17 +115,17 @@ const ModalUlasan = (props) => {
                   cols="30"
                   rows="5"
                   placeholder="Berikan komentar anda"
-                  className="bg-white w-full rounded-lg mt-2 p-4"
+                  className="bg-white w-full rounded-[2vw] sm:rounded-lg sm:mt-2 p-[3vw] sm:p-3 text-[4vw] sm:text-lg"
                 ></textarea>
               </div>
             </div>
           </div>
 
           <div className="border-t border-mediumGray"></div>
-          <center className="py-4 mt-4">
+          <center className="py-[3vw] sm:py-4 sm:mt-4">
             <button
               type="submit"
-              className="px-6 py-2 text-base rounded-full shadow-lg bg-secondary text-white"
+              className="px-[4vw] py-[1vw] sm:px-6 sm:py-2 text-[3.5vw] sm:text-base rounded-full shadow-lg bg-secondary text-white"
             >
               Simpan
             </button>

@@ -20,22 +20,22 @@ const RestoranTerdekat = () => {
     : [];
 
   return (
-    <div className=" bg-white rounded-lg shadow-lg p-4">
-      <h3 className="text-black text-2xl font-semibold text-center pb-5">
+    <div className=" bg-white rounded-lg shadow-lg p-[2vw] sm:p-4">
+      <h3 className="text-black text-[6vw] sm:text-2xl font-semibold text-center pb-[2vw] sm:pb-5">
         Restoran Terdekat
       </h3>
       {getListRestoranResult ? (
         RestoranTerdekat?.map((item) => (
-          <div className="p-4" key={item.id}>
+          <div className="p-[2vw] sm:p-4 cursor-pointer" key={item.id}>
             <img
               src={item.image}
               alt={item.nama_resto.split(" ").join("-")}
-              className="rounded-lg object-cover h-48 w-full"
+              className="rounded-lg object-cover h-[40vw] lg:h-48 w-full"
             />
-            <p className="text-lg text-black font-semibold pt-2">
+            <p className="text-[4.5vw] sm:text-lg text-black font-semibold pt-2">
               {item.nama_resto}
             </p>
-            <p className="text-base text-black">{item.jarak}</p>
+            <p className="text-[3.5vw] sm:text-base text-black">{item.jarak}</p>
           </div>
         ))
       ) : getListRestoranLoading ? (

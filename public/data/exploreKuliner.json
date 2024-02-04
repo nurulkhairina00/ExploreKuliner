@@ -13,17 +13,17 @@
         {
             "id": 3,
             "nama": "Korea",
-            "image": "/images/kategori3.jpg"
+            "image": "/images/kategori2.jpg"
         },
         {
             "id": 4,
             "nama": "Health Food",
-            "image": "/images/kategori2.jpg"
+            "image": "/images/kategori1.jpg"
         },
         {
             "id": 5,
             "nama": "Bakery",
-            "image": "/images/kategori4.jpg"
+            "image": "/images/kategori2.jpg"
         },
         {
             "id": 6,
@@ -33,12 +33,12 @@
         {
             "id": 7,
             "nama": "Indonesia",
-            "image": "/images/kategori1.jpg"
+            "image": "/images/kategori2.jpg"
         },
         {
             "id": 8,
             "nama": "Bakery",
-            "image": "/images/kategori3.jpg"
+            "image": "/images/kategori1.jpg"
         },
         {
             "id": 9,
@@ -67,7 +67,7 @@
         },
         {
             "id": 3,
-            "image": "/images/restoran3.jpg",
+            "image": "/images/restoran2.jpg",
             "jarak": "0.5 km",
             "nama_resto": "Sate Senayan Tebet",
             "alamat": "Tebet, Jakarta Selatan",
@@ -76,7 +76,7 @@
         },
         {
             "id": 4,
-            "image": "/images/restoran4.jpg",
+            "image": "/images/restoran1.jpg",
             "jarak": "0.5 km",
             "nama_resto": "Bakmi Gang Kelinci",
             "alamat": "Pasar Baru, Jakarta Pusat",
@@ -94,7 +94,7 @@
         },
         {
             "id": 6,
-            "image": "/images/restoran4.jpg",
+            "image": "/images/restoran1.jpg",
             "jarak": "0.5 km",
             "nama_resto": "Seribu Rasa Menteng",
             "alamat": "Menteng, Jakarta Pusat",
@@ -103,7 +103,7 @@
         },
         {
             "id": 7,
-            "image": "/images/restoran3.jpg",
+            "image": "/images/restoran2.jpg",
             "jarak": "0.5 km",
             "nama_resto": "Seribu Rasa Menteng",
             "alamat": "Menteng, Jakarta Pusat",
@@ -123,7 +123,7 @@
     "artikel": [
         {
             "id": 1,
-            "image": "/images/restoran1.jpg",
+            "image": "/images/restoran2.jpg",
             "kategori": "Berita",
             "judul": "10 Coffe Shop Terbagus Di Jakarta",
             "publish_date": "2024-01-12",
@@ -132,7 +132,7 @@
         },
         {
             "id": 2,
-            "image": "/images/restoran3.jpg",
+            "image": "/images/restoran1.jpg",
             "kategori": "Berita",
             "judul": "Rekomendasi Steak Di Jakarta",
             "publish_date": "2024-01-12",
@@ -141,7 +141,7 @@
         },
         {
             "id": 3,
-            "image": "/images/restoran4.jpg",
+            "image": "/images/restoran2.jpg",
             "kategori": "Berita",
             "judul": "Promo Diskon Voucher 25% di Subway",
             "publish_date": "2024-01-12",
@@ -150,7 +150,7 @@
         },
         {
             "id": 4,
-            "image": "/images/restoran2.jpg",
+            "image": "/images/restoran1.jpg",
             "kategori": "Berita",
             "judul": "10 Coffe Shop Terbagus Di Jakarta",
             "publish_date": "2024-01-12",
@@ -160,7 +160,7 @@
     ],
     "detailRestoran": {
         "nama_resto": "Seribu Rasa Menteng",
-        "image": "/images/restoran2.jpg",
+        "image": "/images/restoran1.jpg",
         "rating": "4.5",
         "jarak": "0.5 km",
         "ulasan": "1000 Ulasan",
@@ -256,7 +256,7 @@
             {
                 "nama": "Nurul Khairina Surbakti",
                 "rating": 4,
-                "image": "/images/kategori4.jpg",
+                "image": "/images/kategori2.jpg",
                 "komentar": "Tempatnya sangat rekomendasi untuk wfh atau nugas.",
                 "pesanan": "Stuffed Tofu Parahtangan",
                 "created_date": "2024-01-30",
@@ -266,7 +266,7 @@
             {
                 "nama": "Iqbal Alhuda",
                 "rating": 4.5,
-                "image": "/images/kategori3.jpg",
+                "image": "/images/kategori1.jpg",
                 "komentar": "Cocok banget buat nongkrong bareng teman atau sahabat.",
                 "pesanan": "Hokkien Spring Roll",
                 "created_date": "2024-01-31",
@@ -302,10 +302,10 @@
                 "image": "/images/restoran1.jpg"
             },
             {
-                "image": "/images/restoran3.jpg"
+                "image": "/images/restoran2.jpg"
             },
             {
-                "image": "/images/restoran4.jpg"
+                "image": "/images/restoran1.jpg"
             },
             {
                 "image": "/images/kategori1.jpg"
@@ -326,10 +326,10 @@
                 "image": "/images/bg-register.jpg"
             },
             {
-                "image": "/images/kategori4.jpg"
+                "image": "/images/kategori2.jpg"
             },
             {
-                "image": "/images/kategori3.jpg"
+                "image": "/images/kategori1.jpg"
             }
         ]
     }

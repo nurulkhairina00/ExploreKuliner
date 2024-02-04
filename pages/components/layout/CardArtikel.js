@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 
-const cardArtikel = (props) => {
+const CardArtikel = (props) => {
   const { data } = props;
 
   return (
@@ -14,13 +14,13 @@ const cardArtikel = (props) => {
         />
       </div>
       <div className="p-[2.5vw] sm:p-4">
-        <p className="text-gray font-medium text-[2.5vw] sm:text-sm">
+        <p className="text-gray font-medium text-[3vw] sm:text-sm">
           {data.kategori}
         </p>
         <h6 className="text-black font-semibold pb-[2vw] text-[3vw] sm:pb-2 sm:text-base lg:text-lg">
           {data.judul}
         </h6>
-        <p className="text-gray text-[3vw] sm:text-[10px] lg:text-sm line-clamp-2">
+        <p className="text-gray text-[3vw] sm:text-xs lg:text-sm line-clamp-2">
           {data.deskripsi}
         </p>
         <p className="text-black font-medium text-[2.5vw] pt-[3vw] sm:text-sm sm:pt-5">
@@ -31,4 +31,4 @@ const cardArtikel = (props) => {
   );
 };
 
-export default cardArtikel;
+export default CardArtikel;

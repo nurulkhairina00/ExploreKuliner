@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import axios from "axios";
-import CardRestoran from "../layout/CardRestoran";
+import CardRestoran from "../layout/cardRestoran";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -53,7 +53,7 @@ const RestoranBaru = () => {
         <h2 className="text-primary font-bold text-[6vw] sm:text-3xl pb-[2vw] sm:pb-5">
           Restoran Baru
         </h2>
-        <p className="text-[3vw] text-primary font-normal pb-[2vw] sm:text-lg sm:pb-5">
+        <p className="text-[4vw] text-primary font-normal pb-[2vw] sm:text-lg sm:pb-5">
           Restoran baru buka, ayok datangi resto yang kamu mau.
         </p>
       </div>
