@@ -198,9 +198,11 @@ const Hero = () => {
       </div>
       {showModal && (
         <ModalOption
-          showModal={showModal}
-          setShowModal={setShowModal}
-          type={type}
+          {...{
+            showModal,
+            setShowModal,
+            type,
+          }}
         />
       )}
     </section>

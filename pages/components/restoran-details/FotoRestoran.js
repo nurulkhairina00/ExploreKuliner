@@ -48,9 +48,11 @@ const FotoRestoran = (props) => {
 
       {showModal && (
         <ModalFotoRestoran
-          showModal={showModal}
-          setShowModal={setShowModal}
-          data={data}
+          {...{
+            showModal,
+            setShowModal,
+            data,
+          }}
         />
       )}
     </div>

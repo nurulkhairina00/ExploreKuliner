@@ -29,10 +29,10 @@ const TentangRestoran = () => {
 
   return (
     <section className="flex flex-col p-[5vw] pt-[25vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-10 sm:pt-36">
-      <FotoRestoran data={data} />
+      <FotoRestoran {...{ data }} />
       <div className="flex flex-col lg:flex-row w-full pt-[2vw] sm:pt-5">
         <DeskripsiRestoran data={data} />
-        <LokasiRestoran data={data} />
+        <LokasiRestoran {...{ data }} />
       </div>
       <div className="flex flex-col lg:flex-row w-full pt-[10vw] sm:pt-5">
         <div className="w-full lg:w-4/6 xl:w-3/4 lg:ms-4 lg:me-8">
@@ -61,9 +61,9 @@ const TentangRestoran = () => {
             </button>
           </div>
           {activeTab === "menu" ? (
-            <TabMenu data={data} />
+            <TabMenu {...{ data }} />
           ) : (
-            <TabUlasan data={data} />
+            <TabUlasan {...{ data }} />
           )}
         </div>
         <div className="w-full lg:w-1/3 xl:w-1/4 mt-4 lg:mt-0">

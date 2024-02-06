@@ -82,9 +82,11 @@ const DeskripsiRestoran = (props) => {
 
       {showModal && (
         <ModalUlasan
-          showModal={showModal}
-          setShowModal={setShowModal}
-          data={data}
+          {...{
+            showModal,
+            setShowModal,
+            data,
+          }}
         />
       )}
     </div>

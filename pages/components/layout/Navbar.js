@@ -42,9 +42,11 @@ const Navbar = () => {
       </div>
       {showModal && (
         <ModalOption
-          showModal={showModal}
-          setShowModal={setShowModal}
-          type={type}
+          {...{
+            showModal,
+            setShowModal,
+            type,
+          }}
         />
       )}
     </nav>
