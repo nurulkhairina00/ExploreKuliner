@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useEffect } from "react";
+import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -30,9 +31,11 @@ const ListArtikel = () => {
           <p className="text-[3vw] sm:text-lg font-normal">
             Berbagai rekomendasi tempat dan menu terbaik.
           </p>
-          <p className="text-[3vw] sm:text-lg font-medium text-secondary cursor-pointer">
-            Lihat Semua
-          </p>
+          <Link href="/artikel">
+            <p className="text-[3vw] sm:text-lg font-medium text-secondary cursor-pointer">
+              Lihat Semua
+            </p>
+          </Link>
         </div>
       </div>
 

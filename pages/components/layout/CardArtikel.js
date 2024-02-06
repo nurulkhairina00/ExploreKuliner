@@ -13,7 +13,7 @@ const CardArtikel = (props) => {
           className="rounded-t-[2vw] w-full aspect-[16/10] rounded-b-none sm:rounded-t-lg sm:rounded-b-none relative transition-transform duration-300 hover:scale-110 ease-in-out"
         />
       </div>
-      <div className="p-[2.5vw] sm:p-4">
+      <div className="p-[4vw] sm:p-6">
         <p className="text-gray font-medium text-[3vw] sm:text-sm">
           {data.kategori}
         </p>
