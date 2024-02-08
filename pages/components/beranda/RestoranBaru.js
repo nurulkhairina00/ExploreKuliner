@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import axios from "axios";
-import CardRestoran from "../layout/cardRestoran";
+import CardRestoran from "../layout/CardRestoran";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -39,7 +39,7 @@ const RestoranBaru = () => {
   return (
     <section className="sm:flex sm:px-8 md:px-16 lg:px-28 xl:px-36 sm:py-12 sm:p-0 bg-secondary">
       {/* Tampilan Judul Mobile */}
-      <div className="sm:hidden p-[5vw]">
+      <div className="sm:hidden p-[8vw]">
         <h2 className="text-primary font-bold text-[6vw] sm:text-3xl pb-[2vw] sm:pb-5">
           Restoran Baru
         </h2>
@@ -59,7 +59,7 @@ const RestoranBaru = () => {
       </div>
 
       {/* Card Restoran Baru */}
-      <div className="w-full sm:w-3/4 ps-[5vw] sm:ps-0 sm:py-5 relative">
+      <div className="w-full sm:w-3/4 ps-[8vw] sm:ps-0 sm:py-5 relative">
         <button
           onClick={slidePrev}
           className="hidden sm:block absolute bottom-3 bg-white p-2 rounded-full z-10"

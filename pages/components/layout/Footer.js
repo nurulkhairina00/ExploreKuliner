@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <section className="bg-black p-[5vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-10">
+    <section className="bg-black p-[8vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-10">
       <div className="flex flex-col sm:flex-row justify-between items-center">
         <h6 className="text-[4vw] sm:text-lg text-primary font-semibold">
           Ikuti Kami

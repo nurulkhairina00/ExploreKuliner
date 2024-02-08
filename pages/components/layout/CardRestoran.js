@@ -29,7 +29,7 @@ const CardRestoran = (props) => {
           </svg>
           {data.rating}
         </div>
-        <div className="p-[2.5vw] sm:p-4">
+        <div className="p-[4vw] sm:p-4">
           <p className="pb-[3vw] text-[3vw] sm:pb-2 sm:text-sm lg:text-base">
             {data.jarak}{" "}
             {jenis_makanan === "none" && (

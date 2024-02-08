@@ -28,7 +28,7 @@ const TentangRestoran = () => {
   }, []);
 
   return (
-    <section className="flex flex-col p-[5vw] pt-[25vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-10 sm:pt-36">
+    <section className="flex flex-col p-[8vw] pt-[28vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-10 sm:pt-36">
       <FotoRestoran {...{ data }} />
       <div className="flex flex-col lg:flex-row w-full pt-[2vw] sm:pt-5">
         <DeskripsiRestoran data={data} />

@@ -20,13 +20,13 @@ const RestoranTerdekat = () => {
     : [];
 
   return (
-    <div className=" bg-white rounded-lg shadow-lg p-[2vw] sm:p-4">
+    <div className=" bg-white rounded-lg shadow-lg p-[4vw] sm:p-4">
       <h3 className="text-black text-[6vw] sm:text-2xl font-semibold text-center pb-[2vw] sm:pb-5">
         Restoran Terdekat
       </h3>
       {getListRestoranResult ? (
         RestoranTerdekat?.map((item) => (
-          <div className="p-[2vw] sm:p-4 cursor-pointer" key={item.id}>
+          <div className="p-[4vw] sm:p-4 cursor-pointer" key={item.id}>
             <img
               src={item.image}
               alt={item.nama_resto.split(" ").join("-")}

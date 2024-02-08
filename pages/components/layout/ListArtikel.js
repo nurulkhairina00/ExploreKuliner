@@ -21,7 +21,7 @@ const ListArtikel = () => {
   }, [dispatch]);
 
   return (
-    <section className="p-[5vw] sm:px-8 md:px-16 lg:px-28 xl:px-36 sm:pt-12 sm:pb-20 sm:p-0">
+    <section className="p-[8vw] sm:px-8 md:px-16 lg:px-28 xl:px-36 sm:pt-12 sm:pb-20 sm:p-0">
       {/* Judul Artikel */}
       <div className="text-black">
         <h2 className="font-bold text-[6vw] sm:text-3xl pb-[2vw] sm:pb-5">

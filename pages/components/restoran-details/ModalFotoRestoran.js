@@ -9,7 +9,7 @@ const ModalFotoRestoran = (props) => {
   return (
     <div className="h-full w-full fixed left-0 top-0 flex flex-col justify-center items-center bg-black bg-opacity-70 z-10">
       <div className="w-[90%] xl:w-1/2 bg-white rounded-[2vw] sm:rounded-lg shadow-lg h-[90%] overflow-hidden">
-        <div className="p-[3vw] sm:p-4">
+        <div className="p-[4vw] sm:p-4">
           <div className="flex justify-end pb-3" onClick={handleCloseModal}>
             <div className="w-[6vw] h-[6vw] sm:w-11 sm:h-11 border-gray border-2 rounded-full flex justify-center items-center cursor-pointer">
               <svg
@@ -26,7 +26,7 @@ const ModalFotoRestoran = (props) => {
             </div>
           </div>
           <div className="border-t border-mediumGray"></div>
-          <div className="w-full p-[2vw] sm:p-4">
+          <div className="w-full p-[4vw] sm:p-4">
             <h6 className="text-black font-semibold text-[4.5vw] sm:text-3xl text-center pb-[3vw] sm:pb-6">
               Foto Restoran {data.nama_resto}
             </h6>

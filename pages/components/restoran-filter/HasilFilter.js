@@ -25,7 +25,7 @@ const HasilFilter = () => {
 
   return (
     <div className="w-full xl:w-3/4 sm:px-4 relative pb-[20vw] sm:pb-28">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-[3vw] sm:gap-4 cursor-pointer">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-[5vw] sm:gap-4 cursor-pointer">
         {data.map((item) => (
           <Link href="/restoran-detail" key={item.id}>
             <div className="flex flex-row shadow-md hover:shadow-xl rounded-lg">

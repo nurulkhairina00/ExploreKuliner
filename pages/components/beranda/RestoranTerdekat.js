@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { useDispatch, useSelector } from "react-redux";
 import { getListRestoran } from "../../actions/restoranAction";
-import CardRestoran from "../layout/cardRestoran";
+import CardRestoran from "../layout/CardRestoran";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -36,7 +36,7 @@ const RestoranTerdekat = () => {
   return (
     <section className="sm:px-8 md:px-16 lg:px-28 xl:px-36 sm:py-12 sm:p-0">
       {/* Judul Restoran Terdekat */}
-      <div className="p-[5vw] sm:p-0 text-black">
+      <div className="p-[8vw] sm:p-0 text-black">
         <h2 className="font-bold text-[6vw] sm:text-3xl pb-[2vw] sm:pb-5">
           Restoran Terdekat
         </h2>
@@ -54,7 +54,7 @@ const RestoranTerdekat = () => {
 
       {/* Card Restoran Terdekat */}
       {getListRestoranResult ? (
-        <div className="ps-[5vw] sm:ps-0 sm:py-5 relative">
+        <div className="ps-[8vw] sm:ps-0 sm:py-5 relative">
           <button
             onClick={slidePrev}
             className="hidden sm:block absolute top-1/2 -translate-y-1/2 bg-white p-2 rounded-full z-10"

@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full bg-white fixed shadow-md p-[5vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-7 z-10">
+    <nav className="w-full bg-white fixed shadow-md p-[8vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-7 z-10">
       <div className="flex justify-between">
         <Link href="/">
           <h6 className=" text-[4vw] sm:text-xl text-secondary font-bold cursor-pointer">

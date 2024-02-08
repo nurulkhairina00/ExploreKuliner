@@ -5,7 +5,7 @@ const LokasiRestoran = (props) => {
 
   return (
     <div className="w-full lg:w-1/3 xl:w-1/4 mt-4 lg:mt-0">
-      <div className=" bg-white rounded-lg shadow-lg p-[2.5vw] sm:p-4">
+      <div className=" bg-white rounded-lg shadow-lg p-[4vw] sm:p-4">
         <h3 className="text-black text-[4vw] sm:text-base font-bold text-center pb-[3vw] sm:pb-5">
           Lokasi, Jam Operasional & Kontak
         </h3>

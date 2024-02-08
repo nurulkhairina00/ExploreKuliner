@@ -5,7 +5,7 @@ import HasilFilter from "./HasilFilter";
 
 const FilterRestoran = () => {
   return (
-    <section className="flex p-[5vw] pt-[30vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-10 sm:pt-36">
+    <section className="flex p-[8vw] pt-[30vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-10 sm:pt-36">
       <TabFilter />
       <HasilFilter />
     </section>

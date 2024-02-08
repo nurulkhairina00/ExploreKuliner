@@ -30,7 +30,7 @@ const TabUlasan = (props) => {
       </div>
       {data.ulasanCustomer.map((item, index) => (
         <div key={index}>
-          <div className="w-full flex p-[2vw] sm:p-4">
+          <div className="w-full flex p-[4vw] sm:p-4">
             <div className="w-[13%] xl:w-[10%]">
               <img
                 src={item.image}

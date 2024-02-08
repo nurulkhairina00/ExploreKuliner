@@ -33,7 +33,7 @@ const ListVideo = () => {
   return (
     <section className="sm:px-8 md:px-16 lg:px-28 xl:px-36 sm:py-12 sm:p-0">
       {/* Judul Restoran Populer*/}
-      <div className="p-[5vw] text-black sm:p-0">
+      <div className="p-[8vw] text-black sm:p-0">
         <h2 className=" font-bold text-[6vw] sm:text-3xl pb-[2vw] sm:pb-5">
           Video Makanan
         </h2>
@@ -43,7 +43,7 @@ const ListVideo = () => {
       </div>
 
       {/* Card Video Makanan */}
-      <div className="px-[5vw] sm:px-0 sm:py-5 relative">
+      <div className="px-[8vw] sm:px-0 sm:py-5 relative">
         <button
           onClick={slidePrev}
           className="hidden sm:block absolute top-1/2 -translate-y-1/2 bg-white p-2 rounded-full z-10"
