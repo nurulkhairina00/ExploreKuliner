@@ -220,51 +220,61 @@
         ],
         "menu": [
             {
+                "id": 1,
                 "nama_menu": "Chicken Satay Nusantara",
                 "image": "/images/chicken-satay-nusantara.jpeg",
                 "harga": 65000
             },
             {
+                "id": 2,
                 "nama_menu": "Stuffed Tofu Parahtangan",
                 "image": "/images/chicken-satay-nusantara.jpeg",
                 "harga": 75000
             },
             {
+                "id": 3,
                 "nama_menu": "Oriental Seafood Ckawe",
                 "image": "/images/chicken-satay-nusantara.jpeg",
                 "harga": 60000
             },
             {
+                "id": 4,
                 "nama_menu": "Hokkien Spring Roll",
                 "image": "/images/chicken-satay-nusantara.jpeg",
                 "harga": 50000
             },
             {
+                "id": 5,
                 "nama_menu": "Beef Satay kotagede",
                 "image": "/images/chicken-satay-nusantara.jpeg",
                 "harga": 65000
             },
             {
+                "id": 6,
                 "nama_menu": "Udang Gulung",
                 "image": "/images/chicken-satay-nusantara.jpeg",
                 "harga": 65000
             },
             {
+                "id": 7,
                 "nama_menu": "Chicken Satay Nusantara",
                 "image": "/images/chicken-satay-nusantara.jpeg",
                 "harga": 65000
             },
             {
+                "id": 8,
                 "nama_menu": "Beef Satay kotagede",
                 "image": "/images/chicken-satay-nusantara.jpeg",
                 "harga": 65000
             },
             {
+                "id": 9,
                 "nama_menu": "Chicken Satay Nusantara",
                 "image": "/images/chicken-satay-nusantara.jpeg",
                 "harga": 65000
             },
             {
+                "id": 10,
                 "nama_menu": "Beef Satay kotagede",
                 "image": "/images/chicken-satay-nusantara.jpeg",
                 "harga": 65000
@@ -272,6 +282,7 @@
         ],
         "ulasanCustomer": [
             {
+                "id": 1,
                 "nama": "Nurul Khairina Surbakti",
                 "rating": 4,
                 "image": "/images/kategori2.jpg",
@@ -282,6 +293,7 @@
                 "buruk": 2
             },
             {
+                "id": 2,
                 "nama": "Iqbal Alhuda",
                 "rating": 4.5,
                 "image": "/images/kategori1.jpg",
@@ -292,6 +304,7 @@
                 "buruk": 0
             },
             {
+                "id": 3,
                 "nama": "Herbowo Prasetyo",
                 "rating": 4.5,
                 "image": "/images/kategori2.jpg",
@@ -302,6 +315,7 @@
                 "buruk": 0
             },
             {
+                "id": 4,
                 "nama": "Ariyandi",
                 "rating": 4,
                 "image": "/images/kategori1.jpg",

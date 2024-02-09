@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/layout/Navbar";
-import TentangRestoran from "../components/restoran-details/tentangRestoran";
+import TentangRestoran from "../components/restoran-details/TentangRestoran";
 import RestoranSerupa from "../components/restoran-details/RestoranSerupa";
 import ListArtikel from "../components/layout/ListArtikel";
 import Footer from "../components/layout/Footer";

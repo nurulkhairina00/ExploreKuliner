@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import moment from "moment";
 
 const CardArtikel = (props) => {
   const { data } = props;
@@ -20,6 +21,9 @@ const CardArtikel = (props) => {
         <h6 className="text-black font-semibold pb-[2vw] text-[3vw] sm:pb-2 sm:text-base lg:text-lg">
           {data.judul}
         </h6>
+        <p className="text-[2.5vw] sm:text-xs font-semibold sm:mb-1">
+          {moment(data.publish_date).format("DD MMMM YYYY")}
+        </p>
         <p className="text-gray text-[3vw] sm:text-xs lg:text-sm line-clamp-2">
           {data.deskripsi}
         </p>
