@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Pagination from "./Pagination";
+import Pagination from "../../layout/Pagination";
 
 const TabMenu = (props) => {
   const { data } = props;

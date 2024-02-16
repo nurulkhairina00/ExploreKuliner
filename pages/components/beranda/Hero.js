@@ -179,7 +179,7 @@ const Hero = () => {
           </div>
 
           {/* Button Search Restoran */}
-          <Link href="/restoran-filter">
+          <Link href="/restoran">
             <div className="p-2 rounded-full m-3 bg-secondary z-10 cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

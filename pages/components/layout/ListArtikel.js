@@ -71,7 +71,9 @@ const ListArtikel = () => {
             >
               {getListArtikelResult?.map((item) => (
                 <SwiperSlide key={item.id}>
-                  <CardArtikel data={item} />
+                  <Link href={`/artikel/detail/${item.id}`}>
+                    <CardArtikel data={item} />
+                  </Link>
                 </SwiperSlide>
               ))}
             </Swiper>

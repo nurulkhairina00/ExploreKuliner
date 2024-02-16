@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
-import Rating from "../layout/Rating";
+import Rating from "../../layout/Rating";
 import ModalUlasan from "./ModalUlasan";
 
 const DeskripsiRestoran = (props) => {

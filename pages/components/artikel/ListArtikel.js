@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import { UseDispatch, useDispatch, useSelector } from "react-redux";
 import { getListArtikel } from "../../actions/artikelAction";
 import CardArtikel from "../layout/cardArtikel";
-import Pagination from "../restoran-details/Pagination";
+import Pagination from "../layout/Pagination";
+import Link from "next/link";
 
 const ListArtikel = () => {
   const { getListArtikelResult, getListArtikelLoading, getListArtikelError } =
@@ -37,9 +38,7 @@ const ListArtikel = () => {
         <>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-[6vw] sm:gap-10">
             {getListArtikelResult.map((item) => (
-              <div className="" key={item.id}>
-                <CardArtikel data={item} />
-              </div>
+              <CardArtikel data={item} key={item.id} />
             ))}
           </div>
           <div className="py-[4vw] sm:py-6">

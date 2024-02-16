@@ -3,8 +3,8 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { useDispatch, useSelector } from "react-redux";
-import { getListRestoran } from "../../actions/restoranAction";
-import CardRestoran from "../layout/CardRestoran";
+import { getListRestoran } from "../../../actions/restoranAction";
+import CardRestoran from "../../layout/CardRestoran";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -44,7 +44,7 @@ const RestoranSerupa = () => {
           <p className="text-[3vw] sm:text-lg font-normal">
             Restoran dengan makanan yang serupa.
           </p>
-          <Link href="/restoran-filter">
+          <Link href="/restoran">
             <p className="text-[3vw] sm:text-lg font-medium text-secondary cursor-pointer">
               Lihat Semua
             </p>

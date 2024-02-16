@@ -44,7 +44,7 @@ const RestoranTerdekat = () => {
           <p className="text-[3vw] sm:text-lg font-normal">
             Kami pilihan resto yang dekat dengan lokasi mu.
           </p>
-          <Link href="/restoran-filter">
+          <Link href="/restoran">
             <p className="text-[3vw] sm:text-lg font-medium text-secondary cursor-pointer">
               Lihat Semua
             </p>

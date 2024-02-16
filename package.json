@@ -17,6 +17,7 @@
     "react-redux": "^9.1.0",
     "redux": "^5.0.1",
     "redux-thunk": "^3.1.0",
+    "sweetalert2": "^11.10.5",
     "swiper": "^11.0.5"
   },
   "devDependencies": {

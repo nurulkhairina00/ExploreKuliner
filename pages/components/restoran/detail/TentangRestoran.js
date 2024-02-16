@@ -1,6 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useRouter } from "next/router";
 import FotoRestoran from "./FotoRestoran";
 import DeskripsiRestoran from "./DeskripsiRestoran";
 import LokasiRestoran from "./LokasiRestoran";
@@ -9,6 +11,8 @@ import TabUlasan from "./TabUlasan";
 import RestoranTerdekat from "./RestoranTerdekat";
 
 const TentangRestoran = () => {
+  const router = useRouter();
+  const { id } = router.query;
   const [data, setData] = useState({});
   const [activeTab, setActiveTab] = useState("menu");
 
@@ -16,7 +20,8 @@ const TentangRestoran = () => {
     await axios
       .get(`/data/exploreKuliner.json`)
       .then((res) => {
-        setData(res.data.detailRestoran);
+        let result = res.data.restoran.find((item) => item.id === Number(id));
+        setData(result);
       })
       .catch((error) => {
         throw error;

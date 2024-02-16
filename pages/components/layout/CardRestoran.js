@@ -6,7 +6,7 @@ const CardRestoran = (props) => {
   const { data, jenis_makanan } = props;
 
   return (
-    <Link href="/restoran-detail">
+    <Link href={`/restoran/detail/${data.id}`}>
       <div className="text-black bg-white rounded-[2vw] sm:rounded-xl shadow-lg cursor-pointer">
         <div className="relative overflow-hidden rounded-t-[2vw] rounded-b-none sm:rounded-t-lg sm:rounded-b-none">
           <img

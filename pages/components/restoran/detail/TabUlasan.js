@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
-import Rating from "../layout/Rating";
-import Pagination from "./Pagination";
+import Rating from "../../layout/Rating";
+import Pagination from "../../layout/Pagination";
 
 const TabUlasan = (props) => {
   const { data } = props;
