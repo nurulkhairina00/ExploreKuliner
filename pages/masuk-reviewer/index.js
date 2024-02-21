@@ -6,6 +6,7 @@ import Router from "next/router";
 
 const Masuk = () => {
   const handleBack = () => Router.back();
+
   return (
     <>
       <Head>
@@ -41,7 +42,7 @@ const Masuk = () => {
 
           {/* Form Masuk */}
           <div className="w-full h-screen md:w-1/2 flex justify-center items-center">
-            <div className="w-5/6 lg:w-2/3 bg-white p-[6vw] sm:p-7 rounded-lg shadow-lg">
+            <div className="w-5/6 lg:w-2/3 bg-white p-[6vw] sm:p-7 rounded-[2vw] sm:rounded-lg shadow-lg">
               <h1 className="text-secondary text-[6vw] sm:text-3xl font-bold pb-[2vw] sm:pb-5">
                 ExploreKuliner
               </h1>
@@ -93,12 +94,11 @@ const Masuk = () => {
                       Ingatkan saya
                     </label>
                   </div>
-                  <a
-                    href="#"
-                    className="text-[3vw] sm:text-sm text-secondary font-normal text-end"
-                  >
-                    Lupa kata sandi?
-                  </a>
+                  <Link href="/reset-password">
+                    <p className="text-[3vw] sm:text-sm text-secondary font-normal text-end mb-0 cursor-pointer">
+                      Lupa kata sandi?
+                    </p>
+                  </Link>
                 </div>
                 <button
                   type="submit"
