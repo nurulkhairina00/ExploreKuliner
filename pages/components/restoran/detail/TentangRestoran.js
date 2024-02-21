@@ -33,14 +33,14 @@ const TentangRestoran = () => {
   }, []);
 
   return (
-    <section className="flex flex-col p-[8vw] pt-[28vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-10 sm:pt-36">
+    <section className="flex flex-col px-[8vw] pb-[8vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-10 sm:pt-0">
       <FotoRestoran {...{ data }} />
-      <div className="flex flex-col lg:flex-row w-full pt-[2vw] sm:pt-5">
-        <DeskripsiRestoran data={data} />
+      <div className="flex flex-col lg:flex-row w-full pt-[2vw] sm:pt-4 sm:px-4 xl:px-0">
+        <DeskripsiRestoran {...{ data }} />
         <LokasiRestoran {...{ data }} />
       </div>
-      <div className="flex flex-col lg:flex-row w-full pt-[10vw] sm:pt-5">
-        <div className="w-full lg:w-4/6 xl:w-3/4 lg:ms-4 lg:me-8">
+      <div className="flex flex-col lg:flex-row w-full pt-[10vw] sm:pt-4 sm:px-4 xl:px-0">
+        <div className="w-full lg:w-4/6 xl:w-3/4 lg:me-8">
           <div className="flex mb-4">
             <button
               id="menu"

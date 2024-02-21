@@ -8,10 +8,10 @@ const FotoRestoran = (props) => {
   const handleOpenModal = () => setShowModal(!showModal);
 
   return (
-    <div className="flex w-full pb-[3vw] md:pb-5">
+    <div className="flex w-full pb-[3vw] md:pb-5 sm:px-4 xl:px-0">
       {data?.fotoRestoran?.length > 0 ? (
         <>
-          <div className="w-4/6 xl:w-3/4 h-[40vw] md:h-60 lg:h-96 rounded-lg shadow-lg me-[2vw] sm:me-3 lg:mx-4">
+          <div className="w-4/6 xl:w-3/4 h-[40vw] md:h-60 lg:h-96 rounded-lg shadow-lg me-[2vw] sm:me-3">
             <img
               src={data.fotoRestoran[0].image}
               alt="image"

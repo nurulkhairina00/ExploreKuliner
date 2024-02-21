@@ -10,7 +10,7 @@ const DeskripsiRestoran = (props) => {
   const handleOpenModal = () => setShowModal(!showModal);
 
   return (
-    <div className="w-full lg:w-4/6 xl:w-3/4 lg:ms-4 lg:me-8">
+    <div className="w-full lg:w-4/6 xl:w-3/4 lg:me-8">
       <div className="pb-[2vw] sm:pb-8">
         <h3 className="text-[5vw] sm:text-2xl font-semibold text-black sm:pb-3">
           {data.nama_resto}
