@@ -39,8 +39,8 @@ const Hero = () => {
         <div className="hidden sm:flex flex-row gap-[3vw] sm:gap-5">
           <div className="w-[6vw] h-[6vw] sm:w-11 sm:h-11 bg-primary rounded-full flex justify-center items-center cursor-pointer">
             <svg
-              width="24"
-              height="24"
+              width="22"
+              height="22"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -53,8 +53,8 @@ const Hero = () => {
           </div>
           <div className="w-[6vw] h-[6vw] sm:w-11 sm:h-11 bg-primary rounded-full flex justify-center items-center cursor-pointer">
             <svg
-              width="24"
-              height="24"
+              width="22"
+              height="22"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -67,8 +67,8 @@ const Hero = () => {
           </div>
           <div className="w-[6vw] h-[6vw] sm:w-11 sm:h-11 bg-primary rounded-full flex justify-center items-center cursor-pointer">
             <svg
-              width="24"
-              height="24"
+              width="20"
+              height="20"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

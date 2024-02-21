@@ -41,74 +41,81 @@ const Daftar = () => {
 
           {/* Form Daftar */}
           <div className="w-full h-screen md:w-1/2 flex justify-center items-center">
-            <div className="w-5/6 lg:w-2/3 bg-white p-7 rounded-lg shadow-lg">
-              <h2 className="text-secondary text-3xl font-bold pb-5">
+            <div className="w-5/6 lg:w-2/3 p-[6vw] sm:p-7 rounded-[2vw] sm:rounded-lg shadow-lg">
+              <h2 className="text-secondary text-[6vw] sm:text-3xl font-bold pb-[2vw] sm:pb-5">
                 ExploreKuliner
               </h2>
-              <p className="text-black text-2xl font-semibold">
+              <p className="text-black text-[5vw] sm:text-2xl font-semibold">
                 Daftarkan Akun Anda
               </p>
-              <p className="text-black text-sm pb-5">
+              <p className="text-black text-[3vw] sm:text-sm pb-[2vw] sm:pb-5">
                 Daftar dengan alamat email, no hp dan kata sandi.
               </p>
               <form action="">
-                <div className="pb-3">
-                  <label htmlFor="email" className="text-sm font-normal">
+                <div className="pb-[2vw] sm:pb-3">
+                  <label
+                    htmlFor="email"
+                    className="text-[3vw] sm:text-sm font-normal"
+                  >
                     Alamat Email
                   </label>
                   <input
                     type="email"
                     name="email"
                     placeholder="mail@gmail.com"
-                    className="w-full mt-1 p-2 rounded-lg bg-mediumGray focus:outline-secondary"
+                    className="w-full sm:mt-1 p-[2vw] sm:p-2 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-sm"
                   />
                 </div>
-                <div className="pb-3">
-                  <label htmlFor="no_hp" className="text-sm font-normal">
+                <div className="pb-[2vw] sm:pb-3">
+                  <label
+                    htmlFor="no_hp"
+                    className="text-[3vw] sm:text-sm font-normal"
+                  >
                     No Handphone
                   </label>
                   <input
                     type="number"
                     name="no_hp"
                     placeholder="+62"
-                    className="w-full mt-1 p-2 rounded-lg bg-mediumGray focus:outline-secondary"
+                    className="w-full sm:mt-1 p-[2vw] sm:p-2 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-sm"
                   />
                 </div>
-                <div className="pb-5">
-                  <label htmlFor="katasandi" className="text-sm font-normal">
+                <div className="pb-[6vw] sm:pb-5">
+                  <label
+                    htmlFor="katasandi"
+                    className="text-[3vw] sm:text-sm font-normal"
+                  >
                     Kata Sandi
                   </label>
                   <input
                     type="password"
                     name="katasandi"
                     placeholder="********"
-                    className="w-full mt-1 p-2 rounded-lg bg-mediumGray focus:outline-secondary"
+                    className="w-full sm:mt-1 p-[2vw] sm:p-2 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-sm"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full font-semibold text-white p-2 rounded-full bg-secondary "
+                  className="w-full font-semibold text-white p-[2vw] sm:p-2 rounded-full bg-secondary text-[3vw] sm:text-sm"
                 >
                   Daftar
                 </button>
               </form>
-              <p className="text-black text-sm text-center py-5">
+              <p className="text-black text-[3vw] sm:text-sm text-center py-[4vw] sm:py-5">
                 Atau masuk dengan
               </p>
               <button
                 type="button"
-                className="w-full text-sm font-semibold text-black p-2 rounded-full bg-mediumGray flex justify-center"
+                className="w-full text-[3vw] sm:text-sm font-semibold text-black p-[2vw] sm:p-2 rounded-full bg-mediumGray flex justify-center"
               >
                 <img
                   src="/logo/icon-google.svg"
                   alt="google"
-                  width={24}
-                  height={24}
-                  className="me-2"
+                  className="me-[2vw] sm:me-2 w-[4vw] h-[4vw] sm:w-[24px] sm:h-[24px]"
                 />
                 Google
               </button>
-              <p className="text-sm text-center pt-7">
+              <p className="text-[3vw] sm:text-sm text-center pt-[7vw] sm:pt-7">
                 <span className="text-black">Sudah memiliki akun?</span>
                 <Link href="/masuk-reviewer">
                   <span className="text-secondary font-bold cursor-pointer">

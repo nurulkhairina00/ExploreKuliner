@@ -13,9 +13,9 @@ const Footer = () => {
         <div className="flex flex-row gap-[3vw] sm:gap-5 py-[1.5vw] sm:py-3">
           <div className="w-[7vw] h-[7vw] sm:w-11 sm:h-11 bg-white rounded-full flex justify-center items-center cursor-pointer">
             <svg
-              className="sm:w-[24px] sm:h-[24px]"
-              width="4vw"
-              height="4vw"
+              className="sm:w-[22px] sm:h-[22px]"
+              width="3.5vw"
+              height="3.5vw"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -28,9 +28,9 @@ const Footer = () => {
           </div>
           <div className="w-[7vw] h-[7vw] sm:w-11 sm:h-11 bg-white rounded-full flex justify-center items-center cursor-pointer">
             <svg
-              className="sm:w-[24px] sm:h-[24px]"
-              width="4vw"
-              height="4vw"
+              className="sm:w-[22px] sm:h-[22px]"
+              width="3.5vw"
+              height="3.5vw"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -43,9 +43,9 @@ const Footer = () => {
           </div>
           <div className="w-[7vw] h-[7vw] sm:w-11 sm:h-11 bg-white rounded-full flex justify-center items-center cursor-pointer">
             <svg
-              className="sm:w-[24px] sm:h-[24px]"
-              width="4vw"
-              height="4vw"
+              className="sm:w-[20px] sm:h-[20px]"
+              width="3.5vw"
+              height="3.5vw"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
