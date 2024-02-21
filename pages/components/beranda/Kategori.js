@@ -42,7 +42,7 @@ const Kategori = () => {
   }, []);
 
   return (
-    <section className="p-[8vw] sm:px-8 md:px-16 lg:px-28 xl:px-36 sm:pt-24 sm:py-12">
+    <section className="px-[8vw] pt-[8vw] sm:px-8 md:px-16 lg:px-28 xl:px-36 sm:pt-24 sm:py-12">
       <h2 className="text-black font-bold text-[6vw] sm:text-3xl pb-[12vw] sm:pb-9">
         Kategori
       </h2>

@@ -7,7 +7,7 @@ import ListArtikel from "../components/layout/ListArtikel";
 import Footer from "../components/layout/Footer";
 
 const Index = () => {
-  let breadcrumbData = [
+  const breadcrumbData = [
     {
       label: "Restoran",
       link: "/restoran",

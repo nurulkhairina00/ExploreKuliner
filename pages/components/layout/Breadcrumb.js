@@ -9,7 +9,6 @@ const Breadcrumb = (props) => {
       <ol className="flex items-center px-0 sm:px-4 xl:px-0">
         <li className="text-gray text-[3vw] sm:text-base">
           <Link href="/">
-            {/* <a className="flex items-center">🏠</a> */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="3vw"
@@ -31,7 +30,9 @@ const Breadcrumb = (props) => {
         {data.map((item, index) => (
           <li
             key={index}
-            className="flex items-center text-gray text-[3vw] sm:text-base"
+            className={`flex items-center text-[3vw] sm:text-base font-medium ${
+              data.length === index + 1 ? "text-gray" : "text-secondary"
+            }`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

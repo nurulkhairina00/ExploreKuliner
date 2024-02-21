@@ -39,11 +39,6 @@
             "id": 8,
             "nama": "Bakery",
             "image": "/images/kategori1.jpg"
-        },
-        {
-            "id": 9,
-            "nama": "Korea",
-            "image": "/images/kategori2.jpg"
         }
     ],
     "restoran": [

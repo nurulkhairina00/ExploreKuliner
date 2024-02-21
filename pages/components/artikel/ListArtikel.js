@@ -15,7 +15,7 @@ const ListArtikel = () => {
   }, [dispatch]);
 
   return (
-    <section className="flex flex-col p-[8vw] pt-[28vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-30 sm:pt-48">
+    <section className="flex flex-col p-[8vw] pb-[8vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-30 sm:pt-10">
       <div className="pb-[8vw] sm:pb-14 flex flex-col ">
         <h5 className="text-[10vw] sm:text-6xl font-bold text-black text-center">
           Artikel

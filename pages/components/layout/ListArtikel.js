@@ -44,7 +44,7 @@ const ListArtikel = () => {
         <div className="sm:py-5 relative">
           <div className="sm:px-5">
             <Swiper
-              slidesPerView={3}
+              slidesPerView={4}
               spaceBetween={30}
               className="mySwiper"
               pagination={{
@@ -64,8 +64,11 @@ const ListArtikel = () => {
                 641: {
                   slidesPerView: 2,
                 },
-                1100: {
+                1000: {
                   slidesPerView: 3,
+                },
+                1600: {
+                  slidesPerView: 4,
                 },
               }}
             >
