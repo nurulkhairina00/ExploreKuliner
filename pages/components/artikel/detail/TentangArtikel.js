@@ -31,7 +31,7 @@ const TentangArtikel = () => {
   return (
     <section className="flex flex-col px-[8vw] pb-[8vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-10 sm:pt-0">
       <div className="flex flex-col justify-center items-center">
-        <div className="w-full lg:w-3/4 h-[40vw] md:h-72 lg:h-96 rounded-lg shadow-lg">
+        <div className="w-full lg:w-3/4 h-[40vw] md:h-72 lg:h-96 rounded-[2vw] sm:rounded-lg shadow-lg">
           <img
             src={data?.image}
             alt="cover-artikel"

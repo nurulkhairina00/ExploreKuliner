@@ -8,7 +8,7 @@ const ModalOption = (props) => {
 
   return (
     <div className="h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-70 z-10">
-      <div className="w-1/2 xl:w-1/3 bg-white rounded-lg shadow-lg">
+      <div className="w-1/2 xl:w-1/3 bg-white rounded-[2vw] sm:rounded-lg shadow-lg">
         <div className="p-4">
           <div className="flex justify-end pb-3" onClick={handleCloseModal}>
             <div className="w-[6vw] h-[6vw] sm:w-11 sm:h-11 border-gray border-2 rounded-full flex justify-center items-center cursor-pointer">
@@ -33,7 +33,7 @@ const ModalOption = (props) => {
             <Link
               href={type === "masuk" ? "/masuk-reviewer" : "/daftar-reviewer"}
             >
-              <button className="border-secondary border-2 w-1/2 rounded-lg py-2 text-base text-secondary font-bold hover:bg-secondary hover:text-primary">
+              <button className="border-secondary border-2 w-1/2 rounded-[2vw] sm:rounded-lg py-2 text-base text-secondary font-bold hover:bg-secondary hover:text-primary">
                 Reviewer
               </button>
             </Link>
@@ -41,7 +41,7 @@ const ModalOption = (props) => {
             <Link
               href={type === "masuk" ? "/masuk-reviewer" : "/daftar-reviewer"}
             >
-              <button className="border-secondary border-2 w-1/2 rounded-lg py-2 text-base text-secondary font-bold hover:bg-secondary hover:text-primary">
+              <button className="border-secondary border-2 w-1/2 rounded-[2vw] sm:rounded-lg py-2 text-base text-secondary font-bold hover:bg-secondary hover:text-primary">
                 Pemilik Restoran
               </button>
             </Link>

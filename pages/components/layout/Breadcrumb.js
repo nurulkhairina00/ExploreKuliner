@@ -46,7 +46,7 @@ const Breadcrumb = (props) => {
                 stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                stroke-width="2"
+                strokeWidth="2"
                 d="m10 17l5-5l-5-5"
               />
             </svg>

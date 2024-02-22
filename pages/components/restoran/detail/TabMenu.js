@@ -1,12 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
-import Pagination from "../../layout/Pagination";
+import React, { useState } from "react";
+import Pagination from "./PaginationMenu";
 
 const TabMenu = (props) => {
   const { data } = props;
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 8;
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+
+  const displayedData = data?.menu?.slice(startIndex, endIndex);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
 
   return (
-    <div className="my-[5vw] sm:my-10 py-[8vw] sm:py-8 px-[2vw] sm:px-4 bg-white rounded-lg shadow-lg">
+    <div className="my-[5vw] sm:my-10 py-[8vw] sm:py-8 px-[2vw] sm:px-4 bg-white rounded-[2vw] sm:rounded-lg shadow-lg">
       <div className="flex justify-between items-center pb-[5vw] sm:pb-10">
         <h6 className="text-[4vw] sm:text-2xl text-black font-bold">
           Menu {data.nama_resto}
@@ -36,8 +47,11 @@ const TabMenu = (props) => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-[3vw] sm:gap-4 cursor-pointer overflow-y-auto">
-        {data.menu?.map((item, index) => (
-          <div className="flex flex-row rounded-lg border-2" key={index}>
+        {displayedData?.map((item, index) => (
+          <div
+            className="flex flex-row rounded-[2vw] sm:rounded-lg border-[0.5vw] sm:border-2"
+            key={index}
+          >
             <div className="w-2/3 p-[2vw] sm:p-2 xl:p-4">
               <p className="text-black text-[3.5vw] sm:text-base font-semibold sm:pb-1">
                 {item.nama_menu}
@@ -50,13 +64,18 @@ const TabMenu = (props) => {
               <img
                 src={item.image}
                 alt={item.nama_menu.split(" ").join("-")}
-                className="rounded-lg object-cover w-full h-[20vw] sm:h-28 -z-10"
+                className="rounded-[2vw] sm:rounded-lg object-cover w-full h-[20vw] sm:h-28 -z-10"
               />
             </div>
           </div>
         ))}
       </div>
-      <Pagination />
+      <Pagination
+        totalItems={data?.menu?.length || 0}
+        itemsPerPage={itemsPerPage}
+        currentPage={currentPage}
+        onPageChange={handlePageChange}
+      />
     </div>
   );
 };

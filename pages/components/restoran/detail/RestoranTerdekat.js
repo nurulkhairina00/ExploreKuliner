@@ -20,7 +20,7 @@ const RestoranTerdekat = () => {
     : [];
 
   return (
-    <div className=" bg-white rounded-lg shadow-lg p-[4vw] sm:p-4">
+    <div className=" bg-white rounded-[2vw] sm:rounded-lg shadow-lg p-[4vw] sm:p-4">
       <h3 className="text-black text-[6vw] sm:text-2xl font-semibold text-center pb-[2vw] sm:pb-5">
         Restoran Terdekat
       </h3>
@@ -30,7 +30,7 @@ const RestoranTerdekat = () => {
             <img
               src={item.image}
               alt={item.nama_resto.split(" ").join("-")}
-              className="rounded-lg object-cover h-[40vw] lg:h-48 w-full"
+              className="rounded-[2vw] sm:rounded-lg object-cover h-[40vw] lg:h-48 w-full"
             />
             <p className="text-[4.5vw] sm:text-lg text-black font-semibold pt-2">
               {item.nama_resto}

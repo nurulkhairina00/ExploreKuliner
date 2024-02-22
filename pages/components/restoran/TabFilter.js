@@ -2,7 +2,7 @@ import React from "react";
 
 const TabFilter = () => {
   return (
-    <div className="w-1/4 bg-white p-4 me-4 rounded-lg shadow-lg hidden xl:block relative">
+    <div className="w-1/4 bg-white p-4 me-4 rounded-[2vw] sm:rounded-lg shadow-lg hidden xl:block relative">
       <div className="flex justify-between items-center pb-3">
         <h6 className="text-balck text-xl font-medium">Filter</h6>
         <p className="text-red text-xs font-semibold cursor-pointer">

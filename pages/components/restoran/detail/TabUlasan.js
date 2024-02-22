@@ -15,7 +15,7 @@ const TabUlasan = (props) => {
   };
 
   return (
-    <div className="my-[5vw] sm:my-10 py-[8vw] sm:py-8 px-[2vw] sm:px-4 bg-white rounded-lg shadow-lg">
+    <div className="my-[5vw] sm:my-10 py-[8vw] sm:py-8 px-[2vw] sm:px-4 bg-white rounded-[2vw] sm:rounded-lg shadow-lg">
       <h6 className="text-[4vw] sm:text-2xl text-black font-bold">
         Review {data.nama_resto}
       </h6>
@@ -109,7 +109,7 @@ const TabUlasan = (props) => {
                     cols="30"
                     rows="4"
                     placeholder="Berikan komentar anda"
-                    className="w-full rounded-lg p-4"
+                    className="w-full rounded-[2vw] sm:rounded-lg p-4"
                   ></textarea>
                   <button className="px-[4vw] py-[1vw] sm:px-6 sm:py-2 text-[3vw] sm:text-base rounded-full shadow-lg bg-secondary text-white absolute bottom-5 right-5">
                     Kirim

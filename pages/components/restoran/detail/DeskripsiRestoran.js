@@ -56,7 +56,7 @@ const DeskripsiRestoran = (props) => {
         </p>
       </div>
 
-      <div className="flex bg-white rounded-lg shadow-lg py-[3vw] sm:py-4 px-[3vw] md:px-8 my-[4vw] md:my-6">
+      <div className="flex bg-white rounded-[2vw] sm:rounded-lg shadow-lg py-[3vw] sm:py-4 px-[3vw] md:px-8 my-[4vw] md:my-6">
         <div className="w-1/2 my-auto">
           <h3 className="text-black text-[4vw] sm:text-2xl md:text-2xl xl:text-3xl font-semibold">
             Yuk, memberi ulasan
