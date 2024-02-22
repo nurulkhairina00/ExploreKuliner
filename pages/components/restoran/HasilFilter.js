@@ -7,6 +7,8 @@ import Pagination from "./Pagination";
 
 const HasilFilter = () => {
   const [data, setData] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 8;
 
   const getDataRestoran = async () => {
     await axios
@@ -19,6 +21,13 @@ const HasilFilter = () => {
       });
   };
 
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+
+  const displayedData = data?.slice(startIndex, endIndex);
+
+  const handlePageChange = (page) => setCurrentPage(page);
+
   useEffect(() => {
     getDataRestoran();
   }, []);
@@ -26,7 +35,7 @@ const HasilFilter = () => {
   return (
     <div className="w-full xl:w-3/4 sm:px-4 relative pb-[20vw] sm:pb-28">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-[5vw] sm:gap-4 cursor-pointer">
-        {data.map((item) => (
+        {displayedData.map((item) => (
           <Link href={`/restoran/detail/${item.id}`} key={item.id}>
             <div className="flex flex-row shadow-md hover:shadow-xl rounded-[2vw] sm:rounded-lg">
               <div className="w-1/3 relative shadow-lg rounded-[2vw] sm:rounded-lg">
@@ -73,7 +82,12 @@ const HasilFilter = () => {
           </Link>
         ))}
       </div>
-      <Pagination />
+      <Pagination
+        totalItems={data?.length || 0}
+        itemsPerPage={itemsPerPage}
+        currentPage={currentPage}
+        onPageChange={handlePageChange}
+      />
     </div>
   );
 };
