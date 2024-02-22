@@ -24,7 +24,7 @@ const index = () => {
         </svg>
       </div>
       <div className="w-full h-screen flex justify-center items-center">
-        <div className="w-5/6 md:w-1/2 lg:w-1/3 bg-white p-[6vw] sm:p-8 rounded-[2vw] sm:rounded-lg shadow-lg">
+        <div className="w-5/6 md:w-1/2 lg:w-1/3  p-[6vw] sm:p-8 rounded-[2vw] sm:rounded-lg shadow-lg">
           <h1 className="text-secondary text-[6vw] sm:text-3xl font-bold pb-[2vw] sm:pb-5">
             ExploreKuliner
           </h1>

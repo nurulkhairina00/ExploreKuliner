@@ -31,7 +31,7 @@ const ModalOption = (props) => {
           </h2>
           <div className="py-4 flex flex-col items-center justify-center gap-3">
             <Link
-              href={type === "masuk" ? "/masuk-reviewer" : "/daftar-reviewer"}
+              href={type === "masuk" ? "/login-reviewer" : "/register-reviewer"}
             >
               <button className="border-secondary border-2 w-1/2 rounded-[2vw] sm:rounded-lg py-2 text-base text-secondary font-bold hover:bg-secondary hover:text-primary">
                 Reviewer
@@ -39,7 +39,7 @@ const ModalOption = (props) => {
             </Link>
             <p className="text-black text-xs font-semibold">Atau</p>
             <Link
-              href={type === "masuk" ? "/masuk-reviewer" : "/daftar-reviewer"}
+              href={type === "masuk" ? "/login-reviewer" : "/register-reviewer"}
             >
               <button className="border-secondary border-2 w-1/2 rounded-[2vw] sm:rounded-lg py-2 text-base text-secondary font-bold hover:bg-secondary hover:text-primary">
                 Pemilik Restoran

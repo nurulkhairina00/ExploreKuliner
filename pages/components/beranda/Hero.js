@@ -15,7 +15,7 @@ const Hero = () => {
     <section className="w-full h-96 bg-[url(/images/bg-hero.jpg)] bg-cover bg-[50%_50%] p-[8vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-10">
       {/* Tampilan Masuk Mobile */}
       <div className="flex justify-end items-end pb-7 sm:hidden">
-        <Link href="/masuk-reviewer">
+        <Link href="/login-reviewer">
           <div className="flex p-4 rounded-full bg-secondary w-8 h-8 justify-center items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"

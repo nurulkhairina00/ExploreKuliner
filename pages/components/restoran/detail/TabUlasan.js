@@ -1,11 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import Rating from "../../layout/Rating";
-import Pagination from "../../layout/Pagination";
+import Pagination from "./PaginationUlasan";
 
 const TabUlasan = (props) => {
   const { data } = props;
   const [showReply, setShowReply] = useState({});
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 4;
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+
+  const displayedData = data?.ulasanCustomer?.slice(startIndex, endIndex);
+
+  const handlePageChange = (page) => setCurrentPage(page);
 
   const handleOpenBalas = (index) => {
     setShowReply((prevState) => ({
@@ -28,7 +37,7 @@ const TabUlasan = (props) => {
           <p className="text-black text-[3.5vw] sm:text-base">{data.ulasan}</p>
         </div>
       </div>
-      {data.ulasanCustomer.map((item, index) => (
+      {displayedData.map((item, index) => (
         <div key={index}>
           <div className="w-full flex p-[4vw] sm:p-4">
             <div className="w-[13%] xl:w-[10%]">
@@ -121,7 +130,12 @@ const TabUlasan = (props) => {
           <div className="border-t-2 border-mediumGray"></div>
         </div>
       ))}
-      <Pagination />
+      <Pagination
+        totalItems={data?.ulasanCustomer?.length || 0}
+        itemsPerPage={itemsPerPage}
+        currentPage={currentPage}
+        onPageChange={handlePageChange}
+      />
     </div>
   );
 };

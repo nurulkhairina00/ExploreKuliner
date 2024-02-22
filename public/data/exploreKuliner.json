@@ -192,6 +192,17 @@
                     "created_date": "2024-01-31",
                     "bagus": 4,
                     "buruk": 0
+                },
+                {
+                    "id": 5,
+                    "nama": "Dana",
+                    "rating": 4,
+                    "image": "/images/kategori1.jpg",
+                    "komentar": "Masakan enak dan bagus tempat kumpul bareng teman atau keluarga",
+                    "pesanan": "Ayam Kremes",
+                    "created_date": "2024-01-31",
+                    "bagus": 2,
+                    "buruk": 0
                 }
             ],
             "fotoRestoran": [

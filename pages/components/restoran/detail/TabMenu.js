@@ -12,9 +12,7 @@ const TabMenu = (props) => {
 
   const displayedData = data?.menu?.slice(startIndex, endIndex);
 
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
+  const handlePageChange = (page) => setCurrentPage(page);
 
   return (
     <div className="my-[5vw] sm:my-10 py-[8vw] sm:py-8 px-[2vw] sm:px-4 bg-white rounded-[2vw] sm:rounded-lg shadow-lg">
