@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const TabFilter = () => {
   const [selectedRating, setSelectedRating] = useState(null);
   const [selectedDistance, setSelectedDistance] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState([]);
   const [selectedPrice, setSelectedPrice] = useState([]);
   const [selectedOther, setSelectedOther] = useState([]);
+  const [category, setCategory] = useState([]);
 
   const rentangPrice = [
     { id: "$", label: "Dibawah Rp. 20.000" },
@@ -22,9 +25,17 @@ const TabFilter = () => {
 
   const handleDistance = (distance) => setSelectedDistance(distance);
 
+  const handleCategory = (category) => {
+    if (selectedCategory.includes(category)) {
+      setSelectedCategory(selectedCategory.filter((item) => item !== category));
+    } else {
+      setSelectedCategory([...selectedCategory, category]);
+    }
+  };
+
   const handlePrice = (price) => {
     if (selectedPrice.includes(price)) {
-      setSelectedPrice(selectedPrice.filter((range) => range !== price));
+      setSelectedPrice(selectedPrice.filter((item) => item !== price));
     } else {
       setSelectedPrice([...selectedPrice, price]);
     }
@@ -32,7 +43,7 @@ const TabFilter = () => {
 
   const handleOther = (other) => {
     if (selectedOther.includes(other)) {
-      setSelectedOther(selectedOther.filter((selected) => selected !== other));
+      setSelectedOther(selectedOther.filter((item) => item !== other));
     } else {
       setSelectedOther([...selectedOther, other]);
     }
@@ -41,9 +52,25 @@ const TabFilter = () => {
   const handleResetFilter = () => {
     setSelectedRating(null);
     setSelectedDistance(null);
+    setSelectedCategory([]);
     setSelectedPrice([]);
     setSelectedOther([]);
   };
+
+  const getCategory = async () => {
+    await axios
+      .get(`/data/exploreKuliner.json`)
+      .then((res) => {
+        setCategory(res.data.kategori);
+      })
+      .catch((error) => {
+        throw error;
+      });
+  };
+
+  useEffect(() => {
+    getCategory();
+  }, []);
 
   return (
     <div className="w-1/4 bg-white p-4 me-4 rounded-[2vw] sm:rounded-lg shadow-lg hidden xl:block relative">
@@ -113,6 +140,28 @@ const TabFilter = () => {
         </div>
       </div>
 
+      {/* Category */}
+      <hr className="text-gray" />
+      <div className="py-6">
+        <p className="text-gray text-base font-semibold pb-4">Kategori</p>
+        {category.map((kategori) => (
+          <div className="flex items-center pb-3" key={kategori.id}>
+            <input
+              type="checkbox"
+              id={kategori.nama}
+              name={kategori.nama}
+              value={kategori.nama}
+              className="rounded-3 me-2"
+              checked={selectedCategory.includes(kategori.nama)}
+              onChange={() => handleCategory(kategori.nama)}
+            />
+            <label htmlFor={kategori.nama} className="text-sm">
+              {kategori.nama}
+            </label>
+          </div>
+        ))}
+      </div>
+
       {/* Rentang Harga */}
       <hr className="text-gray" />
       <div className="py-6">
@@ -137,7 +186,7 @@ const TabFilter = () => {
 
       {/* Lainnya */}
       <hr className="text-gray" />
-      <div className="py-6">
+      <div className="pt-6 py-16">
         <p className="text-gray text-base font-semibold pb-4">Lainnya</p>
         {otherOption.map((other) => (
           <div key={other.id} className="flex items-center pb-3">

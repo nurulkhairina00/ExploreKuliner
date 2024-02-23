@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const FilterRestoranMobile = () => {
   const [open, setOpen] = useState(false);
   const [selectedRating, setSelectedRating] = useState(null);
   const [selectedDistance, setSelectedDistance] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState([]);
   const [selectedPrice, setSelectedPrice] = useState([]);
   const [selectedOther, setSelectedOther] = useState([]);
+  const [category, setCategory] = useState([]);
 
   const rentangPrice = [
     { id: "$", label: "Dibawah Rp. 20.000" },
@@ -25,9 +28,17 @@ const FilterRestoranMobile = () => {
 
   const handleDistance = (distance) => setSelectedDistance(distance);
 
+  const handleCategory = (category) => {
+    if (selectedCategory.includes(category)) {
+      setSelectedCategory(selectedCategory.filter((item) => item !== category));
+    } else {
+      setSelectedCategory([...selectedCategory, category]);
+    }
+  };
+
   const handlePrice = (price) => {
     if (selectedPrice.includes(price)) {
-      setSelectedPrice(selectedPrice.filter((range) => range !== price));
+      setSelectedPrice(selectedPrice.filter((item) => item !== price));
     } else {
       setSelectedPrice([...selectedPrice, price]);
     }
@@ -35,7 +46,7 @@ const FilterRestoranMobile = () => {
 
   const handleOther = (other) => {
     if (selectedOther.includes(other)) {
-      setSelectedOther(selectedOther.filter((selected) => selected !== other));
+      setSelectedOther(selectedOther.filter((item) => item !== other));
     } else {
       setSelectedOther([...selectedOther, other]);
     }
@@ -44,6 +55,7 @@ const FilterRestoranMobile = () => {
   const handleClose = () => {
     setSelectedRating(null);
     setSelectedDistance(null);
+    setSelectedCategory([]);
     setSelectedPrice([]);
     setSelectedOther([]);
     setOpen(!open);
@@ -53,20 +65,51 @@ const FilterRestoranMobile = () => {
     setOpen(!open);
   };
 
+  const getCategory = async () => {
+    await axios
+      .get(`/data/exploreKuliner.json`)
+      .then((res) => {
+        setCategory(res.data.kategori);
+      })
+      .catch((error) => {
+        throw error;
+      });
+  };
+
+  useEffect(() => {
+    getCategory();
+  }, []);
+
   return (
     <section className="flex px-[8vw] pb-[4vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-4 sm:pt-0 xl:hidden relative">
       <div className="w-full px-0 sm:px-4">
         <button
-          className="items-center border-gray border-[1px] px-[3.5vw] py-[0.5vw] sm:px-6 sm:py-[2px] text-[2.5vw] sm:text-sm rounded-full text-black"
+          className="items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[2px] text-[2.5vw] sm:text-sm rounded-full text-black"
           onClick={handleOpen}
         >
-          Filter
+          <div className="flex gap-[1vw] sm:gap-1 justify-center items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="3.5vw"
+              height="3.5vw"
+              viewBox="0 0 24 24"
+              className="sm:w-5 sm:h-5"
+            >
+              <g fill="none" stroke="#333333" strokeLinecap="round">
+                <path d="M5 12V4m14 16v-3M5 20v-4m14-3V4m-7 3V4m0 16v-9" />
+                <circle cx="5" cy="14" r="2" />
+                <circle cx="12" cy="9" r="2" />
+                <circle cx="19" cy="15" r="2" />
+              </g>
+            </svg>
+            <span className="text-[3vw] sm:text-base">Filter</span>
+          </div>
         </button>
 
         {open && (
-          <div className="fixed inset-0 bg-black bg-opacity-70 z-10">
+          <div className="fixed inset-0 bg-black bg-opacity-70 z-20">
             <div
-              className={`xl:hidden text-secondary absolute w-2/3 sm:w-1/2 h-screen p-[6vw] sm:p-6 font-medium bg-white z-10 top-0 duration-300 ${
+              className={`xl:hidden  absolute w-2/3 sm:w-1/2 h-screen p-[6vw] sm:p-6 bg-white z-10 top-0 duration-300 overflow-auto ${
                 open ? "left-0" : "left-[-100%]"
               } `}
             >
@@ -148,6 +191,36 @@ const FilterRestoranMobile = () => {
                 </div>
               </div>
 
+              {/* Category */}
+              <hr className="text-gray" />
+              <div className="py-[4vw] sm:py-6">
+                <p className="text-gray text-[3vw] sm:text-base font-semibold pb-[3vw] sm:pb-4">
+                  Kategori
+                </p>
+                {category.map((kategori) => (
+                  <div
+                    className="flex items-center pb-[2vw] sm:pb-3"
+                    key={kategori.id}
+                  >
+                    <input
+                      type="checkbox"
+                      id={kategori.nama}
+                      name={kategori.nama}
+                      value={kategori.nama}
+                      className="rounded-3 me-[2vw] sm:me-2 w-[3vw] h-[3vw] sm:w-4 sm:h-4"
+                      checked={selectedCategory.includes(kategori.nama)}
+                      onChange={() => handleCategory(kategori.nama)}
+                    />
+                    <label
+                      htmlFor={kategori.nama}
+                      className="text-[2.5vw] sm:text-base"
+                    >
+                      {kategori.nama}
+                    </label>
+                  </div>
+                ))}
+              </div>
+
               {/* Rentang Harga */}
               <hr className="text-gray" />
               <div className="py-[4vw] sm:py-6">
@@ -180,7 +253,7 @@ const FilterRestoranMobile = () => {
 
               {/* Lainnya */}
               <hr className="text-gray" />
-              <div className="py-[4vw] sm:py-6">
+              <div className="pt-[4vw] py-[12vw] sm:pt-6 sm:py-14">
                 <p className="text-gray text-[3vw] sm:text-base font-semibold pb-[3vw] sm:pb-4">
                   Lainnya
                 </p>
@@ -209,21 +282,19 @@ const FilterRestoranMobile = () => {
               </div>
 
               {/* Button Terapkan */}
-              <div className="px-4 absolute bottom-5 inset-x-0">
-                <div className="flex items-center justify-center gap-3">
-                  <button
-                    className="w-1/3 py-[0.5vw] sm:py-1 rounded-full text-secondary border-secondary border-[0.5vw] sm:border-1 text-[3vw] sm:text-base"
-                    onClick={handleClose}
-                  >
-                    Batal
-                  </button>
-                  <button
-                    className="w-1/3 bg-secondary py-[1vw] sm:py-2 rounded-full text-primary text-[3vw] sm:text-base"
-                    onClick={handleSubmit}
-                  >
-                    Terapkan
-                  </button>
-                </div>
+              <div className="flex items-center justify-center gap-[2vw] sm:gap-4 fixed bottom-0 left-0 w-2/3 sm:w-1/2 p-[6vw] sm:p-6 bg-white">
+                <button
+                  className="w-1/3 py-[0.5vw] sm:py-1 rounded-full text-secondary border-secondary border-[0.5vw] sm:border-2 text-[3vw] sm:text-base"
+                  onClick={handleClose}
+                >
+                  Batal
+                </button>
+                <button
+                  className="w-1/3 bg-secondary py-[1vw] sm:py-2 rounded-full text-primary text-[3vw] sm:text-base"
+                  onClick={handleSubmit}
+                >
+                  Terapkan
+                </button>
               </div>
             </div>
           </div>

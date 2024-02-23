@@ -2,12 +2,12 @@
     "kategori": [
         {
             "id": 1,
-            "nama": "Indonesia",
+            "nama": "Asia",
             "image": "/images/kategori1.jpg"
         },
         {
             "id": 2,
-            "nama": "Barat",
+            "nama": "Jepang",
             "image": "/images/kategori2.jpg"
         },
         {
@@ -17,22 +17,22 @@
         },
         {
             "id": 4,
-            "nama": "Health Food",
+            "nama": "Western",
             "image": "/images/kategori1.jpg"
         },
         {
             "id": 5,
-            "nama": "Bakery",
+            "nama": "Pizza",
             "image": "/images/kategori2.jpg"
         },
         {
             "id": 6,
-            "nama": "Barat",
+            "nama": "Chinese",
             "image": "/images/kategori1.jpg"
         },
         {
             "id": 7,
-            "nama": "Indonesia",
+            "nama": "Healthy",
             "image": "/images/kategori2.jpg"
         },
         {
@@ -1766,6 +1766,388 @@
                 },
                 {
                     "image": "/images/kategori2.jpg"
+                },
+                {
+                    "image": "/images/kategori1.jpg"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "image": "/images/restoran2.jpg",
+            "jarak": "0.5 km",
+            "nama_resto": "Seribu Rasa Menteng",
+            "alamat": "Menteng, Jakarta Pusat",
+            "rating": 4.5,
+            "ulasan": "1000 Ulasan",
+            "jenis_makanan": "Asia, Indonesia",
+            "deskripsi": "Terinspirasi oleh kekayaan kuliner daerah, Seribu Rasa menawarkan hidangan lokal dan makanan laut lezat yang mewujudkan kekayaan cita rasa Asia Tenggara dan Indonesia. Setiap resep tradisional disiapkan dengan bahan-bahan segar dan disempurnakan oleh keterampilan kuliner Chef kami, membawa pelanggan kami ke perjalanan gastronomi “Seribu Rasa” yang menakjubkan.",
+            "alamat_detail": "Jln. Haji Agus Salim No. 128, Jakarta.",
+            "telephone": "+62 21 7385726",
+            "email": "seriburasa@gmail.com",
+            "website": "Seriburasa.com",
+            "jamOperasional": [
+                {
+                    "hari": "Senin",
+                    "jam": "10.00 - 22.00 Wib"
+                },
+                {
+                    "hari": "Selasa",
+                    "jam": "10.00 - 22.00 Wib"
+                },
+                {
+                    "hari": "Rabu",
+                    "jam": "10.00 - 22.00 Wib"
+                },
+                {
+                    "hari": "Kamis",
+                    "jam": "10.00 - 22.00 Wib"
+                },
+                {
+                    "hari": "Jum'at",
+                    "jam": "10.00 - 22.00 Wib"
+                },
+                {
+                    "hari": "Sabtu",
+                    "jam": "10.00 - 22.00 Wib"
+                },
+                {
+                    "hari": "Minggu",
+                    "jam": "10.00 - 22.00 Wib"
+                }
+            ],
+            "menu": [
+                {
+                    "id": 1,
+                    "nama_menu": "Chicken Satay Nusantara",
+                    "image": "/images/chicken-satay-nusantara.jpeg",
+                    "harga": 65000
+                },
+                {
+                    "id": 2,
+                    "nama_menu": "Stuffed Tofu Parahtangan",
+                    "image": "/images/chicken-satay-nusantara.jpeg",
+                    "harga": 75000
+                },
+                {
+                    "id": 3,
+                    "nama_menu": "Oriental Seafood Ckawe",
+                    "image": "/images/chicken-satay-nusantara.jpeg",
+                    "harga": 60000
+                },
+                {
+                    "id": 4,
+                    "nama_menu": "Hokkien Spring Roll",
+                    "image": "/images/chicken-satay-nusantara.jpeg",
+                    "harga": 50000
+                },
+                {
+                    "id": 5,
+                    "nama_menu": "Beef Satay kotagede",
+                    "image": "/images/chicken-satay-nusantara.jpeg",
+                    "harga": 65000
+                },
+                {
+                    "id": 6,
+                    "nama_menu": "Udang Gulung",
+                    "image": "/images/chicken-satay-nusantara.jpeg",
+                    "harga": 65000
+                },
+                {
+                    "id": 7,
+                    "nama_menu": "Chicken Satay Nusantara",
+                    "image": "/images/chicken-satay-nusantara.jpeg",
+                    "harga": 65000
+                },
+                {
+                    "id": 8,
+                    "nama_menu": "Beef Satay kotagede",
+                    "image": "/images/chicken-satay-nusantara.jpeg",
+                    "harga": 65000
+                },
+                {
+                    "id": 9,
+                    "nama_menu": "Chicken Satay Nusantara",
+                    "image": "/images/chicken-satay-nusantara.jpeg",
+                    "harga": 65000
+                },
+                {
+                    "id": 10,
+                    "nama_menu": "Beef Satay kotagede",
+                    "image": "/images/chicken-satay-nusantara.jpeg",
+                    "harga": 65000
+                }
+            ],
+            "ulasanCustomer": [
+                {
+                    "id": 1,
+                    "nama": "Nurul Khairina Surbakti",
+                    "rating": 4,
+                    "image": "/images/kategori2.jpg",
+                    "komentar": "Tempatnya sangat rekomendasi untuk wfh atau nugas.",
+                    "pesanan": "Stuffed Tofu Parahtangan",
+                    "created_date": "2024-01-30",
+                    "bagus": 5,
+                    "buruk": 2
+                },
+                {
+                    "id": 2,
+                    "nama": "Iqbal Alhuda",
+                    "rating": 4.5,
+                    "image": "/images/kategori1.jpg",
+                    "komentar": "Cocok banget buat nongkrong bareng teman atau sahabat.",
+                    "pesanan": "Hokkien Spring Roll",
+                    "created_date": "2024-01-31",
+                    "bagus": 0,
+                    "buruk": 0
+                },
+                {
+                    "id": 3,
+                    "nama": "Herbowo Prasetyo",
+                    "rating": 4.5,
+                    "image": "/images/kategori2.jpg",
+                    "komentar": "Interiornya sangat bagus, variant makanannya sangat banyak dan masakannya enak.",
+                    "pesanan": "Udang Gulung",
+                    "created_date": "2024-01-31",
+                    "bagus": 2,
+                    "buruk": 0
+                },
+                {
+                    "id": 4,
+                    "nama": "Ariyandi",
+                    "rating": 4,
+                    "image": "/images/kategori1.jpg",
+                    "komentar": "Masakan enak betul",
+                    "pesanan": "Oriental Seafood Ckawe",
+                    "created_date": "2024-01-31",
+                    "bagus": 4,
+                    "buruk": 0
+                }
+            ],
+            "fotoRestoran": [
+                {
+                    "image": "/images/bg-register.jpg"
+                },
+                {
+                    "image": "/images/restoran1.jpg"
+                },
+                {
+                    "image": "/images/restoran2.jpg"
+                },
+                {
+                    "image": "/images/restoran1.jpg"
+                },
+                {
+                    "image": "/images/kategori1.jpg"
+                },
+                {
+                    "image": "/images/bg-hero.jpg"
+                },
+                {
+                    "image": "/images/restoran2.jpg"
+                },
+                {
+                    "image": "/images/chicken-satay-nusantara.jpeg"
+                },
+                {
+                    "image": "/images/kategori2.jpg"
+                },
+                {
+                    "image": "/images/bg-register.jpg"
+                },
+                {
+                    "image": "/images/kategori2.jpg"
+                },
+                {
+                    "image": "/images/kategori1.jpg"
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "image": "/images/restoran2.jpg",
+            "jarak": "0.5 km",
+            "nama_resto": "Cabe Rempah Resto",
+            "alamat": "Menteng, Jakarta Pusat",
+            "rating": 4.5,
+            "ulasan": "1000 Ulasan",
+            "jenis_makanan": "Asia, Indonesia",
+            "deskripsi": "Masakan Tradisional Indonesia yang disajikan penuh kreatifitas dengan bumbu rempah yang melimpah dan citarasa yang kuat dari seluruh nusantara..\n Dengan menggunakan bahan bahan masakan kelas utama, Cabe Rempah memberikan segala kelezatan kuliner nusantara yang akan membuat anda teringat dengan kampung halaman Anda",
+            "alamat_detail": "Jl. Cikini Raya No.2 Lt. 2, Jakarta 10330",
+            "telephone": "0811-1042-852",
+            "email": "caberempah@gmail.com",
+            "website": "https://www.caberempah.id/menu.html",
+            "jamOperasional": [
+                {
+                    "hari": "Senin",
+                    "jam": "10.00 - 22.00 Wib"
+                },
+                {
+                    "hari": "Selasa",
+                    "jam": "10.00 - 22.00 Wib"
+                },
+                {
+                    "hari": "Rabu",
+                    "jam": "10.00 - 22.00 Wib"
+                },
+                {
+                    "hari": "Kamis",
+                    "jam": "10.00 - 22.00 Wib"
+                },
+                {
+                    "hari": "Jum'at",
+                    "jam": "10.00 - 22.00 Wib"
+                },
+                {
+                    "hari": "Sabtu",
+                    "jam": "10.00 - 22.00 Wib"
+                },
+                {
+                    "hari": "Minggu",
+                    "jam": "10.00 - 22.00 Wib"
+                }
+            ],
+            "menu": [
+                {
+                    "id": 1,
+                    "nama_menu": "Ayam Bakar Bumbu Pedas",
+                    "image": "/images/chicken-satay-nusantara.jpeg",
+                    "harga": 25000
+                },
+                {
+                    "id": 2,
+                    "nama_menu": "Ayam Bakar Madu",
+                    "image": "/images/chicken-satay-nusantara.jpeg",
+                    "harga": 25000
+                },
+                {
+                    "id": 3,
+                    "nama_menu": "Ayam Goreng Kremes",
+                    "image": "/images/chicken-satay-nusantara.jpeg",
+                    "harga": 25000
+                },
+                {
+                    "id": 4,
+                    "nama_menu": "Sop Iga",
+                    "image": "/images/chicken-satay-nusantara.jpeg",
+                    "harga": 57000
+                },
+                {
+                    "id": 5,
+                    "nama_menu": "Iga Bakar/Goreng",
+                    "image": "/images/chicken-satay-nusantara.jpeg",
+                    "harga": 57000
+                },
+                {
+                    "id": 6,
+                    "nama_menu": "Gurame Saos Mentega",
+                    "image": "/images/chicken-satay-nusantara.jpeg",
+                    "harga": 64000
+                },
+                {
+                    "id": 7,
+                    "nama_menu": "Pindang Patin",
+                    "image": "/images/chicken-satay-nusantara.jpeg",
+                    "harga": 35000
+                },
+                {
+                    "id": 8,
+                    "nama_menu": "Nasi Timbal",
+                    "image": "/images/chicken-satay-nusantara.jpeg",
+                    "harga": 43000
+                },
+                {
+                    "id": 9,
+                    "nama_menu": "Nasi Goreng Kecombrang",
+                    "image": "/images/chicken-satay-nusantara.jpeg",
+                    "harga": 32000
+                },
+                {
+                    "id": 10,
+                    "nama_menu": "Nasi Bakar Teri Ayam",
+                    "image": "/images/chicken-satay-nusantara.jpeg",
+                    "harga": 25000
+                }
+            ],
+            "ulasanCustomer": [
+                {
+                    "id": 1,
+                    "nama": "Nurul Khairina Surbakti",
+                    "rating": 4,
+                    "image": "/images/kategori2.jpg",
+                    "komentar": "Tempatnya sangat rekomendasi untuk wfh atau nugas.",
+                    "pesanan": "Pindang Patin",
+                    "created_date": "2024-02-12",
+                    "bagus": 5,
+                    "buruk": 2
+                },
+                {
+                    "id": 2,
+                    "nama": "Iqbal Alhuda",
+                    "rating": 4.5,
+                    "image": "/images/kategori1.jpg",
+                    "komentar": "Cocok banget buat nongkrong bareng teman atau sahabat.",
+                    "pesanan": "Iga Bakar/Goreng",
+                    "created_date": "2024-02-12",
+                    "bagus": 0,
+                    "buruk": 0
+                },
+                {
+                    "id": 3,
+                    "nama": "Herbowo Prasetyo",
+                    "rating": 4.5,
+                    "image": "/images/kategori2.jpg",
+                    "komentar": "Interiornya sangat bagus, variant makanannya sangat banyak dan masakannya enak.",
+                    "pesanan": "Nasi Bakar Teri Ayam",
+                    "created_date": "2024-02-12",
+                    "bagus": 2,
+                    "buruk": 0
+                },
+                {
+                    "id": 4,
+                    "nama": "Ariyandi",
+                    "rating": 4,
+                    "image": "/images/kategori1.jpg",
+                    "komentar": "Masakan enak betul",
+                    "pesanan": "Ayam Goreng Kremes",
+                    "created_date": "2024-02-12",
+                    "bagus": 4,
+                    "buruk": 0
+                }
+            ],
+            "fotoRestoran": [
+                {
+                    "image": "/images/kategori1.jpg"
+                },
+                {
+                    "image": "/images/kategori2.jpg"
+                },
+                {
+                    "image": "/images/restoran1.jpg"
+                },
+                {
+                    "image": "/images/bg-register.jpg"
+                },
+                {
+                    "image": "/images/restoran2.jpg"
+                },
+                {
+                    "image": "/images/restoran1.jpg"
+                },
+                {
+                    "image": "/images/bg-hero.jpg"
+                },
+                {
+                    "image": "/images/restoran2.jpg"
+                },
+                {
+                    "image": "/images/chicken-satay-nusantara.jpeg"
+                },
+                {
+                    "image": "/images/kategori2.jpg"
+                },
+                {
+                    "image": "/images/bg-register.jpg"
                 },
                 {
                     "image": "/images/kategori1.jpg"
