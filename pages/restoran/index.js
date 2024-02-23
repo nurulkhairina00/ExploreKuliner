@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "../components/layout/Navbar";
 import Breadcrumb from "../components/layout/Breadcrumb";
-import Filter from "../components/restoran/FilterRestoran";
+import FilterRestoranMobile from "../components/restoran/FilterRestoranMobile";
+import FilterRestoran from "../components/restoran/FilterRestoran";
 import ListVideo from "../components/layout/ListVideo";
 import ListArtikel from "../components/layout/ListArtikel";
 import Footer from "../components/layout/Footer";
@@ -18,7 +19,8 @@ const Index = () => {
     <>
       <Navbar />
       <Breadcrumb data={breadcrumbData} />
-      <Filter />
+      <FilterRestoranMobile />
+      <FilterRestoran />
       <ListVideo />
       <ListArtikel />
       <Footer />
