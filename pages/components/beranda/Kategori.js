@@ -10,7 +10,7 @@ import "swiper/css/effect-coverflow";
 
 const Kategori = () => {
   const swiperRef = useRef();
-  const [data, setData] = useState([]);
+  const [listCategory, setListCategory] = useState([]);
 
   // navigation prev
   const slidePrev = () => {
@@ -26,11 +26,11 @@ const Kategori = () => {
     }
   };
 
-  const getDataKategori = async () => {
+  const getCategory = async () => {
     await axios
       .get(`/data/exploreKuliner.json`)
       .then((res) => {
-        setData(res.data.kategori);
+        setListCategory(res.data.kategori);
       })
       .catch((error) => {
         throw error;
@@ -38,7 +38,7 @@ const Kategori = () => {
   };
 
   useEffect(() => {
-    getDataKategori();
+    getCategory();
   }, []);
 
   return (
@@ -48,7 +48,7 @@ const Kategori = () => {
       </h2>
       {/* Tampilan Kategori Mobile */}
       <div className="flex flex-wrap justify-center items-center gap-[3.5vw] sm:hidden">
-        {data.map((item) => (
+        {listCategory.map((item) => (
           <div
             className="w-[15vw] h-[14vw] pt-[7vw] pb-[2.5vw] mb-[9vw] bg-white rounded-xl shadow-lg relative cursor-pointer"
             key={item.id}
@@ -116,7 +116,7 @@ const Kategori = () => {
               },
             }}
           >
-            {data.map((item) => (
+            {listCategory.map((item) => (
               <SwiperSlide key={item.id} className="pt-20 relative">
                 <div className="w-36 h-32 p-4 bg-white rounded-3xl shadow-lg relative hover:border-b-[3px] hover:border-b-secondary">
                   <img

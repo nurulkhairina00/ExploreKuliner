@@ -10,7 +10,7 @@ const HasilFilter = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
-  const getDataRestoran = async () => {
+  const getRestoran = async () => {
     await axios
       .get(`/data/exploreKuliner.json`)
       .then((res) => {
@@ -29,7 +29,7 @@ const HasilFilter = () => {
   const handlePageChange = (page) => setCurrentPage(page);
 
   useEffect(() => {
-    getDataRestoran();
+    getRestoran();
   }, []);
 
   return (

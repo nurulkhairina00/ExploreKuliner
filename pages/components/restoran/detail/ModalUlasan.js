@@ -7,9 +7,7 @@ const ModalUlasan = (props) => {
 
   const handleCloseModal = () => setShowModal(!showModal);
 
-  const handleStarClick = (index) => {
-    setClickCount(index + 1);
-  };
+  const handleStarClick = (index) => setClickCount(index + 1);
 
   return (
     <div className="h-full w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-70 z-10">

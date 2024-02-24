@@ -5,6 +5,7 @@ import ModalFotoRestoran from "./ModalFotoRestoran";
 const FotoRestoran = (props) => {
   const { data } = props;
   const [showModal, setShowModal] = useState(false);
+
   const handleOpenModal = () => setShowModal(!showModal);
 
   return (

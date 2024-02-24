@@ -8,7 +8,7 @@ const FilterRestoranMobile = () => {
   const [selectedCategory, setSelectedCategory] = useState([]);
   const [selectedPrice, setSelectedPrice] = useState([]);
   const [selectedOther, setSelectedOther] = useState([]);
-  const [category, setCategory] = useState([]);
+  const [listCategory, setListCategory] = useState([]);
 
   const rentangPrice = [
     { id: "$", label: "Dibawah Rp. 20.000" },
@@ -69,7 +69,7 @@ const FilterRestoranMobile = () => {
     await axios
       .get(`/data/exploreKuliner.json`)
       .then((res) => {
-        setCategory(res.data.kategori);
+        setListCategory(res.data.kategori);
       })
       .catch((error) => {
         throw error;
@@ -197,7 +197,7 @@ const FilterRestoranMobile = () => {
                 <p className="text-gray text-[3vw] sm:text-base font-semibold pb-[3vw] sm:pb-4">
                   Kategori
                 </p>
-                {category.map((kategori) => (
+                {listCategory.map((kategori) => (
                   <div
                     className="flex items-center pb-[2vw] sm:pb-3"
                     key={kategori.id}

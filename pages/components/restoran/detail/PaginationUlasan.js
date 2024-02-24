@@ -5,13 +5,9 @@ const Pagination = (props) => {
 
   const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-  const handlePrevPage = () => {
-    onPageChange(currentPage - 1);
-  };
+  const handlePrevPage = () => onPageChange(currentPage - 1);
 
-  const handleNextPage = () => {
-    onPageChange(currentPage + 1);
-  };
+  const handleNextPage = () => onPageChange(currentPage + 1);
 
   const renderPageNumbers = () => {
     const pageNumbers = [];

@@ -6,6 +6,7 @@ import Router from "next/router";
 
 const Daftar = () => {
   const handleBack = () => Router.back();
+
   return (
     <>
       <Head>

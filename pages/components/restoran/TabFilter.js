@@ -7,7 +7,7 @@ const TabFilter = () => {
   const [selectedCategory, setSelectedCategory] = useState([]);
   const [selectedPrice, setSelectedPrice] = useState([]);
   const [selectedOther, setSelectedOther] = useState([]);
-  const [category, setCategory] = useState([]);
+  const [listCategory, setListCategory] = useState([]);
 
   const rentangPrice = [
     { id: "$", label: "Dibawah Rp. 20.000" },
@@ -61,7 +61,7 @@ const TabFilter = () => {
     await axios
       .get(`/data/exploreKuliner.json`)
       .then((res) => {
-        setCategory(res.data.kategori);
+        setListCategory(res.data.kategori);
       })
       .catch((error) => {
         throw error;
@@ -144,7 +144,7 @@ const TabFilter = () => {
       <hr className="text-gray" />
       <div className="py-6">
         <p className="text-gray text-base font-semibold pb-4">Kategori</p>
-        {category.map((kategori) => (
+        {listCategory.map((kategori) => (
           <div className="flex items-center pb-3" key={kategori.id}>
             <input
               type="checkbox"

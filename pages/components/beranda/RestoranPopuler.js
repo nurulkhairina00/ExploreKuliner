@@ -21,7 +21,7 @@ const RestoranPopuler = () => {
       swiperRef.current.swiper.slideNext();
   };
 
-  const getDataRestoran = async () => {
+  const getRestoran = async () => {
     await axios
       .get(`/data/exploreKuliner.json`)
       .then((res) => {
@@ -33,7 +33,7 @@ const RestoranPopuler = () => {
   };
 
   useEffect(() => {
-    getDataRestoran();
+    getRestoran();
   }, []);
 
   return (
