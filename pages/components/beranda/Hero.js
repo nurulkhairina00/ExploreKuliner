@@ -1,26 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import axios from "axios";
 import ModalOption from "../layout/ModalOption";
+import Select from "react-select";
 
 const Hero = () => {
   const [showModal, setShowModal] = useState(false);
   const [type, setType] = useState("");
+  const [listArea, setListArea] = useState([]);
+  const [searchArea, setSearchArea] = useState("");
+  const [searchRestaurant, setSearchRestaurant] = useState("");
 
   const handleOpenModal = (value) => {
     setType(value);
     setShowModal(!showModal);
   };
 
+  const getListArea = async () => {
+    await axios
+      .get(`/data/exploreKuliner.json`)
+      .then((res) => {
+        setListArea(res.data.area);
+      })
+      .catch((error) => {
+        throw error;
+      });
+  };
+
+  const handleSearchArea = (value) => setSearchArea(value);
+
+  const handleSearchRestaurant = (value) => setSearchRestaurant(value);
+
+  useEffect(() => {
+    getListArea();
+  }, []);
+
   return (
-    <section className="w-full h-96 bg-[url(/images/bg-hero.jpg)] bg-cover bg-[50%_50%] p-[8vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-10">
+    <section className="w-full h-[65vw] sm:h-[28rem] bg-[url(/images/bg-hero.jpg)] bg-cover bg-[50%_50%] px-[8vw] py-[5vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-10">
       {/* Tampilan Masuk Mobile */}
-      <div className="flex justify-end items-end pb-7 sm:hidden">
+      <div className="flex justify-end items-end sm:pb-7 sm:hidden">
         <Link href="/login-reviewer">
-          <div className="flex p-4 rounded-full bg-secondary w-8 h-8 justify-center items-center">
+          <div className="flex p-[1vw] rounded-full bg-secondary w-[7vw] h-[7vw] justify-center items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              height="14"
-              width="12"
+              height="3.5vw"
+              width="3.5vw"
               viewBox="0 0 448 512"
               className="flex-shrink-0"
             >
@@ -34,7 +58,7 @@ const Hero = () => {
       </div>
 
       {/* Tampilan Masuk Tablet dan Desktop */}
-      <div className="flex justify-between pb-7">
+      <div className="flex justify-between sm:pb-7">
         {/* Icon Social Media */}
         <div className="hidden sm:flex flex-row gap-[3vw] sm:gap-5">
           <div className="w-[6vw] h-[6vw] sm:w-11 sm:h-11 bg-primary rounded-full flex justify-center items-center cursor-pointer">
@@ -102,9 +126,11 @@ const Hero = () => {
       </div>
 
       <div className="flex flex-col items-center">
-        <h1 className="text-primary font-bold text-center text-4xl sm:text-5xl lg:text-6xl py-10">
+        <h1 className="text-primary font-bold text-center text-[8vw] sm:text-5xl lg:text-6xl py-[8vw] sm:py-14">
           Explore Kuliner
         </h1>
+
+        {/* Search Tablet dan Desktop */}
         <div className="hidden sm:flex flex-row w-full lg:w-3/4 bg-primary rounded-full shadow-lg">
           {/* Select Lokasi Restoran */}
           <div className="flex justify-center items-center w-1/2 ps-5">
@@ -120,28 +146,35 @@ const Hero = () => {
                 fill="#8F8F9D"
               />
             </svg>
-
-            <div className="relative w-full">
-              <select className="block appearance-none w-full bg-primary p-2 focus:outline-none">
-                <option disabled>Lokasi</option>
-                <option>Jakarta Pusat</option>
-                <option>Jakarta Selatan</option>
-              </select>
-              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
-                <svg
-                  className="fill-current h-4 w-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 12L4 6h12z" />
-                </svg>
-              </div>
+            <div className="relative w-full z-10">
+              <Select
+                options={listArea.map((area) => ({
+                  label: area.nama,
+                  value: area.id,
+                }))}
+                placeholder="Pilih Lokasi"
+                isSearchable
+                onChange={(e) => handleSearchArea(e.value)}
+                styles={{
+                  control: (provided, state) => ({
+                    ...provided,
+                    border: "none",
+                    boxShadow: state.isFocused ? "none" : provided.boxShadow,
+                    "&:hover": {
+                      border: "none",
+                    },
+                  }),
+                }}
+                theme={(theme) => ({
+                  ...theme,
+                  borderRadius: 0,
+                  colors: {
+                    ...theme.colors,
+                    primary: "#3B7850",
+                  },
+                })}
+              />
             </div>
-          </div>
-
-          {/* Border */}
-          <div className="relative flex justify-center items-center">
-            <div className="border-[1.5px] h-12 border-gray mx-3"></div>
           </div>
 
           {/* Input Search Restoran */}
@@ -174,6 +207,7 @@ const Hero = () => {
                 name="restoran"
                 placeholder="Cari restoran"
                 className="bg-primary p-2 w-full focus:outline-none"
+                onChange={(e) => handleSearchRestaurant(e.target.value)}
               />
             </div>
           </div>
@@ -194,6 +228,33 @@ const Hero = () => {
               </svg>
             </div>
           </Link>
+        </div>
+
+        {/* Search Mobile */}
+        <div className=" sm:hidden w-full bg-primary rounded-full shadow-lg">
+          <div className="flex justify-between items-center bg-primary rounded-full px-[4vw] py-[1.2vw]">
+            <div className="relative w-full">
+              <input
+                type="text"
+                name="restoran"
+                placeholder="Cari restoran"
+                className="bg-primary p-[1vw] w-full focus:outline-none rounded-full text-[3vw] sm:text-sm flex justify-center"
+                onChange={(e) => handleSearchRestaurant(e.target.value)}
+              />
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="4vw"
+              height="4vw"
+              viewBox="0 0 24 24"
+              className="cursor-pointer"
+            >
+              <path
+                fill="#8F8F9D"
+                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"
+              />
+            </svg>
+          </div>
         </div>
       </div>
       {showModal && (

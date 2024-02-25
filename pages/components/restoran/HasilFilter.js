@@ -8,7 +8,7 @@ import Pagination from "./Pagination";
 const HasilFilter = () => {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
+  const itemsPerPage = 8;
 
   const getRestoran = async () => {
     await axios
