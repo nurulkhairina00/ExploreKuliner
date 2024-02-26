@@ -24,11 +24,11 @@ const Navbar = () => {
         </Link>
 
         {/* Tampilan Masuk Tablet dan Desktop */}
-        <div className="flex">
+        <div className="flex space-x-4">
           {/* Daftar dan Masuk */}
           <button
             type="button"
-            className="px-7 py-2 rounded-full bg-primary mx-2 hidden sm:block"
+            className="px-7 py-2 rounded-full bg-primary hidden sm:block"
             onClick={() => handleOpenModal("daftar")}
           >
             <span className="text-secondary font-bold">Daftar</span>
@@ -36,10 +36,10 @@ const Navbar = () => {
 
           <button
             type="button"
-            className="px-7 py-[6px] rounded-full border-secondary border-2 mx-2 hidden sm:block"
+            className="px-7 py-[6px] rounded-full bg-secondary hidden sm:block"
             onClick={() => handleOpenModal("masuk")}
           >
-            <span className="text-secondary font-bold">Masuk</span>
+            <span className="text-white font-bold">Masuk</span>
           </button>
         </div>
       </div>

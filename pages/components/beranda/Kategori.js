@@ -47,18 +47,18 @@ const Kategori = () => {
         Kategori
       </h2>
       {/* Tampilan Kategori Mobile */}
-      <div className="flex flex-wrap justify-center items-center gap-[3.5vw] sm:hidden">
+      <div className="flex flex-wrap justify-center items-center gap-[4vw] sm:hidden">
         {listCategory.map((item) => (
           <div
-            className="w-[15vw] h-[14vw] pt-[7vw] pb-[2.5vw] mb-[9vw] bg-white rounded-xl shadow-lg relative cursor-pointer"
+            className="w-[18vw] h-[16vw] pt-[7vw] mb-[9vw] bg-white rounded-[2vw] shadow-lg relative cursor-pointer p-[1.5vw] leading-tight flex justify-center items-center"
             key={item.id}
           >
             <img
               src={item.image}
               alt={item.nama.split(" ").join("-")}
-              className="w-[12vw] h-[12vw] sm:w-14 sm:h-14 rounded-full object-cover absolute -top-1/2 left-1/2 -translate-x-1/2 cursor-pointer"
+              className="w-[14vw] h-[14vw] rounded-full object-cover absolute -top-1/2 left-1/2 -translate-x-1/2 cursor-pointer"
             />
-            <p className="text-black text-center font-bold text-[2vw] sm:pt-1 sm:text-[10px]">
+            <p className="text-black text-center font-bold text-[2.5vw]">
               {item.nama}
             </p>
           </div>
@@ -66,10 +66,10 @@ const Kategori = () => {
       </div>
 
       {/* Tampilan Kategori Tablet dan Desktop */}
-      <div className="pb-10 relative hidden sm:block">
+      <div className="pb-6 relative hidden sm:block">
         <button
           onClick={slidePrev}
-          className="absolute top-1/2  transform -translate-y-1/2 bg-secondary p-2 rounded-full hidden sm:block"
+          className="absolute top-1/2 transform -translate-y-1/2 bg-secondary p-2 rounded-full hidden sm:block"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -105,26 +105,26 @@ const Kategori = () => {
               640: {
                 slidesPerView: 3,
               },
-              930: {
+              1080: {
                 slidesPerView: 4,
               },
-              1200: {
+              1350: {
                 slidesPerView: 5,
               },
-              1430: {
+              1530: {
                 slidesPerView: 6,
               },
             }}
           >
             {listCategory.map((item) => (
-              <SwiperSlide key={item.id} className="pt-20 relative">
-                <div className="w-36 h-32 p-4 bg-white rounded-3xl shadow-lg relative hover:border-b-[3px] hover:border-b-secondary">
+              <SwiperSlide key={item.id} className="pt-20 relative pb-4">
+                <div className="sm:w-36 sm:h-32 md:w-40 md:h-36 p-4 bg-white rounded-3xl shadow-lg relative hover:border-b-[3px] hover:border-b-secondary leading-tight flex justify-center items-center">
                   <img
                     src={item.image}
                     alt={item.nama.split(" ").join("-")}
-                    className="rounded-full w-[7rem] h-[7rem] object-cover absolute -top-1/2 left-1/2 -translate-x-1/2"
+                    className="rounded-full sm:w-[7rem] sm:h-[7rem] md:w-[8rem] md:h-[8rem] object-cover absolute -top-1/2 left-1/2 -translate-x-1/2"
                   />
-                  <p className="text-base text-black pt-12 text-center font-semibold cursor-pointer">
+                  <p className="text-lg text-black sm:pt-8 md:pt-12 text-center font-semibold cursor-pointer">
                     {item.nama}
                   </p>
                 </div>

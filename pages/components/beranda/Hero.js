@@ -4,9 +4,11 @@ import Link from "next/link";
 import axios from "axios";
 import ModalOption from "../layout/ModalOption";
 import Select from "react-select";
+import ModalFilter from "./ModalFilter";
 
 const Hero = () => {
   const [showModal, setShowModal] = useState(false);
+  const [showModalFilter, setShowModalFilter] = useState(false);
   const [type, setType] = useState("");
   const [listArea, setListArea] = useState([]);
   const [searchArea, setSearchArea] = useState("");
@@ -16,6 +18,8 @@ const Hero = () => {
     setType(value);
     setShowModal(!showModal);
   };
+
+  const handleOpenModalFilter = () => setShowModalFilter(!showModalFilter);
 
   const getListArea = async () => {
     await axios
@@ -118,10 +122,10 @@ const Hero = () => {
 
           <button
             type="button"
-            className="px-7 py-[6px] rounded-full border-secondary border-2 mx-2 hidden sm:block"
+            className="px-7 py-[6px] rounded-full bg-secondary mx-2 hidden sm:block"
             onClick={() => handleOpenModal("masuk")}
           >
-            <span className="text-secondary font-bold">Masuk</span>
+            <span className="text-white font-bold">Masuk</span>
           </button>
         </div>
       </div>
@@ -237,7 +241,7 @@ const Hero = () => {
 
         {/* Search Mobile */}
         <div className=" sm:hidden w-full bg-primary rounded-full shadow-lg">
-          <div className="flex justify-between items-center bg-primary rounded-full px-[4vw] py-[1.2vw]">
+          <div className="flex justify-between items-center bg-primary rounded-full ps-[4vw] pe-[2vw] py-[1.2vw]">
             <div className="relative w-full">
               <input
                 type="text"
@@ -247,18 +251,34 @@ const Hero = () => {
                 onChange={(e) => handleSearchRestaurant(e.target.value)}
               />
             </div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="4vw"
-              height="4vw"
-              viewBox="0 0 24 24"
-              className="cursor-pointer"
-            >
-              <path
-                fill="#8F8F9D"
-                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"
-              />
-            </svg>
+            <Link href="/restoran">
+              <div className="p-[1vw] rounded-full bg-secondary z-10 cursor-pointer justify-center items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="3.5vw"
+                  height="3.5vw"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="white"
+                    d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"
+                  />
+                </svg>
+              </div>
+            </Link>
+            <div className="ms-[0.5vw]" onClick={() => handleOpenModalFilter()}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="4.5vw"
+                height="4.5vw"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#8F8F9D"
+                  d="M15 19.88c.04.3-.06.62-.29.83a.996.996 0 0 1-1.41 0L9.29 16.7a.989.989 0 0 1-.29-.83v-5.12L4.21 4.62a1 1 0 0 1 .17-1.4c.19-.14.4-.22.62-.22h14c.22 0 .43.08.62.22a1 1 0 0 1 .17 1.4L15 10.75zM7.04 5L11 10.06v5.52l2 2v-7.53L16.96 5z"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -268,6 +288,17 @@ const Hero = () => {
             showModal,
             setShowModal,
             type,
+          }}
+        />
+      )}
+
+      {showModalFilter && (
+        <ModalFilter
+          {...{
+            showModalFilter,
+            setShowModalFilter,
+            listArea,
+            handleSearchArea,
           }}
         />
       )}
