@@ -67,7 +67,7 @@ const Pagination = (props) => {
         >
           <path
             fill="none"
-            stroke={`${currentPage === 1 ? "#3B7850" : "#ffffff"}`}
+            stroke={`${currentPage === 1 ? "#d86141" : "#ffffff"}`}
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="1.5"
@@ -105,7 +105,7 @@ const Pagination = (props) => {
         >
           <path
             fill="none"
-            stroke={`${currentPage === totalPages ? "#3B7850" : "#ffffff"}`}
+            stroke={`${currentPage === totalPages ? "#d86141" : "#ffffff"}`}
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="1.5"

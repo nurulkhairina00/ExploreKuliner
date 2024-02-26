@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import axios from "axios";
@@ -36,7 +37,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="w-full h-[65vw] sm:h-[28rem] bg-[url(/images/bg-hero.jpg)] bg-cover bg-[50%_50%] px-[8vw] py-[5vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-10">
+    <section className="w-full h-[60vw] sm:h-[28rem] bg-[url(/images/bg-hero.jpg)] bg-cover bg-[50%_50%] px-[8vw] py-[5vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-10">
       {/* Tampilan Masuk Mobile */}
       <div className="flex justify-end items-end sm:pb-7 sm:hidden">
         <Link href="/login-reviewer">
@@ -126,9 +127,13 @@ const Hero = () => {
       </div>
 
       <div className="flex flex-col items-center">
-        <h1 className="text-primary font-bold text-center text-[8vw] sm:text-5xl lg:text-6xl py-[8vw] sm:py-14">
-          Explore Kuliner
-        </h1>
+        <div className="pt-[9vw] pb-[5vw] sm:pt-14 sm:pb-10">
+          <img
+            src="/logo/logo-explore-kuliner.svg"
+            alt="logo-explore-kuliner"
+            className="w-[55vw] sm:w-[380px] lg:w-[450px]"
+          />
+        </div>
 
         {/* Search Tablet dan Desktop */}
         <div className="hidden sm:flex flex-row w-full lg:w-3/4 bg-primary rounded-full shadow-lg">
@@ -170,7 +175,7 @@ const Hero = () => {
                   borderRadius: 0,
                   colors: {
                     ...theme.colors,
-                    primary: "#3B7850",
+                    primary: "#d86141",
                   },
                 })}
               />

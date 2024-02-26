@@ -41,7 +41,7 @@ const LokasiRestoran = (props) => {
                 >
                   <g
                     fill="none"
-                    stroke="#3B7850"
+                    stroke="#d86141"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
@@ -65,7 +65,7 @@ const LokasiRestoran = (props) => {
                 >
                   <path
                     fill="none"
-                    stroke="#3B7850"
+                    stroke="#d86141"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="1.5"
@@ -86,7 +86,7 @@ const LokasiRestoran = (props) => {
                   className="me-[1vw] sm:me-2 sm:w-7 sm:h-7"
                 >
                   <path
-                    fill="#3B7850"
+                    fill="#d86141"
                     d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0l-8 5l-8-5zm0 12H4V8l8 5l8-5z"
                   />
                 </svg>
@@ -103,7 +103,7 @@ const LokasiRestoran = (props) => {
                   className="me-[1vw] sm:me-2 sm:w-7 sm:h-7"
                 >
                   <path
-                    fill="#3B7850"
+                    fill="#d86141"
                     d="M1 21v-2h22v2zm3-3q-.825 0-1.412-.587T2 16V5q0-.825.588-1.412T4 3h16q.825 0 1.413.588T22 5v11q0 .825-.587 1.413T20 18zm0-2h16V5H4zm0 0V5z"
                   />
                 </svg>

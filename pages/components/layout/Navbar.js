@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import ModalOption from "./ModalOption";
 import Link from "next/link";
@@ -12,12 +13,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full bg-white fixed shadow-md p-[8vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-7 z-10">
+    <nav className="w-full bg-white fixed shadow-md p-[6vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-7 z-10">
       <div className="flex justify-between">
         <Link href="/">
-          <h6 className=" text-[4vw] sm:text-xl text-secondary font-bold cursor-pointer">
-            ExploreKuliner
-          </h6>
+          <img
+            src="/logo/logo-explore-kuliner.svg"
+            alt="logo-explore-kuliner"
+            className="w-[30vw] sm:w-60"
+          />
         </Link>
 
         {/* Tampilan Masuk Tablet dan Desktop */}

@@ -37,7 +37,7 @@ const DeskripsiRestoran = (props) => {
             className="sm:w-6 sm:h-6 mr-[1vw] sm:mr-2"
           >
             <path
-              fill="#3B7850"
+              fill="#d86141"
               d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m4.2 14.2L11 13V7h1.5v5.2l4.5 2.7z"
             />
           </svg>
