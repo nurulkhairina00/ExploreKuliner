@@ -17,9 +17,9 @@ const Navbar = () => {
       <div className="flex justify-between">
         <Link href="/">
           <img
-            src="/logo/logo-explore-kuliner.svg"
+            src="/logo/logo-explore-kuliner-v2.svg"
             alt="logo-explore-kuliner"
-            className="w-[30vw] sm:w-60"
+            className="w-[18vw] sm:w-24 cursor-pointer"
           />
         </Link>
 

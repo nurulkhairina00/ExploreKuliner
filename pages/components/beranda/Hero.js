@@ -127,11 +127,11 @@ const Hero = () => {
       </div>
 
       <div className="flex flex-col items-center">
-        <div className="pt-[9vw] pb-[5vw] sm:pt-14 sm:pb-10">
+        <div className="pt-[9vw] pb-[5vw] sm:py-10 sm:pb-8">
           <img
-            src="/logo/logo-explore-kuliner.svg"
+            src="/logo/logo-explore-kuliner-v2.svg"
             alt="logo-explore-kuliner"
-            className="w-[55vw] sm:w-[380px] lg:w-[450px]"
+            className="w-[35vw] sm:w-[250px] lg:w-[300px]"
           />
         </div>
 
