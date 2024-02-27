@@ -40,26 +40,31 @@ const Hero = () => {
     getListArea();
   }, []);
 
+  useEffect(() => {
+    console.log("searchArea", searchArea);
+  }, [searchArea]);
+
   return (
     <section className="w-full h-[60vw] sm:h-[28rem] bg-[url(/images/bg-hero.jpg)] bg-cover bg-[50%_50%] px-[8vw] py-[5vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-10">
       {/* Tampilan Masuk Mobile */}
       <div className="flex justify-end items-end sm:pb-7 sm:hidden">
-        <Link href="/login-reviewer">
-          <div className="flex p-[1vw] rounded-full bg-secondary w-[7vw] h-[7vw] justify-center items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="3.5vw"
-              width="3.5vw"
-              viewBox="0 0 448 512"
-              className="flex-shrink-0"
-            >
-              <path
-                fill="#f4f4f4"
-                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
-              />
-            </svg>
-          </div>
-        </Link>
+        <div
+          className="flex p-[1vw] rounded-full bg-secondary w-[7vw] h-[7vw] justify-center items-center"
+          onClick={() => handleOpenModal("masuk")}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="3.5vw"
+            width="3.5vw"
+            viewBox="0 0 448 512"
+            className="flex-shrink-0"
+          >
+            <path
+              fill="#f4f4f4"
+              d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
+            />
+          </svg>
+        </div>
       </div>
 
       {/* Tampilan Masuk Tablet dan Desktop */}
@@ -157,12 +162,18 @@ const Hero = () => {
             </svg>
             <div className="relative w-full z-10">
               <Select
+                placeholder="Pilih Lokasi"
+                isSearchable
                 options={listArea.map((area) => ({
                   label: area.nama,
                   value: area.id,
                 }))}
-                placeholder="Pilih Lokasi"
-                isSearchable
+                value={{
+                  value: searchArea,
+                  label: listArea.find((item) => item.id === searchArea)
+                    ? listArea.find((item) => item.id === searchArea).nama
+                    : "Pilih...",
+                }}
                 onChange={(e) => handleSearchArea(e.value)}
                 styles={{
                   control: (provided, state) => ({
@@ -215,7 +226,8 @@ const Hero = () => {
                 type="text"
                 name="restoran"
                 placeholder="Cari restoran"
-                className="bg-primary p-2 w-full focus:outline-none"
+                className="bg-primary p-2 w-full focus:outline-none text-lg"
+                value={searchRestaurant}
                 onChange={(e) => handleSearchRestaurant(e.target.value)}
               />
             </div>
@@ -248,6 +260,7 @@ const Hero = () => {
                 name="restoran"
                 placeholder="Cari restoran"
                 className="bg-primary p-[1vw] w-full focus:outline-none rounded-full text-[3vw] sm:text-sm flex justify-center"
+                value={searchRestaurant}
                 onChange={(e) => handleSearchRestaurant(e.target.value)}
               />
             </div>
@@ -274,7 +287,7 @@ const Hero = () => {
                 viewBox="0 0 24 24"
               >
                 <path
-                  fill="#8F8F9D"
+                  fill={`${searchArea ? "#d86141" : "#8F8F9D"}`}
                   d="M15 19.88c.04.3-.06.62-.29.83a.996.996 0 0 1-1.41 0L9.29 16.7a.989.989 0 0 1-.29-.83v-5.12L4.21 4.62a1 1 0 0 1 .17-1.4c.19-.14.4-.22.62-.22h14c.22 0 .43.08.62.22a1 1 0 0 1 .17 1.4L15 10.75zM7.04 5L11 10.06v5.52l2 2v-7.53L16.96 5z"
                 />
               </svg>
@@ -298,6 +311,7 @@ const Hero = () => {
             showModalFilter,
             setShowModalFilter,
             listArea,
+            searchArea,
             handleSearchArea,
           }}
         />

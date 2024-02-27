@@ -8,9 +8,9 @@ const index = () => {
     <div className="w-full h-screen bg-primary">
       <div className="cursor-pointer" onClick={handleBack}>
         <svg
-          className="absolute left-[8vw] top-[3vw] sm:left-8 sm:top-6 sm:w-14 h-14"
-          width="10vw"
-          height="10vw"
+          className="absolute left-[8vw] top-[5vw] sm:left-8 sm:top-6 sm:w-14 h-14"
+          width="8vw"
+          height="8vw"
           viewBox="0 0 56 56"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

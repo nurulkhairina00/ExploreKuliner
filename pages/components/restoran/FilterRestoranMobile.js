@@ -99,9 +99,9 @@ const FilterRestoranMobile = () => {
   }, []);
 
   return (
-    <section className="flex px-[8vw] pt-[2vw] pb-[4vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-4 sm:pt-2 xl:hidden relative">
+    <section className="flex px-[8vw] pt-[2vw] pb-[4vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-4 sm:pt-2 xl:hidden relative overflow-x-auto">
       <div className="w-full px-0 sm:px-4">
-        <div className="flex flex-row gap-[1.5vw] sm:gap-2">
+        <div className="flex flex-row gap-[1.5vw] sm:gap-2 overflow-auto">
           <button
             className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[2.5vw] sm:text-sm rounded-full text-black ${
               selectedRating !== null ||
@@ -145,7 +145,7 @@ const FilterRestoranMobile = () => {
             </div>
           </button>
           <button
-            className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[2.5vw] sm:text-sm rounded-full ${
+            className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[2.5vw] sm:text-sm rounded-full whitespace-nowrap${
               selectedRating === "Bintang 4.5" ? "bg-black text-white" : ""
             }`}
             onClick={() => handleRating("Bintang 4.5")}
@@ -154,7 +154,7 @@ const FilterRestoranMobile = () => {
           </button>
           <div className="relative inline-block">
             <button
-              className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[2.5vw] sm:text-sm rounded-full text-black 4 ${
+              className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[2.5vw] sm:text-sm rounded-full text-black 4 whitespace-nowrap ${
                 selectedCategory.length > 0 ? "bg-black text-white" : ""
               }`}
               onClick={handleOpenCategory}
@@ -207,7 +207,7 @@ const FilterRestoranMobile = () => {
           </div>
           <div className="relative inline-block">
             <button
-              className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[2.5vw] sm:text-sm rounded-full text-black ${
+              className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[2.5vw] sm:text-sm rounded-full text-black whitespace-nowrap ${
                 selectedPrice.length > 0 ? "bg-black text-white" : ""
               }`}
               onClick={handleOpenPrice}
@@ -256,7 +256,7 @@ const FilterRestoranMobile = () => {
             )}
           </div>
           <button
-            className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[2.5vw] sm:text-sm rounded-full ${
+            className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[2.5vw] sm:text-sm rounded-full whitespace-nowrap ${
               selectedOther.includes("bukasekarang")
                 ? "bg-black text-white"
                 : "text-black"

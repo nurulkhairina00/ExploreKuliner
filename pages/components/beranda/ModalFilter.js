@@ -2,8 +2,13 @@ import React from "react";
 import Select from "react-select";
 
 const ModalFilter = (props) => {
-  const { showModalFilter, setShowModalFilter, listArea, handleSearchArea } =
-    props;
+  const {
+    showModalFilter,
+    setShowModalFilter,
+    listArea,
+    searchArea,
+    handleSearchArea,
+  } = props;
 
   const handleCloseModal = () => setShowModalFilter(!showModalFilter);
 
@@ -31,12 +36,18 @@ const ModalFilter = (props) => {
             </div>
           </div>
           <Select
+            placeholder="Pilih Lokasi"
+            isSearchable
             options={listArea.map((area) => ({
               label: area.nama,
               value: area.id,
             }))}
-            placeholder="Pilih Lokasi"
-            isSearchable
+            value={{
+              value: searchArea,
+              label: listArea.find((item) => item.id === searchArea)
+                ? listArea.find((item) => item.id === searchArea).nama
+                : "Pilih...",
+            }}
             onChange={(e) => handleSearchArea(e.value)}
             styles={{
               control: (provided, state) => ({

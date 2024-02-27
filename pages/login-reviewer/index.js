@@ -41,8 +41,28 @@ const Masuk = () => {
           </div>
 
           {/* Form Masuk */}
-          <div className="w-full h-screen md:w-1/2 flex justify-center items-center">
-            <div className="w-5/6 lg:w-2/3  p-[6vw] sm:p-7 rounded-[2vw] sm:rounded-lg shadow-lg">
+          <div className="w-full h-screen md:w-1/2 flex flex-col justify-center items-center">
+            <div
+              className="cursor-pointer md:hidden w-5/6 lg:w-2/3 p-[6vw]"
+              onClick={handleBack}
+            >
+              <svg
+                className="absolute left-[8vw] top-[5vw]"
+                width="8vw"
+                height="8vw"
+                viewBox="0 0 56 56"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M10.1065 29.8667L21.8553 41.6118L19.2121 44.2513L2.96094 28.0001L19.2121 11.7451L21.8553 14.3883L10.1065 26.1334H52.2671V29.8667H10.1065Z"
+                  fill="#d86141"
+                />
+              </svg>
+            </div>
+            <div className="w-5/6 lg:w-2/3 p-[6vw] sm:p-7 rounded-[2vw] sm:rounded-lg shadow-lg">
               <h1 className="text-secondary text-[6vw] sm:text-3xl font-bold pb-[2vw] sm:pb-5">
                 ExploreKuliner
               </h1>
