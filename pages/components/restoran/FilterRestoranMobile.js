@@ -101,7 +101,7 @@ const FilterRestoranMobile = () => {
   return (
     <section className="flex px-[8vw] pt-[2vw] pb-[4vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-4 sm:pt-2 xl:hidden relative overflow-x-auto">
       <div className="w-full px-0 sm:px-4">
-        <div className="flex flex-row gap-[1.5vw] sm:gap-2 overflow-auto">
+        <div className="flex flex-row gap-[1.5vw] sm:gap-2 overflow-x-auto">
           <button
             className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[2.5vw] sm:text-sm rounded-full text-black ${
               selectedRating !== null ||

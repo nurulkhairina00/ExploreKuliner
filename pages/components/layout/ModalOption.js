@@ -29,7 +29,7 @@ const ModalOption = (props) => {
               </svg>
             </div>
           </div>
-          <h2 className="font-bold text-[5vw] sm:text-2xl lg:text-3xl text-black text-center py-[3vw] sm:py-4 border-t-[1px] border-mediumGray">
+          <h2 className="font-bold text-[4.5vw] sm:text-2xl lg:text-3xl text-black text-center py-[3vw] sm:py-4 border-t-[1px] border-mediumGray">
             {type === "masuk" ? "Masuk " : "Daftar "}
             Sebagai
           </h2>

@@ -15,7 +15,7 @@ const ModalFilter = (props) => {
   return (
     <div className="h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-70 z-10">
       <div className="w-3/4 bg-white rounded-[2vw] sm:rounded-lg shadow-lg">
-        <div className="p-[3vw] sm:p-4">
+        <div className="p-[4vw] sm:p-4">
           <div
             className="flex justify-end pb-[4vw] sm:pb-4"
             onClick={handleCloseModal}

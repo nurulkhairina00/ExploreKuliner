@@ -40,10 +40,10 @@ const TentangArtikel = () => {
         </div>
 
         <div className="w-full sm:w-3/4 lg:w-1/2">
-          <h4 className="text-[6vw] sm:text-3xl font-bold py-[4vw] sm:py-8 text-center">
+          <h4 className="text-[6vw] sm:text-4xl font-bold py-[4vw] sm:py-8 text-center leading-normal">
             {data.judul}
           </h4>
-          <p className="text-[3vw] sm:text-sm text-gray text-center">
+          <p className="text-[3vw] sm:text-base text-gray text-center">
             {data.deskripsi}
           </p>
           <div className="w-full flex p-[4vw] sm:p-4 justify-center items-center gap-1">
@@ -55,16 +55,16 @@ const TentangArtikel = () => {
               />
             </div>
             <div className="text-start">
-              <p className="text-[3vw] sm:text-sm font-semibold">
+              <p className="text-[3vw] sm:text-base font-semibold">
                 By {data.author}
               </p>
-              <p className="text-[2.5vw] sm:text-xs">
+              <p className="text-[2.5vw] sm:text-sm">
                 {moment(data.publish_date).format("DD MMMM YYYY")} - 09.13 Wib
               </p>
             </div>
           </div>
           <div className="w-full py-[4vw] sm:py-8">
-            <p className="font-semibold text-[3vw] sm:text-base py-[3vw] sm:py-4">
+            <p className="font-semibold text-[4vw] sm:text-lg py-[3vw] sm:py-4">
               1. Kopi Nalar
             </p>
             <img
@@ -112,7 +112,7 @@ const TentangArtikel = () => {
               className="bg-secondary text-white px-[2vw] py-[1vw] sm:px-4 sm:py-1 rounded-[2vw] sm:rounded-lg"
               key={index}
             >
-              <p className="text-[2.5vw] sm:text-sm">{item}</p>
+              <p className="text-[3vw] sm:text-base">{item}</p>
             </div>
           ))}
         </div>

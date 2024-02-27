@@ -5,7 +5,7 @@ const Breadcrumb = (props) => {
   const { data } = props;
 
   return (
-    <section className="flex px-[8vw] pb-[2vw] pt-[30vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-4 sm:pt-36">
+    <section className="flex px-[8vw] pb-[2vw] pt-[28vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-4 sm:pt-36">
       <ol className="flex items-center px-0 sm:px-4 xl:px-0">
         <li className="text-gray text-[3vw] sm:text-base">
           <Link href="/">
