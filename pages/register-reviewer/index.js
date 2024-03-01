@@ -130,14 +130,14 @@ const Register = () => {
               <p className="text-black text-[5vw] sm:text-2xl font-semibold">
                 Daftarkan Akun Anda
               </p>
-              <p className="text-black text-[3vw] sm:text-sm pb-[2vw] sm:pb-5">
+              <p className="text-black text-[3vw] sm:text-base pb-[3vw] sm:pb-6">
                 Daftar dengan alamat email, no hp dan kata sandi.
               </p>
               <form onSubmit={handleRegister}>
                 <div className="pb-[2vw] sm:pb-3">
                   <label
                     htmlFor="email"
-                    className="text-[3vw] sm:text-sm font-normal"
+                    className="text-[3vw] sm:text-base font-normal"
                   >
                     Alamat Email
                   </label>
@@ -147,14 +147,14 @@ const Register = () => {
                     placeholder="mail@gmail.com"
                     value={input.email}
                     onChange={(e) => handleChange(e.target.value, "email")}
-                    className="w-full sm:mt-1 p-[2vw] sm:p-2 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-sm"
+                    className="w-full sm:mt-1 py-[2vw] px-[3vw] sm:py-2 sm:px-4 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                     required
                   />
                 </div>
                 <div className="pb-[2vw] sm:pb-3">
                   <label
                     htmlFor="no_hp"
-                    className="text-[3vw] sm:text-sm font-normal"
+                    className="text-[3vw] sm:text-base font-normal"
                   >
                     No Handphone
                   </label>
@@ -164,14 +164,14 @@ const Register = () => {
                     placeholder="+62"
                     value={input.no_hp}
                     onChange={(e) => handleChange(e.target.value, "no_hp")}
-                    className="w-full sm:mt-1 p-[2vw] sm:p-2 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-sm"
+                    className="w-full sm:mt-1 py-[2vw] px-[3vw] sm:py-2 sm:px-4 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                     required
                   />
                 </div>
                 <div className="pb-[6vw] sm:pb-5">
                   <label
                     htmlFor="password"
-                    className="text-[3vw] sm:text-sm font-normal"
+                    className="text-[3vw] sm:text-base font-normal"
                   >
                     Kata Sandi
                   </label>
@@ -181,31 +181,17 @@ const Register = () => {
                     placeholder="********"
                     value={input.password}
                     onChange={(e) => handleChange(e.target.value, "password")}
-                    className="w-full sm:mt-1 p-[2vw] sm:p-2 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-sm"
+                    className="w-full sm:mt-1 py-[2vw] px-[3vw] sm:py-2 sm:px-4 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                     required
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full font-semibold text-white p-[2vw] sm:p-2 rounded-full bg-secondary text-[3vw] sm:text-sm"
+                  className="w-full font-bold text-white p-[2vw] sm:px-2 sm:py-3 rounded-full bg-secondary text-[3vw] sm:text-lg mst-[2vw] sm:mt-5"
                 >
                   Daftar
                 </button>
               </form>
-              <p className="text-black text-[3vw] sm:text-sm text-center py-[4vw] sm:py-5">
-                Atau masuk dengan
-              </p>
-              <button
-                type="button"
-                className="w-full text-[3vw] sm:text-sm font-semibold text-black p-[2vw] sm:p-2 rounded-full bg-mediumGray flex justify-center"
-              >
-                <img
-                  src="/logo/icon-google.svg"
-                  alt="google"
-                  className="me-[2vw] sm:me-2 w-[4vw] h-[4vw] sm:w-[24px] sm:h-[24px]"
-                />
-                Google
-              </button>
               <p className="text-[3vw] sm:text-sm text-center pt-[7vw] sm:pt-7">
                 <span className="text-black">Sudah memiliki akun?</span>
                 <Link href="/login-reviewer">
