@@ -134,10 +134,10 @@ const Register = () => {
                 Daftar dengan alamat email, no hp dan kata sandi.
               </p>
               <form onSubmit={handleRegister}>
-                <div className="pb-[2vw] sm:pb-3">
+                <div className="pb-[2vw] sm:pb-4">
                   <label
                     htmlFor="email"
-                    className="text-[3vw] sm:text-base font-normal"
+                    className="text-[3vw] sm:text-lg font-normal"
                   >
                     Alamat Email
                   </label>
@@ -147,14 +147,14 @@ const Register = () => {
                     placeholder="mail@gmail.com"
                     value={input.email}
                     onChange={(e) => handleChange(e.target.value, "email")}
-                    className="w-full sm:mt-1 py-[2vw] px-[3vw] sm:py-2 sm:px-4 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
+                    className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                     required
                   />
                 </div>
-                <div className="pb-[2vw] sm:pb-3">
+                <div className="pb-[2vw] sm:pb-4">
                   <label
                     htmlFor="no_hp"
-                    className="text-[3vw] sm:text-base font-normal"
+                    className="text-[3vw] sm:text-lg font-normal"
                   >
                     No Handphone
                   </label>
@@ -164,14 +164,14 @@ const Register = () => {
                     placeholder="+62"
                     value={input.no_hp}
                     onChange={(e) => handleChange(e.target.value, "no_hp")}
-                    className="w-full sm:mt-1 py-[2vw] px-[3vw] sm:py-2 sm:px-4 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
+                    className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                     required
                   />
                 </div>
-                <div className="pb-[6vw] sm:pb-5">
+                <div className="pb-[6vw] sm:pb-6">
                   <label
                     htmlFor="password"
-                    className="text-[3vw] sm:text-base font-normal"
+                    className="text-[3vw] sm:text-lg font-normal"
                   >
                     Kata Sandi
                   </label>
@@ -181,7 +181,7 @@ const Register = () => {
                     placeholder="********"
                     value={input.password}
                     onChange={(e) => handleChange(e.target.value, "password")}
-                    className="w-full sm:mt-1 py-[2vw] px-[3vw] sm:py-2 sm:px-4 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
+                    className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                     required
                   />
                 </div>

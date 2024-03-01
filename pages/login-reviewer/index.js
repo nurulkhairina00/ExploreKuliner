@@ -112,14 +112,14 @@ const Login = () => {
               <p className=" text-black text-[5vw] sm:text-2xl font-semibold">
                 Masuk
               </p>
-              <p className="text-black text-[3vw] sm:text-base pb-[3vw] sm:pb-6">
+              <p className="text-black text-[3vw] sm:text-lg pb-[3vw] sm:pb-6">
                 Masuk dengan alamat email dan kata sandi.
               </p>
               <form onSubmit={handleLogin}>
-                <div className="pb-[2vw] sm:pb-3">
+                <div className="pb-[2vw] sm:pb-4">
                   <label
                     htmlFor="email"
-                    className="text-[3vw] sm:text-base font-normal"
+                    className="text-[3vw] sm:text-lg font-normal"
                   >
                     Alamat Email
                   </label>
@@ -129,14 +129,14 @@ const Login = () => {
                     placeholder="mail@gmail.com"
                     value={input.email}
                     onChange={(e) => handleChange(e.target.value, "email")}
-                    className="w-full sm:mt-1 py-[2vw] px-[3vw] sm:py-2 sm:px-4 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
+                    className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                     required
                   />
                 </div>
-                <div className="pb-[2vw] sm:pb-3">
+                <div className="pb-[2vw] sm:pb-4">
                   <label
                     htmlFor="password"
-                    className="text-[3vw] sm:text-base font-normal"
+                    className="text-[3vw] sm:text-lg font-normal"
                   >
                     Kata Sandi
                   </label>
@@ -146,7 +146,7 @@ const Login = () => {
                     placeholder="********"
                     value={input.password}
                     onChange={(e) => handleChange(e.target.value, "password")}
-                    className="w-full sm:mt-1 py-[2vw] px-[3vw] sm:py-2 sm:px-4 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
+                    className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                     required
                   />
                 </div>
@@ -179,7 +179,7 @@ const Login = () => {
                   Masuk
                 </button>
               </form>
-              <p className=" text-black text-[3vw] sm:text-base text-center py-[4vw] sm:py-5">
+              <p className=" text-black text-[3vw] sm:text-base text-center py-[3vw] sm:py-6">
                 Atau masuk dengan
               </p>
               <button
@@ -193,7 +193,7 @@ const Login = () => {
                 />
                 Google
               </button>
-              <p className="text-[3vw] sm:text-base text-center pt-[7vw] sm:pt-7">
+              <p className="text-[3vw] sm:text-base text-center pt-[6vw] sm:pt-6">
                 <span className="text-black">Belum punya akun?</span>
                 <Link href="/register-reviewer">
                   <span className="text-secondary font-bold cursor-pointer">
