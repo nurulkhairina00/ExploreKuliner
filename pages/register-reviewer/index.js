@@ -1,11 +1,71 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Router from "next/router";
+import axios from "axios";
+import Swal from "sweetalert2";
+import { hash } from "bcryptjs";
 
-const Daftar = () => {
+const Register = () => {
+  const [input, setInput] = useState({
+    email: "",
+    no_hp: "",
+    password: "",
+  });
+
   const handleBack = () => Router.back();
+
+  const handleChange = (value, name) => {
+    setInput({ ...input, [name]: value });
+  };
+
+  const handleRegister = async (event) => {
+    event.preventDefault();
+
+    let regexPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+    if (!input.password.match(regexPassword)) {
+      Swal.fire({
+        title: `Sorry, Password tidak sesuai`,
+        text: "Password minimal 6 karakter dan harus mengandung angka, serta gabungan huruf besar dan kecil",
+        showConfirmButton: false,
+        timer: 2500,
+      });
+      return false;
+    }
+
+    await axios({
+      method: "POST",
+      url: `${process.env.NEXT_PUBLIC_API_PATH}:${process.env.NEXT_PUBLIC_API_PORT}/api/v1/register`,
+      data: {
+        input,
+        hashedPassword: await hash(input.password, 12),
+        // host_url: `${process.env.APP_PATH}/register/verify/`,
+      },
+    })
+      .then(() => {
+        Router.push("/login-reviewer");
+        Swal.fire({
+          title: `Berhasil mendaftar`,
+          text: "Silahkan Cek Email Untuk Konfirmasi",
+          showConfirmButton: false,
+          timer: 3000,
+        });
+        setInput({
+          email: "",
+          no_hp: "",
+          password: "",
+        });
+      })
+      .catch((err) => {
+        Swal.fire({
+          title: `Sorry, Email sudah terdaftar`,
+          text: "Silahkan login atau mendaftar dengan Email yang berbeda",
+          showConfirmButton: false,
+          timer: 2500,
+        });
+      });
+  };
 
   return (
     <>
@@ -73,7 +133,7 @@ const Daftar = () => {
               <p className="text-black text-[3vw] sm:text-sm pb-[2vw] sm:pb-5">
                 Daftar dengan alamat email, no hp dan kata sandi.
               </p>
-              <form action="">
+              <form onSubmit={handleRegister}>
                 <div className="pb-[2vw] sm:pb-3">
                   <label
                     htmlFor="email"
@@ -85,7 +145,10 @@ const Daftar = () => {
                     type="email"
                     name="email"
                     placeholder="mail@gmail.com"
+                    value={input.email}
+                    onChange={(e) => handleChange(e.target.value, "email")}
                     className="w-full sm:mt-1 p-[2vw] sm:p-2 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-sm"
+                    required
                   />
                 </div>
                 <div className="pb-[2vw] sm:pb-3">
@@ -99,21 +162,27 @@ const Daftar = () => {
                     type="number"
                     name="no_hp"
                     placeholder="+62"
+                    value={input.no_hp}
+                    onChange={(e) => handleChange(e.target.value, "no_hp")}
                     className="w-full sm:mt-1 p-[2vw] sm:p-2 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-sm"
+                    required
                   />
                 </div>
                 <div className="pb-[6vw] sm:pb-5">
                   <label
-                    htmlFor="katasandi"
+                    htmlFor="password"
                     className="text-[3vw] sm:text-sm font-normal"
                   >
                     Kata Sandi
                   </label>
                   <input
                     type="password"
-                    name="katasandi"
+                    name="password"
                     placeholder="********"
+                    value={input.password}
+                    onChange={(e) => handleChange(e.target.value, "password")}
                     className="w-full sm:mt-1 p-[2vw] sm:p-2 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-sm"
+                    required
                   />
                 </div>
                 <button
@@ -154,4 +223,4 @@ const Daftar = () => {
   );
 };
 
-export default Daftar;
+export default Register;

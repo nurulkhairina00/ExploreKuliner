@@ -1,11 +1,54 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Router from "next/router";
+import { signIn } from "next-auth/react";
+import Swal from "sweetalert2";
 
-const Masuk = () => {
+const Login = () => {
+  let [input, setInput] = useState({
+    email: "",
+    password: "",
+  });
+
   const handleBack = () => Router.back();
+
+  const handleChange = (value, name) => {
+    setInput({ ...input, [name]: value });
+  };
+
+  const handleLogin = async (event) => {
+    event.preventDefault();
+    const result = await signIn("credentials", {
+      redirect: false,
+      email: input.email,
+      password: input.password,
+    });
+
+    if (result.error) {
+      let errorMessage;
+      if (
+        result.error.includes("Email tidak terdaftar") ||
+        result.error.includes("Request failed with status code 401")
+      ) {
+        errorMessage = "Email tidak terdaftar";
+      } else if (result.error.includes("Password tidak sesuai")) {
+        errorMessage = "Password tidak sesuai";
+      }
+
+      Swal.fire({
+        title: `Sorry, ${errorMessage}`,
+        text: "Silahkan login kembali dengan email dan password Anda yang sesuai",
+        icon: "warning",
+        showConfirmButton: false,
+        timer: 2000,
+      });
+      return false;
+    }
+
+    Router.push("/");
+  };
 
   return (
     <>
@@ -72,7 +115,7 @@ const Masuk = () => {
               <p className="text-black text-[3vw] sm:text-sm pb-[2vw] sm:pb-5">
                 Masuk dengan alamat email dan kata sandi.
               </p>
-              <form>
+              <form onSubmit={handleLogin}>
                 <div className="pb-[2vw] sm:pb-3">
                   <label
                     htmlFor="email"
@@ -84,21 +127,27 @@ const Masuk = () => {
                     type="email"
                     name="email"
                     placeholder="mail@gmail.com"
+                    value={input.email}
+                    onChange={(e) => handleChange(e.target.value, "email")}
                     className="w-full sm:mt-1 p-[2vw] sm:p-2 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-sm"
+                    required
                   />
                 </div>
                 <div className="pb-[2vw] sm:pb-3">
                   <label
-                    htmlFor="katasandi"
+                    htmlFor="password"
                     className="text-[3vw] sm:text-sm font-normal"
                   >
                     Kata Sandi
                   </label>
                   <input
                     type="password"
-                    name="katasandi"
+                    name="password"
                     placeholder="********"
+                    value={input.password}
+                    onChange={(e) => handleChange(e.target.value, "password")}
                     className="w-full sm:mt-1 p-[2vw] sm:p-2 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-sm"
+                    required
                   />
                 </div>
                 <div className="flex justify-between pb-[6vw] sm:pb-6">
@@ -158,4 +207,4 @@ const Masuk = () => {
   );
 };
 
-export default Masuk;
+export default Login;
