@@ -187,12 +187,12 @@ const Register = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full font-bold text-white p-[2vw] sm:px-2 sm:py-3 rounded-full bg-secondary text-[3vw] sm:text-lg mst-[2vw] sm:mt-5"
+                  className="w-full font-bold text-white p-[2vw] sm:px-2 sm:py-3 rounded-full bg-secondary text-[3vw] sm:text-lg mt-[2vw] sm:mt-5"
                 >
                   Daftar
                 </button>
               </form>
-              <p className="text-[3vw] sm:text-sm text-center pt-[7vw] sm:pt-7">
+              <p className="text-[3vw] sm:text-base text-center pt-[7vw] sm:pt-7">
                 <span className="text-black">Sudah memiliki akun?</span>
                 <Link href="/login-reviewer">
                   <span className="text-secondary font-bold cursor-pointer">

@@ -112,14 +112,14 @@ const Login = () => {
               <p className=" text-black text-[5vw] sm:text-2xl font-semibold">
                 Masuk
               </p>
-              <p className="text-black text-[3vw] sm:text-sm pb-[2vw] sm:pb-5">
+              <p className="text-black text-[3vw] sm:text-base pb-[3vw] sm:pb-6">
                 Masuk dengan alamat email dan kata sandi.
               </p>
               <form onSubmit={handleLogin}>
                 <div className="pb-[2vw] sm:pb-3">
                   <label
                     htmlFor="email"
-                    className="text-[3vw] sm:text-sm font-normal"
+                    className="text-[3vw] sm:text-base font-normal"
                   >
                     Alamat Email
                   </label>
@@ -129,14 +129,14 @@ const Login = () => {
                     placeholder="mail@gmail.com"
                     value={input.email}
                     onChange={(e) => handleChange(e.target.value, "email")}
-                    className="w-full sm:mt-1 p-[2vw] sm:p-2 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-sm"
+                    className="w-full sm:mt-1 py-[2vw] px-[3vw] sm:py-2 sm:px-4 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                     required
                   />
                 </div>
                 <div className="pb-[2vw] sm:pb-3">
                   <label
                     htmlFor="password"
-                    className="text-[3vw] sm:text-sm font-normal"
+                    className="text-[3vw] sm:text-base font-normal"
                   >
                     Kata Sandi
                   </label>
@@ -146,7 +146,7 @@ const Login = () => {
                     placeholder="********"
                     value={input.password}
                     onChange={(e) => handleChange(e.target.value, "password")}
-                    className="w-full sm:mt-1 p-[2vw] sm:p-2 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-sm"
+                    className="w-full sm:mt-1 py-[2vw] px-[3vw] sm:py-2 sm:px-4 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                     required
                   />
                 </div>
@@ -157,31 +157,34 @@ const Login = () => {
                       id="ingatkan"
                       name="ingatkan"
                       value="ingatkan"
-                      className="rounded-3 me-[2vw] sm:me-2 w-[4vw] h-[4vw] sm:w-4 sm:h-4"
+                      className="rounded-3 me-[2vw] sm:me-2 w-[3vw] h-[3vw] sm:w-4 sm:h-4"
                     />
-                    <label htmlFor="ingatkan" className="text-[3vw] sm:text-sm">
+                    <label
+                      htmlFor="ingatkan"
+                      className="text-[3vw] sm:text-base"
+                    >
                       Ingatkan saya
                     </label>
                   </div>
                   <Link href="/reset-password">
-                    <p className="text-[3vw] sm:text-sm text-secondary font-normal text-end mb-0 cursor-pointer">
+                    <p className="text-[3vw] sm:text-base text-secondary font-normal text-end mb-0 cursor-pointer">
                       Lupa kata sandi?
                     </p>
                   </Link>
                 </div>
                 <button
                   type="submit"
-                  className="w-full font-semibold text-white p-[2vw] sm:p-2 rounded-full bg-secondary text-[3vw] sm:text-sm"
+                  className="w-full font-bold text-white p-[2vw] sm:px-2 sm:py-3 rounded-full bg-secondary text-[3vw] sm:text-lg mt-[2vw] sm:mt-5"
                 >
                   Masuk
                 </button>
               </form>
-              <p className=" text-black text-[3vw] sm:text-sm text-center py-[4vw] sm:py-5">
+              <p className=" text-black text-[3vw] sm:text-base text-center py-[4vw] sm:py-5">
                 Atau masuk dengan
               </p>
               <button
                 type="button"
-                className="w-full text-[3vw] sm:text-sm font-semibold text-black p-[2vw] sm:p-2 rounded-full bg-mediumGray flex justify-center items-center"
+                className="w-full text-[3vw] sm:text-lg font-bold text-black p-[2vw] sm:px-2 sm:py-3 rounded-full bg-mediumGray flex justify-center items-center"
               >
                 <img
                   src="/logo/icon-google.svg"
@@ -190,7 +193,7 @@ const Login = () => {
                 />
                 Google
               </button>
-              <p className="text-[3vw] sm:text-sm text-center pt-[7vw] sm:pt-7">
+              <p className="text-[3vw] sm:text-base text-center pt-[7vw] sm:pt-7">
                 <span className="text-black">Belum punya akun?</span>
                 <Link href="/register-reviewer">
                   <span className="text-secondary font-bold cursor-pointer">
