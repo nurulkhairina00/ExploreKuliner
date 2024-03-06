@@ -35,6 +35,12 @@ const Login = () => {
         errorMessage = "Email tidak terdaftar";
       } else if (result.error.includes("Password tidak sesuai")) {
         errorMessage = "Password tidak sesuai";
+      } else if (
+        result.error.includes(
+          "Akun belum aktif, Mohon periksa email aktivasi Anda!"
+        )
+      ) {
+        errorMessage = "Akun belum aktif, Mohon periksa email aktivasi Anda!";
       }
 
       Swal.fire({
@@ -48,6 +54,14 @@ const Login = () => {
     }
 
     Router.push("/");
+  };
+
+  const handleLoginGoogle = () => {
+    signIn(
+      "google",
+      { callbackUrl: "http://localhost:3000" },
+      { prompt: "login" }
+    );
   };
 
   return (
@@ -185,6 +199,7 @@ const Login = () => {
               <button
                 type="button"
                 className="w-full text-[3vw] sm:text-lg font-bold text-black p-[2vw] sm:px-2 sm:py-3 rounded-full bg-mediumGray flex justify-center items-center"
+                onClick={handleLoginGoogle}
               >
                 <img
                   src="/logo/icon-google.svg"

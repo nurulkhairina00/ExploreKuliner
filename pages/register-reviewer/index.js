@@ -9,6 +9,7 @@ import { hash } from "bcryptjs";
 
 const Register = () => {
   const [input, setInput] = useState({
+    nama: "",
     email: "",
     no_hp: "",
     password: "",
@@ -28,41 +29,39 @@ const Register = () => {
       Swal.fire({
         title: `Sorry, Password tidak sesuai`,
         text: "Password minimal 6 karakter dan harus mengandung angka, serta gabungan huruf besar dan kecil",
+        icon: "warning",
         showConfirmButton: false,
-        timer: 2500,
+        timer: 2000,
       });
       return false;
     }
 
     await axios({
       method: "POST",
-      url: `${process.env.NEXT_PUBLIC_API_PATH}:${process.env.NEXT_PUBLIC_API_PORT}/api/v1/register`,
+      url: `${process.env.NEXT_PUBLIC_API_PATH}:${process.env.NEXT_PUBLIC_API_PORT}/api/${process.env.NEXT_PUBLIC_VER}/register`,
       data: {
         input,
         hashedPassword: await hash(input.password, 12),
-        // host_url: `${process.env.APP_PATH}/register/verify/`,
+        host_url: `${process.env.NEXT_PUBLIC_APP_PATH}:${process.env.NEXT_PUBLIC_APP_PORT}/register-reviewer/verify/`,
       },
     })
       .then(() => {
-        Router.push("/login-reviewer");
         Swal.fire({
           title: `Berhasil mendaftar`,
           text: "Silahkan Cek Email Untuk Konfirmasi",
+          icon: "success",
           showConfirmButton: false,
-          timer: 3000,
+          timer: 2000,
         });
-        setInput({
-          email: "",
-          no_hp: "",
-          password: "",
-        });
+        Router.push("/login-reviewer");
       })
       .catch((err) => {
         Swal.fire({
           title: `Sorry, Email sudah terdaftar`,
           text: "Silahkan login atau mendaftar dengan Email yang berbeda",
+          icon: "info",
           showConfirmButton: false,
-          timer: 2500,
+          timer: 2000,
         });
       });
   };
@@ -134,6 +133,23 @@ const Register = () => {
                 Daftar dengan alamat email, no hp dan kata sandi.
               </p>
               <form onSubmit={handleRegister}>
+                <div className="pb-[2vw] sm:pb-4">
+                  <label
+                    htmlFor="nama"
+                    className="text-[3vw] sm:text-lg font-normal"
+                  >
+                    Nama
+                  </label>
+                  <input
+                    type="text"
+                    name="nama"
+                    placeholder="Nama Lengkap"
+                    value={input.nama}
+                    onChange={(e) => handleChange(e.target.value, "nama")}
+                    className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
+                    required
+                  />
+                </div>
                 <div className="pb-[2vw] sm:pb-4">
                   <label
                     htmlFor="email"

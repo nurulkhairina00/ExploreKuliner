@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from "react";
+import { signOut } from "next-auth/react";
 import Link from "next/link";
 import axios from "axios";
 import ModalOption from "../layout/ModalOption";
@@ -7,7 +8,8 @@ import Select from "react-select";
 import ModalFilter from "./ModalFilter";
 import SocialMedia from "../layout/SocialMedia";
 
-const Hero = () => {
+const Hero = (props) => {
+  const { isLoggedIn } = props;
   const [showModal, setShowModal] = useState(false);
   const [showModalFilter, setShowModalFilter] = useState(false);
   const [type, setType] = useState("");
@@ -36,6 +38,8 @@ const Hero = () => {
   const handleSearchArea = (value) => setSearchArea(value);
 
   const handleSearchRestaurant = (value) => setSearchRestaurant(value);
+
+  const logoutHandler = () => signOut({ callbackUrl: `/` });
 
   useEffect(() => {
     getListArea();
@@ -68,23 +72,37 @@ const Hero = () => {
               />
             </svg>
           </div>
+          {isLoggedIn ? (
+            <>
+              {/* Daftar dan Masuk Tablet dan Desktop*/}
+              <button
+                type="button"
+                className="px-7 py-2 rounded-full bg-primary mx-2 hidden sm:block"
+                onClick={logoutHandler}
+              >
+                <span className="text-secondary font-bold">Logout</span>
+              </button>
+            </>
+          ) : (
+            <>
+              {/* Daftar dan Masuk Tablet dan Desktop*/}
+              <button
+                type="button"
+                className="px-7 py-2 rounded-full bg-primary mx-2 hidden sm:block"
+                onClick={() => handleOpenModal("daftar")}
+              >
+                <span className="text-secondary font-bold">Daftar</span>
+              </button>
 
-          {/* Daftar dan Masuk Tablet dan Desktop*/}
-          <button
-            type="button"
-            className="px-7 py-2 rounded-full bg-primary mx-2 hidden sm:block"
-            onClick={() => handleOpenModal("daftar")}
-          >
-            <span className="text-secondary font-bold">Daftar</span>
-          </button>
-
-          <button
-            type="button"
-            className="px-7 py-[6px] rounded-full bg-secondary mx-2 hidden sm:block"
-            onClick={() => handleOpenModal("masuk")}
-          >
-            <span className="text-white font-bold">Masuk</span>
-          </button>
+              <button
+                type="button"
+                className="px-7 py-[6px] rounded-full bg-secondary mx-2 hidden sm:block"
+                onClick={() => handleOpenModal("masuk")}
+              >
+                <span className="text-white font-bold">Masuk</span>
+              </button>
+            </>
+          )}
         </div>
       </div>
 
