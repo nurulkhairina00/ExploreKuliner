@@ -1,9 +1,7 @@
 import React from "react";
-import Navbar from "../../components/navbar";
 import Breadcrumb from "../../components/main/Breadcrumb";
 import TentangArtikel from "../../components/main/artikel/detail/TentangArtikel";
 import ListArtikel from "../../components/main/ListArtikel";
-import Footer from "../../components/footer";
 
 const Detail = () => {
   const breadcrumbData = [
@@ -19,11 +17,9 @@ const Detail = () => {
 
   return (
     <>
-      <Navbar />
       <Breadcrumb data={breadcrumbData} />
       <TentangArtikel />
       <ListArtikel />
-      <Footer />
     </>
   );
 };

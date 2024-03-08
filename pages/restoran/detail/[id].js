@@ -1,12 +1,10 @@
 import React from "react";
+import axios from "axios";
 import { getSession } from "next-auth/react";
-import Navbar from "../../components/navbar";
 import Breadcrumb from "../../components/main/Breadcrumb";
 import TentangRestoran from "../../components/main/restoran/detail/TentangRestoran";
 import RestoranSerupa from "../../components/main/restoran/detail/RestoranSerupa";
 import ListArtikel from "../../components/main/ListArtikel";
-import Footer from "../../components/footer";
-import axios from "axios";
 
 const Detail = (props) => {
   const { session } = props;
@@ -24,12 +22,10 @@ const Detail = (props) => {
 
   return (
     <>
-      <Navbar />
       <Breadcrumb data={breadcrumbData} />
       <TentangRestoran />
       <RestoranSerupa />
       <ListArtikel />
-      <Footer />
     </>
   );
 };

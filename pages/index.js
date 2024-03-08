@@ -1,4 +1,4 @@
-import Head from "next/head";
+import axios from "axios";
 import { getSession } from "next-auth/react";
 import Hero from "./components/main/beranda/Hero";
 import Kategori from "./components/main/beranda/Kategori";
@@ -7,27 +7,19 @@ import RestoranPopuler from "./components/main/beranda/RestoranPopuler";
 import RestoranBaru from "./components/main/beranda/RestoranBaru";
 import RestoranTerdekat from "./components/main/beranda/RestoranTerdekat";
 import ListArtikel from "./components/main/ListArtikel";
-import Footer from "./components/footer";
-import axios from "axios";
 
 export default function Home(props) {
   const { isLoggedIn } = props;
 
   return (
     <>
-      <Head>
-        <title>Explore Kuliner</title>
-      </Head>
-      <div className="bg-primary">
-        <Hero {...{ isLoggedIn }} />
-        <Kategori />
-        <ListVideo />
-        <RestoranPopuler />
-        <RestoranBaru />
-        <RestoranTerdekat />
-        <ListArtikel />
-        <Footer />
-      </div>
+      <Hero {...{ isLoggedIn }} />
+      <Kategori />
+      <ListVideo />
+      <RestoranPopuler />
+      <RestoranBaru />
+      <RestoranTerdekat />
+      <ListArtikel />
     </>
   );
 }

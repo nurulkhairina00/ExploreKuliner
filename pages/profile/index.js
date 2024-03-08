@@ -1,10 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from "react";
 import { getSession } from "next-auth/react";
-import Navbar from "../components/navbar";
 import Breadcrumb from "../components/main/Breadcrumb";
 import Profile from "../components/main/profile";
-import Footer from "../components/footer";
 import axios from "axios";
 
 const index = (props) => {
@@ -37,10 +35,8 @@ const index = (props) => {
 
   return (
     <>
-      <Navbar />
       <Breadcrumb data={breadcrumbData} />
       <Profile {...{ input, setInput }} />
-      <Footer />
     </>
   );
 };

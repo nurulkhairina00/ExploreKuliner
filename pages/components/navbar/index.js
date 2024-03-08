@@ -1,18 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from "react";
-import ModalOption from "../main/ModalOption";
+import { signOut } from "next-auth/react";
 import Link from "next/link";
 import Select from "react-select";
 import axios from "axios";
+import ModalOption from "../main/ModalOption";
 import ModalFilter from "../main/beranda/ModalFilter";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const { isLoggedIn } = props;
   const [showModal, setShowModal] = useState(false);
   const [showModalFilter, setShowModalFilter] = useState(false);
   const [type, setType] = useState("");
   const [listArea, setListArea] = useState([]);
   const [searchArea, setSearchArea] = useState("");
   const [searchRestaurant, setSearchRestaurant] = useState("");
+  const [showDropdown, setShowDropdown] = useState(false);
 
   const getListArea = async () => {
     await axios
@@ -25,10 +28,6 @@ const Navbar = () => {
       });
   };
 
-  useEffect(() => {
-    getListArea();
-  }, []);
-
   const handleSearchArea = (value) => setSearchArea(value);
 
   const handleSearchRestaurant = (value) => setSearchRestaurant(value);
@@ -39,6 +38,19 @@ const Navbar = () => {
     setType(value);
     setShowModal(!showModal);
   };
+
+  const handleLogout = () => {
+    signOut({ callbackUrl: `/` });
+    setShowDropdown(!showDropdown);
+  };
+
+  const handleToggleDropdown = () => setShowDropdown(!showDropdown);
+
+  const handleCloseToggleDropdown = () => setShowDropdown(false);
+
+  useEffect(() => {
+    getListArea();
+  }, []);
 
   return (
     <nav className="w-full bg-white fixed shadow-md p-[6vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-9 z-10">
@@ -208,41 +220,86 @@ const Navbar = () => {
         </div>
 
         <div className="flex sm:space-x-4">
-          {/* Tampilan Masuk Mobile */}
-          <div
-            className="flex p-[1vw] rounded-full bg-secondary w-[7vw] h-[7vw] justify-center items-center sm:hidden"
-            onClick={() => handleOpenModal("masuk")}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="3.5vw"
-              width="3.5vw"
-              viewBox="0 0 448 512"
-              className="flex-shrink-0"
-            >
-              <path
-                fill="#f4f4f4"
-                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
-              />
-            </svg>
-          </div>
+          {isLoggedIn ? (
+            <>
+              {/* Daftar dan Masuk Tablet dan Desktop*/}
+              <div className="relative">
+                <div
+                  className="flex p-[1vw] rounded-full bg-secondary w-[7vw] h-[7vw] sm:w-11 sm:h-11 justify-center items-center cursor-pointer"
+                  onClick={handleToggleDropdown}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="3.5vw"
+                    width="3.5vw"
+                    viewBox="0 0 448 512"
+                    className="flex-shrink-0 sm:w-5 sm:h-5"
+                  >
+                    <path
+                      fill="#f4f4f4"
+                      d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
+                    />
+                  </svg>
+                </div>
+                {showDropdown && (
+                  <div className="absolute top-full right-0 mt-[1.5vw] sm:mt-2 bg-white rounded-md shadow-md overflow-hidden">
+                    <Link href="/profile">
+                      <div
+                        className="py-[1vw] sm:py-2 px-[3.5vw] sm:px-10 cursor-pointer hover:bg-secondary hover:text-white text-[3vw] sm:text-lg"
+                        onClick={handleCloseToggleDropdown}
+                      >
+                        Profile
+                      </div>
+                    </Link>
+                    <div
+                      className="py-[1vw] sm:py-2 px-[3.5vw] sm:px-10 cursor-pointer hover:bg-secondary hover:text-white text-[3vw] sm:text-lg"
+                      onClick={handleLogout}
+                    >
+                      Logout
+                    </div>
+                  </div>
+                )}
+              </div>
+            </>
+          ) : (
+            <>
+              {/* Tampilan Masuk Mobile */}
+              <div
+                className="flex p-[1vw] rounded-full bg-secondary w-[7vw] h-[7vw] justify-center items-center sm:hidden"
+                onClick={() => handleOpenModal("masuk")}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="3.5vw"
+                  width="3.5vw"
+                  viewBox="0 0 448 512"
+                  className="flex-shrink-0"
+                >
+                  <path
+                    fill="#f4f4f4"
+                    d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
+                  />
+                </svg>
+              </div>
 
-          {/* Daftar dan Masuk Tablet dan Desktop*/}
-          <button
-            type="button"
-            className="px-7 py-2 rounded-full bg-primary hidden sm:block"
-            onClick={() => handleOpenModal("daftar")}
-          >
-            <span className="text-secondary font-bold">Daftar</span>
-          </button>
+              {/* Daftar dan Masuk Tablet dan Desktop*/}
+              <button
+                type="button"
+                className="px-7 py-2 rounded-full bg-primary hidden sm:block"
+                onClick={() => handleOpenModal("daftar")}
+              >
+                <span className="text-secondary font-bold">Daftar</span>
+              </button>
 
-          <button
-            type="button"
-            className="px-7 py-[6px] rounded-full bg-secondary hidden sm:block"
-            onClick={() => handleOpenModal("masuk")}
-          >
-            <span className="text-white font-bold">Masuk</span>
-          </button>
+              <button
+                type="button"
+                className="px-7 py-[6px] rounded-full bg-secondary hidden sm:block"
+                onClick={() => handleOpenModal("masuk")}
+              >
+                <span className="text-white font-bold">Masuk</span>
+              </button>
+            </>
+          )}
         </div>
       </div>
       {showModal && (
