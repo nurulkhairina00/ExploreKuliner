@@ -2,10 +2,15 @@ import React from "react";
 
 const SocialMedia = (props) => {
   const { background } = props;
+  const PhoneNumber = 6282286232021;
+  const message = encodeURIComponent(`Selamat Datang di Explore Kuliner.`);
+  const whatsappLink = `https://wa.me/${PhoneNumber}?text=${message}`;
 
   return (
     <>
-      <div
+      <a
+        href={whatsappLink}
+        target="_blank"
         className={`w-[7vw] h-[7vw] sm:w-11 sm:h-11 ${
           background === "color" ? "bg-secondary" : "bg-primary"
         } rounded-full flex justify-center items-center cursor-pointer`}
@@ -23,8 +28,10 @@ const SocialMedia = (props) => {
             fill={background === "color" ? "white" : "#333333"}
           />
         </svg>
-      </div>
-      <div
+      </a>
+      <a
+        href="https://www.instagram.com/id.explorekuliner/"
+        target="_blank"
         className={`w-[7vw] h-[7vw] sm:w-11 sm:h-11 ${
           background === "color" ? "bg-secondary" : "bg-primary"
         } rounded-full flex justify-center items-center cursor-pointer`}
@@ -42,8 +49,10 @@ const SocialMedia = (props) => {
             fill={background === "color" ? "white" : "#333333"}
           />
         </svg>
-      </div>
-      <div
+      </a>
+      <a
+        href=""
+        target="_blank"
         className={`w-[7vw] h-[7vw] sm:w-11 sm:h-11 ${
           background === "color" ? "bg-secondary" : "bg-primary"
         } rounded-full flex justify-center items-center cursor-pointer`}
@@ -61,7 +70,7 @@ const SocialMedia = (props) => {
             fill={background === "color" ? "white" : "#333333"}
           />
         </svg>
-      </div>
+      </a>
     </>
   );
 };
