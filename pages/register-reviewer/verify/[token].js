@@ -2,7 +2,7 @@
 import React from "react";
 import axios from "axios";
 import Link from "next/link";
-import SocialMedia from "../../components/layout/SocialMedia";
+import SocialMedia from "../../components/main/SocialMedia";
 
 const token = (props) => {
   const { data_user, is_actived_before } = props;

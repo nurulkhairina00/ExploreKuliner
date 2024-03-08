@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import SocialMedia from "./SocialMedia";
+import SocialMedia from "../main/SocialMedia";
 
 const Footer = () => {
   return (

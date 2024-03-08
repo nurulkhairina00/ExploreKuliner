@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getListRestoran } from "../../../actions/restoranAction";
+import { getListRestoran } from "../../../../actions/restoranAction";
 
 const RestoranTerdekat = () => {
   const {

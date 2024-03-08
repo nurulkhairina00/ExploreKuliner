@@ -1,11 +1,11 @@
 import React from "react";
 import { getSession } from "next-auth/react";
-import Navbar from "../../components/layout/Navbar";
-import Breadcrumb from "../../components/layout/Breadcrumb";
-import TentangRestoran from "../../components/restoran/detail/TentangRestoran";
-import RestoranSerupa from "../../components/restoran/detail/RestoranSerupa";
-import ListArtikel from "../../components/layout/ListArtikel";
-import Footer from "../../components/layout/Footer";
+import Navbar from "../../components/navbar";
+import Breadcrumb from "../../components/main/Breadcrumb";
+import TentangRestoran from "../../components/main/restoran/detail/TentangRestoran";
+import RestoranSerupa from "../../components/main/restoran/detail/RestoranSerupa";
+import ListArtikel from "../../components/main/ListArtikel";
+import Footer from "../../components/footer";
 import axios from "axios";
 
 const Detail = (props) => {

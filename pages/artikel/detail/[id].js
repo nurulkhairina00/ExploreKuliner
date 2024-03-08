@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "../../components/layout/Navbar";
-import Breadcrumb from "../../components/layout/Breadcrumb";
-import TentangArtikel from "../../components/artikel/detail/TentangArtikel";
-import ListArtikel from "../../components/layout/ListArtikel";
-import Footer from "../../components/layout/Footer";
+import Navbar from "../../components/navbar";
+import Breadcrumb from "../../components/main/Breadcrumb";
+import TentangArtikel from "../../components/main/artikel/detail/TentangArtikel";
+import ListArtikel from "../../components/main/ListArtikel";
+import Footer from "../../components/footer";
 
 const Detail = () => {
   const breadcrumbData = [

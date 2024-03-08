@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from "react";
 import { getSession } from "next-auth/react";
-import Navbar from "../components/layout/Navbar";
-import Breadcrumb from "../components/layout/Breadcrumb";
-import Profile from "../components/profile/Profile";
-import Footer from "../components/layout/Footer";
+import Navbar from "../components/navbar";
+import Breadcrumb from "../components/main/Breadcrumb";
+import Profile from "../components/main/profile";
+import Footer from "../components/footer";
 import axios from "axios";
 
 const index = (props) => {

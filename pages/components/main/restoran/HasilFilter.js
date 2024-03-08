@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import axios from "axios";
-import Rating from "../layout/Rating";
+import Rating from "../Rating";
 import Pagination from "./Pagination";
 
 const HasilFilter = () => {

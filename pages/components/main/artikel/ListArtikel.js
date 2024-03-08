@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { UseDispatch, useDispatch, useSelector } from "react-redux";
-import { getListArtikel } from "../../actions/artikelAction";
-import CardArtikel from "../layout/cardArtikel";
+import { getListArtikel } from "../../../actions/artikelAction";
+import CardArtikel from "../cardArtikel";
 import Pagination from "./Pagination";
 
 const ListArtikel = () => {

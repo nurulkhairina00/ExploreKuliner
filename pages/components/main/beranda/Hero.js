@@ -1,18 +1,29 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from "react";
-import ModalOption from "./ModalOption";
+import { signOut } from "next-auth/react";
 import Link from "next/link";
-import Select from "react-select";
 import axios from "axios";
-import ModalFilter from "../beranda/ModalFilter";
+import ModalOption from "../ModalOption";
+import Select from "react-select";
+import ModalFilter from "./ModalFilter";
+import SocialMedia from "../SocialMedia";
 
-const Navbar = () => {
+const Hero = (props) => {
+  const { isLoggedIn } = props;
   const [showModal, setShowModal] = useState(false);
   const [showModalFilter, setShowModalFilter] = useState(false);
   const [type, setType] = useState("");
   const [listArea, setListArea] = useState([]);
   const [searchArea, setSearchArea] = useState("");
   const [searchRestaurant, setSearchRestaurant] = useState("");
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const handleOpenModal = (value) => {
+    setType(value);
+    setShowModal(!showModal);
+  };
+
+  const handleOpenModalFilter = () => setShowModalFilter(!showModalFilter);
 
   const getListArea = async () => {
     await axios
@@ -25,39 +36,126 @@ const Navbar = () => {
       });
   };
 
-  useEffect(() => {
-    getListArea();
-  }, []);
-
   const handleSearchArea = (value) => setSearchArea(value);
 
   const handleSearchRestaurant = (value) => setSearchRestaurant(value);
 
-  const handleOpenModalFilter = () => setShowModalFilter(!showModalFilter);
-
-  const handleOpenModal = (value) => {
-    setType(value);
-    setShowModal(!showModal);
+  const handleLogout = () => {
+    signOut({ callbackUrl: `/` });
+    setShowDropdown(!showDropdown);
   };
 
+  const handleToggleDropdown = () => setShowDropdown(!showDropdown);
+
+  useEffect(() => {
+    getListArea();
+  }, []);
+
   return (
-    <nav className="w-full bg-white fixed shadow-md p-[6vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-9 z-10">
-      <div className="flex justify-between">
-        <Link href="/">
+    <section className="w-full h-[60vw] sm:h-[28rem] bg-[url(/images/bg-hero.jpg)] bg-cover bg-[50%_50%] px-[8vw] py-[5vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-10">
+      <div className="flex justify-between sm:pb-7">
+        {/* Icon Social Media */}
+        <div className="flex flex-row gap-[2vw] sm:gap-5">
+          <SocialMedia />
+        </div>
+
+        <div className="flex">
+          {isLoggedIn ? (
+            <>
+              {/* Daftar dan Masuk Tablet dan Desktop*/}
+              <div className="relative">
+                <div
+                  className="flex p-[1vw] rounded-full bg-secondary w-[7vw] h-[7vw] sm:w-11 sm:h-11 justify-center items-center cursor-pointer"
+                  onClick={handleToggleDropdown}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="3.5vw"
+                    width="3.5vw"
+                    viewBox="0 0 448 512"
+                    className="flex-shrink-0 sm:w-5 sm:h-5"
+                  >
+                    <path
+                      fill="#f4f4f4"
+                      d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
+                    />
+                  </svg>
+                </div>
+                {showDropdown && (
+                  <div className="absolute top-full right-0 mt-[1.5vw] sm:mt-2 bg-white rounded-md shadow-md overflow-hidden">
+                    <Link href="/profile">
+                      <div className="py-[1vw] sm:py-2 px-[3.5vw] sm:px-10 cursor-pointer hover:bg-secondary hover:text-white text-[3vw] sm:text-lg">
+                        Profile
+                      </div>
+                    </Link>
+                    <div
+                      className="py-[1vw] sm:py-2 px-[3.5vw] sm:px-10 cursor-pointer hover:bg-secondary hover:text-white text-[3vw] sm:text-lg"
+                      onClick={handleLogout}
+                    >
+                      Logout
+                    </div>
+                  </div>
+                )}
+              </div>
+            </>
+          ) : (
+            <>
+              {/* Tampilan Masuk Mobile */}
+              <div
+                className="flex p-[1vw] rounded-full bg-secondary w-[7vw] h-[7vw] justify-center items-center sm:hidden cursor-pointer"
+                onClick={() => handleOpenModal("masuk")}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="3.5vw"
+                  width="3.5vw"
+                  viewBox="0 0 448 512"
+                  className="flex-shrink-0"
+                >
+                  <path
+                    fill="#f4f4f4"
+                    d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
+                  />
+                </svg>
+              </div>
+
+              {/* Daftar dan Masuk Tablet dan Desktop*/}
+              <button
+                type="button"
+                className="px-7 py-2 rounded-full bg-primary mx-2 hidden sm:block"
+                onClick={() => handleOpenModal("daftar")}
+              >
+                <span className="text-secondary font-bold">Daftar</span>
+              </button>
+
+              <button
+                type="button"
+                className="px-7 py-[6px] rounded-full bg-secondary mx-2 hidden sm:block"
+                onClick={() => handleOpenModal("masuk")}
+              >
+                <span className="text-white font-bold">Masuk</span>
+              </button>
+            </>
+          )}
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center">
+        <div className="pt-[9vw] pb-[5vw] sm:py-10 sm:pb-8">
           <img
             src="/logo/logo-explore-kuliner-v2.svg"
             alt="logo-explore-kuliner"
-            className="w-[17vw] sm:w-24 cursor-pointer"
+            className="w-[35vw] sm:w-[250px] lg:w-[300px]"
           />
-        </Link>
+        </div>
 
-        {/* Tampilan Search Tablet Dan Desktop */}
-        <div className="hidden lg:flex flex-row lg:w-3/4 xl:w-3/5 2xl:w-1/2 bg-primary rounded-full ms-4">
+        {/* Search Tablet dan Desktop */}
+        <div className="hidden sm:flex flex-row w-full lg:w-3/4 bg-primary rounded-full shadow-lg">
           {/* Select Lokasi Restoran */}
           <div className="flex justify-center items-center w-1/2 ps-5">
             <svg
-              width="24"
-              height="24"
+              width="36"
+              height="36"
               viewBox="0 0 36 36"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -107,8 +205,8 @@ const Navbar = () => {
           {/* Input Search Restoran */}
           <div className="flex justify-center items-center w-1/2 bg-primary">
             <svg
-              width="20"
-              height="23"
+              width="29"
+              height="32"
               viewBox="0 0 29 32"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +231,7 @@ const Navbar = () => {
                 type="text"
                 name="restoran"
                 placeholder="Cari restoran"
-                className="bg-primary p-2 w-full focus:outline-none text-base"
+                className="bg-primary p-2 w-full focus:outline-none text-lg"
                 value={searchRestaurant}
                 onChange={(e) => handleSearchRestaurant(e.target.value)}
               />
@@ -142,11 +240,11 @@ const Navbar = () => {
 
           {/* Button Search Restoran */}
           <Link href="/restoran">
-            <div className="p-1 rounded-full m-2 bg-secondary z-10 cursor-pointer">
+            <div className="p-2 rounded-full m-3 bg-secondary z-10 cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
+                width="24"
+                height="24"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -158,27 +256,26 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Tampilan Search Mobile */}
-        <div className=" lg:hidden w-3/4 sm:w-1/2 bg-primary rounded-full shadow-lg mx-[4vw] sm:mx-0 sm:ms-4">
-          <div className="flex justify-between items-center bg-primary rounded-full ps-[3vw] sm:ps-3 pe-[2vw] sm:pe-2 py-[1vw] sm:py-1">
+        {/* Search Mobile */}
+        <div className=" sm:hidden w-full bg-primary rounded-full shadow-lg">
+          <div className="flex justify-between items-center bg-primary rounded-full ps-[4vw] pe-[2vw] py-[1.2vw]">
             <div className="relative w-full">
               <input
                 type="text"
                 name="restoran"
                 placeholder="Cari restoran"
-                className="bg-primary p-[1vw] sm:p-2 w-full focus:outline-none rounded-full text-[2.5vw] sm:text-sm flex justify-center"
+                className="bg-primary p-[1vw] w-full focus:outline-none rounded-full text-[3vw] sm:text-sm flex justify-center"
                 value={searchRestaurant}
                 onChange={(e) => handleSearchRestaurant(e.target.value)}
               />
             </div>
             <Link href="/restoran">
-              <div className="p-[1vw] sm:p-1 rounded-full bg-secondary z-10 cursor-pointer justify-center items-center">
+              <div className="p-[1vw] rounded-full bg-secondary z-10 cursor-pointer justify-center items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="3vw"
-                  height="3vw"
+                  width="3.5vw"
+                  height="3.5vw"
                   viewBox="0 0 24 24"
-                  className="sm:w-5 sm:h-5"
                 >
                   <path
                     fill="white"
@@ -187,16 +284,12 @@ const Navbar = () => {
                 </svg>
               </div>
             </Link>
-            <div
-              className="ms-[0.5vw] sm:ms-1"
-              onClick={() => handleOpenModalFilter()}
-            >
+            <div className="ms-[0.5vw]" onClick={() => handleOpenModalFilter()}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="4vw"
-                height="4vw"
+                width="4.5vw"
+                height="4.5vw"
                 viewBox="0 0 24 24"
-                className="sm:w-6 sm:h-6"
               >
                 <path
                   fill={`${searchArea ? "#d86141" : "#8F8F9D"}`}
@@ -205,44 +298,6 @@ const Navbar = () => {
               </svg>
             </div>
           </div>
-        </div>
-
-        <div className="flex sm:space-x-4">
-          {/* Tampilan Masuk Mobile */}
-          <div
-            className="flex p-[1vw] rounded-full bg-secondary w-[7vw] h-[7vw] justify-center items-center sm:hidden"
-            onClick={() => handleOpenModal("masuk")}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="3.5vw"
-              width="3.5vw"
-              viewBox="0 0 448 512"
-              className="flex-shrink-0"
-            >
-              <path
-                fill="#f4f4f4"
-                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
-              />
-            </svg>
-          </div>
-
-          {/* Daftar dan Masuk Tablet dan Desktop*/}
-          <button
-            type="button"
-            className="px-7 py-2 rounded-full bg-primary hidden sm:block"
-            onClick={() => handleOpenModal("daftar")}
-          >
-            <span className="text-secondary font-bold">Daftar</span>
-          </button>
-
-          <button
-            type="button"
-            className="px-7 py-[6px] rounded-full bg-secondary hidden sm:block"
-            onClick={() => handleOpenModal("masuk")}
-          >
-            <span className="text-white font-bold">Masuk</span>
-          </button>
         </div>
       </div>
       {showModal && (
@@ -266,8 +321,8 @@ const Navbar = () => {
           }}
         />
       )}
-    </nav>
+    </section>
   );
 };
 
-export default Navbar;
+export default Hero;

@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "../components/layout/Navbar";
-import Breadcrumb from "../components/layout/Breadcrumb";
-import ListArtikel from "../components/artikel/ListArtikel";
-import Footer from "../components/layout/Footer";
+import Navbar from "../components/navbar";
+import Breadcrumb from "../components/main/Breadcrumb";
+import ListArtikel from "../components/main/artikel/ListArtikel";
+import Footer from "../components/footer";
 
 const Index = () => {
   const breadcrumbData = [

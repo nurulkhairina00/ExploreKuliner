@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import axios from "axios";
-import CardRestoran from "../layout/CardRestoran";
+import CardRestoran from "../CardRestoran";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";

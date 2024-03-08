@@ -1,13 +1,13 @@
 import Head from "next/head";
 import { getSession } from "next-auth/react";
-import Hero from "./components/beranda/Hero";
-import Kategori from "./components/beranda/Kategori";
-import ListVideo from "./components/layout/ListVideo";
-import RestoranPopuler from "./components/beranda/RestoranPopuler";
-import RestoranBaru from "./components/beranda/RestoranBaru";
-import RestoranTerdekat from "./components/beranda/RestoranTerdekat";
-import ListArtikel from "./components/layout/ListArtikel";
-import Footer from "./components/layout/Footer";
+import Hero from "./components/main/beranda/Hero";
+import Kategori from "./components/main/beranda/Kategori";
+import ListVideo from "./components/main/ListVideo";
+import RestoranPopuler from "./components/main/beranda/RestoranPopuler";
+import RestoranBaru from "./components/main/beranda/RestoranBaru";
+import RestoranTerdekat from "./components/main/beranda/RestoranTerdekat";
+import ListArtikel from "./components/main/ListArtikel";
+import Footer from "./components/footer";
 import axios from "axios";
 
 export default function Home(props) {
@@ -19,7 +19,7 @@ export default function Home(props) {
         <title>Explore Kuliner</title>
       </Head>
       <div className="bg-primary">
-        <Hero isLoggedIn={isLoggedIn} />
+        <Hero {...{ isLoggedIn }} />
         <Kategori />
         <ListVideo />
         <RestoranPopuler />
