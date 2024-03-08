@@ -45,6 +45,7 @@ export const authOptions = {
           nama_lengkap: user.nama_lengkap,
           email: user.email,
           password: user.password,
+          no_hp: user.no_hp,
           token: user.token,
         };
       },
@@ -85,12 +86,13 @@ export const authOptions = {
             data: {
               nama: session.user.name,
               email: session.user.email,
+              image: session.user.image,
               no_hp: "",
               password: "LOGIN_GOOGLE",
               hashedPassword: "LOGIN_GOOGLE",
             },
           })
-            .then(() => console.log("OK"))
+            .then(() => console.log("Register Google Berhasil"))
             .catch((err) => {
               throw err;
             });
@@ -116,6 +118,7 @@ export const authOptions = {
 
         let data_di_db = {
           id: user.id,
+          nama_lengkap: user.nama_lengkap,
           email: user.email,
           no_hp: user.no_hp,
           token: user.token,

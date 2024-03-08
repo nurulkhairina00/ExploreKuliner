@@ -9,7 +9,7 @@ import Footer from "../../components/layout/Footer";
 import axios from "axios";
 
 const Detail = (props) => {
-  const { data } = props;
+  const { session } = props;
 
   const breadcrumbData = [
     {
@@ -37,15 +37,15 @@ const Detail = (props) => {
 export async function getServerSideProps(context) {
   const session = await getSession({ req: context.req });
   const { id } = context.query;
-  console.log("id", id);
-  let dataResto = [{ no: 1, nama: "resto" }];
 
   if (session)
-    axios.defaults.headers.common["authorization"] = session.user.token;
+    axios.defaults.headers.common[
+      "Authorization"
+    ] = `Bearer ${session.user.token}`;
 
   return {
     props: {
-      data: dataResto,
+      session,
     },
   };
 }

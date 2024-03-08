@@ -37,7 +37,9 @@ export async function getServerSideProps(context) {
   let isLoggedIn = false;
 
   if (session) {
-    axios.defaults.headers.common["authorization"] = session.user.token;
+    axios.defaults.headers.common[
+      "Authorization"
+    ] = `Bearer ${session.user.token}`;
     isLoggedIn = true;
   }
 
