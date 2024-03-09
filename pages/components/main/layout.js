@@ -11,14 +11,14 @@ const layout = (props) => {
 
   const isNavbar =
     router.pathname === "/" ||
-    router.pathname === "/login-reviewer" ||
-    router.pathname === "/register-reviewer" ||
-    router.pathname === "/reset-password";
+    router.pathname.includes("/login") ||
+    router.pathname.includes("/register") ||
+    router.pathname.includes("/reset-password");
 
   const isFooter =
-    router.pathname === "/login-reviewer" ||
-    router.pathname === "/register-reviewer" ||
-    router.pathname === "/reset-password";
+    router.pathname.includes("/login") ||
+    router.pathname.includes("/register") ||
+    router.pathname.includes("/reset-password");
 
   let isLoggedIn = !!session;
 

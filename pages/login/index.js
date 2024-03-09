@@ -230,7 +230,7 @@ const Login = () => {
               </button>
               <p className="text-[3vw] sm:text-base text-center pt-[6vw] sm:pt-6">
                 <span className="text-black">Belum punya akun?</span>
-                <Link href="/register-reviewer">
+                <Link href="/register">
                   <span className="text-secondary font-bold cursor-pointer">
                     {" "}
                     Daftar

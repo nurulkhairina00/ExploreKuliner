@@ -164,7 +164,7 @@ export const authOptions = {
               allowOutsideClick: false,
             }).then((result) => {
               if (result.isConfirmed) {
-                Router.push("/login-reviewer");
+                Router.push("/login");
               }
             });
           }

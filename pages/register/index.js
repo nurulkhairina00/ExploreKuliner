@@ -48,7 +48,7 @@ const Register = () => {
       data: {
         input,
         hashedPassword: await hash(input.password, 12),
-        host_url: `${process.env.NEXT_PUBLIC_APP_PATH}:${process.env.NEXT_PUBLIC_APP_PORT}/register-reviewer/verify/`,
+        host_url: `${process.env.NEXT_PUBLIC_APP_PATH}:${process.env.NEXT_PUBLIC_APP_PORT}/register/verify/`,
       },
     })
       .then(() => {
@@ -59,7 +59,7 @@ const Register = () => {
           showConfirmButton: false,
           timer: 2000,
         });
-        Router.push("/login-reviewer");
+        Router.push("/login");
       })
       .catch((err) => {
         Swal.fire({
@@ -230,7 +230,7 @@ const Register = () => {
               </form>
               <p className="text-[3vw] sm:text-base text-center pt-[7vw] sm:pt-7">
                 <span className="text-black">Sudah memiliki akun?</span>
-                <Link href="/login-reviewer">
+                <Link href="/login">
                   <span className="text-secondary font-bold cursor-pointer">
                     {" "}
                     Masuk
