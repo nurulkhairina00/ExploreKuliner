@@ -17,7 +17,7 @@ const TabFilter = () => {
   ];
 
   const otherOption = [
-    { id: "bukasekarang", label: "Buka Sekarang" },
+    { id: "dinein", label: "Dine In" },
     { id: "pickup", label: "Pickup Only" },
   ];
 

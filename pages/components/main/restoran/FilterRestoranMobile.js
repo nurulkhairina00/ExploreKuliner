@@ -20,7 +20,7 @@ const FilterRestoranMobile = () => {
   ];
 
   const otherOption = [
-    { id: "bukasekarang", label: "Buka Sekarang" },
+    { id: "dinein", label: "Dine In" },
     { id: "pickup", label: "Pickup Only" },
   ];
 
@@ -257,13 +257,13 @@ const FilterRestoranMobile = () => {
           </div>
           <button
             className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[2.5vw] sm:text-sm rounded-full whitespace-nowrap ${
-              selectedOther.includes("bukasekarang")
+              selectedOther.includes("dinein")
                 ? "bg-black text-white"
                 : "text-black"
             }`}
-            onClick={() => handleOther("bukasekarang")}
+            onClick={() => handleOther("dinein")}
           >
-            Buka Sekarang
+            Dine In
           </button>
           <button
             className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[2.5vw] sm:text-sm rounded-full ${

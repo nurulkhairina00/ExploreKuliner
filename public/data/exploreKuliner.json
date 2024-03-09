@@ -22,7 +22,7 @@
         },
         {
             "id": 5,
-            "nama": "Pizza",
+            "nama": "Tradisional",
             "image": "/images/kategori2.jpg"
         },
         {
@@ -37,7 +37,7 @@
         },
         {
             "id": 8,
-            "nama": "Bakery",
+            "nama": "Desert",
             "image": "/images/kategori1.jpg"
         }
     ],
