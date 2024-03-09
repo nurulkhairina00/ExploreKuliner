@@ -28,7 +28,7 @@ const index = (props) => {
     imagePreview: data_user.image?.includes("https://")
       ? data_user.image
       : data_user.image !== null
-      ? `${process.env.API_APP_PATH}:${process.env.API_APP_PORT}/` +
+      ? `${process.env.NEXT_PUBLIC_API_PATH}:${process.env.NEXT_PUBLIC_API_PORT}/` +
         data_user.image
       : "",
   });

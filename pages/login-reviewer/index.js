@@ -11,11 +11,17 @@ const Login = () => {
     email: "",
     password: "",
   });
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleBack = () => Router.back();
 
   const handleChange = (value, name) => {
     setInput({ ...input, [name]: value });
+  };
+
+  const handleShowPassword = (event) => {
+    event.preventDefault();
+    setShowPassword(!showPassword);
   };
 
   const handleLogin = async (event) => {
@@ -129,7 +135,7 @@ const Login = () => {
               <p className="text-black text-[3vw] sm:text-lg pb-[3vw] sm:pb-6">
                 Masuk dengan alamat email dan kata sandi.
               </p>
-              <form onSubmit={handleLogin}>
+              <form>
                 <div className="pb-[2vw] sm:pb-4">
                   <label
                     htmlFor="email"
@@ -154,15 +160,28 @@ const Login = () => {
                   >
                     Kata Sandi
                   </label>
-                  <input
-                    type="password"
-                    name="password"
-                    placeholder="********"
-                    value={input.password}
-                    onChange={(e) => handleChange(e.target.value, "password")}
-                    className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
-                    required
-                  />
+                  <div className="flex">
+                    <input
+                      type={showPassword ? "text" : "password"}
+                      name="password"
+                      placeholder="********"
+                      value={input.password}
+                      onChange={(e) => handleChange(e.target.value, "password")}
+                      className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-l-[2vw] sm:rounded-l-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
+                      required
+                    />
+                    <input
+                      type="image"
+                      src={
+                        showPassword
+                          ? "/images/open-eye.png"
+                          : "/images/closed-eye.png"
+                      }
+                      alt={showPassword ? "Open Eye" : "Closed Eye"}
+                      className="w-[10vw] sm:w-12 mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-r-[2vw] sm:rounded-r-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base cursor-pointer"
+                      onClick={(e) => handleShowPassword(e)}
+                    />
+                  </div>
                 </div>
                 <div className="flex justify-between pb-[6vw] sm:pb-6">
                   <div className="flex justify-center items-center">
@@ -189,6 +208,7 @@ const Login = () => {
                 <button
                   type="submit"
                   className="w-full font-bold text-white p-[2vw] sm:px-2 sm:py-3 rounded-full bg-secondary text-[3vw] sm:text-lg mt-[2vw] sm:mt-5"
+                  onClick={handleLogin}
                 >
                   Masuk
                 </button>

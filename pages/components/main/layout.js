@@ -7,19 +7,26 @@ import Footer from "../footer";
 
 const layout = (props) => {
   const { data: session } = useSession();
-
   const router = useRouter();
-  const isHomePage = router.pathname === "/";
 
-  let isLoggedIn = false;
+  const isNavbar =
+    router.pathname === "/" ||
+    router.pathname === "/login-reviewer" ||
+    router.pathname === "/register-reviewer" ||
+    router.pathname === "/reset-password";
 
-  if (session) isLoggedIn = true;
+  const isFooter =
+    router.pathname === "/login-reviewer" ||
+    router.pathname === "/register-reviewer" ||
+    router.pathname === "/reset-password";
+
+  let isLoggedIn = !!session;
 
   return (
     <div>
-      {!isHomePage && <Navbar {...{ isLoggedIn }} />}
+      {!isNavbar && <Navbar {...{ isLoggedIn }} />}
       <div className="bg-primary">{props.children}</div>
-      <Footer />
+      {!isFooter && <Footer />}
     </div>
   );
 };
