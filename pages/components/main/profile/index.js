@@ -17,7 +17,7 @@ const Profile = (props) => {
         text: "Ukuran file harus kurang dari 2MB",
         icon: "info",
         showConfirmButton: false,
-        timer: 2000,
+        timer: 3000,
       });
       return false;
     }
@@ -28,7 +28,7 @@ const Profile = (props) => {
         text: "Jenis file harus berupa Image",
         icon: "info",
         showConfirmButton: false,
-        timer: 2000,
+        timer: 3000,
       });
       return false;
     }
@@ -67,7 +67,7 @@ const Profile = (props) => {
           text: "Data Profile Berhasil Diperbarui",
           icon: "success",
           showConfirmButton: false,
-          timer: 2000,
+          timer: 3000,
         });
       })
       .catch((error) => {

@@ -73,8 +73,8 @@ export async function getServerSideProps(context) {
     .then((res) => {
       return res.data;
     })
-    .catch((err) => {
-      throw err;
+    .catch((error) => {
+      throw error;
     });
 
   if (!data_user) {
@@ -94,8 +94,8 @@ export async function getServerSideProps(context) {
       },
     })
       .then(() => console.log("Akun berhasil diaktifkan."))
-      .catch((err) => {
-        throw err;
+      .catch((error) => {
+        throw error;
       });
   }
 

@@ -54,7 +54,7 @@ const Login = () => {
         text: "Silahkan login kembali dengan email dan password Anda yang sesuai",
         icon: "warning",
         showConfirmButton: false,
-        timer: 2000,
+        timer: 3000,
       });
       return false;
     }

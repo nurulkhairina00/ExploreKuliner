@@ -37,7 +37,7 @@ const Register = () => {
         text: "Password minimal 6 karakter dan harus mengandung angka, serta gabungan huruf besar dan kecil",
         icon: "warning",
         showConfirmButton: false,
-        timer: 2000,
+        timer: 3000,
       });
       return false;
     }
@@ -57,17 +57,17 @@ const Register = () => {
           text: "Silahkan Cek Email Untuk Konfirmasi",
           icon: "success",
           showConfirmButton: false,
-          timer: 2000,
+          timer: 3000,
         });
         Router.push("/login");
       })
-      .catch((err) => {
+      .catch((error) => {
         Swal.fire({
           title: `Sorry, Email sudah terdaftar`,
           text: "Silahkan login atau mendaftar dengan Email yang berbeda",
           icon: "info",
           showConfirmButton: false,
-          timer: 2000,
+          timer: 3000,
         });
       });
   };

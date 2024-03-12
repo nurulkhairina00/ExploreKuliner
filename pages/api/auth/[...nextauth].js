@@ -93,8 +93,8 @@ export const authOptions = {
             },
           })
             .then(() => console.log("Register Google Berhasil"))
-            .catch((err) => {
-              throw err;
+            .catch((error) => {
+              throw error;
             });
         }
 

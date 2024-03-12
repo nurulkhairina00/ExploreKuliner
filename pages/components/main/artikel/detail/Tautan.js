@@ -18,7 +18,7 @@ const Tautan = (props) => {
       text: "Link artikel berhasil di salin",
       icon: "success",
       showConfirmButton: false,
-      timer: 2000,
+      timer: 3000,
     });
   };
 

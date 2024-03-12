@@ -1,8 +1,49 @@
-import React from "react";
+/* eslint-disable react-hooks/rules-of-hooks */
+import React, { useState } from "react";
 import Router from "next/router";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 const index = () => {
+  const [email, setEmail] = useState("");
+
   const handleBack = () => Router.back();
+
+  const handleChange = (value) => setEmail(value);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    axios({
+      method: "POST",
+      url: `${process.env.NEXT_PUBLIC_API_PATH}:${process.env.NEXT_PUBLIC_API_PORT}/api/${process.env.NEXT_PUBLIC_VER}/reset-password`,
+      data: {
+        email: email,
+        host_url: `${process.env.NEXT_PUBLIC_APP_PATH}:${process.env.NEXT_PUBLIC_APP_PORT}/reset-password/`,
+      },
+    })
+      .then((res) => {
+        if (res.data.message == "EMAILNOTFOUND") {
+          Swal.fire({
+            title: `Sorry, Email tidak terdaftar`,
+            text: "Silahkan inputkan email yang terdaftar pada database kami.",
+            showConfirmButton: false,
+            icon: "warning",
+            timer: 3000,
+          });
+        } else {
+          Swal.fire({
+            title: "Success!",
+            text: "Link untuk mengubah password telah dikirim ke email Anda. Silahkan check email Anda",
+            showConfirmButton: false,
+            icon: "success",
+            timer: 3000,
+          });
+        }
+      })
+      .catch((error) => {
+        throw error;
+      });
+  };
 
   return (
     <div className="w-full h-screen bg-primary">
@@ -35,7 +76,7 @@ const index = () => {
             Masukkan alamat email akun anda dibawah ini. Kami akan mengirimkan
             instruksi pemulihan ke email tersebut.
           </p>
-          <form>
+          <form onSubmit={(e) => handleSubmit(e)}>
             <div className="pb-[6vw] sm:pb-10">
               <label
                 htmlFor="email"
@@ -47,13 +88,16 @@ const index = () => {
                 type="email"
                 name="email"
                 placeholder="mail@gmail.com"
-                className="w-full sm:mt-1 p-[2vw] sm:p-2 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-sm"
+                value={email}
+                onChange={(e) => handleChange(e.target.value)}
+                className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
+                required
               />
             </div>
 
             <button
               type="submit"
-              className="w-full font-semibold text-white p-[2vw] sm:p-2 rounded-full bg-secondary text-[3vw] sm:text-sm"
+              className="w-full font-bold text-white p-[2vw] sm:px-2 sm:py-3 rounded-full bg-secondary text-[3vw] sm:text-lg"
             >
               Kirim
             </button>
