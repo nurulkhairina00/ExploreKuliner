@@ -18,18 +18,18 @@ const Footer = () => {
 
       {/* Menu */}
       <div className="flex flex-wrap gap-[3vw] sm:gap-8 justify-center items-center sm:item-start sm:justify-start py-[2vw] sm:py-4">
-        <Link href="/tentang-kami">
+        <Link href="/about/tentang-kami">
           <a className="text-[3.5vw] sm:text-base text-white">Tentang Kami</a>
         </Link>
-        <Link href="/syarat-dan-ketentuan">
+        <Link href="/about/kebijakan-privasi">
           <a className="text-[3.5vw] sm:text-base text-white">
-            Syarat dan Ketentuan
+            Kebijakan Privasi
           </a>
         </Link>
-        <Link href="/faq">
-          <a className="text-[3.5vw] sm:text-base text-white">Faq</a>
+        <Link href="/about/faqs">
+          <a className="text-[3.5vw] sm:text-base text-white">Faqs</a>
         </Link>
-        <Link href="/hubungi-kami">
+        <Link href="/about/hubungi-kami">
           <a className="text-[3.5vw] sm:text-base text-white">Hubungi Kami</a>
         </Link>
       </div>
