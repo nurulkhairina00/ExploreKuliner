@@ -5,8 +5,8 @@ import Breadcrumb from "../../components/main/Breadcrumb";
 const index = () => {
   const breadcrumbData = [
     {
-      label: "Tentang kami",
-      link: "/tentang-kami",
+      label: "Hubungi kami",
+      link: "/hubungi-kami",
     },
   ];
 
@@ -109,7 +109,7 @@ const index = () => {
               <div className="flex justify-center items-center pt-[2vw] sm:pt-4">
                 <button
                   type="submit"
-                  className=" font-bold text-white px-[4vw] py-[1.5vw] sm:px-6 sm:py-2 rounded-[2vw] sm:rounded-lg bg-secondary text-[3vw] sm:text-lg mb-[2vw] sm:mb-5"
+                  className=" font-bold text-white px-[4vw] py-[1.5vw] sm:px-6 sm:py-2 rounded-[2vw] sm:rounded-lg bg-secondary text-[3vw] sm:text-lg"
                 >
                   Kirim
                 </button>
