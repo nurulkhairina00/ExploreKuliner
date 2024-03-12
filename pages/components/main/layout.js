@@ -23,9 +23,9 @@ const layout = (props) => {
   let isLoggedIn = !!session;
 
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
       {!isNavbar && <Navbar {...{ isLoggedIn }} />}
-      <div className="bg-primary">{props.children}</div>
+      <div className="flex-1 bg-primary">{props.children}</div>
       {!isFooter && <Footer />}
     </div>
   );
