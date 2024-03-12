@@ -1,5 +1,5 @@
 import React from "react";
-import Breadcrumb from "../components/main/Breadcrumb";
+import Breadcrumb from "../../components/main/Breadcrumb";
 
 const index = () => {
   const breadcrumbData = [
