@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from "react";
+import Link from "next/link";
 import Breadcrumb from "../../components/main/Breadcrumb";
 
 const index = () => {
@@ -20,8 +21,16 @@ const index = () => {
     {
       id: 2,
       question: "Bagaimana cara membuat akun di Explore Kuliner?",
-      answer:
-        "Bisa dengan cara klik menu “DAFTAR” di halaman Home, dan isi formulir yang dibutuhkan. Setelah diverifikasi, maka kamu sudah memiliki akun di Explore Kuliner.",
+      answer: (
+        <>
+          Bisa dengan cara klik menu{" "}
+          <Link href="/register">
+            <a className="text-blue font-semibold">Daftar</a>
+          </Link>{" "}
+          di halaman Home, dan isi formulir yang dibutuhkan. Setelah
+          diverifikasi, maka kamu sudah memiliki akun di Explore Kuliner.
+        </>
+      ),
     },
     {
       id: 3,
@@ -38,8 +47,16 @@ const index = () => {
     {
       id: 5,
       question: "Bagaimana caranya untuk bekerja sama dengan Explore Kuliner?",
-      answer:
-        "Silahkan ke halaman “Hubungi Kami” dan ikuti saja instruksi yang ada.",
+
+      answer: (
+        <>
+          Silahkan ke halaman{" "}
+          <Link href="/register">
+            <a className="text-blue font-semibold">Hubungi Kami</a>
+          </Link>{" "}
+          dan ikuti saja instruksi yang ada.
+        </>
+      ),
     },
   ]);
 

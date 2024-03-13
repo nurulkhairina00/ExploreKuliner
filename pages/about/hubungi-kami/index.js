@@ -31,7 +31,7 @@ const index = () => {
           </p>
           <p className="text-justify text-[3vw] sm:text-lg mb-[2vw] sm:mb-4 indent-[4vw] sm:indent-8">
             Jika ingin menghubungi kami terkait pertanyaan, kerja sama dan hal
-            lain, silahkan kirimkan email ke id.explirekuliner.id atau bisa
+            lain, silahkan kirimkan email ke id.explorekuliner.id atau bisa
             mengisi formulir dibawah ini, kami akan membalasnya secepat
             mungkin..
           </p>

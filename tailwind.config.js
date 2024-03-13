@@ -10,6 +10,7 @@ module.exports = {
       red: "#FF0000",
       gray: "#8F8F9D",
       mediumGray: "#E4E3E9",
+      blue: "#315af9",
     },
     extend: {
       fontSize: {
