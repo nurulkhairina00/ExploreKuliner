@@ -12,3 +12,6 @@
     width: clamp(0.3rem, 2vw, 0.6rem) !important;
     height: clamp(0.3rem, 2vw, 0.6rem) !important;
 }
+.swiper-pagination-white .swiper-pagination-bullet {
+    background-color: white !important;
+  }

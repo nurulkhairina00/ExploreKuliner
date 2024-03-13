@@ -37,7 +37,7 @@ const RestoranBaru = () => {
   }, []);
 
   return (
-    <section className="sm:flex sm:px-8 md:px-16 lg:px-28 xl:px-36 sm:py-12 sm:p-0 bg-secondary">
+    <section className="sm:flex sm:px-8 md:px-16 lg:px-28 xl:px-36 sm:py-12 sm:p-0 mt-[10vw] sm:mt-0 bg-secondary">
       {/* Tampilan Judul Mobile */}
       <div className="sm:hidden p-[8vw]">
         <h2 className="text-primary font-bold text-[6vw] sm:text-3xl pb-[2vw] sm:pb-5">
@@ -83,7 +83,7 @@ const RestoranBaru = () => {
           <Swiper
             slidesPerView={3}
             spaceBetween={30}
-            className="mySwiper"
+            className="mySwiper swiper-pagination-white"
             pagination={{
               clickable: true,
             }}
