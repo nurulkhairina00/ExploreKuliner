@@ -37,18 +37,18 @@ const RestoranSerupa = () => {
     <section className="sm:px-8 md:px-16 lg:px-28 xl:px-36 sm:py-12 sm:p-0">
       {/* Judul Restoran Terdekat */}
       <div className="p-[8vw] sm:p-0 text-black">
-        <h2 className="font-bold text-[6vw] sm:text-3xl pb-[2vw] sm:pb-5">
-          Restoran Serupa
-        </h2>
-        <div className="flex justify-between pb-[2vw] sm:pb-5">
-          <p className="text-[3vw] sm:text-lg font-normal">
-            Restoran dengan makanan yang serupa.
-          </p>
+        <div className="flex justify-between items-center pb-[2vw] sm:pb-5">
+          <h2 className="font-bold text-[6vw] sm:text-3xl ">Restoran Serupa</h2>
           <Link href="/restoran">
             <p className="text-[3vw] sm:text-lg font-medium text-secondary cursor-pointer">
               Lihat Semua
             </p>
           </Link>
+        </div>
+        <div className="pb-[2vw] sm:pb-5">
+          <p className="text-[3vw] sm:text-lg font-normal">
+            Restoran dengan makanan yang serupa.
+          </p>
         </div>
       </div>
 

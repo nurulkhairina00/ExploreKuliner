@@ -80,6 +80,11 @@ const Hero = (props) => {
                         Profile
                       </div>
                     </Link>
+                    <Link href="/artikel/add">
+                      <div className="py-[1vw] sm:py-2 px-[3.5vw] sm:px-10 cursor-pointer hover:bg-secondary hover:text-white text-[3vw] sm:text-lg">
+                        Artikel
+                      </div>
+                    </Link>
                     <div
                       className="py-[1vw] sm:py-2 px-[3.5vw] sm:px-10 cursor-pointer hover:bg-secondary hover:text-white text-[3vw] sm:text-lg"
                       onClick={handleLogout}

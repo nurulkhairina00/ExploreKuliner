@@ -82,7 +82,7 @@ const index = () => {
                   type="text"
                   name="subjek"
                   placeholder="Subjek"
-                  value={input.email}
+                  value={input.subjek}
                   onChange={(e) => handleChange(e.target.value, "subjek")}
                   className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                   required

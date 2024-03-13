@@ -2376,5 +2376,27 @@
             "id": "34",
             "nama": "PAPUA BARAT"
         }
+    ],
+    "jenis_artikel": [
+        {
+            "id": 1,
+            "nama": "General"
+        },
+        {
+            "id": 2,
+            "nama": "Rekomendasi"
+        },
+        {
+            "id": 3,
+            "nama": "Resep"
+        },
+        {
+            "id": 4,
+            "nama": "Tips & Trik"
+        },
+        {
+            "id": 5,
+            "nama": "Tradisional"
+        }
     ]
 }
