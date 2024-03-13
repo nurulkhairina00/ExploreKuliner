@@ -5,7 +5,7 @@ import Link from "next/link";
 import axios from "axios";
 import Select from "react-select";
 import ModalFilter from "./ModalFilter";
-import SocialMedia from "../SocialMedia";
+import SocialMedia from "./SocialMedia";
 
 const Hero = (props) => {
   const { isLoggedIn } = props;
