@@ -121,7 +121,7 @@ const index = () => {
                 type="text"
                 name="judul"
                 placeholder="Judul"
-                className="w-full mt-[1vw] sm:mt-2 py-[0.8vw] px-[3vw] sm:px-3 sm:py-2 rounded-[1vw] sm:rounded-md bg-primary outline outline-mediumGray focus:outline-secondary outline-2 text-[3vw] sm:text-base"
+                className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:px-3 sm:py-2 rounded-[2vw] sm:rounded-md text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                 onChange={(e) => handleInputChange(e.target.value, "judul")}
               />
             </div>
@@ -136,7 +136,7 @@ const index = () => {
                 type="text"
                 name="deskripsi"
                 placeholder="Deskripsi"
-                className="w-full mt-[1vw] sm:mt-2 py-[0.8vw] px-[3vw] sm:px-3 sm:py-2 rounded-[1vw] sm:rounded-md bg-primary outline outline-mediumGray focus:outline-secondary outline-2 text-[3vw] sm:text-base"
+                className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:px-3 sm:py-2 rounded-[2vw] sm:rounded-md text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                 onChange={(e) => handleInputChange(e.target.value, "deskripsi")}
               />
             </div>
@@ -174,7 +174,7 @@ const index = () => {
                 id="image"
                 accept="image/*"
                 onChange={handleImageChange}
-                className="w-full mt-[1vw] sm:mt-2 py-[0.8vw] px-[3vw] sm:px-3 sm:py-2 rounded-[1vw] sm:rounded-md bg-primary outline outline-mediumGray focus:outline-secondary outline-2 text-[3vw] sm:text-base"
+                className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:px-3 sm:py-2 rounded-[1vw] sm:rounded-md text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
               />
               {input.imagePreview && (
                 <img
@@ -209,7 +209,7 @@ const index = () => {
                 type="text"
                 name="tag"
                 placeholder="Tag"
-                className="w-full mt-[1vw] sm:mt-2 py-[0.8vw] px-[3vw] sm:px-3 sm:py-2 rounded-[1vw] sm:rounded-md bg-primary outline outline-mediumGray focus:outline-secondary outline-2 text-[3vw] sm:text-base"
+                className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:px-3 sm:py-2 rounded-[2vw] sm:rounded-md text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                 onChange={(e) => handleInputChange(e.target.value, "tag")}
               />
             </div>
@@ -224,7 +224,7 @@ const index = () => {
                 type="text"
                 name="author"
                 placeholder="Author"
-                className="w-full mt-[1vw] sm:mt-2 py-[0.8vw] px-[3vw] sm:px-3 sm:py-2 rounded-[1vw] sm:rounded-md bg-primary outline outline-mediumGray focus:outline-secondary outline-2 text-[3vw] sm:text-base"
+                className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:px-3 sm:py-2 rounded-[2vw] sm:rounded-md text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                 onChange={(e) => handleInputChange(e.target.value, "author")}
               />
             </div>
@@ -256,7 +256,7 @@ const index = () => {
             </div>
           </div>
           <div className="flex justify-center items-center gap-[4vw] sm:gap-6 pt-[3vw] sm:pt-8">
-            <button className="px-[6vw] sm:px-8 py-[1.3vw] sm:py-2 rounded-[2vw] sm:rounded-lg text-[3vw] sm:text-base text-secondary outline outline-2 my-[3vw] sm:my-4">
+            <button className="px-[6vw] sm:px-8 py-[1.3vw] sm:py-2 rounded-[2vw] sm:rounded-lg text-[3vw] sm:text-base text-secondary border-[0.5vw] sm:border-2 my-[3vw] sm:my-4">
               Draft
             </button>
             <button className="bg-secondary px-[6vw] sm:px-8 py-[1.3vw] sm:py-2 rounded-[2vw] sm:rounded-lg text-[3vw] sm:text-base text-primary my-[3vw] sm:my-4">

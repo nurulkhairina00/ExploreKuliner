@@ -90,7 +90,7 @@ const index = () => {
                 placeholder="mail@gmail.com"
                 value={email}
                 onChange={(e) => handleEmailChange(e.target.value)}
-                className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
+                className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                 required
               />
             </div>

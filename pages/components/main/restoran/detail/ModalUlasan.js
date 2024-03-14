@@ -97,7 +97,7 @@ const ModalUlasan = (props) => {
                   type="text"
                   placeholder="Ayam Goreng"
                   name="pesanan"
-                  className="bg-white w-full rounded-[2vw] sm:rounded-lg sm:mt-2 p-[3vw] sm:p-3 text-[4vw] sm:text-lg"
+                  className="w-full rounded-[2vw] sm:rounded-lg sm:mt-2 p-[3vw] sm:p-3 text-[4vw] sm:text-lg bg-primary border-mediumGray border-2 focus:border-none"
                 />
               </div>
               <div className="py-[3vw] sm:py-4">
@@ -113,7 +113,7 @@ const ModalUlasan = (props) => {
                   cols="30"
                   rows="5"
                   placeholder="Berikan komentar anda"
-                  className="bg-white w-full rounded-[2vw] sm:rounded-lg sm:mt-2 p-[3vw] sm:p-3 text-[4vw] sm:text-lg"
+                  className="w-full rounded-[2vw] sm:rounded-lg sm:mt-2 p-[3vw] sm:p-3 text-[4vw] sm:text-lg bg-primary border-mediumGray border-2 focus:border-none"
                 ></textarea>
               </div>
             </div>

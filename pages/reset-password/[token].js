@@ -122,7 +122,7 @@ const token = (props) => {
                       onChange={(e) =>
                         handleInputChange(e.target.value, "password")
                       }
-                      className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-l-[2vw] sm:rounded-l-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
+                      className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-l-[2vw] sm:rounded-l-lg text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                       required
                     />
                     <input
@@ -133,7 +133,7 @@ const token = (props) => {
                           : "/images/closed-eye.png"
                       }
                       alt={showPassword ? "Open Eye" : "Closed Eye"}
-                      className="w-[10vw] sm:w-12 mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-r-[2vw] sm:rounded-r-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base cursor-pointer"
+                      className="w-[10vw] sm:w-12 mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-r-[2vw] sm:rounded-r-lg text-[3vw] sm:text-base cursor-pointer bg-primary border-mediumGray border-2 focus:border-none"
                       onClick={(e) => handleShowPassword(e, "password")}
                     />
                   </div>
@@ -154,7 +154,7 @@ const token = (props) => {
                       onChange={(e) =>
                         handleInputChange(e.target.value, "password_confirm")
                       }
-                      className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-l-[2vw] sm:rounded-l-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
+                      className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-l-[2vw] sm:rounded-l-lg text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                       required
                     />
                     <input
@@ -165,7 +165,7 @@ const token = (props) => {
                           : "/images/closed-eye.png"
                       }
                       alt={showPasswordConfirm ? "Open Eye" : "Closed Eye"}
-                      className="w-[10vw] sm:w-12 mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-r-[2vw] sm:rounded-r-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base cursor-pointer"
+                      className="w-[10vw] sm:w-12 mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-r-[2vw] sm:rounded-r-lg text-[3vw] sm:text-base cursor-pointer bg-primary border-mediumGray border-2 focus:border-none"
                       onClick={(e) => handleShowPassword(e, "password_confirm")}
                     />
                   </div>

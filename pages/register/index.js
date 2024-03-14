@@ -152,7 +152,7 @@ const Register = () => {
                     placeholder="Nama Lengkap"
                     value={input.nama}
                     onChange={(e) => handleInputChange(e.target.value, "nama")}
-                    className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
+                    className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg  text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                     required
                   />
                 </div>
@@ -169,7 +169,7 @@ const Register = () => {
                     placeholder="mail@gmail.com"
                     value={input.email}
                     onChange={(e) => handleInputChange(e.target.value, "email")}
-                    className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
+                    className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                     required
                   />
                 </div>
@@ -186,7 +186,7 @@ const Register = () => {
                     placeholder="+62"
                     value={input.no_hp}
                     onChange={(e) => handleInputChange(e.target.value, "no_hp")}
-                    className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
+                    className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                     required
                   />
                 </div>
@@ -206,7 +206,7 @@ const Register = () => {
                       onChange={(e) =>
                         handleInputChange(e.target.value, "password")
                       }
-                      className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-l-[2vw] sm:rounded-l-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
+                      className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-l-[2vw] sm:rounded-l-lg text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                       required
                     />
                     <input
@@ -217,7 +217,7 @@ const Register = () => {
                           : "/images/closed-eye.png"
                       }
                       alt={showPassword ? "Open Eye" : "Closed Eye"}
-                      className="w-[10vw] sm:w-12 mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-r-[2vw] sm:rounded-r-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base cursor-pointer"
+                      className="w-[10vw] sm:w-12 mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-l-[2vw] sm:rounded-l-lg text-[3vw] sm:text-base cursor-pointer bg-primary border-mediumGray border-2 focus:border-none"
                       onClick={(e) => handleShowPassword(e)}
                     />
                   </div>

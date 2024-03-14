@@ -123,7 +123,7 @@ const Profile = (props) => {
                   placeholder="Nama Lengkap"
                   value={input.nama}
                   onChange={(e) => handleInputChange(e.target.value, "nama")}
-                  className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
+                  className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                   required
                 />
               </div>
@@ -140,7 +140,7 @@ const Profile = (props) => {
                   placeholder="mail@gmail.com"
                   value={input.email}
                   onChange={(e) => handleInputChange(e.target.value, "email")}
-                  className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
+                  className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                   required
                 />
               </div>
@@ -157,7 +157,7 @@ const Profile = (props) => {
                   placeholder="+62"
                   value={input.no_hp}
                   onChange={(e) => handleInputChange(e.target.value, "no_hp")}
-                  className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
+                  className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                   required
                 />
               </div>
