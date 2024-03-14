@@ -192,7 +192,7 @@ const token = (props) => {
         <SocialMedia background="color" />
       </div>
       <p className="text-black text-center text-[3vw] sm:text-sm sm:text-start font-semibold pt-[3vw] sm:pt-4">
-        © copyrights Explorekuliner.com - 2024
+        © copyrights Explorekuliner.com - 2023
       </p>
     </section>
   );

@@ -35,7 +35,7 @@ const Footer = () => {
       </div>
 
       <p className="text-white text-center text-[3vw] sm:text-sm sm:text-start font-semibold">
-        © copyrights Explorekuliner.com - 2024
+        © copyrights Explorekuliner.com - 2023
       </p>
     </section>
   );
