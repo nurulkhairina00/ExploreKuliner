@@ -42,7 +42,7 @@ const ModalUlasan = (props) => {
                     className="rounded-t-[2vw] rounded-b-none sm:rounded-t-lg sm:rounded-b-none relative transition-transform duration-300 hover:scale-110 ease-in-out"
                   />
                 </div>
-                <div className="flex bg-white w-[17%] h-[6%] text-[2.5vw] sm:w-12 sm:h-5 sm:text-xs text-gray rounded-2xl absolute right-[2vw] top-[2vw] sm:right-3 sm:top-3 justify-center datas-center">
+                <div className="flex bg-white w-[17%] h-[6%] text-[2.5vw] sm:w-12 sm:h-5 sm:text-xs text-gray rounded-2xl absolute right-[2vw] top-[2vw] sm:right-3 sm:top-3 justify-center items-center">
                   <svg
                     className="sm:w-[14px] me-1"
                     xmlns="http://www.w3.org/2000/svg"
