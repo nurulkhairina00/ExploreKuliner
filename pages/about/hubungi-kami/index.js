@@ -17,7 +17,7 @@ const index = () => {
     pesan: "",
   });
 
-  const handleChange = (value, name) => {
+  const handleInputChange = (value, name) => {
     setInput({ ...input, [name]: value });
   };
 
@@ -49,7 +49,7 @@ const index = () => {
                   name="nama"
                   placeholder="Nama Lengkap"
                   value={input.nama}
-                  onChange={(e) => handleChange(e.target.value, "nama")}
+                  onChange={(e) => handleInputChange(e.target.value, "nama")}
                   className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                   required
                 />
@@ -66,7 +66,7 @@ const index = () => {
                   name="email"
                   placeholder="mail@gmail.com"
                   value={input.email}
-                  onChange={(e) => handleChange(e.target.value, "email")}
+                  onChange={(e) => handleInputChange(e.target.value, "email")}
                   className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                   required
                 />
@@ -83,7 +83,7 @@ const index = () => {
                   name="subjek"
                   placeholder="Subjek"
                   value={input.subjek}
-                  onChange={(e) => handleChange(e.target.value, "subjek")}
+                  onChange={(e) => handleInputChange(e.target.value, "subjek")}
                   className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                   required
                 />
@@ -102,7 +102,7 @@ const index = () => {
                   rows="4"
                   placeholder="Berikan pesan anda"
                   value={input.pesan}
-                  onChange={(e) => handleChange(e.target.value, "pesan")}
+                  onChange={(e) => handleInputChange(e.target.value, "pesan")}
                   className="bg-mediumGray w-full rounded-[2vw] sm:rounded-lg sm:mt-2 p-[3vw] sm:p-3 text-[3vw] sm:text-base focus:outline-secondary"
                 />
               </div>

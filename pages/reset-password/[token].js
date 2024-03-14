@@ -30,7 +30,7 @@ const token = (props) => {
     }
   };
 
-  const handleChange = (value, name) => {
+  const handleInputChange = (value, name) => {
     setInput({ ...input, [name]: value });
   };
 
@@ -119,7 +119,9 @@ const token = (props) => {
                       name="password"
                       placeholder="********"
                       value={input.password}
-                      onChange={(e) => handleChange(e.target.value, "password")}
+                      onChange={(e) =>
+                        handleInputChange(e.target.value, "password")
+                      }
                       className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-l-[2vw] sm:rounded-l-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                       required
                     />
@@ -150,7 +152,7 @@ const token = (props) => {
                       placeholder="********"
                       value={input.password_confirm}
                       onChange={(e) =>
-                        handleChange(e.target.value, "password_confirm")
+                        handleInputChange(e.target.value, "password_confirm")
                       }
                       className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-l-[2vw] sm:rounded-l-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                       required

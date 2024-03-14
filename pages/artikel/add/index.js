@@ -15,6 +15,10 @@ const index = (props) => {
       label: "Artikel",
       link: "/artikel",
     },
+    {
+      label: "Add",
+      link: "/artikel/add",
+    },
   ];
 
   return (

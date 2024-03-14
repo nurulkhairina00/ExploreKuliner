@@ -9,7 +9,7 @@ const index = () => {
 
   const handleBack = () => Router.back();
 
-  const handleChange = (value) => setEmail(value);
+  const handleEmailChange = (value) => setEmail(value);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -89,7 +89,7 @@ const index = () => {
                 name="email"
                 placeholder="mail@gmail.com"
                 value={email}
-                onChange={(e) => handleChange(e.target.value)}
+                onChange={(e) => handleEmailChange(e.target.value)}
                 className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                 required
               />

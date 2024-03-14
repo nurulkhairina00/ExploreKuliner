@@ -23,7 +23,7 @@ const Register = () => {
     setShowPassword(!showPassword);
   };
 
-  const handleChange = (value, name) => {
+  const handleInputChange = (value, name) => {
     setInput({ ...input, [name]: value });
   };
 
@@ -151,7 +151,7 @@ const Register = () => {
                     name="nama"
                     placeholder="Nama Lengkap"
                     value={input.nama}
-                    onChange={(e) => handleChange(e.target.value, "nama")}
+                    onChange={(e) => handleInputChange(e.target.value, "nama")}
                     className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                     required
                   />
@@ -168,7 +168,7 @@ const Register = () => {
                     name="email"
                     placeholder="mail@gmail.com"
                     value={input.email}
-                    onChange={(e) => handleChange(e.target.value, "email")}
+                    onChange={(e) => handleInputChange(e.target.value, "email")}
                     className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                     required
                   />
@@ -185,7 +185,7 @@ const Register = () => {
                     name="no_hp"
                     placeholder="+62"
                     value={input.no_hp}
-                    onChange={(e) => handleChange(e.target.value, "no_hp")}
+                    onChange={(e) => handleInputChange(e.target.value, "no_hp")}
                     className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                     required
                   />
@@ -203,7 +203,9 @@ const Register = () => {
                       name="password"
                       placeholder="********"
                       value={input.password}
-                      onChange={(e) => handleChange(e.target.value, "password")}
+                      onChange={(e) =>
+                        handleInputChange(e.target.value, "password")
+                      }
                       className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-l-[2vw] sm:rounded-l-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                       required
                     />

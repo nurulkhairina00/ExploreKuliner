@@ -6,12 +6,12 @@ import Swal from "sweetalert2";
 const Profile = (props) => {
   const { input, setInput } = props;
 
-  const handleChange = (value, name) => {
+  const handleInputChange = (value, name) => {
     setInput({ ...input, [name]: value });
   };
 
   const handleUploadImage = (e) => {
-    if (e.target.files[0].size > 2000000) {
+    if (e.target.files[0].size > 2097152) {
       Swal.fire({
         title: "Info",
         text: "Ukuran file harus kurang dari 2MB",
@@ -122,7 +122,7 @@ const Profile = (props) => {
                   name="nama"
                   placeholder="Nama Lengkap"
                   value={input.nama}
-                  onChange={(e) => handleChange(e.target.value, "nama")}
+                  onChange={(e) => handleInputChange(e.target.value, "nama")}
                   className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                   required
                 />
@@ -139,7 +139,7 @@ const Profile = (props) => {
                   name="email"
                   placeholder="mail@gmail.com"
                   value={input.email}
-                  onChange={(e) => handleChange(e.target.value, "email")}
+                  onChange={(e) => handleInputChange(e.target.value, "email")}
                   className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                   required
                 />
@@ -156,7 +156,7 @@ const Profile = (props) => {
                   name="no_hp"
                   placeholder="+62"
                   value={input.no_hp}
-                  onChange={(e) => handleChange(e.target.value, "no_hp")}
+                  onChange={(e) => handleInputChange(e.target.value, "no_hp")}
                   className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg bg-mediumGray focus:outline-secondary text-[3vw] sm:text-base"
                   required
                 />
