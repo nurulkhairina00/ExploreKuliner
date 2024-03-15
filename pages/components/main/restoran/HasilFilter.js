@@ -33,7 +33,7 @@ const HasilFilter = () => {
   }, []);
 
   return (
-    <div className="w-full xl:w-3/4 sm:px-4 relative pb-[20vw] sm:pb-28">
+    <div className="w-full xl:w-3/4 sm:px-4 relative pb-[20vw] sm:pb-28 mt-[-22vw] sm:mt-[-200px] xl:mt-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-[5vw] sm:gap-4 cursor-pointer">
         {displayedData.map((item) => (
           <Link href={`/restoran/detail/${item.id}`} key={item.id}>

@@ -45,7 +45,7 @@ const Navbar = (props) => {
   }, []);
 
   return (
-    <nav className="w-full bg-white fixed shadow-md p-[6vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-9 z-10">
+    <nav className="w-full bg-white fixed shadow-md p-[6vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-9 z-20">
       <div className="flex justify-between">
         <Link href="/">
           <img

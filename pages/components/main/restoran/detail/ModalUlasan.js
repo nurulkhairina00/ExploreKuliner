@@ -10,7 +10,7 @@ const ModalUlasan = (props) => {
   const handleStarClick = (index) => setClickCount(index + 1);
 
   return (
-    <div className="h-full w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-70 z-10">
+    <div className="h-full w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-70 z-20">
       <div className="w-[90%] max-h-[90%] xl:w-2/3 bg-white rounded-[2vw] sm:rounded-lg shadow-lg overflow-y-auto">
         <div className="p-[2vw] md:p-4">
           <div className="flex justify-end pb-3" onClick={handleCloseModal}>

@@ -99,59 +99,70 @@ const FilterRestoranMobile = () => {
   }, []);
 
   return (
-    <section className="flex px-[8vw] pt-[2vw] pb-[4vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-4 sm:pt-2 xl:hidden relative overflow-x-auto">
-      <div className="w-full px-0 sm:px-4">
-        <div className="flex flex-row gap-[1.5vw] sm:gap-2 overflow-x-auto">
-          <button
-            className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[2.5vw] sm:text-sm rounded-full text-black ${
-              selectedRating !== null ||
-              selectedDistance !== null ||
-              selectedCategory.length > 0 ||
-              selectedPrice.length > 0 ||
-              selectedOther.length > 0
+    <section className="flex px-[8vw] py-[2vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-8 sm:pt-2 xl:hidden relative">
+      <div
+        className="w-full px-0 sm:px-4 overflow-x-auto overflow-y-hidden"
+        style={{ scrollbarWidth: "none" }}
+      >
+        <div className="flex flex-row gap-[1.5vw] sm:gap-2 mb-[24vw] sm:mb-48">
+          <div className="text-black">
+            <button
+              className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[2.5vw] sm:text-sm rounded-full ${
+                selectedRating !== null ||
+                selectedDistance !== null ||
+                selectedCategory.length > 0 ||
+                selectedPrice.length > 0 ||
+                selectedOther.length > 0
+                  ? "bg-black text-white"
+                  : ""
+              }`}
+              onClick={handleOpenFilter}
+            >
+              <div className="flex gap-[1vw] sm:gap-1 justify-center items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="3vw"
+                  height="3vw"
+                  viewBox="0 0 24 24"
+                  className="sm:w-5 sm:h-5"
+                >
+                  <g
+                    fill="none"
+                    stroke={
+                      selectedRating !== null ||
+                      selectedDistance !== null ||
+                      selectedCategory.length > 0 ||
+                      selectedPrice.length > 0 ||
+                      selectedOther.length > 0
+                        ? "white"
+                        : "black"
+                    }
+                    strokeLinecap="round"
+                  >
+                    <path d="M5 12V4m14 16v-3M5 20v-4m14-3V4m-7 3V4m0 16v-9" />
+                    <circle cx="5" cy="14" r="2" />
+                    <circle cx="12" cy="9" r="2" />
+                    <circle cx="19" cy="15" r="2" />
+                  </g>
+                </svg>
+                <span className="text-[3vw] sm:text-base">Filter</span>
+              </div>
+            </button>
+          </div>
+          <div className="text-black">
+            <button
+              className={` items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[3vw] sm:text-base rounded-full whitespace-nowrap 
+            ${
+              selectedRating?.includes("Bintang 4.5")
                 ? "bg-black text-white"
                 : ""
-            }`}
-            onClick={handleOpenFilter}
-          >
-            <div className="flex gap-[1vw] sm:gap-1 justify-center items-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="3vw"
-                height="3vw"
-                viewBox="0 0 24 24"
-                className="sm:w-5 sm:h-5"
-              >
-                <g
-                  fill="none"
-                  stroke={
-                    selectedRating !== null ||
-                    selectedDistance !== null ||
-                    selectedCategory.length > 0 ||
-                    selectedPrice.length > 0 ||
-                    selectedOther.length > 0
-                      ? "white"
-                      : "black"
-                  }
-                  strokeLinecap="round"
-                >
-                  <path d="M5 12V4m14 16v-3M5 20v-4m14-3V4m-7 3V4m0 16v-9" />
-                  <circle cx="5" cy="14" r="2" />
-                  <circle cx="12" cy="9" r="2" />
-                  <circle cx="19" cy="15" r="2" />
-                </g>
-              </svg>
-              <span className="text-[2.5vw] sm:text-sm">Filter</span>
-            </div>
-          </button>
-          <button
-            className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[2.5vw] sm:text-sm rounded-full whitespace-nowrap${
-              selectedRating === "Bintang 4.5" ? "bg-black text-white" : ""
-            }`}
-            onClick={() => handleRating("Bintang 4.5")}
-          >
-            Bintang 4.5
-          </button>
+            }
+            `}
+              onClick={() => handleRating("Bintang 4.5")}
+            >
+              Bintang 4.5
+            </button>
+          </div>
           <div className="relative inline-block">
             <button
               className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[2.5vw] sm:text-sm rounded-full text-black 4 whitespace-nowrap ${
@@ -160,12 +171,13 @@ const FilterRestoranMobile = () => {
               onClick={handleOpenCategory}
             >
               <div className="flex justify-between items-center space-x-[2vw] sm:space-x-6">
-                <span className="text-[2.5vw] sm:text-sm">Kategori Resto</span>
+                <span className="text-[3vw] sm:text-base">Kategori Resto</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
+                  width="3vw"
+                  height="3vw"
                   viewBox="0 0 24 24"
+                  className="sm:w-5 sm:h-5"
                 >
                   <path
                     fill="none"
@@ -179,7 +191,7 @@ const FilterRestoranMobile = () => {
               </div>
             </button>
             {showCategory && (
-              <div className="bg-white overflow-y-auto rounded p-[2vw] sm:p-2 absolute mt-[1vw] sm:mt-2 h-[22vw] sm:max-h-48 z-10 w-full">
+              <div className="bg-white overflow-y-auto rounded p-[2vw] sm:p-4 absolute mt-[1vw] top-[100%] sm:mt-2 h-[22vw] sm:max-h-48 w-full z-10">
                 {listCategory.map((category) => (
                   <div
                     className="flex items-center pb-[2vw] sm:pb-3 space-x-[1vw] sm:space-x-2"
@@ -196,7 +208,7 @@ const FilterRestoranMobile = () => {
                     />
                     <label
                       htmlFor={category.id}
-                      className="text-[2vw] sm:text-sm"
+                      className="text-[3vw] sm:text-base"
                     >
                       {category.nama}
                     </label>
@@ -207,18 +219,25 @@ const FilterRestoranMobile = () => {
           </div>
           <div className="relative inline-block">
             <button
-              className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[2.5vw] sm:text-sm rounded-full text-black whitespace-nowrap ${
+              className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] rounded-full text-black whitespace-nowrap ${
                 selectedPrice.length > 0 ? "bg-black text-white" : ""
               }`}
               onClick={handleOpenPrice}
             >
-              <div className="flex justify-between items-center space-x-[2vw] sm:space-x-6">
-                <span className="text-[2.5vw] sm:text-sm">Rentang Harga</span>
+              <div
+                className={`flex justify-between items-center  ${
+                  showPrice
+                    ? "space-x-[18vw] sm:space-x-28"
+                    : "space-x-[2vw] sm:space-x-6"
+                }`}
+              >
+                <span className="text-[3vw] sm:text-base">Rentang Harga</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
+                  width="3vw"
+                  height="3vw"
                   viewBox="0 0 24 24"
+                  className="sm:w-5 sm:h-5"
                 >
                   <path
                     fill="none"
@@ -232,7 +251,7 @@ const FilterRestoranMobile = () => {
               </div>
             </button>
             {showPrice && (
-              <div className="bg-white overflow-y-auto rounded p-[2vw] sm:p-2 absolute mt-[1vw] sm:mt-2 h-[22vw] sm:max-h-48 z-10">
+              <div className="bg-white overflow-y-auto rounded p-[2vw] sm:p-4 absolute mt-[1vw] sm:mt-2 h-[22vw] sm:max-h-48 z-10">
                 {listPrice.map((price) => (
                   <div
                     className="flex items-center pb-[2vw] sm:pb-3 space-x-[1vw] sm:space-x-2"
@@ -247,7 +266,10 @@ const FilterRestoranMobile = () => {
                       checked={selectedPrice.includes(price.id)}
                       onChange={() => handlePrice(price.id)}
                     />
-                    <label htmlFor={price.id} className="text-[2vw] sm:text-sm">
+                    <label
+                      htmlFor={price.id}
+                      className="text-[3vw] sm:text-base"
+                    >
                       {price.label}
                     </label>
                   </div>
@@ -255,26 +277,26 @@ const FilterRestoranMobile = () => {
               </div>
             )}
           </div>
-          <button
-            className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[2.5vw] sm:text-sm rounded-full whitespace-nowrap ${
-              selectedOther.includes("dinein")
-                ? "bg-black text-white"
-                : "text-black"
-            }`}
-            onClick={() => handleOther("dinein")}
-          >
-            Dine In
-          </button>
-          <button
-            className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[2.5vw] sm:text-sm rounded-full ${
-              selectedOther.includes("pickup")
-                ? "bg-black text-white"
-                : "text-black"
-            }`}
-            onClick={() => handleOther("pickup")}
-          >
-            Pickup
-          </button>
+          <div className="text-black">
+            <button
+              className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[3vw] sm:text-base rounded-full whitespace-nowrap ${
+                selectedOther.includes("dinein") ? "bg-black text-white" : ""
+              }`}
+              onClick={() => handleOther("dinein")}
+            >
+              Dine In
+            </button>
+          </div>
+          <div className="text-black">
+            <button
+              className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[3vw] sm:text-base rounded-full ${
+                selectedOther.includes("pickup") ? "bg-black text-white" : ""
+              }`}
+              onClick={() => handleOther("pickup")}
+            >
+              Pickup
+            </button>
+          </div>
         </div>
 
         {open && (
@@ -301,7 +323,9 @@ const FilterRestoranMobile = () => {
                     <button
                       key={rating}
                       className={`border-gray border-[1px] px-[2.5vw] py-[0.5vw] sm:px-3 md:px-4 sm:py-1 text-[2.5vw] sm:text-sm md:text-base rounded-[1vw] ${
-                        selectedRating === rating ? "bg-black text-white" : ""
+                        selectedRating === rating
+                          ? "bg-black text-white"
+                          : "text-black"
                       }`}
                       onClick={() => handleRating(rating)}
                     >
@@ -405,7 +429,10 @@ const FilterRestoranMobile = () => {
 
               {/* Lainnya */}
               <hr className="text-gray" />
-              <div className="pt-[4vw] py-[12vw] sm:pt-6 sm:py-12">
+              <div
+                className="pt-[4vw] py-[28vw] sm:pt-6 sm:py-14
+              "
+              >
                 <p className="text-gray text-[3vw] sm:text-base font-semibold pb-[3vw] sm:pb-4">
                   Lainnya
                 </p>

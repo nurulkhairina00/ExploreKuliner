@@ -59,7 +59,7 @@ const RestoranBaru = () => {
       </div>
 
       {/* Card Restoran Baru */}
-      <div className="w-full sm:w-3/4 ps-[8vw] sm:ps-0 sm:py-5 relative">
+      <div className="w-full sm:w-3/4 ps-[8vw] pb-[9vw] sm:pb-0 sm:ps-0 sm:py-5 relative">
         <button
           onClick={slidePrev}
           className="hidden sm:block absolute bottom-3 bg-white p-2 rounded-full z-10"

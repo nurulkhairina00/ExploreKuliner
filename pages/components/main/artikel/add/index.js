@@ -109,8 +109,8 @@ const index = () => {
           Tambah Artikel
         </p>
         <form action="">
-          <div className="flex flex-wrap justify-between">
-            <div className="w-full md:w-[48%] pb-[2vw] sm:pb-4">
+          <div className="flex flex-wrap">
+            <div className="w-full pb-[2vw] sm:pb-4">
               <label
                 htmlFor="judul"
                 className="text-[3vw] sm:text-lg font-normal"
@@ -125,7 +125,7 @@ const index = () => {
                 onChange={(e) => handleInputChange(e.target.value, "judul")}
               />
             </div>
-            <div className="w-full md:w-[48%] pb-[2vw] sm:pb-4">
+            <div className="w-full pb-[2vw] sm:pb-4">
               <label
                 htmlFor="deskripsi"
                 className="text-[3vw] sm:text-lg font-normal"
@@ -140,7 +140,7 @@ const index = () => {
                 onChange={(e) => handleInputChange(e.target.value, "deskripsi")}
               />
             </div>
-            <div className="w-full md:w-[48%] pb-[2vw] sm:pb-4 z-10">
+            <div className="w-full pb-[2vw] sm:pb-4">
               <div className="pb-[1vw] sm:pb-2">
                 <label
                   htmlFor="jenis_artikel"
@@ -150,7 +150,7 @@ const index = () => {
                 </label>
               </div>
               <Select
-                className="text-[3vw] sm:text-base"
+                className="text-[3vw] sm:text-base z-10"
                 closeMenuOnSelect={false}
                 components={animatedComponents}
                 isMulti
@@ -161,7 +161,7 @@ const index = () => {
                 onChange={handleJenisChange}
               />
             </div>
-            <div className="w-full md:w-[48%] pb-[2vw] sm:pb-4 flex flex-col">
+            <div className="w-full pb-[2vw] sm:pb-4 flex flex-col">
               <label
                 htmlFor="image"
                 className="text-[3vw] sm:text-lg font-normal"
@@ -198,7 +198,7 @@ const index = () => {
                 handleEditorChange={handleEditorChange}
               />
             </div>
-            <div className="w-full md:w-[48%] pb-[2vw] sm:pb-4">
+            <div className="w-full pb-[2vw] sm:pb-4">
               <label
                 htmlFor="tag"
                 className="text-[3vw] sm:text-lg font-normal"
@@ -213,7 +213,7 @@ const index = () => {
                 onChange={(e) => handleInputChange(e.target.value, "tag")}
               />
             </div>
-            <div className="w-full md:w-[48%] pb-[2vw] sm:pb-4">
+            <div className="w-full pb-[2vw] sm:pb-4">
               <label
                 htmlFor="author"
                 className="text-[3vw] sm:text-lg font-normal"
