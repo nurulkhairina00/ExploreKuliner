@@ -92,7 +92,7 @@ const TabFilter = () => {
           {["Bintang 4", "Bintang 4.5"].map((rating) => (
             <button
               key={rating}
-              className={` border-gray border-[1px] px-3 py-1 text-sm rounded-lg ${
+              className={` border-gray border-[1px] px-3 py-1 text-base rounded-lg ${
                 selectedRating === rating ? "bg-black text-white" : ""
               }`}
               onClick={() => handleRating(rating)}
@@ -112,7 +112,7 @@ const TabFilter = () => {
             (distance) => (
               <button
                 key={distance}
-                className={`border-gray border-[1px] px-3 py-1 text-sm rounded-lg ${
+                className={`border-gray border-[1px] px-3 py-1 text-base rounded-lg ${
                   selectedDistance === distance ? "bg-black text-white" : ""
                 }`}
                 onClick={() => handleDistance(distance)}
@@ -140,7 +140,7 @@ const TabFilter = () => {
                 checked={selectedCategory.includes(kategori.nama)}
                 onChange={() => handleCategory(kategori.nama)}
               />
-              <label htmlFor={kategori.nama} className="text-sm">
+              <label htmlFor={kategori.nama} className="text-base">
                 {kategori.nama}
               </label>
             </div>
@@ -163,7 +163,7 @@ const TabFilter = () => {
               checked={selectedPrice.includes(price.id)}
               onChange={() => handlePrice(price.id)}
             />
-            <label htmlFor={price.id} className="text-sm">
+            <label htmlFor={price.id} className="text-base">
               {price.label}
             </label>
           </div>
@@ -185,7 +185,7 @@ const TabFilter = () => {
               checked={selectedOther.includes(other.id)}
               onChange={() => handleOther(other.id)}
             />
-            <label htmlFor={other.id} className="text-sm">
+            <label htmlFor={other.id} className="text-base">
               {other.label}
             </label>
           </div>

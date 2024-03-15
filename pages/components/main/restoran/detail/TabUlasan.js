@@ -34,28 +34,28 @@ const TabUlasan = (props) => {
         </h4>
         <div className="py-[2vw] sm:py-6 items-center">
           <Rating initialRating={data.rating} display="none" />
-          <p className="text-black text-[3.5vw] sm:text-base">{data.ulasan}</p>
+          <p className="text-black text-[3.5vw] sm:text-lg">{data.ulasan}</p>
         </div>
       </div>
       {displayedData.map((item, index) => (
         <div key={index}>
           <div className="w-full flex p-[4vw] sm:p-4">
-            <div className="w-[13%] xl:w-[10%]">
+            <div className="w-[16%] xl:w-[10%]">
               <img
                 src={item.image}
                 alt="foto-profile"
                 className="w-[9vw] h-[9vw] md:w-16 md:h-16 rounded-full object-cover mr-10"
               />
             </div>
-            <div className="w-[87%] lg:w-[90%]">
+            <div className="w-[84%] lg:w-[90%]">
               <h3 className="text-black text-[3.5vw] sm:text-base font-semibold">
                 {item.nama}
               </h3>
               <Rating initialRating={item.rating} />
-              <p className="text-[3vw] sm:text-sm text-black text-justify sm:py-1">
+              <p className="text-[3.5vw] sm:text-base text-black text-justify sm:py-1">
                 {item.komentar}
               </p>
-              <small className="text-[2.5vw] sm:text-xs text-gray text-justify">
+              <small className="text-[3vw] sm:text-sm text-gray text-justify">
                 Pesanan : {item.pesanan}
               </small>
               <div className="flex justify-between items-center">
@@ -77,7 +77,7 @@ const TabUlasan = (props) => {
                         d="M7 11v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1za4 4 0 0 0 4-4V6a2 2 0 0 1 4 0v5h3a2 2 0 0 1 2 2l-1 5a2 3 0 0 1-2 2h-7a3 3 0 0 1-3-3"
                       />
                     </svg>
-                    <span className="text-[3vw] sm:text-sm text-black">
+                    <span className="text-[3.5vw] sm:text-base text-black">
                       {item.bagus}
                     </span>
                   </button>
@@ -98,12 +98,12 @@ const TabUlasan = (props) => {
                         d="M7 13V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1za4 4 0 0 1 4 4v1a2 2 0 0 0 4 0v-5h3a2 2 0 0 0 2-2l-1-5a2 3 0 0 0-2-2h-7a3 3 0 0 0-3 3"
                       />
                     </svg>
-                    <span className="text-[3vw] sm:text-sm text-black">
+                    <span className="text-[3.5vw] sm:text-base text-black">
                       {item.buruk}
                     </span>
                   </button>
                   <button
-                    className="ms-[1.5vw] sm:ms-3 text-[3vw] sm:text-sm text-black font-medium"
+                    className="ms-[1.5vw] sm:ms-3 text-[3.5vw] sm:text-base text-black font-medium"
                     onClick={() => handleOpenBalas(index)}
                   >
                     {showReply[index] ? "Tutup" : "Balas"}
@@ -118,9 +118,9 @@ const TabUlasan = (props) => {
                     cols="30"
                     rows="4"
                     placeholder="Berikan komentar anda"
-                    className="w-full rounded-[2vw] sm:rounded-lg p-4"
+                    className="w-full rounded-[2vw] sm:rounded-lg p-[3vw] sm:p-4 text-[3.5vw] sm:text-base"
                   ></textarea>
-                  <button className="px-[4vw] py-[1vw] sm:px-6 sm:py-2 text-[3vw] sm:text-base rounded-full shadow-lg bg-secondary text-white absolute bottom-5 right-5">
+                  <button className="px-[4vw] py-[1vw] sm:px-6 sm:py-2 text-[3.5vw] sm:text-base rounded-full shadow-lg bg-secondary text-white absolute bottom-5 right-5">
                     Kirim
                   </button>
                 </div>

@@ -132,14 +132,14 @@ const Login = () => {
               <p className=" text-black text-[5vw] sm:text-2xl font-semibold">
                 Masuk
               </p>
-              <p className="text-black text-[3vw] sm:text-lg pb-[3vw] sm:pb-6">
+              <p className="text-black text-[3.5vw] sm:text-lg pb-[3vw] sm:pb-6">
                 Masuk dengan alamat email dan kata sandi.
               </p>
               <form>
                 <div className="pb-[2vw] sm:pb-4">
                   <label
                     htmlFor="email"
-                    className="text-[3vw] sm:text-lg font-normal"
+                    className="text-[3.5vw] sm:text-lg font-normal"
                   >
                     Alamat Email
                   </label>
@@ -149,14 +149,14 @@ const Login = () => {
                     placeholder="mail@gmail.com"
                     value={input.email}
                     onChange={(e) => handleInputChange(e.target.value, "email")}
-                    className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
+                    className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg text-[3.5vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                     required
                   />
                 </div>
                 <div className="pb-[2vw] sm:pb-4">
                   <label
                     htmlFor="password"
-                    className="text-[3vw] sm:text-lg font-normal"
+                    className="text-[3.5vw] sm:text-lg font-normal"
                   >
                     Kata Sandi
                   </label>
@@ -169,7 +169,7 @@ const Login = () => {
                       onChange={(e) =>
                         handleInputChange(e.target.value, "password")
                       }
-                      className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-l-[2vw] sm:rounded-l-lg text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
+                      className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-l-[2vw] sm:rounded-l-lg text-[3.5vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                       required
                     />
                     <input
@@ -180,7 +180,7 @@ const Login = () => {
                           : "/images/closed-eye.png"
                       }
                       alt={showPassword ? "Open Eye" : "Closed Eye"}
-                      className="w-[10vw] sm:w-12 mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-r-[2vw] sm:rounded-r-lg text-[3vw] sm:text-base cursor-pointer bg-primary border-mediumGray border-2 focus:border-none"
+                      className="w-[10vw] sm:w-12 mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-r-[2vw] sm:rounded-r-lg text-[3.5vw] sm:text-base cursor-pointer bg-primary border-mediumGray border-2 focus:border-none"
                       onClick={(e) => handleShowPassword(e)}
                     />
                   </div>
@@ -196,31 +196,31 @@ const Login = () => {
                     />
                     <label
                       htmlFor="ingatkan"
-                      className="text-[3vw] sm:text-base"
+                      className="text-[3.5vw] sm:text-base"
                     >
                       Ingatkan saya
                     </label>
                   </div>
                   <Link href="/reset-password">
-                    <p className="text-[3vw] sm:text-base text-secondary font-normal text-end mb-0 cursor-pointer">
+                    <p className="text-[3.5vw] sm:text-base text-secondary font-normal text-end mb-0 cursor-pointer">
                       Lupa kata sandi?
                     </p>
                   </Link>
                 </div>
                 <button
                   type="submit"
-                  className="w-full font-bold text-white p-[2vw] sm:px-2 sm:py-3 rounded-full bg-secondary text-[3vw] sm:text-lg mt-[2vw] sm:mt-5"
+                  className="w-full font-bold text-white p-[2vw] sm:px-2 sm:py-3 rounded-full bg-secondary text-[3.5vw] sm:text-lg mt-[2vw] sm:mt-5"
                   onClick={handleLogin}
                 >
                   Masuk
                 </button>
               </form>
-              <p className=" text-black text-[3vw] sm:text-base text-center py-[3vw] sm:py-6">
+              <p className=" text-black text-[3.5vw] sm:text-base text-center py-[3vw] sm:py-6">
                 Atau masuk dengan
               </p>
               <button
                 type="button"
-                className="w-full text-[3vw] sm:text-lg font-bold text-black p-[2vw] sm:px-2 sm:py-3 rounded-full bg-mediumGray flex justify-center items-center"
+                className="w-full text-[3.5vw] sm:text-lg font-bold text-black p-[2vw] sm:px-2 sm:py-3 rounded-full bg-mediumGray flex justify-center items-center"
                 onClick={handleLoginGoogle}
               >
                 <img
@@ -230,7 +230,7 @@ const Login = () => {
                 />
                 Google
               </button>
-              <p className="text-[3vw] sm:text-base text-center pt-[6vw] sm:pt-6">
+              <p className="text-[3.5vw] sm:text-base text-center pt-[6vw] sm:pt-6">
                 <span className="text-black">Belum punya akun?</span>
                 <Link href="/register">
                   <span className="text-secondary font-bold cursor-pointer">

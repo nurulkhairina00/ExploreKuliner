@@ -99,15 +99,15 @@ const FilterRestoranMobile = () => {
   }, []);
 
   return (
-    <section className="flex px-[8vw] py-[2vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-8 sm:pt-2 xl:hidden relative">
+    <section className="flex px-[8vw] py-[2vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-2 xl:hidden relative">
       <div
         className="w-full px-0 sm:px-4 overflow-x-auto overflow-y-hidden"
         style={{ scrollbarWidth: "none" }}
       >
-        <div className="flex flex-row gap-[1.5vw] sm:gap-2 mb-[24vw] sm:mb-48">
+        <div className="flex flex-row gap-[1.5vw] sm:gap-2 mb-[31vw] sm:mb-44">
           <div className="text-black">
             <button
-              className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[2.5vw] sm:text-sm rounded-full ${
+              className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] rounded-full ${
                 selectedRating !== null ||
                 selectedDistance !== null ||
                 selectedCategory.length > 0 ||
@@ -121,8 +121,8 @@ const FilterRestoranMobile = () => {
               <div className="flex gap-[1vw] sm:gap-1 justify-center items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="3vw"
-                  height="3vw"
+                  width="2.5vw"
+                  height="2.5vw"
                   viewBox="0 0 24 24"
                   className="sm:w-5 sm:h-5"
                 >
@@ -145,13 +145,13 @@ const FilterRestoranMobile = () => {
                     <circle cx="19" cy="15" r="2" />
                   </g>
                 </svg>
-                <span className="text-[3vw] sm:text-base">Filter</span>
+                <span className="text-[3.5vw] sm:text-base">Filter</span>
               </div>
             </button>
           </div>
           <div className="text-black">
             <button
-              className={` items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[3vw] sm:text-base rounded-full whitespace-nowrap 
+              className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[3.5vw] sm:text-base rounded-full whitespace-nowrap 
             ${
               selectedRating?.includes("Bintang 4.5")
                 ? "bg-black text-white"
@@ -171,11 +171,13 @@ const FilterRestoranMobile = () => {
               onClick={handleOpenCategory}
             >
               <div className="flex justify-between items-center space-x-[2vw] sm:space-x-6">
-                <span className="text-[3vw] sm:text-base">Kategori Resto</span>
+                <span className="text-[3.5vw] sm:text-base">
+                  Kategori Resto
+                </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="3vw"
-                  height="3vw"
+                  width="4vw"
+                  height="4vw"
                   viewBox="0 0 24 24"
                   className="sm:w-5 sm:h-5"
                 >
@@ -191,7 +193,7 @@ const FilterRestoranMobile = () => {
               </div>
             </button>
             {showCategory && (
-              <div className="bg-white overflow-y-auto rounded p-[2vw] sm:p-4 absolute mt-[1vw] top-[100%] sm:mt-2 h-[22vw] sm:max-h-48 w-full z-10">
+              <div className="bg-white overflow-y-auto rounded p-[2vw] sm:p-4 absolute mt-[1vw] top-[100%] sm:mt-2 h-[30vw] sm:max-h-44 w-full z-10">
                 {listCategory.map((category) => (
                   <div
                     className="flex items-center pb-[2vw] sm:pb-3 space-x-[1vw] sm:space-x-2"
@@ -202,13 +204,13 @@ const FilterRestoranMobile = () => {
                       id={category.id}
                       name={category.id}
                       value={category.id}
-                      className="rounded w-[2vw] h-[2vw] sm:w-3 sm:h-3"
+                      className="rounded w-[3vw] h-[3vw] sm:w-3 sm:h-3"
                       checked={selectedCategory.includes(category.nama)}
                       onChange={() => handleCategory(category.nama)}
                     />
                     <label
                       htmlFor={category.id}
-                      className="text-[3vw] sm:text-base"
+                      className="text-[3.5vw] sm:text-base"
                     >
                       {category.nama}
                     </label>
@@ -227,15 +229,15 @@ const FilterRestoranMobile = () => {
               <div
                 className={`flex justify-between items-center  ${
                   showPrice
-                    ? "space-x-[18vw] sm:space-x-28"
+                    ? "space-x-[26vw] sm:space-x-28"
                     : "space-x-[2vw] sm:space-x-6"
                 }`}
               >
-                <span className="text-[3vw] sm:text-base">Rentang Harga</span>
+                <span className="text-[3.5vw] sm:text-base">Rentang Harga</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="3vw"
-                  height="3vw"
+                  width="4vw"
+                  height="4vw"
                   viewBox="0 0 24 24"
                   className="sm:w-5 sm:h-5"
                 >
@@ -251,7 +253,7 @@ const FilterRestoranMobile = () => {
               </div>
             </button>
             {showPrice && (
-              <div className="bg-white overflow-y-auto rounded p-[2vw] sm:p-4 absolute mt-[1vw] sm:mt-2 h-[22vw] sm:max-h-48 z-10">
+              <div className="bg-white overflow-y-auto rounded p-[2vw] sm:p-4 absolute mt-[1vw] sm:mt-2 h-[31vw] sm:max-h-44 z-10">
                 {listPrice.map((price) => (
                   <div
                     className="flex items-center pb-[2vw] sm:pb-3 space-x-[1vw] sm:space-x-2"
@@ -262,13 +264,13 @@ const FilterRestoranMobile = () => {
                       id={price.id}
                       name={price.id}
                       value={price.id}
-                      className="rounded w-[2vw] h-[2vw] sm:w-3 sm:h-3"
+                      className="rounded w-[3vw] h-[3vw] sm:w-3 sm:h-3"
                       checked={selectedPrice.includes(price.id)}
                       onChange={() => handlePrice(price.id)}
                     />
                     <label
                       htmlFor={price.id}
-                      className="text-[3vw] sm:text-base"
+                      className="text-[3.5vw] sm:text-base"
                     >
                       {price.label}
                     </label>
@@ -279,7 +281,7 @@ const FilterRestoranMobile = () => {
           </div>
           <div className="text-black">
             <button
-              className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[3vw] sm:text-base rounded-full whitespace-nowrap ${
+              className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[3.5vw] sm:text-base rounded-full whitespace-nowrap ${
                 selectedOther.includes("dinein") ? "bg-black text-white" : ""
               }`}
               onClick={() => handleOther("dinein")}
@@ -289,7 +291,7 @@ const FilterRestoranMobile = () => {
           </div>
           <div className="text-black">
             <button
-              className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[3vw] sm:text-base rounded-full ${
+              className={`items-center border-gray border-[1px] px-[3vw] py-[0.2vw] sm:px-4 sm:py-[3px] text-[3.5vw] sm:text-base rounded-full ${
                 selectedOther.includes("pickup") ? "bg-black text-white" : ""
               }`}
               onClick={() => handleOther("pickup")}
@@ -302,7 +304,7 @@ const FilterRestoranMobile = () => {
         {open && (
           <div className="fixed inset-0 bg-black bg-opacity-70 z-20">
             <div
-              className={`xl:hidden  absolute w-2/3 sm:w-1/2 h-screen p-[6vw] sm:p-6 bg-white z-10 top-0 duration-300 overflow-auto ${
+              className={`xl:hidden absolute w-3/4 sm:w-1/2 h-screen p-[6vw] sm:p-6 bg-white z-10 top-0 duration-300 overflow-auto ${
                 open ? "left-0" : "left-[-100%]"
               } `}
             >
@@ -315,14 +317,14 @@ const FilterRestoranMobile = () => {
               {/* Rating Resto */}
               <hr className="text-gray" />
               <div className="py-[4vw] sm:py-6">
-                <p className="text-gray text-[3vw] sm:text-base font-semibold pb-[3vw] sm:pb-4">
+                <p className="text-gray text-[3.5vw] sm:text-base font-semibold pb-[3vw] sm:pb-4">
                   Rating Resto
                 </p>
                 <div className="grid grid-cols-2 gap-[2vw] sm:gap-3">
                   {["Bintang 4", "Bintang 4.5"].map((rating) => (
                     <button
                       key={rating}
-                      className={`border-gray border-[1px] px-[2.5vw] py-[0.5vw] sm:px-3 md:px-4 sm:py-1 text-[2.5vw] sm:text-sm md:text-base rounded-[1vw] ${
+                      className={`border-gray border-[1px] px-[2.5vw] py-[0.5vw] sm:px-3 md:px-4 sm:py-1 text-[3vw] sm:text-sm md:text-base rounded-[1vw] ${
                         selectedRating === rating
                           ? "bg-black text-white"
                           : "text-black"
@@ -338,7 +340,7 @@ const FilterRestoranMobile = () => {
               {/* Jarak */}
               <hr className="text-gray" />
               <div className="py-[4vw] sm:py-6">
-                <p className="text-gray text-[3vw] sm:text-base font-semibold pb-[3vw] sm:pb-4">
+                <p className="text-gray text-[3.5vw] sm:text-base font-semibold pb-[3vw] sm:pb-4">
                   Jarak Resto
                 </p>
                 <div className="grid grid-cols-3 gap-[2vw] sm:gap-3">
@@ -352,7 +354,7 @@ const FilterRestoranMobile = () => {
                   ].map((distance) => (
                     <button
                       key={distance}
-                      className={`border-gray border-[1px] px-[2.5vw] py-[0.5vw] sm:px-3 md:px-4 sm:py-1 text-[2.5vw] sm:text-sm md:text-base rounded-[1vw] ${
+                      className={`border-gray border-[1px] px-[2.5vw] py-[0.5vw] sm:px-3 md:px-4 sm:py-1 text-[3vw] sm:text-sm md:text-base rounded-[1vw] ${
                         selectedDistance === distance
                           ? "bg-black text-white"
                           : ""
@@ -368,7 +370,7 @@ const FilterRestoranMobile = () => {
               {/* Category */}
               <hr className="text-gray" />
               <div className="py-[4vw] sm:py-6">
-                <p className="text-gray text-[3vw] sm:text-base font-semibold pb-[3vw] sm:pb-4">
+                <p className="text-gray text-[3.5vw] sm:text-base font-semibold pb-[3vw] sm:pb-4">
                   Kategori Resto
                 </p>
                 <div className="grid grid-cols-2 lg:grid-cols-3">
@@ -388,7 +390,7 @@ const FilterRestoranMobile = () => {
                       />
                       <label
                         htmlFor={category.nama}
-                        className="text-[2.5vw] sm:text-base"
+                        className="text-[3vw] sm:text-base"
                       >
                         {category.nama}
                       </label>
@@ -400,7 +402,7 @@ const FilterRestoranMobile = () => {
               {/* Rentang Harga */}
               <hr className="text-gray" />
               <div className="py-[4vw] sm:py-6">
-                <p className="text-gray text-[3vw] sm:text-base font-semibold pb-[3vw] sm:pb-4">
+                <p className="text-gray text-[3.5vw] sm:text-base font-semibold pb-[3vw] sm:pb-4">
                   Rentang Harga
                 </p>
                 {listPrice.map((price) => (
@@ -419,7 +421,7 @@ const FilterRestoranMobile = () => {
                     />
                     <label
                       htmlFor={price.id}
-                      className="text-[2.5vw] sm:text-base"
+                      className="text-[3vw] sm:text-base"
                     >
                       {price.label}
                     </label>
@@ -433,7 +435,7 @@ const FilterRestoranMobile = () => {
                 className="pt-[4vw] py-[28vw] sm:pt-6 sm:py-14
               "
               >
-                <p className="text-gray text-[3vw] sm:text-base font-semibold pb-[3vw] sm:pb-4">
+                <p className="text-gray text-[3.5vw] sm:text-base font-semibold pb-[3vw] sm:pb-4">
                   Lainnya
                 </p>
                 {otherOption.map((other) => (
@@ -452,7 +454,7 @@ const FilterRestoranMobile = () => {
                     />
                     <label
                       htmlFor={other.id}
-                      className="text-[2.5vw] sm:text-base"
+                      className="text-[3vw] sm:text-base"
                     >
                       {other.label}
                     </label>

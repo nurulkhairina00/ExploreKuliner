@@ -76,17 +76,17 @@ const Hero = (props) => {
                 {showDropdown && (
                   <div className="absolute top-full right-0 mt-[1.5vw] sm:mt-2 bg-white rounded-md shadow-md overflow-hidden">
                     <Link href="/profile">
-                      <div className="py-[1vw] sm:py-2 px-[3.5vw] sm:px-10 cursor-pointer hover:bg-secondary hover:text-white text-[3vw] sm:text-lg">
+                      <div className="py-[1vw] sm:py-2 px-[3.5vw] sm:px-10 cursor-pointer hover:bg-secondary hover:text-white text-[3.5vw] sm:text-lg">
                         Profile
                       </div>
                     </Link>
                     <Link href="/artikel/add">
-                      <div className="py-[1vw] sm:py-2 px-[3.5vw] sm:px-10 cursor-pointer hover:bg-secondary hover:text-white text-[3vw] sm:text-lg">
+                      <div className="py-[1vw] sm:py-2 px-[3.5vw] sm:px-10 cursor-pointer hover:bg-secondary hover:text-white text-[3.5vw] sm:text-lg">
                         Artikel
                       </div>
                     </Link>
                     <div
-                      className="py-[1vw] sm:py-2 px-[3.5vw] sm:px-10 cursor-pointer hover:bg-secondary hover:text-white text-[3vw] sm:text-lg"
+                      className="py-[1vw] sm:py-2 px-[3.5vw] sm:px-10 cursor-pointer hover:bg-secondary hover:text-white text-[3.5vw] sm:text-lg"
                       onClick={handleLogout}
                     >
                       Logout
@@ -174,7 +174,7 @@ const Hero = (props) => {
                   value: searchArea,
                   label: listArea.find((item) => item.id === searchArea)
                     ? listArea.find((item) => item.id === searchArea).nama
-                    : "Pilih...",
+                    : "Pilih lokasi",
                 }}
                 onChange={(e) => handleSearchArea(e.value)}
                 styles={{
@@ -261,7 +261,7 @@ const Hero = (props) => {
                 type="text"
                 name="restoran"
                 placeholder="Cari restoran"
-                className="bg-primary p-[1vw] w-full focus:outline-none rounded-full text-[3vw] sm:text-sm flex justify-center"
+                className="bg-primary p-[1vw] w-full focus:outline-none rounded-full text-[4vw] sm:text-sm flex justify-center"
                 value={searchRestaurant}
                 onChange={(e) => handleSearchRestaurant(e.target.value)}
               />
@@ -270,8 +270,8 @@ const Hero = (props) => {
               <div className="p-[1vw] rounded-full bg-secondary z-10 cursor-pointer justify-center items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="3.5vw"
-                  height="3.5vw"
+                  width="4.5vw"
+                  height="4.5vw"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -284,8 +284,8 @@ const Hero = (props) => {
             <div className="ms-[0.5vw]" onClick={() => handleOpenModalFilter()}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="4.5vw"
-                height="4.5vw"
+                width="6vw"
+                height="6vw"
                 viewBox="0 0 24 24"
               >
                 <path

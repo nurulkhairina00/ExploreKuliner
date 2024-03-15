@@ -48,7 +48,7 @@ const token = (props) => {
           </p>
           <p className="text-[3vw] sm:text-lg pb-[3vw] sm:pb-6">{pesan}</p>
           <Link href="/login">
-            <button className="bg-secondary px-[6vw] sm:px-8 py-[1.3vw] sm:py-2 rounded-[2vw] sm:rounded-lg text-[3vw] sm:text-base text-primary my-[3vw] sm:my-4">
+            <button className="bg-secondary px-[6vw] sm:px-8 py-[1.3vw] sm:py-2 rounded-[2vw] sm:rounded-lg text-[3.5vw] sm:text-base text-primary my-[3vw] sm:my-4">
               Ke Halaman Login
             </button>
           </Link>

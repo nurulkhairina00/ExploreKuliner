@@ -70,7 +70,7 @@ const index = () => {
           <div className="w-full mb-[4vw] sm:mb-8 px-[4vw] sm:px-8 md:hidden">
             <Select
               placeholder="Pilih Kebijakan"
-              className="text-[3vw] sm:text-lg"
+              className="text-[3.5vw] sm:text-lg"
               options={listKebijakan.map((item) => ({
                 label: item.nama_tab,
                 value: item.key_tab,
@@ -80,7 +80,7 @@ const index = () => {
                 label: listKebijakan.find((item) => item.key_tab === activeTab)
                   ? listKebijakan.find((item) => item.key_tab === activeTab)
                       .nama_tab
-                  : "Pilih...",
+                  : "Pilih kebijakan",
               }}
               onChange={(e) => handleSelect(e.value)}
             />
@@ -90,7 +90,7 @@ const index = () => {
               {listKebijakan.map((item) => (
                 <button
                   key={item.id}
-                  className={`block px-4 py-2 rounded-lg w-full text-left mb-3 ${
+                  className={`block px-4 py-2 rounded-lg w-full text-left mb-3 text-lg ${
                     activeTab === item.key_tab
                       ? "bg-secondary text-white"
                       : "bg-mediumGray text-black"
@@ -104,11 +104,11 @@ const index = () => {
             <div className="w-full md:w-2/3 lg:w-3/4 px-[4vw] sm:px-8">
               {activeTab === "kebijakan" && (
                 <div>
-                  <p className="text-justify text-[3vw] sm:text-lg mb-[2vw] sm:mb-4 indent-[4vw] sm:indent-8">
+                  <p className="text-justify text-[3.5vw] sm:text-lg mb-[2vw] sm:mb-4 indent-[4vw] sm:indent-8">
                     Website explorekuliner.id dimiliki oleh Explore Kuliner,
                     yang akan menjadi pengontrol atas data pribadi Anda.
                   </p>
-                  <p className="text-justify text-[3vw] sm:text-lg mb-[2vw] sm:mb-4 indent-[4vw] sm:indent-8">
+                  <p className="text-justify text-[3.5vw] sm:text-lg mb-[2vw] sm:mb-4 indent-[4vw] sm:indent-8">
                     Kami telah mengadopsi Kebijakan Privasi ini untuk
                     menjelaskan bagaimana kami memproses informasi yang
                     dikumpulkan oleh explorekuliner.id, yang juga menjelaskan
@@ -116,7 +116,7 @@ const index = () => {
                     tentang Anda. Oleh karena itu, Anda harus membaca Kebijakan
                     Privasi ini sebelum menggunakan website explorekuliner.id.
                   </p>
-                  <p className="text-justify text-[3vw] sm:text-lg mb-[2vw] sm:mb-4 indent-[4vw] sm:indent-8">
+                  <p className="text-justify text-[3.5vw] sm:text-lg mb-[2vw] sm:mb-4 indent-[4vw] sm:indent-8">
                     Kami menjaga data pribadi Anda dan berjanji untuk menjamin
                     kerahasiaan dan keamanannya.
                   </p>

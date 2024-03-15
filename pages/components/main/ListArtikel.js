@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { getListArtikel } from "../../actions/artikelAction";
-import CardArtikel from "./cardArtikel";
+import CardArtikel from "./CardArtikel";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -27,13 +27,13 @@ const ListArtikel = () => {
         <div className="flex justify-between items-center pb-[2vw] sm:pb-5">
           <h2 className="font-bold text-[6vw] sm:text-3xl">Artikel</h2>
           <Link href="/artikel">
-            <p className="text-[3vw] sm:text-lg font-medium text-secondary cursor-pointer">
+            <p className="text-[3.5vw] sm:text-lg font-medium text-secondary cursor-pointer">
               Lihat Semua
             </p>
           </Link>
         </div>
         <div className="pb-[2vw] sm:pb-5">
-          <p className="text-[3vw] sm:text-lg font-normal">
+          <p className="text-[3.5vw] sm:text-lg font-normal">
             Berbagai rekomendasi tempat dan menu terbaik.
           </p>
         </div>

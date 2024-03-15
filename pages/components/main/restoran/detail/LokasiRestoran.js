@@ -20,10 +20,10 @@ const LokasiRestoran = (props) => {
                 return (
                   <div className="w-full flex" key={index}>
                     <div className="w-1/4 pb-[1vw] sm:pb-1">
-                      <p className="text-[3vw] sm:text-base">{item.hari}</p>
+                      <p className="text-[3.5vw] sm:text-base">{item.hari}</p>
                     </div>
                     <div className="w-3/4 pb-[1vw] sm:pb-1">
-                      <p className="text-[3vw] sm:text-base">{item.jam}</p>
+                      <p className="text-[3.5vw] sm:text-base">{item.jam}</p>
                     </div>
                   </div>
                 );
@@ -50,7 +50,7 @@ const LokasiRestoran = (props) => {
                     <circle cx="12" cy="10" r="3" />
                   </g>
                 </svg>
-                <p className="text-black text-[3vw] sm:text-base">
+                <p className="text-black text-[3.5vw] sm:text-base">
                   {data.alamat}
                 </p>
               </div>
@@ -72,7 +72,7 @@ const LokasiRestoran = (props) => {
                     d="M15.6 14.522c-2.395 2.52-8.504-3.534-6.1-6.064c1.468-1.545-.19-3.31-1.108-4.609c-1.723-2.435-5.504.927-5.39 3.066c.363 6.746 7.66 14.74 14.726 14.042c2.21-.218 4.75-4.21 2.214-5.669c-1.267-.73-3.008-2.17-4.342-.767"
                   />
                 </svg>
-                <p className="text-black text-[3vw] sm:text-base">
+                <p className="text-black text-[3.5vw] sm:text-base">
                   {data.telephone}
                 </p>
               </div>
@@ -90,7 +90,7 @@ const LokasiRestoran = (props) => {
                     d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0l-8 5l-8-5zm0 12H4V8l8 5l8-5z"
                   />
                 </svg>
-                <p className="text-black text-[3vw] sm:text-base">
+                <p className="text-black text-[3.5vw] sm:text-base">
                   {data.email}
                 </p>
               </div>
@@ -107,7 +107,7 @@ const LokasiRestoran = (props) => {
                     d="M1 21v-2h22v2zm3-3q-.825 0-1.412-.587T2 16V5q0-.825.588-1.412T4 3h16q.825 0 1.413.588T22 5v11q0 .825-.587 1.413T20 18zm0-2h16V5H4zm0 0V5z"
                   />
                 </svg>
-                <p className="text-black text-[3vw] sm:text-base">
+                <p className="text-black text-[3.5vw] sm:text-base">
                   {data.website}
                 </p>
               </div>

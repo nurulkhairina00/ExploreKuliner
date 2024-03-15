@@ -46,7 +46,7 @@ const ModalFilter = (props) => {
               value: searchArea,
               label: listArea.find((item) => item.id === searchArea)
                 ? listArea.find((item) => item.id === searchArea).nama
-                : "Pilih...",
+                : "Pilih lokasi",
             }}
             onChange={(e) => handleSearchArea(e.value)}
             styles={{
@@ -70,7 +70,7 @@ const ModalFilter = (props) => {
             className="rounded-lg"
           />
           <div className="pt-[5vw] pb-[3vw] sm:py-4 flex flex-col items-center justify-center gap-3">
-            <button className="border-secondary border-[0.5vw] sm:border-2 px-[6vw] sm:px-8 rounded-[2vw] sm:rounded-lg py-[1.5vw] sm:py-2 text-[3vw] sm:text-base text-secondary font-bold hover:bg-secondary hover:text-primary">
+            <button className="border-secondary border-[0.5vw] sm:border-2 px-[6vw] sm:px-8 rounded-[2vw] sm:rounded-lg py-[1.5vw] sm:py-2 text-[3.5vw] sm:text-base text-secondary font-bold hover:bg-secondary hover:text-primary">
               Filter
             </button>
           </div>

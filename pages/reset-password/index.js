@@ -72,7 +72,7 @@ const index = () => {
           <p className=" text-black text-[5vw] sm:text-2xl font-semibold">
             Reset Password
           </p>
-          <p className="text-black text-[3vw] sm:text-sm pb-[5vw] sm:pb-10">
+          <p className="text-black text-[3.5vw] sm:text-lg pb-[5vw] sm:pb-10">
             Masukkan alamat email akun anda dibawah ini. Kami akan mengirimkan
             instruksi pemulihan ke email tersebut.
           </p>
@@ -80,7 +80,7 @@ const index = () => {
             <div className="pb-[6vw] sm:pb-10">
               <label
                 htmlFor="email"
-                className="text-[3vw] sm:text-sm font-normal"
+                className="text-[3.5vw] sm:text-lg font-normal"
               >
                 Alamat Email
               </label>
@@ -90,14 +90,14 @@ const index = () => {
                 placeholder="mail@gmail.com"
                 value={email}
                 onChange={(e) => handleEmailChange(e.target.value)}
-                className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
+                className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg text-[3.5vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                 required
               />
             </div>
 
             <button
               type="submit"
-              className="w-full font-bold text-white p-[2vw] sm:px-2 sm:py-3 rounded-full bg-secondary text-[3vw] sm:text-lg"
+              className="w-full font-bold text-white p-[2vw] sm:px-2 sm:py-3 rounded-full bg-secondary text-[3.5vw] sm:text-lg"
             >
               Kirim
             </button>

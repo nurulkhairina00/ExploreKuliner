@@ -42,13 +42,13 @@ const RestoranTerdekat = () => {
             Restoran Terdekat
           </h2>
           <Link href="/restoran">
-            <p className="text-[3vw] sm:text-lg font-medium text-secondary cursor-pointer">
+            <p className="text-[3.5vw] sm:text-lg font-medium text-secondary cursor-pointer">
               Lihat Semua
             </p>
           </Link>
         </div>
         <div className="pb-[2vw] sm:pb-5">
-          <p className="text-[3vw] sm:text-lg font-normal">
+          <p className="text-[3.5vw] sm:text-lg font-normal">
             Kami pilihan resto yang dekat dengan lokasi mu.
           </p>
         </div>

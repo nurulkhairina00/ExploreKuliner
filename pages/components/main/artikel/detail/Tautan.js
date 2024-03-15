@@ -32,35 +32,35 @@ const Tautan = (props) => {
         <div className="flex items-center gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="4vw"
-            height="4vw"
+            width="4.5vw"
+            height="4.5vw"
             viewBox="0 0 24 24"
-            className="sm:w-[20px] sm:h-[20px]"
+            className="sm:w-6 sm:h-6"
           >
             <path
               fill="#8F8F9D"
               d="M18 22q-1.25 0-2.125-.875T15 19q0-.175.025-.363t.075-.337l-7.05-4.1q-.425.375-.95.588T6 15q-1.25 0-2.125-.875T3 12q0-1.25.875-2.125T6 9q.575 0 1.1.213t.95.587l7.05-4.1q-.05-.15-.075-.337T15 5q0-1.25.875-2.125T18 2q1.25 0 2.125.875T21 5q0 1.25-.875 2.125T18 8q-.575 0-1.1-.212t-.95-.588L8.9 11.3q.05.15.075.338T9 12q0 .175-.025.363T8.9 12.7l7.05 4.1q.425-.375.95-.587T18 16q1.25 0 2.125.875T21 19q0 1.25-.875 2.125T18 22"
             />
           </svg>
-          <h6 className="text-[3vw] sm:text-base font-semibold text-gray">
+          <h6 className="text-[3.5vw] sm:text-lg font-semibold text-gray">
             BAGIKAN
           </h6>
         </div>
 
         {/* Icon Social Media */}
         <div className="flex flex-row gap-[2vw] sm:gap-3 py-[1.5vw] sm:py-3">
-          <div className="w-[6vw] h-[6vw] sm:w-9 sm:h-9 border rounded-full flex justify-center items-center cursor-pointer">
+          <div className="w-[7vw] h-[7vw] sm:w-10 sm:h-10 border rounded-full flex justify-center items-center cursor-pointer">
             <FacebookShareButton
               url={currentUrl}
               quote={data?.judul}
               title={data?.judul}
             >
               <svg
-                className="sm:w-[20px] sm:h-[20px]"
-                width="4vw"
-                height="4vw"
+                width="5vw"
+                height="5vw"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
+                className="sm:w-7 sm:h-7"
               >
                 <path
                   d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
@@ -70,19 +70,19 @@ const Tautan = (props) => {
             </FacebookShareButton>
           </div>
 
-          <div className="w-[6vw] h-[6vw] sm:w-9 sm:h-9 border rounded-full flex justify-center items-center cursor-pointer">
+          <div className="w-[7vw] h-[7vw] sm:w-10 sm:h-10 border rounded-full flex justify-center items-center cursor-pointer">
             <TwitterShareButton
               url={currentUrl}
               quote={data?.judul}
               title={data?.judul}
             >
               <svg
-                className="sm:w-[16px] sm:h-[16px]"
-                width="3vw"
-                height="3vw"
+                width="3.5vw"
+                height="3.5vw"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                className="sm:w-[22px] sm:h-[22px]"
               >
                 <path
                   fill="#333333"
@@ -92,7 +92,7 @@ const Tautan = (props) => {
             </TwitterShareButton>
           </div>
 
-          <div className="w-[6vw] h-[6vw] sm:w-9 sm:h-9 border rounded-full flex justify-center items-center cursor-pointer">
+          <div className="w-[7vw] h-[7vw] sm:w-10 sm:h-10 border rounded-full flex justify-center items-center cursor-pointer">
             <WhatsappShareButton
               url={currentUrl}
               quote={data?.judul}
@@ -100,10 +100,10 @@ const Tautan = (props) => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="4vw"
-                height="4vw"
+                width="4.5vw"
+                height="4.5vw"
                 viewBox="0 0 24 24"
-                className="sm:w-[20px] sm:h-[20px]"
+                className="sm:w-6 sm:h-6"
               >
                 <path
                   fill="#333333"
@@ -113,19 +113,19 @@ const Tautan = (props) => {
             </WhatsappShareButton>
           </div>
 
-          <div className="w-[6vw] h-[6vw] sm:w-9 sm:h-9 border rounded-full flex justify-center items-center cursor-pointer">
+          <div className="w-[7vw] h-[7vw] sm:w-10 sm:h-10 border rounded-full flex justify-center items-center cursor-pointer">
             <TelegramShareButton
               url={currentUrl}
               quote={data?.judul}
               title={data?.judul}
             >
               <svg
-                className="sm:w-[20px] sm:h-[20px]"
-                width="4vw"
-                height="4vw"
+                width="4.5vw"
+                height="4.5vw"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                className="sm:w-7 sm:h-7"
               >
                 <path
                   d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2m4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19c-.14.75-.42 1-.68 1.03c-.58.05-1.02-.38-1.58-.75c-.88-.58-1.38-.94-2.23-1.5c-.99-.65-.35-1.01.22-1.59c.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02c-.09.02-1.49.95-4.22 2.79c-.4.27-.76.41-1.08.4c-.36-.01-1.04-.2-1.55-.37c-.63-.2-1.12-.31-1.08-.66c.02-.18.27-.36.74-.55c2.92-1.27 4.86-2.11 5.83-2.51c2.78-1.16 3.35-1.36 3.73-1.36c.08 0 .27.02.39.12c.1.08.13.19.14.27c-.01.06.01.24 0 .38"
@@ -136,15 +136,15 @@ const Tautan = (props) => {
           </div>
 
           <button
-            className="w-[6vw] h-[6vw] sm:w-9 sm:h-9 border rounded-full flex justify-center items-center cursor-pointer"
+            className="w-[7vw] h-[7vw] sm:w-10 sm:h-10 border rounded-full flex justify-center items-center cursor-pointer"
             onClick={copyToClipboard}
           >
             <svg
-              className="sm:w-[20px] sm:h-[20px]"
-              width="4vw"
-              height="4vw"
+              width="4.5vw"
+              height="4.5vw"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
+              className="sm:w-7 sm:h-7"
             >
               <path
                 fill="#333333"

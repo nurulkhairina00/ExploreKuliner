@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { UseDispatch, useDispatch, useSelector } from "react-redux";
 import { getListArtikel } from "../../../actions/artikelAction";
-import CardArtikel from "../cardArtikel";
+import CardArtikel from "../CardArtikel";
 import Pagination from "./Pagination";
 
 const ListArtikel = () => {
@@ -36,10 +36,10 @@ const ListArtikel = () => {
             <input
               type="text"
               name="search"
-              placeholder="Search..."
-              className="w-full py-[3vw] px-[5vw] sm:py-5 sm:px-6 bg-white rounded-full shadow-lg text-[3vw] sm:text-base focus:outline-none"
+              placeholder="Cari artikel"
+              className="w-full py-[3vw] px-[5vw] sm:py-5 sm:px-6 bg-white rounded-full shadow-lg text-[3.5vw] sm:text-base focus:outline-none"
             />
-            <button className="absolute top-1/4 right-[3vw] sm:right-4 px-[4vw] py-[1vw] sm:px-6 sm:py-1 bg-secondary text-primary rounded-full text-[2.5vw] sm:text-sm font-semibold">
+            <button className="absolute top-1/4 right-[3vw] sm:right-4 px-[4vw] py-[1vw] sm:px-6 sm:py-1 bg-secondary text-primary rounded-full text-[3vw] sm:text-base font-semibold">
               Cari
             </button>
           </div>

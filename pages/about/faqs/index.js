@@ -88,7 +88,7 @@ const index = () => {
                 className="flex justify-between items-center p-[3vw] sm:p-4 cursor-pointer"
                 onClick={() => toggleAccordion(index)}
               >
-                <p className="text-[3vw] sm:text-lg font-semibold">
+                <p className="text-[3.5vw] sm:text-lg font-semibold">
                   {item.question}
                 </p>
                 <div className="flex items-center">
@@ -114,7 +114,7 @@ const index = () => {
               </div>
               {accordionStatus[index] && (
                 <div className="px-[3vw] sm:px-4 pb-[3vw] sm:pb-4">
-                  <p className="text-justify text-[3vw] sm:text-lg">
+                  <p className="text-justify text-[3.5vw] sm:text-lg">
                     {item.answer}
                   </p>
                 </div>

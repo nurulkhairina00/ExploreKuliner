@@ -7,12 +7,12 @@ const Breadcrumb = (props) => {
   return (
     <section className="flex px-[8vw] pb-[2vw] pt-[28vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-4 sm:pt-36">
       <ol className="flex items-center px-0 sm:px-4 xl:px-0">
-        <li className="text-gray text-[3vw] sm:text-base">
+        <li className="text-gray text-[3.5vw] sm:text-base">
           <Link href="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="3vw"
-              height="3vw"
+              width="4vw"
+              height="4vw"
               viewBox="0 0 512 512"
               className="sm:w-[16px] sm:h-[16px]"
             >
@@ -30,7 +30,7 @@ const Breadcrumb = (props) => {
         {data.map((item, index) => (
           <li
             key={index}
-            className={`flex items-center text-[3vw] sm:text-base font-medium ${
+            className={`flex items-center text-[3.5vw] sm:text-base font-medium ${
               data.length === index + 1 ? "text-secondary" : "text-gray"
             }`}
           >

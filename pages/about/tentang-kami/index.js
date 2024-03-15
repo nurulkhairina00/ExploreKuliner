@@ -20,19 +20,19 @@ const index = () => {
           <p className="text-[3.5vw] sm:text-xl font-semibold my-[4vw] sm:my-8 text-center">
             Berpetualang bersama ExploreKuliner.id
           </p>
-          <p className="text-center text-[3vw] sm:text-lg mb-[2vw] sm:mb-4">
+          <p className="text-center text-[3.5vw] sm:text-lg mb-[2vw] sm:mb-4">
             ExploreKuliner.id lahir dari semangat untuk menghadirkan yang
             terbaik bagi pecinta kuliner. Dibuat oleh tim yang hobi berpetualang
             mencari tempat tongkrongan dan kulineran, kami menghadirkan
             rekomendasi terbaik dari berbagai sudut kota di <b>JABODETABEK</b>.
           </p>
-          <p className="text-center text-[3vw] sm:text-lg mb-[2vw] sm:mb-4">
+          <p className="text-center text-[3.5vw] sm:text-lg mb-[2vw] sm:mb-4">
             Tujuan kami adalah untuk memberikan rekomendasi tempat makan dan
             nongkrong terbaik, yang mungkin belum ditemukan atau jarang
             terekspos agar dapat dinikmati oleh semua orang. Petualangan tidak
             hanya tentang perjalanan, namun juga menikmati setiap rasa yang ada.
           </p>
-          <p className="text-center text-[3vw] sm:text-lg mb-[2vw] sm:mb-4">
+          <p className="text-center text-[3.5vw] sm:text-lg mb-[2vw] sm:mb-4">
             Rasakanlah perjalanan kuliner dari setiap orang bersama
             <span className="text-secondary font-bold">
               {" "}

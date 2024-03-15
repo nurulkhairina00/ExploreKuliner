@@ -15,16 +15,16 @@ const DeskripsiRestoran = (props) => {
         <h3 className="text-[5vw] sm:text-2xl font-semibold text-black sm:pb-3">
           {data.nama_resto}
         </h3>
-        <div className="flex">
+        <div className="flex items-center">
           <Rating initialRating={data.rating} />
-          <p className="text-secondary text-[3vw] sm:text-sm font-semibold ms-[1vw] sm:ms-3">
+          <p className="text-secondary text-[3.5vw] sm:text-base font-semibold ms-[1vw] sm:ms-3">
             ({data.ulasan})
           </p>
         </div>
-        <p className="text-black text-[3.5vw] sm:text-base font-medium pt-[2vw] sm:pt-4">
+        <p className="text-black text-[3.5vw] sm:text-lg font-medium pt-[2vw] sm:pt-4">
           Jenis Makanan
         </p>
-        <p className="text-secondary text-[3vw] sm:text-sm">
+        <p className="text-secondary text-[3vw] sm:text-base">
           {data.jenis_makanan}
         </p>
 
@@ -41,7 +41,7 @@ const DeskripsiRestoran = (props) => {
               d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m4.2 14.2L11 13V7h1.5v5.2l4.5 2.7z"
             />
           </svg>
-          <p className="text-black text-[3vw] sm:text-sm justify-center items-center">
+          <p className="text-black text-[3.5vw] sm:text-base justify-center items-center">
             Sabtu : 10.00 - 22.00 Wib
           </p>
         </div>
@@ -51,9 +51,7 @@ const DeskripsiRestoran = (props) => {
         <p className="font-semibold text-[6vw] sm:text-3xl pb-[2vw] sm:pb-4">
           Tentang
         </p>
-        <p className="text-[3.5vw] sm:text-base text-justify">
-          {data.deskripsi}
-        </p>
+        <p className="text-[3.5vw] sm:text-lg text-justify">{data.deskripsi}</p>
       </div>
 
       <div className="flex bg-white rounded-[2vw] sm:rounded-lg shadow-lg py-[3vw] sm:py-4 px-[3vw] md:px-8 my-[4vw] md:my-6">
@@ -61,7 +59,7 @@ const DeskripsiRestoran = (props) => {
           <h3 className="text-black text-[4vw] sm:text-2xl md:text-2xl xl:text-3xl font-semibold">
             Yuk, memberi ulasan
           </h3>
-          <p className="text-black text-[3.5vw] sm:text-base sm:py-2">
+          <p className="text-black text-[3.5vw] sm:text-lg sm:py-2">
             Tulis ulasan untuk restoran ini.
           </p>
           <button

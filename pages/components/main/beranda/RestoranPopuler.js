@@ -43,7 +43,7 @@ const RestoranPopuler = () => {
         <h2 className=" font-bold text-[6vw] sm:text-3xl pb-[2vw] sm:pb-5">
           Restoran Populer
         </h2>
-        <p className="font-normal text-[3vw] sm:text-lg pb-[2vw] sm:pb-5">
+        <p className="font-normal text-[3.5vw] sm:text-lg pb-[2vw] sm:pb-5 text-justify">
           Resto yang sering dibicarkan di areamu, orang-orang pada makan disini.
         </p>
       </div>

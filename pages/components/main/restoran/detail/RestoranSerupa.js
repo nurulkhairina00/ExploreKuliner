@@ -40,13 +40,13 @@ const RestoranSerupa = () => {
         <div className="flex justify-between items-center pb-[2vw] sm:pb-5">
           <h2 className="font-bold text-[6vw] sm:text-3xl ">Restoran Serupa</h2>
           <Link href="/restoran">
-            <p className="text-[3vw] sm:text-lg font-medium text-secondary cursor-pointer">
+            <p className="text-[3.5vw] sm:text-lg font-medium text-secondary cursor-pointer">
               Lihat Semua
             </p>
           </Link>
         </div>
         <div className="pb-[2vw] sm:pb-5">
-          <p className="text-[3vw] sm:text-lg font-normal">
+          <p className="text-[3.5vw] sm:text-lg font-normal">
             Restoran dengan makanan yang serupa.
           </p>
         </div>

@@ -44,7 +44,7 @@ const TentangRestoran = () => {
           <div className="flex mb-4">
             <button
               id="menu"
-              className={`p-[2vw] sm:px-4 sm:py-2 rounded-s-[2vw] sm:rounded-s-lg w-full font-semibold text-[3vw] sm:text-xl ${
+              className={`p-[2vw] sm:px-4 sm:py-2 rounded-s-[2vw] sm:rounded-s-lg w-full font-semibold text-[3.5vw] sm:text-xl ${
                 activeTab === "menu"
                   ? "bg-secondary text-primary"
                   : "bg-white text-black"
@@ -55,7 +55,7 @@ const TentangRestoran = () => {
             </button>
             <button
               id="ulasan"
-              className={`p-[2vw] sm:px-4 sm:py-2 rounded-e-[2vw] sm:rounded-e-lg w-full font-semibold text-[3vw] sm:text-xl ${
+              className={`p-[2vw] sm:px-4 sm:py-2 rounded-e-[2vw] sm:rounded-e-lg w-full font-semibold text-[3.5vw] sm:text-xl ${
                 activeTab === "ulasan"
                   ? "bg-secondary text-primary"
                   : "bg-white text-black"

@@ -93,7 +93,7 @@ const Profile = (props) => {
             />
             <label
               htmlFor="foto"
-              className="bg-secondary px-[6vw] sm:px-8 py-[1.3vw] sm:py-2 rounded-[2vw] sm:rounded-lg text-[3vw] sm:text-base text-primary my-[3vw] sm:mt-6"
+              className="bg-secondary px-[6vw] sm:px-8 py-[1.3vw] sm:py-2 rounded-[2vw] sm:rounded-lg text-[3.5vw] sm:text-base text-primary my-[3vw] sm:mt-6"
             >
               Upload Foto
             </label>
@@ -113,7 +113,7 @@ const Profile = (props) => {
               <div className="pb-[2vw] sm:pb-4">
                 <label
                   htmlFor="nama"
-                  className="text-[3vw] sm:text-lg font-normal"
+                  className="text-[3.5vw] sm:text-lg font-normal"
                 >
                   Nama
                 </label>
@@ -123,14 +123,14 @@ const Profile = (props) => {
                   placeholder="Nama Lengkap"
                   value={input.nama}
                   onChange={(e) => handleInputChange(e.target.value, "nama")}
-                  className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
+                  className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg text-[3.5vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                   required
                 />
               </div>
               <div className="pb-[2vw] sm:pb-4">
                 <label
                   htmlFor="email"
-                  className="text-[3vw] sm:text-lg font-normal"
+                  className="text-[3.5vw] sm:text-lg font-normal"
                 >
                   Alamat Email
                 </label>
@@ -140,14 +140,14 @@ const Profile = (props) => {
                   placeholder="mail@gmail.com"
                   value={input.email}
                   onChange={(e) => handleInputChange(e.target.value, "email")}
-                  className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
+                  className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg text-[3.5vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                   required
                 />
               </div>
               <div className="pb-[2vw] sm:pb-4">
                 <label
                   htmlFor="no_hp"
-                  className="text-[3vw] sm:text-lg font-normal"
+                  className="text-[3.5vw] sm:text-lg font-normal"
                 >
                   No Handphone
                 </label>
@@ -157,7 +157,7 @@ const Profile = (props) => {
                   placeholder="+62"
                   value={input.no_hp}
                   onChange={(e) => handleInputChange(e.target.value, "no_hp")}
-                  className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
+                  className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:p-3 rounded-[2vw] sm:rounded-lg text-[3.5vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                   required
                 />
               </div>
@@ -166,7 +166,7 @@ const Profile = (props) => {
         </div>
         <div className="flex justify-center items-center">
           <button
-            className="bg-secondary px-[6vw] sm:px-8 py-[1.3vw] sm:py-2 rounded-[2vw] sm:rounded-lg text-[3vw] sm:text-base text-primary my-[3vw] sm:my-4"
+            className="bg-secondary px-[6vw] sm:px-8 py-[1.3vw] sm:py-2 rounded-[2vw] sm:rounded-lg text-[3.5vw] sm:text-base text-primary my-[3vw] sm:my-4"
             onClick={handleUpdate}
           >
             Update

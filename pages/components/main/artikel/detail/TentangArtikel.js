@@ -43,7 +43,7 @@ const TentangArtikel = () => {
           <h4 className="text-[6vw] sm:text-4xl font-bold py-[4vw] sm:py-8 text-center leading-normal">
             {data.judul}
           </h4>
-          <p className="text-[3vw] sm:text-base text-gray text-center">
+          <p className="text-[3.5vw] sm:text-base text-gray text-center">
             {data.deskripsi}
           </p>
           <div className="w-full flex p-[4vw] sm:p-4 justify-center items-center gap-1">
@@ -55,10 +55,10 @@ const TentangArtikel = () => {
               />
             </div>
             <div className="text-start">
-              <p className="text-[3vw] sm:text-base font-semibold">
+              <p className="text-[3.5vw] sm:text-base font-semibold">
                 By {data.author}
               </p>
-              <p className="text-[2.5vw] sm:text-sm">
+              <p className="text-[3vw] sm:text-sm">
                 {moment(data.publish_date).format("DD MMMM YYYY")} - 09.13 Wib
               </p>
             </div>
@@ -77,7 +77,7 @@ const TentangArtikel = () => {
               nugas
             </p>
             <div className="">
-              <p className="text-justify text-[3vw] sm:text-base">
+              <p className="text-justify text-[3.5vw] sm:text-base">
                 Coffee shop Jakarta Selatan terbaik pertama adalah Kopi Nalar,
                 yang berlokasi di Petogogan, Jakarta Selatan. Kopi Nalar
                 mempunyai suasana yang homey, cozy, dan warm. Coffee shop satu
@@ -106,13 +106,13 @@ const TentangArtikel = () => {
           </div>
         </div>
         <div className="w-full sm:w-3/4 lg:w-1/2 flex gap-[2vw] sm:gap-2 py-[2vw] sm:py-2">
-          <p className="text-[3vw] sm:text-base font-semibold">Tags</p>
+          <p className="text-[4vw] sm:text-base font-semibold">Tags</p>
           {data?.tags?.map((item, index) => (
             <div
               className="bg-secondary text-white px-[2vw] py-[1vw] sm:px-4 sm:py-1 rounded-[2vw] sm:rounded-lg"
               key={index}
             >
-              <p className="text-[3vw] sm:text-base">{item}</p>
+              <p className="text-[3.5vw] sm:text-base">{item}</p>
             </div>
           ))}
         </div>

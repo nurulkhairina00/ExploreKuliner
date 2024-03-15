@@ -83,7 +83,7 @@ const Navbar = (props) => {
                   value: searchArea,
                   label: listArea.find((item) => item.id === searchArea)
                     ? listArea.find((item) => item.id === searchArea).nama
-                    : "Pilih...",
+                    : "Pilih lokasi",
                 }}
                 onChange={(e) => handleSearchArea(e.value)}
                 styles={{
@@ -170,17 +170,17 @@ const Navbar = (props) => {
                 type="text"
                 name="restoran"
                 placeholder="Cari restoran"
-                className="bg-primary p-[1vw] sm:p-2 w-full focus:outline-none rounded-full text-[2.5vw] sm:text-sm flex justify-center"
+                className="bg-primary p-[1vw] sm:p-2 w-full focus:outline-none rounded-full text-[4vw] sm:text-sm flex justify-center"
                 value={searchRestaurant}
                 onChange={(e) => handleSearchRestaurant(e.target.value)}
               />
             </div>
             <Link href="/restoran">
-              <div className="p-[1vw] sm:p-1 rounded-full bg-secondary z-10 cursor-pointer justify-center items-center">
+              <div className="p-[1.2vw] sm:p-1 rounded-full bg-secondary z-10 cursor-pointer justify-center items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="3vw"
-                  height="3vw"
+                  width="4vw"
+                  height="4vw"
                   viewBox="0 0 24 24"
                   className="sm:w-5 sm:h-5"
                 >
@@ -197,8 +197,8 @@ const Navbar = (props) => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="4vw"
-                height="4vw"
+                width="6vw"
+                height="6vw"
                 viewBox="0 0 24 24"
                 className="sm:w-6 sm:h-6"
               >
@@ -211,7 +211,7 @@ const Navbar = (props) => {
           </div>
         </div>
 
-        <div className="flex sm:space-x-4">
+        <div className="flex sm:space-x-4 items-center">
           {isLoggedIn ? (
             <>
               {/* Daftar dan Masuk Tablet dan Desktop*/}
@@ -237,7 +237,7 @@ const Navbar = (props) => {
                   <div className="absolute top-full right-0 mt-[1.5vw] sm:mt-2 bg-white rounded-md shadow-md overflow-hidden">
                     <Link href="/profile">
                       <div
-                        className="py-[1vw] sm:py-2 px-[3.5vw] sm:px-10 cursor-pointer hover:bg-secondary hover:text-white text-[3vw] sm:text-lg"
+                        className="py-[1vw] sm:py-2 px-[3.5vw] sm:px-10 cursor-pointer hover:bg-secondary hover:text-white text-[3.5vw] sm:text-lg"
                         onClick={handleCloseToggleDropdown}
                       >
                         Profile
@@ -245,14 +245,14 @@ const Navbar = (props) => {
                     </Link>
                     <Link href="/artikel/add">
                       <div
-                        className="py-[1vw] sm:py-2 px-[3.5vw] sm:px-10 cursor-pointer hover:bg-secondary hover:text-white text-[3vw] sm:text-lg"
+                        className="py-[1vw] sm:py-2 px-[3.5vw] sm:px-10 cursor-pointer hover:bg-secondary hover:text-white text-[3.5vw] sm:text-lg"
                         onClick={handleCloseToggleDropdown}
                       >
                         Artikel
                       </div>
                     </Link>
                     <div
-                      className="py-[1vw] sm:py-2 px-[3.5vw] sm:px-10 cursor-pointer hover:bg-secondary hover:text-white text-[3vw] sm:text-lg"
+                      className="py-[1vw] sm:py-2 px-[3.5vw] sm:px-10 cursor-pointer hover:bg-secondary hover:text-white text-[3.5vw] sm:text-lg"
                       onClick={handleLogout}
                     >
                       Logout

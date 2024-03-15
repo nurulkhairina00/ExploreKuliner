@@ -98,10 +98,6 @@ const index = () => {
     });
   }, [selectedJenis]);
 
-  useEffect(() => {
-    console.log("input", input);
-  }, [input]);
-
   return (
     <section className="flex justify-center items-center px-[8vw] pb-[8vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-10 sm:pt-0">
       <div className="w-full lg:w-3/4 rounded-[2vw] sm:rounded-lg shadow-lg p-[4vw] sm:p-8">
@@ -113,7 +109,7 @@ const index = () => {
             <div className="w-full pb-[2vw] sm:pb-4">
               <label
                 htmlFor="judul"
-                className="text-[3vw] sm:text-lg font-normal"
+                className="text-[3.5vw] sm:text-lg font-normal"
               >
                 Judul Artikel <span className="text-red">*</span>
               </label>
@@ -121,14 +117,14 @@ const index = () => {
                 type="text"
                 name="judul"
                 placeholder="Judul"
-                className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:px-3 sm:py-2 rounded-[2vw] sm:rounded-md text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
+                className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:px-3 sm:py-2 rounded-[2vw] sm:rounded-md text-[3.5vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                 onChange={(e) => handleInputChange(e.target.value, "judul")}
               />
             </div>
             <div className="w-full pb-[2vw] sm:pb-4">
               <label
                 htmlFor="deskripsi"
-                className="text-[3vw] sm:text-lg font-normal"
+                className="text-[3.5vw] sm:text-lg font-normal"
               >
                 Deskripsi <span className="text-red">*</span>
               </label>
@@ -136,7 +132,7 @@ const index = () => {
                 type="text"
                 name="deskripsi"
                 placeholder="Deskripsi"
-                className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:px-3 sm:py-2 rounded-[2vw] sm:rounded-md text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
+                className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:px-3 sm:py-2 rounded-[2vw] sm:rounded-md text-[3.5vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                 onChange={(e) => handleInputChange(e.target.value, "deskripsi")}
               />
             </div>
@@ -144,13 +140,13 @@ const index = () => {
               <div className="pb-[1vw] sm:pb-2">
                 <label
                   htmlFor="jenis_artikel"
-                  className="text-[3vw] sm:text-lg font-normal"
+                  className="text-[3.5vw] sm:text-lg font-normal"
                 >
                   Jenis Artikel <span className="text-red">*</span>
                 </label>
               </div>
               <Select
-                className="text-[3vw] sm:text-base z-10"
+                className="text-[3.5vw] sm:text-base z-10"
                 closeMenuOnSelect={false}
                 components={animatedComponents}
                 isMulti
@@ -164,7 +160,7 @@ const index = () => {
             <div className="w-full pb-[2vw] sm:pb-4 flex flex-col">
               <label
                 htmlFor="image"
-                className="text-[3vw] sm:text-lg font-normal"
+                className="text-[3.5vw] sm:text-lg font-normal"
               >
                 Image <span className="text-red">*</span>
               </label>
@@ -174,7 +170,7 @@ const index = () => {
                 id="image"
                 accept="image/*"
                 onChange={handleImageChange}
-                className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:px-3 sm:py-2 rounded-[1vw] sm:rounded-md text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
+                className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:px-3 sm:py-2 rounded-[1vw] sm:rounded-md text-[3.5vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
               />
               {input.imagePreview && (
                 <img
@@ -188,7 +184,7 @@ const index = () => {
               <div className="pb-[1vw] sm:pb-2">
                 <label
                   htmlFor="content"
-                  className="text-[3vw] sm:text-lg font-normal"
+                  className="text-[3.5vw] sm:text-lg font-normal"
                 >
                   Content <span className="text-red">*</span>
                 </label>
@@ -201,7 +197,7 @@ const index = () => {
             <div className="w-full pb-[2vw] sm:pb-4">
               <label
                 htmlFor="tag"
-                className="text-[3vw] sm:text-lg font-normal"
+                className="text-[3.5vw] sm:text-lg font-normal"
               >
                 Tag <span className="text-red">*</span>
               </label>
@@ -209,14 +205,14 @@ const index = () => {
                 type="text"
                 name="tag"
                 placeholder="Tag"
-                className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:px-3 sm:py-2 rounded-[2vw] sm:rounded-md text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
+                className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:px-3 sm:py-2 rounded-[2vw] sm:rounded-md text-[3.5vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                 onChange={(e) => handleInputChange(e.target.value, "tag")}
               />
             </div>
             <div className="w-full pb-[2vw] sm:pb-4">
               <label
                 htmlFor="author"
-                className="text-[3vw] sm:text-lg font-normal"
+                className="text-[3.5vw] sm:text-lg font-normal"
               >
                 Author <span className="text-red">*</span>
               </label>
@@ -224,12 +220,12 @@ const index = () => {
                 type="text"
                 name="author"
                 placeholder="Author"
-                className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:px-3 sm:py-2 rounded-[2vw] sm:rounded-md text-[3vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
+                className="w-full mt-[1vw] sm:mt-2 py-[2vw] px-[3vw] sm:px-3 sm:py-2 rounded-[2vw] sm:rounded-md text-[3.5vw] sm:text-base bg-primary border-mediumGray border-2 focus:border-none"
                 onChange={(e) => handleInputChange(e.target.value, "author")}
               />
             </div>
             <div className="w-full md:w-[48%] pb-[2vw] sm:pb-4">
-              <p className="text-[3vw] sm:text-lg font-normal pb-[1vw] sm:pb-2">
+              <p className="text-[3.5vw] sm:text-lg font-normal pb-[1vw] sm:pb-2">
                 Status
               </p>
               <div className="flex items-center">
@@ -246,7 +242,7 @@ const index = () => {
                   />
                 </div>
                 <span
-                  className={`ml-2 text-[3vw] sm:text-lg ${
+                  className={`ml-2 text-[3.5vw] sm:text-lg ${
                     input.status ? "text-secondary" : "text-black"
                   }`}
                 >
@@ -256,10 +252,10 @@ const index = () => {
             </div>
           </div>
           <div className="flex justify-center items-center gap-[4vw] sm:gap-6 pt-[3vw] sm:pt-8">
-            <button className="px-[6vw] sm:px-8 py-[1.3vw] sm:py-2 rounded-[2vw] sm:rounded-lg text-[3vw] sm:text-base text-secondary border-[0.5vw] sm:border-2 my-[3vw] sm:my-4">
+            <button className="px-[6vw] sm:px-8 py-[1.3vw] sm:py-2 rounded-[2vw] sm:rounded-lg text-[3.5vw] sm:text-base text-secondary border-[0.5vw] sm:border-2 my-[3vw] sm:my-4">
               Draft
             </button>
-            <button className="bg-secondary px-[6vw] sm:px-8 py-[1.3vw] sm:py-2 rounded-[2vw] sm:rounded-lg text-[3vw] sm:text-base text-primary my-[3vw] sm:my-4">
+            <button className="bg-secondary px-[6vw] sm:px-8 py-[1.3vw] sm:py-2 rounded-[2vw] sm:rounded-lg text-[3.5vw] sm:text-base text-primary my-[3vw] sm:my-4">
               Kirim
             </button>
           </div>

@@ -16,9 +16,9 @@ const Komentar = () => {
           cols="20"
           rows="4"
           placeholder="Berikan komentar anda"
-          className="bg-primary w-full rounded-[2vw] sm:rounded-lg sm:mt-2 p-[3vw] sm:p-3 text-[3vw] sm:text-base"
+          className="bg-primary w-full rounded-[2vw] sm:rounded-lg sm:mt-2 p-[3vw] sm:p-4 text-[3.5vw] sm:text-base"
         />
-        <button className="px-[4vw] py-[1vw] sm:px-5 sm:py-1 text-[3vw] sm:text-base rounded-full shadow-lg bg-secondary text-white absolute bottom-[7vw] right-[6vw] sm:bottom-12 sm:right-11">
+        <button className="px-[4vw] py-[1vw] sm:px-5 sm:py-1 text-[3.5vw] sm:text-base rounded-full shadow-lg bg-secondary text-white absolute bottom-[7vw] right-[6vw] sm:bottom-12 sm:right-11">
           Simpan
         </button>
       </div>
@@ -40,7 +40,7 @@ const Komentar = () => {
           <p className="text-[4vw] sm:text-lg font-semibold">
             Belum ada Komentar
           </p>
-          <p className="text-[3vw] sm:text-base text-gray">
+          <p className="text-[3.5vw] sm:text-base text-gray">
             Jadilah yang pertama berkomentar
           </p>
         </div>
@@ -118,9 +118,9 @@ const Komentar = () => {
             cols="30"
             rows="4"
             placeholder="Berikan komentar anda"
-            className="w-full rounded-[2vw] sm:rounded-lg sm:mt-2 p-[3vw] sm:p-3 text-[3vw] sm:text-base bg-white"
+            className="w-full rounded-[2vw] sm:rounded-lg sm:mt-2 p-[3vw] sm:p-3 text-[3.5vw] sm:text-base bg-white"
           ></textarea>
-          <button className="px-[4vw] py-[1vw] sm:px-5 sm:py-1 text-[3vw] sm:text-base rounded-full shadow-lg bg-secondary text-white absolute bottom-[3vw] right-[2vw] sm:bottom-4 sm:right-3">
+          <button className="px-[4vw] py-[1vw] sm:px-5 sm:py-1 text-[3.5vw] sm:text-base rounded-full shadow-lg bg-secondary text-white absolute bottom-[3vw] right-[2vw] sm:bottom-4 sm:right-3">
             Kirim
           </button>
         </div>
