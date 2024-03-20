@@ -1,19 +1,26 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Router from "next/router";
 import { signIn } from "next-auth/react";
 import Swal from "sweetalert2";
+import { parseCookies, setCookie } from "nookies";
+import { AES, enc } from "crypto-js";
 
 const Login = () => {
+  const cookies = parseCookies();
   let [input, setInput] = useState({
     email: "",
     password: "",
   });
   const [showPassword, setShowPassword] = useState(false);
+  const [remember, setRemember] = useState(false);
 
   const handleBack = () => Router.back();
+
+  const handleRemember = () => setRemember(!remember);
 
   const handleInputChange = (value, name) => {
     setInput({ ...input, [name]: value });
@@ -26,6 +33,19 @@ const Login = () => {
 
   const handleLogin = async (event) => {
     event.preventDefault();
+    const cipherText = AES.encrypt(input.password, "SECRET_KEY");
+
+    if (remember) {
+      setCookie(null, "email", input.email, {
+        maxAge: 30 * 24 * 60 * 60,
+        path: "/",
+      });
+      setCookie(null, "password", cipherText.toString(), {
+        maxAge: 30 * 24 * 60 * 60,
+        path: "/",
+      });
+    }
+
     const result = await signIn("credentials", {
       redirect: false,
       email: input.email,
@@ -69,6 +89,15 @@ const Login = () => {
       { prompt: "login" }
     );
   };
+
+  useEffect(() => {
+    if (cookies.email && cookies.password) {
+      const bytes = AES.decrypt(cookies.password, "SECRET_KEY");
+      const decrypted = bytes.toString(enc.Utf8);
+
+      setInput({ ...input, email: cookies.email, password: decrypted });
+    }
+  }, []);
 
   return (
     <>
@@ -193,6 +222,7 @@ const Login = () => {
                       name="ingatkan"
                       value="ingatkan"
                       className="rounded-3 me-[2vw] sm:me-2 w-[3vw] h-[3vw] sm:w-4 sm:h-4"
+                      onClick={handleRemember}
                     />
                     <label
                       htmlFor="ingatkan"
