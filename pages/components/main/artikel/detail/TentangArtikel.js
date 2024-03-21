@@ -4,13 +4,17 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 import moment from "moment";
+import Swal from "sweetalert2";
 import Komentar from "./Komentar";
 import Tautan from "./Tautan";
 
-const TentangArtikel = () => {
+const TentangArtikel = (props) => {
+  const { isLoggedIn } = props;
   const router = useRouter();
   const { id } = router.query;
+
   const [data, setData] = useState([]);
+  const [isBookmarked, setIsBookmarked] = useState(false);
 
   const getDetailArtikel = async () => {
     await axios
@@ -24,6 +28,26 @@ const TentangArtikel = () => {
       });
   };
 
+  const handleBookmark = () => {
+    if (!isLoggedIn) {
+      Swal.fire({
+        title: "Silahkan login terlebih dahulu",
+        icon: "info",
+        showConfirmButton: false,
+        timer: 3000,
+      });
+    } else {
+      setIsBookmarked(!isBookmarked);
+      Swal.fire({
+        title: "Success!",
+        text: "Berhasil menyimpan artikel",
+        icon: "success",
+        showConfirmButton: false,
+        timer: 3000,
+      });
+    }
+  };
+
   useEffect(() => {
     getDetailArtikel();
   }, []);
@@ -31,14 +55,45 @@ const TentangArtikel = () => {
   return (
     <section className="flex flex-col px-[8vw] pb-[8vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-10 sm:pt-0">
       <div className="flex flex-col justify-center items-center">
-        <div className="w-full lg:w-3/4 h-[40vw] md:h-72 lg:h-96 rounded-[2vw] sm:rounded-lg shadow-lg">
+        <div className="w-full lg:w-3/4 h-[40vw] md:h-72 lg:h-96 rounded-[2vw] sm:rounded-lg shadow-lg relative">
           <img
             src={data?.image}
             alt="cover-artikel"
             className="w-full h-full object-cover rounded-[2vw] sm:rounded-lg shadow-lg"
           />
+          <div
+            className="absolute top-[2vw] right-[2vw] sm:top-3 sm:right-3 cursor-pointer"
+            onClick={handleBookmark}
+          >
+            {isBookmarked ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="5vw"
+                height="5vw"
+                viewBox="0 0 24 24"
+                className="sm:w-10 sm:h-10 absolute top-[2vw] right-[2vw] sm:top-1 sm:right-1"
+              >
+                <path
+                  fill="black"
+                  d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3z"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="5vw"
+                height="5vw"
+                viewBox="0 0 24 24"
+                className="sm:w-10 sm:h-10 absolute top-[2vw] right-[2vw] sm:top-1 sm:right-1"
+              >
+                <path
+                  fill="white"
+                  d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3zm2-3.05l5-2.15l5 2.15V5H7zM7 5h10z"
+                />
+              </svg>
+            )}
+          </div>
         </div>
-
         <div className="w-full sm:w-3/4 lg:w-1/2">
           <h4 className="text-[6vw] sm:text-4xl font-bold py-[4vw] sm:py-8 text-center leading-normal">
             {data.judul}
