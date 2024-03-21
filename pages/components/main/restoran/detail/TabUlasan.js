@@ -7,6 +7,7 @@ const TabUlasan = (props) => {
   const { data } = props;
   const [showReply, setShowReply] = useState({});
   const [currentPage, setCurrentPage] = useState(1);
+  const [ulasan, setUlasan] = useState("");
   const itemsPerPage = 4;
 
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -21,6 +22,10 @@ const TabUlasan = (props) => {
       ...Object.fromEntries(Object.keys(prevState).map((key) => [key, false])),
       [index]: !prevState[index],
     }));
+  };
+
+  const handleKomentar = (event) => {
+    setUlasan(event.target.value);
   };
 
   return (
@@ -58,6 +63,20 @@ const TabUlasan = (props) => {
               <small className="text-[3vw] sm:text-sm text-gray text-justify">
                 Pesanan : {item.pesanan}
               </small>
+              <div className="flex flex-wrap py-0 sm:py-2">
+                {item.imageUlasan.map((gambar, index) => (
+                  <div
+                    key={index}
+                    className="relative mr-[2vw] sm:mr-4 my-[3vw] sm:my-4"
+                  >
+                    <img
+                      src={gambar}
+                      alt="Uploaded"
+                      className="w-[16vw] h-[16vw] sm:w-32 sm:h-32 object-cover rounded-lg cursor-pointer"
+                    />
+                  </div>
+                ))}
+              </div>
               <div className="flex justify-between items-center">
                 <div className="flex items-center space-x-2">
                   <button className="flex items-center space-x-1">
@@ -111,18 +130,21 @@ const TabUlasan = (props) => {
                 </div>
               </div>
               {showReply[index] && (
-                <div className="w-full pt-4 relative">
+                <div className="w-full p-[3vw] sm:p-4 bg-primary rounded-lg mt-[2vw] sm:mt-4">
                   <textarea
                     name="ulasan"
                     id="ulasan"
                     cols="30"
-                    rows="4"
+                    rows="3"
                     placeholder="Berikan komentar anda"
-                    className="w-full rounded-[2vw] sm:rounded-lg p-[3vw] sm:p-4 text-[3.5vw] sm:text-base"
+                    className="w-full rounded-[2vw] sm:rounded-lg p-[3vw] sm:p-4 text-[3.5vw] sm:text-base bg-white"
+                    onChange={handleKomentar}
                   ></textarea>
-                  <button className="px-[4vw] py-[1vw] sm:px-6 sm:py-2 text-[3.5vw] sm:text-base rounded-full shadow-lg bg-secondary text-white absolute bottom-5 right-5">
-                    Kirim
-                  </button>
+                  <div className="flex justify-end">
+                    <button className="px-[4vw] py-[1vw] sm:px-8 sm:py-2 text-[3.5vw] sm:text-base rounded-full shadow-lg bg-secondary text-white">
+                      Kirim
+                    </button>
+                  </div>
                 </div>
               )}
             </div>

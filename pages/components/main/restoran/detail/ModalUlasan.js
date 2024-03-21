@@ -3,11 +3,41 @@ import React, { useState } from "react";
 
 const ModalUlasan = (props) => {
   const { showModal, setShowModal, data } = props;
-  const [clickCount, setClickCount] = useState(0);
+  const [input, setInput] = useState({
+    rating: 0,
+    pesanan: "",
+    ulasan: "",
+    image: [],
+  });
 
   const handleCloseModal = () => setShowModal(!showModal);
 
-  const handleStarClick = (index) => setClickCount(index + 1);
+  const handleInputChange = (value, name) => {
+    setInput((prevInput) => ({
+      ...prevInput,
+      [name]: value,
+    }));
+  };
+
+  const handleUpload = (event) => {
+    const files = event.target.files;
+
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      setInput((prevInput) => ({
+        ...prevInput,
+        image: [...prevInput.image, URL.createObjectURL(file)],
+      }));
+    }
+  };
+
+  const handleDelete = (index) => {
+    setInput((prevInput) => {
+      const newList = [...prevInput.image];
+      newList.splice(index, 1);
+      return { ...prevInput, image: newList };
+    });
+  };
 
   return (
     <div className="h-full w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-70 z-20">
@@ -44,9 +74,10 @@ const ModalUlasan = (props) => {
                 </div>
                 <div className="flex bg-white w-[17%] h-[6%] text-[2.5vw] sm:w-12 sm:h-5 sm:text-xs text-gray rounded-2xl absolute right-[2vw] top-[2vw] sm:right-3 sm:top-3 justify-center items-center">
                   <svg
-                    className="sm:w-[14px] me-1"
+                    className="sm:w-4 sm:h-4 mr-[0.5vw] sm:mr-1"
                     xmlns="http://www.w3.org/2000/svg"
-                    width="30%"
+                    width="3.5vw"
+                    height="3.5vw"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -60,7 +91,7 @@ const ModalUlasan = (props) => {
                   <h6 className="pb-[2vw] text-[4vw] sm:pb-2 md:text-base lg:text-lg font-semibold">
                     {data.nama_resto}
                   </h6>
-                  <p className="text-gray text-[3vw] sm:text-sm lg:text-base">
+                  <p className="text-gray text-[3.5vw] sm:text-base lg:text-base">
                     {data.alamat}
                   </p>
                 </div>
@@ -74,13 +105,13 @@ const ModalUlasan = (props) => {
                 {[...Array(5)].map((_, index) => (
                   <svg
                     key={index}
-                    width="3vw"
-                    height="3vw"
+                    width="8vw"
+                    height="8vw"
                     viewBox="0 0 15 14"
-                    fill={index < clickCount ? "#FFA011" : "#8F8F9D"}
+                    fill={index < input.rating ? "#FFA011" : "#8F8F9D"}
                     xmlns="http://www.w3.org/2000/svg"
                     className="sm:w-[40px] sm:h-[40px] mr-[0.5vw] sm:mr-1"
-                    onClick={() => handleStarClick(index)}
+                    onClick={() => handleInputChange(index + 1, "rating")}
                   >
                     <path d="M6.82502 1.67301C6.8938 1.56285 6.99232 1.47145 7.11076 1.40793C7.2292 1.3444 7.36342 1.31097 7.50002 1.31097C7.63662 1.31097 7.77084 1.3444 7.88928 1.40793C8.00772 1.47145 8.10624 1.56285 8.17502 1.67301L9.9219 4.47184L13.3144 5.15784C13.4478 5.18491 13.5714 5.24415 13.6726 5.32966C13.7739 5.41516 13.8494 5.52395 13.8916 5.64517C13.9337 5.7664 13.9411 5.89582 13.913 6.02055C13.8849 6.14527 13.8222 6.26094 13.7313 6.35601L11.4188 8.77159L11.7688 11.9945C11.7826 12.1214 11.7605 12.2495 11.7047 12.3659C11.6489 12.4824 11.5613 12.5831 11.4507 12.6581C11.3402 12.7331 11.2104 12.7797 11.0745 12.7932C10.9387 12.8068 10.8013 12.7868 10.6763 12.7353L7.50002 11.4287L4.32377 12.7353C4.19872 12.7868 4.06139 12.8068 3.92549 12.7932C3.7896 12.7797 3.65989 12.7331 3.54932 12.6581C3.43875 12.5831 3.35119 12.4824 3.29538 12.3659C3.23957 12.2495 3.21746 12.1214 3.23127 11.9945L3.58127 8.77159L1.26877 6.35659C1.17766 6.26153 1.11487 6.14582 1.08665 6.02101C1.05844 5.89621 1.0658 5.76669 1.10799 5.64537C1.15018 5.52405 1.22572 5.41518 1.32709 5.32964C1.42845 5.24409 1.55209 5.18485 1.68565 5.15784L5.07815 4.47184L6.82502 1.67301Z" />
                   </svg>
@@ -98,27 +129,80 @@ const ModalUlasan = (props) => {
                   placeholder="Ayam Goreng"
                   name="pesanan"
                   className="w-full rounded-[2vw] sm:rounded-lg sm:mt-2 p-[3vw] sm:p-3 text-[4vw] sm:text-lg bg-primary border-mediumGray border-2 focus:border-none"
+                  onChange={(e) => handleInputChange(e.target.value, "pesanan")}
                 />
               </div>
               <div className="py-[3vw] sm:py-4">
                 <label
-                  htmlFor="komentar"
+                  htmlFor="ulasan"
                   className="text-black text-[4vw] sm:text-lg font-medium"
                 >
                   Tulis Ulasan
                 </label>
                 <textarea
-                  name="komentar"
-                  id="komentar"
+                  name="ulasan"
+                  id="ulasan"
                   cols="30"
                   rows="5"
                   placeholder="Berikan komentar anda"
                   className="w-full rounded-[2vw] sm:rounded-lg sm:mt-2 p-[3vw] sm:p-3 text-[4vw] sm:text-lg bg-primary border-mediumGray border-2 focus:border-none"
+                  onChange={(e) => handleInputChange(e.target.value, "ulasan")}
                 ></textarea>
+              </div>
+              <div className="my-[2vw] sm:my-4">
+                <label
+                  htmlFor="foto"
+                  className="px-[4vw] py-[1vw] sm:px-8 sm:py-2 text-[3.5vw] sm:text-base bg-secondary text-white rounded-[2vw] sm:rounded-lg"
+                >
+                  Upload Foto
+                </label>
+                <input
+                  id="foto"
+                  type="file"
+                  className="py-[2vw] sm:py-4"
+                  accept="image/png, image/jpeg, image/*"
+                  onChange={handleUpload}
+                  multiple
+                  hidden
+                />
+              </div>
+              <div className="flex flex-wrap">
+                {input.image.map((gambar, index) => (
+                  <div
+                    key={index}
+                    className="relative mr-[2vw] sm:mr-4 my-[3vw] sm:my-4"
+                  >
+                    <img
+                      src={gambar}
+                      alt="Uploaded"
+                      className="w-[16vw] h-[16vw] sm:w-32 sm:h-32 object-cover rounded-lg"
+                    />
+                    <button
+                      className="absolute top-0 right-0 p-1 bg-red-500 rounded-full text-white"
+                      onClick={() => handleDelete(index)}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="4vw"
+                        height="4vw"
+                        viewBox="0 0 16 16"
+                        className="sm:w-6 sm:h-6"
+                      >
+                        <path
+                          fill="none"
+                          stroke="#333333"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="1.5"
+                          d="m11.25 4.75l-6.5 6.5m0-6.5l6.5 6.5"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
-
           <div className="border-t border-mediumGray"></div>
           <center className="py-[3vw] sm:py-4 sm:mt-4">
             <button

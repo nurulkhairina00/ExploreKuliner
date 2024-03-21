@@ -256,7 +256,7 @@ const index = () => {
               Draft
             </button>
             <button className="bg-secondary px-[6vw] sm:px-8 py-[1.3vw] sm:py-2 rounded-[2vw] sm:rounded-lg text-[3.5vw] sm:text-base text-primary my-[3vw] sm:my-4">
-              Kirim
+              Publish
             </button>
           </div>
         </form>
