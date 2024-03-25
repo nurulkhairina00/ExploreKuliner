@@ -66,31 +66,35 @@ const TentangArtikel = (props) => {
             onClick={handleBookmark}
           >
             {isBookmarked ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="5vw"
-                height="5vw"
-                viewBox="0 0 24 24"
-                className="sm:w-10 sm:h-10 absolute top-[2vw] right-[2vw] sm:top-1 sm:right-1"
-              >
-                <path
-                  fill="black"
-                  d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3z"
-                />
-              </svg>
+              <div className="w-[8vw] h-[8vw] sm:w-12 sm:h-12 bg-white flex justify-center items-center rounded-full">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="5vw"
+                  height="5vw"
+                  viewBox="0 0 24 24"
+                  className="sm:w-8 sm:h-8 absolute top-[1.5vw] right-[1.5vw] sm:top-[8px] sm:right-[8px]"
+                >
+                  <path
+                    fill="black"
+                    d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3z"
+                  />
+                </svg>
+              </div>
             ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="5vw"
-                height="5vw"
-                viewBox="0 0 24 24"
-                className="sm:w-10 sm:h-10 absolute top-[2vw] right-[2vw] sm:top-1 sm:right-1"
-              >
-                <path
-                  fill="white"
-                  d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3zm2-3.05l5-2.15l5 2.15V5H7zM7 5h10z"
-                />
-              </svg>
+              <div className="w-[8vw] h-[8vw] sm:w-12 sm:h-12 flex justify-center items-center rounded-full">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="5vw"
+                  height="5vw"
+                  viewBox="0 0 24 24"
+                  className="sm:w-8 sm:h-8 absolute top-[1.5vw] right-[1.5vw] sm:top-[8px] sm:right-[8px]"
+                >
+                  <path
+                    fill="white"
+                    d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3zm2-3.05l5-2.15l5 2.15V5H7zM7 5h10z"
+                  />
+                </svg>
+              </div>
             )}
           </div>
         </div>

@@ -101,10 +101,16 @@ const index = () => {
   return (
     <section className="flex justify-center items-center px-[8vw] pb-[8vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:pb-10 sm:pt-0">
       <div className="w-full lg:w-3/4 rounded-[2vw] sm:rounded-lg shadow-lg p-[4vw] sm:p-8">
-        <p className="text-[4vw] sm:text-2xl font-semibold my-[3vw] sm:my-6">
-          Tambah Artikel
-        </p>
-        <form action="">
+        <div className="py-[2vw] sm:py-2">
+          <div className="flex pb-[2vw] sm:pb-4">
+            <div className="border-l-[2vw] sm:border-l-8 border-secondary me-[2vw] sm:me-2"></div>
+            <p className="text-[4vw] sm:text-2xl font-semibold my-1">
+              Tambah Artikel
+            </p>
+          </div>
+          <hr className="border-mediumGray border-dashed border-[1px]" />
+        </div>
+        <form action="" className="py-[2vw] sm:py-4">
           <div className="flex flex-wrap">
             <div className="w-full pb-[2vw] sm:pb-4">
               <label
@@ -251,7 +257,7 @@ const index = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center items-center gap-[4vw] sm:gap-6 pt-[3vw] sm:pt-8">
+          <div className="flex justify-center items-center gap-[4vw] sm:gap-6 pt-[2vw] sm:pt-6">
             <button className="px-[6vw] sm:px-8 py-[1.3vw] sm:py-2 rounded-[2vw] sm:rounded-lg text-[3.5vw] sm:text-base text-secondary border-[0.5vw] sm:border-2 my-[3vw] sm:my-4">
               Draft
             </button>
