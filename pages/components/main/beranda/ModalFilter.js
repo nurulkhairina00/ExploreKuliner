@@ -37,6 +37,7 @@ const ModalFilter = (props) => {
           </div>
           <Select
             placeholder="Pilih Lokasi"
+            className="text-[3.5vw] sm:text-lg rounded-lg "
             isSearchable
             options={listArea.map((area) => ({
               label: area.nama,
@@ -67,7 +68,6 @@ const ModalFilter = (props) => {
                 primary: "#d86141",
               },
             })}
-            className="rounded-lg"
           />
           <div className="pt-[5vw] pb-[3vw] sm:py-4 flex flex-col items-center justify-center gap-3">
             <button className="border-secondary border-[0.5vw] sm:border-2 px-[6vw] sm:px-8 rounded-[2vw] sm:rounded-lg py-[1.5vw] sm:py-2 text-[3.5vw] sm:text-base text-secondary font-bold hover:bg-secondary hover:text-primary">
