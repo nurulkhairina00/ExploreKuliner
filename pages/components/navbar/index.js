@@ -45,13 +45,13 @@ const Navbar = (props) => {
   }, []);
 
   return (
-    <nav className="w-full bg-white fixed shadow-md p-[6vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-9 z-20">
+    <nav className="w-full bg-white fixed shadow-md p-[6vw] sm:px-5 md:px-12 lg:px-20 xl:px-32 sm:py-8 z-20">
       <div className="flex justify-between">
         <Link href="/">
           <img
             src="/logo/logo-explore-kuliner-v2.svg"
             alt="logo-explore-kuliner"
-            className="w-[17vw] sm:w-24 cursor-pointer"
+            className="w-[18vw] sm:w-28 cursor-pointer"
           />
         </Link>
 
@@ -146,12 +146,13 @@ const Navbar = (props) => {
 
           {/* Button Search Restoran */}
           <Link href="/restoran">
-            <div className="p-1 rounded-full m-2 bg-secondary z-10 cursor-pointer">
+            <div className="p-2 rounded-full m-2 bg-secondary z-10 cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
+                width="4vw"
+                height="4vw"
                 viewBox="0 0 24 24"
+                className="sm:w-6 sm:h-6"
               >
                 <path
                   fill="white"
@@ -176,7 +177,7 @@ const Navbar = (props) => {
               />
             </div>
             <Link href="/restoran">
-              <div className="p-[1.2vw] sm:p-1 rounded-full bg-secondary z-10 cursor-pointer justify-center items-center">
+              <div className="p-[1.4vw] sm:p-2 rounded-full bg-secondary z-10 cursor-pointer justify-center items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="4vw"
