@@ -97,30 +97,11 @@ const TabUlasan = (props) => {
                       />
                     </svg>
                     <span className="text-[3.5vw] sm:text-base text-black">
-                      {item.bagus}
+                      Sangat Membantu{" "}
+                      {item.bagus !== 0 && "(" + item.bagus + ")"}
                     </span>
                   </button>
-                  <button className="flex items-center space-x-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="4vw"
-                      height="4vw"
-                      viewBox="0 0 24 24"
-                      className="sm:w-[20px] sm:h-[20px]"
-                    >
-                      <path
-                        fill="none"
-                        stroke="#8F8F9D"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M7 13V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1za4 4 0 0 1 4 4v1a2 2 0 0 0 4 0v-5h3a2 2 0 0 0 2-2l-1-5a2 3 0 0 0-2-2h-7a3 3 0 0 0-3 3"
-                      />
-                    </svg>
-                    <span className="text-[3.5vw] sm:text-base text-black">
-                      {item.buruk}
-                    </span>
-                  </button>
+
                   <button
                     className="ms-[1.5vw] sm:ms-3 text-[3.5vw] sm:text-base text-black font-medium"
                     onClick={() => handleOpenBalas(index)}
