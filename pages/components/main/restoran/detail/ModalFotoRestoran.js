@@ -4,11 +4,19 @@ import React from "react";
 const ModalFotoRestoran = (props) => {
   const { showModal, setShowModal, data } = props;
 
+  let fotoRestoran = [];
+
+  fotoRestoran = fotoRestoran.concat(data.fotoRestoran);
+  let imageUlasan = data.ulasanCustomer.map((item) => item.imageUlasan);
+  imageUlasan.forEach((images) => {
+    fotoRestoran = fotoRestoran.concat(images);
+  });
+
   const handleCloseModal = () => setShowModal(!showModal);
 
   return (
     <div className="h-full w-full fixed left-0 top-0 flex flex-col justify-center items-center bg-black bg-opacity-70 z-20">
-      <div className="w-[90%] xl:w-1/2 bg-white rounded-[2vw] sm:rounded-lg shadow-lg h-[90%] overflow-hidden">
+      <div className="w-[90%] xl:w-1/2 bg-white rounded-[2vw] sm:rounded-lg shadow-lg max-h-[48rem] overflow-hidden">
         <div className="p-[4vw] sm:p-4">
           <div className="flex justify-end pb-3" onClick={handleCloseModal}>
             <div className="w-[6vw] h-[6vw] sm:w-11 sm:h-11 border-gray border-2 rounded-full flex justify-center items-center cursor-pointer">
@@ -30,12 +38,12 @@ const ModalFotoRestoran = (props) => {
             <h6 className="text-black font-semibold text-[4.5vw] sm:text-3xl text-center pb-[3vw] sm:pb-6">
               Foto Restoran {data.nama_resto}
             </h6>
-            <div className="h-full overflow-y-auto max-h-[38rem]">
+            <div className="overflow-y-auto max-h-[34rem]">
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {data.fotoRestoran.map((item, index) => (
+                {fotoRestoran.map((item, index) => (
                   <img
                     key={index}
-                    src={item.image}
+                    src={item}
                     alt={`gambar-resto-${index + 1}`}
                     className="w-full h-[25vw] sm:h-48 rounded-[2vw] sm:rounded-lg cursor-pointer"
                   />

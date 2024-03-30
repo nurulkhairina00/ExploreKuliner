@@ -14,21 +14,21 @@ const FotoRestoran = (props) => {
         <>
           <div className="w-4/6 xl:w-3/4 h-[40vw] md:h-60 lg:h-96 rounded-[2vw] sm:rounded-lg shadow-lg me-[2vw] sm:me-3">
             <img
-              src={data.fotoRestoran[0].image}
+              src={data.fotoRestoran[0]}
               alt="image"
               className="w-full h-full object-cover rounded-[2vw] sm:rounded-lg shadow-lg"
             />
           </div>
           <div className="w-1/3 xl:w-1/4 flex flex-col gap-[1.5vw] sm:gap=2 lg:gap-4">
             <img
-              src={data.fotoRestoran[1].image}
+              src={data.fotoRestoran[1]}
               alt="image"
               className="w-full object-cover h-[19.3vw] md:h-[112px] lg:h-[184px] rounded-[2vw] sm:rounded-lg shadow-lg"
             />
 
             <div className="relative h-[19.3vw] md:h-[112px] lg:h-[184px]">
               <img
-                src={data.fotoRestoran[2].image}
+                src={data.fotoRestoran[2]}
                 alt="image"
                 className="w-full h-full object-cover rounded-[2vw] sm:rounded-lg shadow-lg"
               />
