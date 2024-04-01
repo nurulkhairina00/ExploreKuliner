@@ -14,7 +14,7 @@ const Breadcrumb = (props) => {
               width="4vw"
               height="4vw"
               viewBox="0 0 512 512"
-              className="sm:w-[16px] sm:h-[16px]"
+              className="sm:w-[16px] sm:h-[16px] cursor-pointer"
             >
               <path
                 fill="#8F8F9D"
